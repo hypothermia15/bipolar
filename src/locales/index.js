@@ -5,6 +5,7 @@ export const translations = {
     sections: {
       stabilizers: "Stabilizatory nastroju",
       antipsychotics: "Antypsychotyki",
+      psychedelics: "Psychodeliki",
       substances: "Substancje",
       other: "Inne"
     },
@@ -279,6 +280,7 @@ export const translations = {
     sections: {
       stabilizers: "Stimmungsstabilisierer",
       antipsychotics: "Antipsychotika",
+      psychedelics: "Psychedelika",
       substances: "Substanzen",
       other: "Andere"
     },

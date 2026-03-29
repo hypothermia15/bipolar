@@ -11,9 +11,9 @@ export default function InfoPanel({ activeDrugs, lang }) {
 
   return (
     <div className="description-panel" style={{
-      flex: "1 1 340px", maxWidth: 440, minWidth: 280, padding: "16px 20px",
+      width: "100%", padding: "16px 20px",
       background: "rgba(255,255,255,0.03)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.06)",
-      maxHeight: 420, overflowY: "auto",
+      maxHeight: 600, overflowY: "auto",
     }}>
       {activeDescs.length === 0 ? (
         <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 14, margin: 0, lineHeight: 1.7 }}>
