@@ -134,6 +134,12 @@ export const translations = {
         desc: "Reset krajobrazu — mania i depresja prawie plaskie, eutymia staje sie prawdziwym atraktorem.",
         detail: "Elektrowstrzasy. Najsilniejsza metoda przerywania epizodow. Dramatyczna zmiana topologii.",
         refs: ["UK ECT Review Group 2003 (Lancet)", "Dierckx et al. 2012 — meta-analiza", "Versiani et al. 2011 — EW w manii"]
+      },
+      alcohol: {
+        label: "Alkohol",
+        desc: "Destabilizuje krajobraz, poglebiajac oba patologiczne baseny. Chwilowe spowolnienie ustepuje miejsca zwiekszonemu chaosowi i ryzyku nawrotu.",
+        detail: "Dziala hamujaco na OUN (GABA), co doraźnie spowalnia kulke (sedacja). Jednak metabolity i efekt 'rebound' poglebiaja dolki manii i depresji, czyniac je silniejszymi atraktorami. Zwieksza cyklowanie i ryzyko zachowan impulsywnych.",
+        refs: ["Boden & Fergusson 2011 — metaanaliza", "Salloum et al. 2005 — alkohol w ChAD"]
       }
     }
   },
@@ -143,6 +149,7 @@ export const translations = {
     sections: {
       stabilizers: "Mood Stabilizers",
       antipsychotics: "Antipsychotics",
+      psychedelics: "Psychedelics",
       substances: "Substances",
       other: "Other"
     },
@@ -271,6 +278,12 @@ export const translations = {
         desc: "Landscape reset — mania and depression become almost flat, euthymia becomes a true attractor.",
         detail: "Electroconvulsive therapy. Most potent method for breaking severe episodes. Dramatic topological change.",
         refs: ["UK ECT Review Group 2003 (Lancet)", "Dierckx et al. 2012 — meta-analysis", "Versiani et al. 2011 — ECT in mania"]
+      },
+      alcohol: {
+        label: "Alcohol",
+        desc: "Destabilizes the landscape by deepening both pathological basins. Temporary slowing gives way to increased chaos and relapse risk.",
+        detail: "CNS depressant (GABAergic). While initially slowing the ball (sedation), its long-term effects and rebound deepen both manic and depressive wells, making them stronger attractors. Increases cycling and impulsivity.",
+        refs: ["Boden & Fergusson 2011 — meta-analysis", "Salloum et al. 2005 — alcohol in bipolar"]
       }
     }
   },
@@ -407,9 +420,16 @@ export const translations = {
       ect: {
         label: "EKT",
         desc: "Landschafts-Reset — Manie und Depression fast flach, Euthymie wird zum wahren Attraktor.",
-        detail: "Elektrokonvulsionstherapie. Stärkste Methode zur Unterbrechung schwerer Episoden.",
+        detail: "Elektrokonvulsionstherapie. Stärkste Methode zur Unterbrechung schwerer Episoden. Dramatische topologische Veränderung.",
         refs: ["UK ECT Review Group 2003 (Lancet)", "Dierckx et al. 2012 — Meta-Analyse", "Versiani et al. 2011 — EKT bei Manie"]
+      },
+      alcohol: {
+        label: "Alkohol",
+        desc: "Destabilisiert die Landschaft, indem beide pathologischen Becken vertieft werden. Kurzzeitige Verlangsamung weicht erhöhtem Chaos und Rückfallrisiko.",
+        detail: "ZNS-Depressivum (GABAerg). Während es den Ball anfangs verlangsamt (Sedierung), vertiefen Langzeitfolgen und Rebound-Effekte sowohl manische als auch depressive Mulden. Erhöht das Cycling- und Impulsivitätsrisiko.",
+        refs: ["Boden & Fergusson 2011 — Meta-Analyse", "Salloum et al. 2005 — Alkohol bei Bipolarität"]
       }
-    }
-  }
-};
+      }
+      }
+      };
+

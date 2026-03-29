@@ -201,6 +201,21 @@ export const DRUGS = {
       { url: "https://pubmed.ncbi.nlm.nih.gov/22189930/" },
     ],
   },
+  alcohol: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 2.6, w: 0.22 },
+      { cx:  0.00, depth: 0.0, w: 0.25 },
+      { cx:  0.68, depth: 2.7, w: 0.22 },
+    ],
+    damping: 0.90, gravity: 8, barrierH: 0, jitter: 0.40,
+    icon: "🍺", color: "#e67e22",
+    halfLife: 6, onset: 1,
+    refs: [
+      { url: "https://pubmed.ncbi.nlm.nih.gov/21223274/" },
+      { url: "https://pubmed.ncbi.nlm.nih.gov/15800147/" },
+    ],
+  },
 };
 
 export const BASE = {

@@ -9,7 +9,7 @@ export default function DrugControls({ activeDrugs, toggleDrug, lang }) {
     { title: t.sections.stabilizers, keys: ["lithium", "valproate", "lamotrigine"] },
     { title: t.sections.antipsychotics, keys: ["aripiprazole", "quetiapine", "olanzapine", "risperidone"] },
     { title: t.sections.psychedelics, keys: ["ketamine", "mdma", "ayahuasca"] },
-    { title: t.sections.substances, keys: ["clonazepam", "thc"] },
+    { title: t.sections.substances, keys: ["clonazepam", "thc", "alcohol"] },
     { title: t.sections.other, keys: ["ect"] },
   ];
 
