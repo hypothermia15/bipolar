@@ -1,0 +1,9 @@
+export const W = 800;
+export const H = 420;
+export const PAD = 52;
+export const BALL_R = 14;
+export const X_LO = -1.12;
+export const X_HI = 1.12;
+export const Y_LO = -2.5;
+export const Y_HI = 2.8;
+export const BARRIER = { cx: -0.38, w: 0.10 };
