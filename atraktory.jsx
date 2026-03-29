@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-const W = 700, H = 330, PAD = 48, BALL_R = 12;
+const W = 800, H = 420, PAD = 52, BALL_R = 14;
 const X_LO = -1.12, X_HI = 1.12, Y_LO = -2.5, Y_HI = 2.8;
 const BARRIER = { cx: -0.38, w: 0.10 };
 
@@ -64,8 +64,8 @@ const DRUGS = {
       { cx:  0.00, depth: 0.0, w: 0.25 },
       { cx:  0.68, depth: 2.2, w: 0.20 },
     ],
-    damping: 0.92, gravity: 6, barrierH: 0, jitter: 0,
-    label: "Walproinian", icon: "💊", color: "#9b59b6",
+    damping: 0.88, gravity: 4, barrierH: 0, jitter: 0,
+    label: "Walproinian", icon: "🛡️", color: "#9b59b6",
     halfLife: 18, onset: 4,
     desc: "Kulka porusza sie w 'miodzie' — przejscia miedzy stanami sa wolniejsze, ale krajobraz sie nie zmienia.",
     detail: "Wzmacnia transmisje GABA-ergiczna i blokuje kanaly sodowe zalezne od napiecia. Skuteczny glownie w ostrej manii i u pacjentow z szybkim cyklowaniem. Nie wykazuje istotnej skutecznosci w depresji bipolarnej. Terrain (studnie) pozostaje bez zmian — lek spowalnia dynamike kulki, ale nie zmienia docelowych stanow.",
@@ -82,30 +82,83 @@ const DRUGS = {
       { cx:  0.68, depth: 0.55, w: 0.22 },
     ],
     damping: 0.985, gravity: 14, barrierH: 0, jitter: 0,
-    label: "Lamotrigina", icon: "💊", color: "#e67e22",
+    label: "Lamotrigina", icon: "🛡️", color: "#e67e22",
     halfLife: 30, onset: 10,
     desc: "Splyca depresyjny dolek (blokada glutaminianu) — ale mania pozostaje gleboka. Asymetryczna ochrona.",
-    detail: "Blokuje napieciozalezne kanaly sodowe i hamuje uwalnianie glutaminianu. Wykazuje dobrze udokumentowana skutecznosc w zapobieganiu epizodom depresji, przy znacznie slabszym dzialaniu przeciwmaniakalnym. Wymaga bardzo wolnego miareczkowania dawki (ryzyko ciezkiej wysypki Stevensa-Johnsona przy zbyt szybkim zwiekszaniu). Asymetria w wizualizacji — depresja splyca sie, ale mania nie.",
+    detail: "Blokaje napieciozalezne kanaly sodowe i hamuje uwalnianie glutaminianu. Wykazuje dobrze udokumentowana skutecznosc w zapobieganiu epizodom depresji, przy znacznie slabszym dzialaniu przeciwmaniakalnym. Wymaga bardzo wolnego miareczkowania dawki (ryzyko ciezkiej wysypki Stevensa-Johnsona przy zbyt szybkim zwiekszaniu). Asymetria w wizualizacji — depresja splyca sie, ale mania nie.",
     refs: [
       { label: "Calabrese et al. 1999 — lamotrigina w depresji bipolarnej (JClinPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/10084637/" },
       { label: "Geddes et al. 2009 — meta-analiza lamotriginy (BrJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/19169266/" },
     ],
   },
-  antipsychotics: {
+  aripiprazole: {
     wallStr: 1.5,
     wells: [
-      { cx: -0.68, depth: 2.2, w: 0.20 },
+      { cx: -0.68, depth: 1.0, w: 0.20 },
       { cx:  0.00, depth: 0.0, w: 0.25 },
       { cx:  0.68, depth: 2.2, w: 0.20 },
     ],
-    damping: 0.985, gravity: 14, barrierH: 3.8, jitter: 0,
-    label: "Antypsychotyki", icon: "💊", color: "#3498db",
-    halfLife: 20, onset: 3,
-    desc: "Bariera przed mania (blokada D2). Kulka nie moze wjechac — ale teren sie nie zmienia.",
-    detail: "Atypowe antypsychotyki (olanzapina, kwetiapina, aripiprazol) blokuja receptory D2 dopaminergiczne, co skutecznie ogranicza psychoze i manie. Kwetiapina wykazuje rowniez skutecznosc w depresji bipolarnej. Dlugookresowo nie przebudowuja krajobrazu nastroju — dzialaja jak zapora, nie jak zmiana terenu. Ryzyko metaboliczne (przyrost masy, insulinoopornosc) przy dlugim stosowaniu.",
+    damping: 0.982, gravity: 13, barrierH: 1.4, jitter: 0,
+    label: "Aripiprazol", icon: "🧠", color: "#3498db",
+    halfLife: 22, onset: 4,
+    desc: "Splyca dolek manii i stawia umiarkowana bariere ('termostat' D2). Jesli kulka jest w manii — stopniowo z niej wyplywa. Depresji nie dotyka.",
+    detail: "Aripiprazol jest unikalny wsrod atypowych antypsychotykow — dziala jako agonista czesciowy receptorow D2 (i 5-HT1A) oraz antagonista 5-HT2A. Zamiast calkowicie blokowac dopamine, 'moduluje' ja — w stanach nadmiaru (mania) obniza aktywnosc, a przy niedoborze moze ja delikatnie wzmocnic. W ostrej manii redukuje glebokosci basenu maniakalnego, a bariera profilaktyczna zapobiega nawrotom. Mniejsze ryzyko metaboliczne niz kwetiapina czy olanzapina.",
+    refs: [
+      { label: "Keck et al. 2003 — aripiprazol w ostrej manii (AmJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/12668363/" },
+      { label: "Marcus et al. 2008 — aripiprazol jako augmentacja w depresji (JClinPsychopharmacol)", url: "https://pubmed.ncbi.nlm.nih.gov/18344725/" },
+      { label: "Shapiro et al. 2003 — aripiprazol: agonista czesciowy D2 (Neuropsychopharmacol)", url: "https://pubmed.ncbi.nlm.nih.gov/12700681/" },
+    ],
+  },
+  quetiapine: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 0.9, w: 0.20 },
+      { cx:  0.00, depth: 0.0, w: 0.25 },
+      { cx:  0.68, depth: 1.2, w: 0.20 },
+    ],
+    damping: 0.94, gravity: 8, barrierH: 1.6, jitter: 0,
+    label: "Kwetiapina", icon: "🧠", color: "#2980b9",
+    halfLife: 16, onset: 2.5,
+    desc: "Splyca oba dolki (mania i depresja) + sedacja + bariera. Dwukierunkowa, ale ciezka metabolicznie.",
+    detail: "Kwetiapina ma szeroki profil receptorowy — blokuje D2, 5-HT2A, H1 (sedacja) i alfa-1. Jedyny atypowy antypsychotyk z udowodniona skutecznoscia zarowno w manii JAK i depresji bipolarnej (badania BOLDER). Spytca studnie manii silniej, depresji slabiej. Niska grawitacja w wizualizacji oddaje sedacje — kulka porusza sie wolno, ale moze uciec z obu patologicznych studzien. Glowna wada: znaczny przyrost masy ciala i ryzyko metaboliczne.",
+    refs: [
+      { label: "Calabrese et al. 2005 — kwetiapina w depresji bipolarnej BOLDER I (AmJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/16135615/" },
+      { label: "Thase et al. 2006 — kwetiapina w depresji bipolarnej BOLDER II", url: "https://pubmed.ncbi.nlm.nih.gov/17196055/" },
+      { label: "Bowden et al. 2005 — kwetiapina w manii (JClinPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/15889941/" },
+    ],
+  },
+  olanzapine: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 0.5, w: 0.20 },
+      { cx:  0.00, depth: 0.0, w: 0.25 },
+      { cx:  0.68, depth: 2.2, w: 0.20 },
+    ],
+    damping: 0.93, gravity: 6, barrierH: 2.0, jitter: 0,
+    label: "Olanzapina", icon: "🧠", color: "#5dade2",
+    halfLife: 20, onset: 2,
+    desc: "Najsilniejsze splycenie dolka manii — kulka wypycha sie nawet z glebokiej manii. Silna sedacja. Depresji nie dotyka.",
+    detail: "Olanzapina to atypowy antypsychotyk o silnym powinowactwie do receptorow D2, 5-HT2A, H1 i muskarynowych. Uznawana za jeden z najskuteczniejszych lekow w ostrej manii. Agresywnie redukuje glebokosci basenu maniakalnego — nawet przy poczatkowej pozycji w manii kulka stopniowo wypywa ku eutymii (silna sedacja spowalnia ruch). W polaczeniu z fluoksetyna wykazuje skutecznosc w depresji bipolarnej. Glowna wada: najwyzsze ryzyko metaboliczne.",
     refs: [
       { label: "Tohen et al. 1999 — olanzapina w ostrej manii (AmJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/10025435/" },
-      { label: "Calabrese et al. 2005 — kwetiapina w depresji bipolarnej (AmJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/16135615/" },
+      { label: "Tohen et al. 2003 — olanzapina + fluoksetyna w depresji bipolarnej", url: "https://pubmed.ncbi.nlm.nih.gov/14702556/" },
+    ],
+  },
+  risperidone: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 0.75, w: 0.20 },
+      { cx:  0.00, depth: 0.0,  w: 0.25 },
+      { cx:  0.68, depth: 2.2,  w: 0.20 },
+    ],
+    damping: 0.975, gravity: 11, barrierH: 1.8, jitter: 0,
+    label: "Risperidon", icon: "🧠", color: "#85c1e9",
+    halfLife: 18, onset: 2.5,
+    desc: "Wyrazne splycenie manii + bariera. Szybki efekt, ale ryzyko sztywnosci i hiperprolaktynemii.",
+    detail: "Risperidon to silny antagonista D2 i 5-HT2A. Skutecznie redukuje glebokosci basenu maniakalnego i tworzy bariere profilaktyczna. W ostrej manii kulka stopniowo wyplywa ku eutymii. Bardziej 'typowy' profil niz aripiprazol — silniejsza blokada D2 oznacza lepszy efekt antymaniakalny, ale wieksze ryzyko objawow pozapiramidowych (sztywnosc, akatyzja) i hiperprolaktynemii. Dostepny w formie dlugodzialajacych iniekcji.",
+    refs: [
+      { label: "Hirschfeld et al. 2004 — risperidon w ostrej manii (JClinPsychopharmacol)", url: "https://pubmed.ncbi.nlm.nih.gov/15118480/" },
+      { label: "Yatham et al. 2003 — risperidon jako augmentacja stabilizatorow", url: "https://pubmed.ncbi.nlm.nih.gov/12587190/" },
     ],
   },
   clonazepam: {
@@ -157,6 +210,60 @@ const DRUGS = {
     refs: [
       { label: "Zarate et al. 2006 — ketamina w depresji opornej (ArchGenPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/16894061/" },
       { label: "Diazgranados et al. 2010 — ketamina w depresji bipolarnej", url: "https://pubmed.ncbi.nlm.nih.gov/20679587/" },
+    ],
+  },
+  mdma: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 1.5, w: 0.22 },
+      { cx:  0.00, depth: 0.0, w: 0.25 },
+      { cx:  0.68, depth: 1.3, w: 0.22 },
+    ],
+    damping: 0.985, gravity: 14, barrierH: 0, jitter: 0.60,
+    label: "MDMA", icon: "💊", color: "#e91e8c",
+    halfLife: 3, onset: 0.5,
+    desc: "Splyca oba dolki (masywne 5-HT/DA) + silny chaos. Chwilowa ulga i otwartosc, ale nieprzewidywalny tor kulki — ryzyko manii.",
+    detail: "MDMA powoduje masywne uwolnienie serotoniny, dopaminy i norepinefryny. W badaniach nad PTSD wykazuje obiecujace efekty terapeutyczne (Mitchell et al. 2021, Nature Medicine). W kontekscie bipolarnosci jest substancja wysokiego ryzyka — masywna stymulacja dopaminergiczna moze wyzwolic epizod maniakalny, a faza 'po' czesto zwieksza depresje (crash serotonergiczny). Jitter w wizualizacji oddaje nieprzewidywalnosc trajektorii: kulka moze trafic do eutymii, ale rownie dobrze w manie. Badania nad terapeutycznym MDMA wykluczaja zazwyczaj osoby z ChAD.",
+    refs: [
+      { label: "Mitchell et al. 2021 — MDMA-assisted therapy for PTSD (Nature Medicine)", url: "https://pubmed.ncbi.nlm.nih.gov/34031603/" },
+      { label: "Reiff et al. 2020 — psychedelics and mood disorders: review (JClinPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/32100483/" },
+      { label: "Strajhar et al. 2016 — MDMA pharmacology (JPharmacol)", url: "https://pubmed.ncbi.nlm.nih.gov/27107462/" },
+    ],
+  },
+  ayahuasca: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 1.9, w: 0.20 },
+      { cx:  0.00, depth: 0.0, w: 0.25 },
+      { cx:  0.68, depth: 0.35, w: 0.24 },
+    ],
+    damping: 0.985, gravity: 14, barrierH: 0, jitter: 0.28,
+    label: "Ajauaska", icon: "🌿", color: "#8d6e63",
+    halfLife: 2.5, onset: 0.5,
+    desc: "Silne i szybkie splycenie dolka depresji (agonizm 5-HT2A + MAOI). Pewien chaos, ale mniejszy niz MDMA. Manii prawie nie dotyka.",
+    detail: "Ajauaska to mieszanina DMT (agonista 5-HT2A) i alkaloidow beta-karbolinowych (harmalina/harmina — inhibitory MAO). Badania kliniczne wykazuja szybki efekt antydepresyjny — Palhano-Fontes et al. 2019 (RCT, Psychological Medicine) pokazal redukcje depresji w ciagu 7 dni u pacjentow opornych na leczenie. Mechanizm: masywna stymulacja 5-HT2A nasila neuroplasticite i zmienia wzorce sieci domyslnej (DMN). W bipolarze: ryzyko wyzwolenia hipomanii/manii — inhibitory MAO wzmacniaja dopamine. Brak RCT swoiście dla ChAD. Jitter mniejszy niz MDMA — psychedeliki dzialaja bardziej 'ukierunkowanie'.",
+    refs: [
+      { label: "Palhano-Fontes et al. 2019 — RCT ajauaski w depresji opornej (PsycholMed)", url: "https://pubmed.ncbi.nlm.nih.gov/29903051/" },
+      { label: "Osório et al. 2015 — ajauaska w depresji: otwarte badanie (RevBrasPsiquiatr)", url: "https://pubmed.ncbi.nlm.nih.gov/26154898/" },
+      { label: "Dos Santos et al. 2016 — ajauaska: profil bezpieczenstwa i interakcje (Medicine)", url: "https://pubmed.ncbi.nlm.nih.gov/27741115/" },
+    ],
+  },
+  ect: {
+    wallStr: 1.5,
+    wells: [
+      { cx: -0.68, depth: 0.25, w: 0.20 },
+      { cx:  0.00, depth: 0.65, w: 0.35 },
+      { cx:  0.68, depth: 0.25, w: 0.20 },
+    ],
+    damping: 0.985, gravity: 19, barrierH: 0, jitter: 0,
+    label: "EW", icon: "⚡", color: "#ffe600",
+    halfLife: 9, onset: 0.2,
+    desc: "Reset krajobrazu — mania i depresja prawie plaskie, eutymia staje sie prawdziwym atraktorem. Najsilniejsza interwencja w psychiatrii.",
+    detail: "Elektrowstrzasy (EW) to jedna z najskuteczniejszych interwencji w psychiatrii — wskazania obejmuja ciazka depresje bipolarna, ostry stan maniakalny i depresje z ryzykiem samobojstwa. Mechanizm nie jest w pelni poznany: masywna synchroniczna aktywacja neuronalna normalizuje patologicznie utrwalone wzorce sieci. W wizualizacji: dramatyczna zmiana topologii krajobrazu — studnie manii i depresji spieszczaja sie niemal do zera, a eutymia (cx=0) staje sie prawdziwym atraktorem (kulka sama tam dazy). Efekt utrzymuje sie tygodniami po serii zabiegow. Glowne ograniczenia kliniczne: przejsciowe zaburzenia pamieci i napietnowosc spoleczna procedury.",
+    refs: [
+      { label: "UK ECT Review Group 2003 — skutecznosc EW w depresji (Lancet)", url: "https://pubmed.ncbi.nlm.nih.gov/14643118/" },
+      { label: "Dierckx et al. 2012 — EW w depresji bipolarnej: meta-analiza (BrJPsychiatry)", url: "https://pubmed.ncbi.nlm.nih.gov/22450444/" },
+      { label: "Versiani et al. 2011 — EW w manii: systematyczny przeglad (RevBrasPsiquiatr)", url: "https://pubmed.ncbi.nlm.nih.gov/22189930/" },
     ],
   },
 };
@@ -678,8 +785,8 @@ export default function App() {
   // ── Render ──────────────────────────────────────────────────────────────────
 
   const pill = (active, color) => ({
-    padding: "7px 12px", borderRadius: 7, cursor: "pointer",
-    fontWeight: 600, fontSize: 11, transition: "all 0.25s", lineHeight: 1,
+    padding: "8px 14px", borderRadius: 8, cursor: "pointer",
+    fontWeight: 600, fontSize: 13, transition: "all 0.25s", lineHeight: 1,
     border: `2px solid ${active ? color : "rgba(255,255,255,0.14)"}`,
     background: active ? `${color}22` : "transparent",
     color: active ? color : "rgba(255,255,255,0.42)",
@@ -687,8 +794,8 @@ export default function App() {
   });
 
   const actionBtn = (color) => ({
-    padding: "7px 14px", borderRadius: 7, cursor: "pointer",
-    fontWeight: 600, fontSize: 11, lineHeight: 1, transition: "all 0.25s",
+    padding: "8px 16px", borderRadius: 8, cursor: "pointer",
+    fontWeight: 600, fontSize: 13, lineHeight: 1, transition: "all 0.25s",
     border: `2px solid ${color}55`,
     background: "transparent",
     color: `${color}bb`,
@@ -706,164 +813,228 @@ export default function App() {
     <div style={{
       background: "#0d0d1b", minHeight: "100vh",
       display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center",
-      gap: 11, padding: 14,
+      alignItems: "center", justifyContent: "flex-start",
+      gap: 16, padding: "20px 10px",
       fontFamily: "system-ui, -apple-system, sans-serif",
+      color: "#dde",
     }}>
+      <style>{`
+        @media (max-width: 600px) {
+          h2 { fontSize: 18px !important; }
+          .canvas-container { gap: 10px !important; }
+          .pill-button { padding: 6px 10px !important; font-size: 11px !important; }
+          .section-label { font-size: 9px !important; min-width: auto !important; margin-bottom: 4px; }
+          .drug-section { flex-direction: column !important; align-items: center !important; gap: 4px !important; }
+          .bars-container { width: 100%; justify-content: center; }
+        }
+        @media (max-width: 1100px) {
+          .main-content { flex-direction: column !important; align-items: center !important; }
+          .description-panel { max-width: 800px !important; width: 100% !important; max-height: none !important; }
+        }
+        canvas {
+          max-width: 100%;
+          height: auto !important;
+          background: #0d0d1b;
+        }
+      `}</style>
 
-      <h2 style={{ color: "#dde", margin: 0, fontSize: 15, fontWeight: 600, letterSpacing: 0.4 }}>
+      <h2 style={{ color: "#dde", margin: 0, fontSize: 20, fontWeight: 600, letterSpacing: 0.4, textAlign: "center" }}>
         Krajobraz energetyczny — atraktory w chorobie dwubiegunowej
       </h2>
-      <p style={{ color: "rgba(255,255,255,0.30)", margin: 0, fontSize: 10.5, textAlign: "center", maxWidth: 560 }}>
+      <p style={{ color: "rgba(255,255,255,0.35)", margin: 0, fontSize: 13, textAlign: "center", maxWidth: 700 }}>
         Klikaj leki aby je wlaczac/wylaczac. Mozesz laczyc wiele naraz. Obserwuj onset i zanik.
       </p>
 
       {/* ── Sekcje lekow ── */}
-      {[
-        { title: "Stabilizator", keys: ["lithium"] },
-        { title: "Leki na bipolar", keys: ["valproate", "lamotrigine", "antipsychotics"] },
-        { title: "Substancje", keys: ["ketamine", "clonazepam", "thc"] },
-      ].map((sec) => (
-        <div key={sec.title} style={{
-          display: "flex", alignItems: "center", gap: 6,
-          flexWrap: "wrap", justifyContent: "center",
-        }}>
-          <span style={{
-            color: "rgba(255,255,255,0.22)", fontSize: 9, fontWeight: 600,
-            textTransform: "uppercase", letterSpacing: 1, minWidth: 50,
-          }}>{sec.title}</span>
-          {sec.keys.map(k => {
-            const d = DRUGS[k];
-            const state = drugsRef.current[k];
-            const isOn = state && state.on;
-            return (
-              <button key={k} onClick={() => toggleDrug(k)} style={pill(isOn, d.color)}>
-                {d.icon} {d.label}
-              </button>
-            );
-          })}
-          {sec.keys.map(k => {
-            const d = DRUGS[k];
-            const state = drugsRef.current[k];
-            const conc = state ? state.conc : 0;
-            if (conc < 0.005 && !(state && state.on)) return null;
-            return (
-              <div key={k + "_bar"} style={{
-                display: "flex", alignItems: "center", gap: 4,
-                padding: "3px 8px", borderRadius: 5,
-                background: "rgba(255,255,255,0.04)",
-                fontSize: 10, color: d.color, minWidth: 90,
-              }}>
-                <span style={{ opacity: 0.7, fontSize: 9 }}>{d.icon}</span>
-                <div style={{
-                  flex: 1, height: 4, borderRadius: 2,
-                  background: "rgba(255,255,255,0.08)", overflow: "hidden",
-                }}>
-                  <div style={{
-                    width: `${conc * 100}%`, height: "100%",
-                    borderRadius: 2, background: d.color,
-                    transition: "width 0.1s linear",
-                  }} />
-                </div>
-                <span style={{ fontSize: 9, opacity: 0.6, minWidth: 28, textAlign: "right" }}>
-                  {Math.round(conc * 100)}%
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      ))}
-
-      {/* Przycisk akcji */}
-      <div style={{ display: "flex", gap: 7 }}>
-        <button onClick={disturb} style={actionBtn("#ffbe3c")}>
-          ⚡ Stresor
-        </button>
-      </div>
-
-      {/* Plotno */}
-      <canvas ref={canvasRef} width={W} height={H}
-        style={{
-          borderRadius: 12, border: "1px solid rgba(255,255,255,0.06)",
-          cursor: "grab", maxWidth: "100%", touchAction: "none",
-        }}
-        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
-        onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp}
-      />
-
-      {/* Opis aktywnych lekow */}
       <div style={{
-        maxWidth: 560, padding: "11px 16px",
-        background: "rgba(255,255,255,0.03)",
-        borderRadius: 10, border: "1px solid rgba(255,255,255,0.06)",
+        display: "flex", flexDirection: "column", gap: 12, alignItems: "center",
+        width: "100%", maxWidth: 1000,
       }}>
-        {noActive ? (
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, margin: 0, lineHeight: 1.7 }}>
-            ⚡ Bez leku: Eutymia to szczyt — kazde zaburzenie straca kulke w manie lub depresje.
-          </p>
-        ) : (
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {activeDescs.map(([key, state]) => {
-              const d = DRUGS[key];
-              const pct = Math.round(state.conc * 100);
-              const phaseLabel = state.phase === "onset"
-                ? " (narasta)"
-                : state.on ? " (zanika)" : " (odstawiony)";
-              return (
-                <div key={key} style={{
-                  borderLeft: `2px solid ${d.color}55`,
-                  paddingLeft: 10,
-                  display: "flex", flexDirection: "column", gap: 4,
-                }}>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                    <span style={{ color: d.color, fontWeight: 700, fontSize: 12 }}>
-                      {d.icon} {d.label}
-                    </span>
-                    <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 10 }}>
-                      {pct}%{phaseLabel}
+        {[
+          { title: "Stabilizatory nastroju", keys: ["lithium", "valproate", "lamotrigine"] },
+          { title: "Antypsychotyki", keys: ["aripiprazole", "quetiapine", "olanzapine", "risperidone"] },
+          { title: "Substancje", keys: ["ketamine", "mdma", "ayahuasca", "clonazepam", "thc"] },
+          { title: "Inne", keys: ["ect"] },
+        ].map((sec) => (
+          <div key={sec.title} className="drug-section" style={{
+            display: "flex", alignItems: "center", gap: 10,
+            flexWrap: "wrap", justifyContent: "center",
+            width: "100%",
+          }}>
+            <span className="section-label" style={{
+              color: "rgba(255,255,255,0.25)", fontSize: 10, fontWeight: 700,
+              textTransform: "uppercase", letterSpacing: 1.2, minWidth: 100,
+              textAlign: "right",
+            }}>{sec.title}</span>
+
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center" }}>
+              {sec.keys.map(k => {
+                const d = DRUGS[k];
+                const state = drugsRef.current[k];
+                const isOn = state && state.on;
+                return (
+                  <button key={k} className="pill-button" onClick={() => toggleDrug(k)} style={pill(isOn, d.color)}>
+                    {d.icon} {d.label}
+                  </button>
+                );
+              })}
+              {sec.actions && sec.actions.map((act, i) => (
+                <button key={i} className="pill-button" onClick={act.onClick} style={actionBtn(act.color)}>
+                  {act.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="bars-container" style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center" }}>
+              {sec.keys.map(k => {
+                const d = DRUGS[k];
+                const state = drugsRef.current[k];
+                const conc = state ? state.conc : 0;
+                if (conc < 0.005 && !(state && state.on)) return null;
+                return (
+                  <div key={k + "_bar"} style={{
+                    display: "flex", alignItems: "center", gap: 6,
+                    padding: "4px 8px", borderRadius: 6,
+                    background: "rgba(255,255,255,0.04)",
+                    fontSize: 11, color: d.color, minWidth: 80,
+                  }}>
+                    <span style={{ opacity: 0.7 }}>{d.icon}</span>
+                    <div style={{
+                      width: 40, height: 4, borderRadius: 2,
+                      background: "rgba(255,255,255,0.08)", overflow: "hidden",
+                    }}>
+                      <div style={{
+                        width: `${conc * 100}%`, height: "100%",
+                        background: d.color,
+                        transition: "width 0.1s linear",
+                      }} />
+                    </div>
+                    <span style={{ fontSize: 10, opacity: 0.6, width: 24, textAlign: "right" }}>
+                      {Math.round(conc * 100)}%
                     </span>
                   </div>
-                  <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 11.5, margin: 0, lineHeight: 1.6 }}>
-                    {d.desc}
-                  </p>
-                  {d.detail && (
-                    <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 11, margin: 0, lineHeight: 1.6 }}>
-                      {d.detail}
-                    </p>
-                  )}
-                  {d.sections && d.sections.map((sec, si) => (
-                    <div key={si} style={{ marginTop: si === 0 ? 2 : 0 }}>
-                      <p style={{ color: d.color, opacity: 0.75, fontSize: 10, margin: "0 0 3px 0", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }}>
-                        {sec.heading}
-                      </p>
-                      {sec.items.map((item, ii) => (
-                        <p key={ii} style={{ color: "rgba(255,255,255,0.45)", fontSize: 10.5, margin: "1px 0", lineHeight: 1.5, paddingLeft: 10 }}>
-                          <span style={{ color: d.color, opacity: 0.5, marginRight: 4 }}>&#8227;</span>{item}
-                        </p>
-                      ))}
-                    </div>
-                  ))}
-                  {d.refs && d.refs.length > 0 && (
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "3px 10px", marginTop: 2 }}>
-                      {d.refs.map((ref, i) => (
-                        <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer"
-                          style={{
-                            color: d.color, opacity: 0.7, fontSize: 10,
-                            textDecoration: "none", borderBottom: `1px dotted ${d.color}55`,
-                          }}
-                          onMouseOver={e => e.target.style.opacity = 1}
-                          onMouseOut={e => e.target.style.opacity = 0.7}
-                        >
-                          📄 {ref.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        )}
+        ))}
+      </div>
+
+      {/* ── Glowna sekcja: wykres + opis obok siebie ── */}
+      <div className="main-content" style={{
+        display: "flex", gap: 16, alignItems: "flex-start",
+        maxWidth: 1240, width: "100%", justifyContent: "center",
+        flexWrap: "wrap",
+      }}>
+        {/* Plotno */}
+        <div className="canvas-container" style={{ position: "relative", flexShrink: 1, minWidth: 0 }}>
+          <canvas ref={canvasRef} width={W} height={H}
+            style={{
+              borderRadius: 14, border: "1px solid rgba(255,255,255,0.06)",
+              cursor: "grab", touchAction: "none",
+              display: "block",
+            }}
+            onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
+            onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp}
+          />
+          
+          {/* Przycisk Stresor nakladany na wykres */}
+          <button 
+            onClick={(e) => { e.stopPropagation(); disturb(); }}
+            style={{
+              ...actionBtn("#ffbe3c"),
+              position: "absolute",
+              bottom: 15,
+              left: 15,
+              background: "rgba(255,190,60,0.1)",
+              backdropFilter: "blur(4px)",
+              fontSize: 12,
+              padding: "6px 12px",
+              zIndex: 10,
+            }}
+            onMouseOver={e => e.target.style.background = "rgba(255,190,60,0.2)"}
+            onMouseOut={e => e.target.style.background = "rgba(255,190,60,0.1)"}
+          >
+            ⚡ Stresor
+          </button>
+        </div>
+
+        {/* Opis aktywnych lekow — panel po prawej */}
+        <div className="description-panel" style={{
+          flex: "1 1 340px", maxWidth: 440, minWidth: 280,
+          padding: "16px 20px",
+          background: "rgba(255,255,255,0.03)",
+          borderRadius: 12, border: "1px solid rgba(255,255,255,0.06)",
+          maxHeight: H, overflowY: "auto",
+        }}>
+          {noActive ? (
+            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 14, margin: 0, lineHeight: 1.7 }}>
+              ⚡ Bez leku: Eutymia to szczyt — kazde zaburzenie straca kulke w manie lub depresje.
+            </p>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {activeDescs.map(([key, state]) => {
+                const d = DRUGS[key];
+                const pct = Math.round(state.conc * 100);
+                const phaseLabel = state.phase === "onset"
+                  ? " (narasta)"
+                  : state.on ? " (zanika)" : " (odstawiony)";
+                return (
+                  <div key={key} style={{
+                    borderLeft: `3px solid ${d.color}55`,
+                    paddingLeft: 12,
+                    display: "flex", flexDirection: "column", gap: 5,
+                  }}>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                      <span style={{ color: d.color, fontWeight: 700, fontSize: 15 }}>
+                        {d.icon} {d.label}
+                      </span>
+                      <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 12 }}>
+                        {pct}%{phaseLabel}
+                      </span>
+                    </div>
+                    <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 13.5, margin: 0, lineHeight: 1.6 }}>
+                      {d.desc}
+                    </p>
+                    {d.detail && (
+                      <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12.5, margin: 0, lineHeight: 1.6 }}>
+                        {d.detail}
+                      </p>
+                    )}
+                    {d.sections && d.sections.map((sec, si) => (
+                      <div key={si} style={{ marginTop: si === 0 ? 4 : 0 }}>
+                        <p style={{ color: d.color, opacity: 0.75, fontSize: 12, margin: "0 0 4px 0", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }}>
+                          {sec.heading}
+                        </p>
+                        {sec.items.map((item, ii) => (
+                          <p key={ii} style={{ color: "rgba(255,255,255,0.45)", fontSize: 12.5, margin: "2px 0", lineHeight: 1.55, paddingLeft: 12 }}>
+                            <span style={{ color: d.color, opacity: 0.5, marginRight: 5 }}>&#8227;</span>{item}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                    {d.refs && d.refs.length > 0 && (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 12px", marginTop: 4 }}>
+                        {d.refs.map((ref, i) => (
+                          <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer"
+                            style={{
+                              color: d.color, opacity: 0.7, fontSize: 11.5,
+                              textDecoration: "none", borderBottom: `1px dotted ${d.color}55`,
+                            }}
+                            onMouseOver={e => e.target.style.opacity = 1}
+                            onMouseOut={e => e.target.style.opacity = 0.7}
+                          >
+                            📄 {ref.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
 
     </div>
