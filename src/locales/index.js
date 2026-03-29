@@ -123,12 +123,6 @@ export const translations = {
         detail: "Masywne uwolnienie monoamin. Ryzykowne w ChAD — moze wywolac manie lub poglebic depresje (crash).",
         refs: ["Mitchell et al. 2021 — MDMA in PTSD (Nature)", "Reiff et al. 2020 — psychedelics review"]
       },
-      ayahuasca: {
-        label: "Ajauaska",
-        desc: "Silne i szybkie splycenie dolka depresji. Pewien chaos. Manii prawie nie dotyka.",
-        detail: "Agonizm 5-HT2A. Szybka poprawa nastroju, ale ryzyko indukcji stanow maniakalnych.",
-        refs: ["Palhano-Fontes et al. 2019 — RCT ajauaski", "Osório et al. 2015 — badanie otwarte"]
-      },
       ect: {
         label: "EW",
         desc: "Reset krajobrazu — mania i depresja prawie plaskie, eutymia staje sie prawdziwym atraktorem.",
@@ -267,12 +261,6 @@ export const translations = {
         detail: "Massive monoamine release. High risk in bipolar — may trigger mania or worsen depression (crash).",
         refs: ["Mitchell et al. 2021 — MDMA in PTSD (Nature)", "Reiff et al. 2020 — psychedelics review"]
       },
-      ayahuasca: {
-        label: "Ayahuasca",
-        desc: "Strong and rapid shallowing of the depressive well. Some chaos. Does not touch mania.",
-        detail: "5-HT2A agonism. Rapid mood improvement but risk of inducing manic states.",
-        refs: ["Palhano-Fontes et al. 2019 — ayahuasca RCT", "Osório et al. 2015 — open label study"]
-      },
       ect: {
         label: "ECT",
         desc: "Landscape reset — mania and depression become almost flat, euthymia becomes a true attractor.",
@@ -410,12 +398,6 @@ export const translations = {
         desc: "Flacht beide Mulden ab (massive 5-HT/DA-Ausschüttung) + hohes Chaos. Manierisiko.",
         detail: "Massive Monoamin-Freisetzung. Hohes Risiko bei Bipolarität — kann Manie auslösen oder Depression verschlimmern.",
         refs: ["Mitchell et al. 2021 — MDMA in PTSD (Nature)", "Reiff et al. 2020 — Psychedelika Review"]
-      },
-      ayahuasca: {
-        label: "Ayahuasca",
-        desc: "Starke und schnelle Abflachung der depressiven Mulde. Gewisses Chaos. Berührt Manie nie.",
-        detail: "5-HT2A-Agonismus. Schnelle Stimmungsverbesserung, aber Risiko für manische Zustände.",
-        refs: ["Palhano-Fontes et al. 2019 — Ayahuasca RCT", "Osório et al. 2015 — offene Studie"]
       },
       ect: {
         label: "EKT",

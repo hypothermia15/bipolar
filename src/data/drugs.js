@@ -170,21 +170,6 @@ export const DRUGS = {
       { url: "https://pubmed.ncbi.nlm.nih.gov/32100483/" },
     ],
   },
-  ayahuasca: {
-    wallStr: 1.5,
-    wells: [
-      { cx: -0.68, depth: 1.9, w: 0.20 },
-      { cx:  0.00, depth: 0.0, w: 0.25 },
-      { cx:  0.68, depth: 0.35, w: 0.24 },
-    ],
-    damping: 0.985, gravity: 14, barrierH: 0, jitter: 0.28,
-    icon: "🌿", color: "#8d6e63",
-    halfLife: 2.5, onset: 0.5,
-    refs: [
-      { url: "https://pubmed.ncbi.nlm.nih.gov/29903051/" },
-      { url: "https://pubmed.ncbi.nlm.nih.gov/26154898/" },
-    ],
-  },
   ect: {
     wallStr: 1.5,
     wells: [

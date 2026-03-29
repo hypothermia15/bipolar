@@ -18,9 +18,9 @@ export function useSimulation() {
   const toggleDrug = useCallback((key) => {
     const cur = drugsRef.current[key];
     if (cur && cur.on) {
-      drugsRef.current[key] = { on: false, conc: 0, phase: "decay" };
+      drugsRef.current[key] = { on: false, conc: 0, phase: "decay", kicked: false };
     } else {
-      drugsRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset" };
+      drugsRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset", kicked: false };
     }
     setActiveDrugs({ ...drugsRef.current });
   }, []);
@@ -71,6 +71,10 @@ export function useSimulation() {
       if (d.phase === "onset") {
         const rate = dt / cfg.onset;
         d.conc = Math.min(1, d.conc + rate);
+        if (cfg.kick && !d.kicked && d.conc >= 0.5) {
+          s.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (cfg.kick * (0.7 + Math.random() * 0.6));
+          d.kicked = true;
+        }
         if (d.conc >= 0.999) { d.conc = 1; d.phase = "decay"; }
         changed = true;
       } else if (d.phase === "decay") {
