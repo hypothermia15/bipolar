@@ -54,10 +54,10 @@ export default function InfoPanel({ activeDrugs, lang }) {
                   </div>
                 ))}
 
-                {d.refs && d.refs.length > 0 && (
+                {loc.refs && loc.refs.length > 0 && (
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 12px", marginTop: 4 }}>
-                    {d.refs.map((ref, i) => (
-                      <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer"
+                    {loc.refs.map((refLabel, i) => (
+                      <a key={i} href={d.refs[i].url} target="_blank" rel="noopener noreferrer"
                         style={{
                           color: d.color, opacity: 0.7, fontSize: 11.5,
                           textDecoration: "none", borderBottom: `1px dotted ${d.color}55`,
@@ -66,7 +66,7 @@ export default function InfoPanel({ activeDrugs, lang }) {
                         onMouseOver={e => e.currentTarget.style.opacity = 1}
                         onMouseOut={e => e.currentTarget.style.opacity = 0.7}
                       >
-                        📄 {ref.label}
+                        📄 {refLabel}
                       </a>
                     ))}
                   </div>
