@@ -90,6 +90,8 @@ export function useSimulation() {
       .filter(([, d]) => d.conc > 0.001)
       .map(([key, d]) => ({ key, conc: d.conc }));
 
+    sim.current.activeList = activeList;
+
     const target = activeList.length > 0 ? blendParams(activeList) : BASE;
     const t = Math.min(dt * 3.5, 1);
 
