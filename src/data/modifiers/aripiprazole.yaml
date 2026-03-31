@@ -20,9 +20,9 @@ gravity: 13
 barrierH: 1.4
 jitter: 0
 refs:
-  - cite: "Keck et al. 2003 — aripiprazole in acute mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/12668363/"
-  - cite: "Marcus et al. 2008 — augmentation in depression"
+  - cite: "A placebo-controlled, double-blind study of the efficacy and safety of aripiprazole in patients with acute bipolar mania."
+    url: "https://pubmed.ncbi.nlm.nih.gov/12944341/"
+  - cite: "The efficacy and safety of aripiprazole as adjunctive therapy in major depressive disorder: a second multicenter, randomized, double-blind, placebo-controlled study."
     url: "https://pubmed.ncbi.nlm.nih.gov/18344725/"
-  - cite: "Shapiro et al. 2003 — D2 partial agonism mechanism"
-    url: "https://pubmed.ncbi.nlm.nih.gov/12700681/"
+  - cite: "Aripiprazole, a novel atypical antipsychotic drug with a unique and robust pharmacology."
+    url: "https://pubmed.ncbi.nlm.nih.gov/12784105/"

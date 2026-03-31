@@ -20,7 +20,7 @@ gravity: 2.5
 barrierH: 0
 jitter: 0
 refs:
-  - cite: "Chouinard et al. 1983 — clonazepam in mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/6135288/"
-  - cite: "Ashton 2005 — benzodiazepine withdrawal"
-    url: "https://pubmed.ncbi.nlm.nih.gov/15963697/"
+  - cite: "Antimanic effect of clonazepam."
+    url: "https://pubmed.ncbi.nlm.nih.gov/6407539/"
+  - cite: "The diagnosis and management of benzodiazepine dependence."
+    url: "https://pubmed.ncbi.nlm.nih.gov/16639148/"

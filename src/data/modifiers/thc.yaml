@@ -20,7 +20,7 @@ gravity: 14
 barrierH: 0
 jitter: 0.45
 refs:
-  - cite: "Gibbs et al. 2015 — cannabis and mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/25534936/"
-  - cite: "Mammen et al. 2018 — cannabis and relapse"
-    url: "https://pubmed.ncbi.nlm.nih.gov/29995353/"
+  - cite: "Cannabis use and mania symptoms: a systematic review and meta-analysis."
+    url: "https://pubmed.ncbi.nlm.nih.gov/25285897/"
+  - cite: "Association of Cannabis With Long-Term Clinical Symptoms in Anxiety and Mood Disorders: A Systematic Review of Prospective Studies."
+    url: "https://pubmed.ncbi.nlm.nih.gov/29877641/"

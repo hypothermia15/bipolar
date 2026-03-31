@@ -20,7 +20,7 @@ gravity: 6
 barrierH: 2.0
 jitter: 0
 refs:
-  - cite: "Tohen et al. 1999 — olanzapine in acute mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/10025435/"
-  - cite: "Tohen et al. 2003 — olanzapine + fluoxetine"
-    url: "https://pubmed.ncbi.nlm.nih.gov/14702556/"
+  - cite: "Olanzapine versus placebo in the treatment of acute mania. Olanzapine HGEH Study Group."
+    url: "https://pubmed.ncbi.nlm.nih.gov/10327902/"
+  - cite: "Efficacy of olanzapine and olanzapine-fluoxetine combination in the treatment of bipolar I depression."
+    url: "https://pubmed.ncbi.nlm.nih.gov/14609883/"

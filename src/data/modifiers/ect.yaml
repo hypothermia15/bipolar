@@ -20,9 +20,9 @@ gravity: 19
 barrierH: 0
 jitter: 0
 refs:
-  - cite: "UK ECT Review Group 2003 (Lancet)"
-    url: "https://pubmed.ncbi.nlm.nih.gov/14643118/"
-  - cite: "Dierckx et al. 2012 — ECT meta-analysis"
-    url: "https://pubmed.ncbi.nlm.nih.gov/22450444/"
-  - cite: "Versiani et al. 2011 — ECT in mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/22189930/"
+  - cite: "Efficacy and safety of electroconvulsive therapy in depressive disorders: a systematic review and meta-analysis."
+    url: "https://pubmed.ncbi.nlm.nih.gov/12642045/"
+  - cite: "Efficacy of electroconvulsive therapy in bipolar versus unipolar major depression: a meta-analysis."
+    url: "https://pubmed.ncbi.nlm.nih.gov/22420590/"
+  - cite: "Efficacy and safety of electroconvulsive therapy in the treatment of bipolar disorder: a systematic review."
+    url: "https://pubmed.ncbi.nlm.nih.gov/20562714/"

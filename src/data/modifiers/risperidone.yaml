@@ -20,7 +20,7 @@ gravity: 11
 barrierH: 1.8
 jitter: 0
 refs:
-  - cite: "Hirschfeld et al. 2004 — risperidone in mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/15118480/"
-  - cite: "Yatham et al. 2003 — risperidone as augmentation"
-    url: "https://pubmed.ncbi.nlm.nih.gov/12587190/"
+  - cite: "Rapid antimanic effect of risperidone monotherapy: a 3-week multicenter, double-blind, placebo-controlled trial."
+    url: "https://pubmed.ncbi.nlm.nih.gov/15169694/"
+  - cite: "Mood stabilisers plus risperidone or placebo in the treatment of acute mania. International, double-blind, randomised controlled trial."
+    url: "https://pubmed.ncbi.nlm.nih.gov/12562742/"

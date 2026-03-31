@@ -20,7 +20,7 @@ gravity: 8
 barrierH: 0
 jitter: 0.40
 refs:
-  - cite: "Boden & Fergusson 2011 — meta-analysis"
-    url: "https://pubmed.ncbi.nlm.nih.gov/21223274/"
-  - cite: "Salloum et al. 2005 — alcohol in bipolar"
-    url: "https://pubmed.ncbi.nlm.nih.gov/15800147/"
+  - cite: "Alcohol and depression."
+    url: "https://pubmed.ncbi.nlm.nih.gov/21382111/"
+  - cite: "Efficacy of valproate maintenance in patients with bipolar disorder and alcoholism: a double-blind placebo-controlled study."
+    url: "https://pubmed.ncbi.nlm.nih.gov/15630071/"

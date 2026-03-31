@@ -20,9 +20,9 @@ gravity: 8
 barrierH: 1.6
 jitter: 0
 refs:
-  - cite: "Calabrese et al. 2005 — BOLDER I study"
-    url: "https://pubmed.ncbi.nlm.nih.gov/16135615/"
-  - cite: "Thase et al. 2006 — BOLDER II study"
-    url: "https://pubmed.ncbi.nlm.nih.gov/17196055/"
-  - cite: "Bowden et al. 2005 — quetiapine in mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/15889941/"
+  - cite: "A randomized, double-blind, placebo-controlled trial of quetiapine in the treatment of bipolar I or II depression."
+    url: "https://pubmed.ncbi.nlm.nih.gov/15994719/"
+  - cite: "Efficacy of quetiapine monotherapy in bipolar I and II depression: a double-blind, placebo-controlled study (the BOLDER II study)."
+    url: "https://pubmed.ncbi.nlm.nih.gov/17110817/"
+  - cite: "A randomized, double-blind, placebo-controlled efficacy and safety study of quetiapine or lithium as monotherapy for mania in bipolar disorder."
+    url: "https://pubmed.ncbi.nlm.nih.gov/15669897/"

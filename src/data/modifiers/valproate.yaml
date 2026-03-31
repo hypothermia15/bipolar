@@ -20,7 +20,7 @@ gravity: 4
 barrierH: 0
 jitter: 0
 refs:
-  - cite: "Bowden et al. 1994 — valproate vs lithium in mania"
-    url: "https://pubmed.ncbi.nlm.nih.gov/8133987/"
-  - cite: "Macritchie et al. 2003 — Cochrane review"
-    url: "https://pubmed.ncbi.nlm.nih.gov/12535471/"
+  - cite: "Efficacy of divalproex vs lithium and placebo in the treatment of mania. The Depakote Mania Study Group."
+    url: "https://pubmed.ncbi.nlm.nih.gov/8120960/"
+  - cite: "Valproate for acute mood episodes in bipolar disorder."
+    url: "https://pubmed.ncbi.nlm.nih.gov/12535506/"
