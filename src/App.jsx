@@ -69,7 +69,7 @@ export default function App() {
           .content-area { padding: 12px; }
         }
 
-        canvas { max-width: 100%; height: auto !important; background: #0d0d1b; }
+        canvas { width: 100%; height: auto !important; background: #0d0d1b; display: block; }
         
         .lang-picker {
           display: flex;

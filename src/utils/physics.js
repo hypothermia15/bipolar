@@ -1,8 +1,8 @@
 import { PAD, X_LO, X_HI, Y_LO, Y_HI, BARRIER, W, H } from "../constants";
 
-export function toX(lx) { return PAD + ((lx - X_LO) / (X_HI - X_LO)) * (W - 2 * PAD); }
+export function toX(lx) { return ((lx - X_LO) / (X_HI - X_LO)) * W; }
 export function toY(ly) { return PAD + ((Y_HI - ly) / (Y_HI - Y_LO)) * (H - 2 * PAD); }
-export function fromX(cx){ return X_LO + ((cx - PAD) / (W - 2 * PAD)) * (X_HI - X_LO); }
+export function fromX(cx){ return ((cx / W) * (X_HI - X_LO)) + X_LO; }
 export function lerp(a, b, t) { return a + (b - a) * t; }
 
 export function energy(x, p) {

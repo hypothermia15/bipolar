@@ -68,7 +68,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     ctx.lineWidth = 1;
     for (let yv = -2; yv <= 2.5; yv += 0.5) {
       const cy = toY(yv);
-      ctx.beginPath(); ctx.moveTo(PAD, cy); ctx.lineTo(W - PAD, cy); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, cy); ctx.lineTo(W, cy); ctx.stroke();
     }
 
     const N = 500;
