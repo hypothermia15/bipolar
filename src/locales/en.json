@@ -9,7 +9,12 @@
     "other": "Other"
   },
   "ui": {
-    "noActive": "⚡ No medication: Euthymia is a peak — any disturbance pushes the ball into mania or depression.",
+    "noActive": "⚡ No active medication",
+    "attractorTheory": {
+      "title": "Attractor Theory of Bipolar Disorder",
+      "description": "Bipolar disorder can be understood as a disease of the brain's 'energy landscape'. In this model, states like Mania and Depression are stable 'basins' (attractors) that the system naturally falls into. Without treatment, Euthymia (stable mood) is often an unstable peak — like a ball balanced on a hill — where any stressor can easily push the system into a pathological state. Medications like Lithium work by reshaping this landscape, making euthymia a stable attractor.",
+      "link": "Read more: 'A dynamic energy landscape of the genome organization in bipolar disorder' (Nature, 2022)"
+    },
     "phaseOnset": " (onset)",
     "phaseSteady": " (steady)",
     "phaseDecay": " (decay)",

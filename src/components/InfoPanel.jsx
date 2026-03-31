@@ -16,9 +16,36 @@ export default function InfoPanel({ activeModifiers }) {
       maxHeight: 600, overflowY: "auto",
     }}>
       {activeDescs.length === 0 ? (
-        <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 14, margin: 0, lineHeight: 1.7 }}>
-          {t("ui.noActive")}
-        </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 14, margin: 0, fontWeight: 700 }}>
+            {t("ui.noActive")}
+          </p>
+          <div style={{
+            padding: 12, borderRadius: 8, background: "rgba(255,255,255,0.02)",
+            border: "1px solid rgba(255,255,255,0.05)"
+          }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, margin: "0 0 8px 0", fontWeight: 700 }}>
+              {t("ui.attractorTheory.title")}
+            </p>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12.5, margin: 0, lineHeight: 1.6 }}>
+              {t("ui.attractorTheory.description")}
+            </p>
+            <a
+              href="https://www.nature.com/articles/s41398-022-02194-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block", marginTop: 12, color: "#8ab", fontSize: 11.5,
+                textDecoration: "none", borderBottom: "1px dotted rgba(136,170,187,0.5)",
+                transition: "opacity 0.2s"
+              }}
+              onMouseOver={e => e.currentTarget.style.opacity = 0.8}
+              onMouseOut={e => e.currentTarget.style.opacity = 1}
+            >
+              📄 {t("ui.attractorTheory.link")}
+            </a>
+          </div>
+        </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {activeDescs.map(([key, state]) => {

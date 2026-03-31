@@ -9,7 +9,12 @@
     "other": "Andere"
   },
   "ui": {
-    "noActive": "⚡ Ohne Medikation: Euthymie ist ein Gipfel — jede Störung stößt den Ball in Manie oder Depression.",
+    "noActive": "⚡ Keine aktive Medikation",
+    "attractorTheory": {
+      "title": "Attraktortheorie der bipolaren Störung",
+      "description": "Die bipolare Störung kann als eine Erkrankung der 'Energielandschaft' des Gehirns verstanden werden. In diesem Modell sind Zustände wie Manie und Depression stabile 'Becken' (Attraktoren), in die das System natürlicherweise fällt. Ohne Behandlung ist die Euthymie (stabile Stimmung) oft ein instabiler Gipfel — wie ein Ball, der auf einem Hügel balanciert — auf dem jeder Stressor das System leicht in einen pathologischen Zustand stoßen kann. Medikamente wie Lithium wirken durch die Umgestaltung dieser Landschaft und machen die Euthymie zu einem stabilen Attraktor.",
+      "link": "Mehr lesen: 'A dynamic energy landscape of the genome organization in bipolar disorder' (Nature, 2022)"
+    },
     "phaseOnset": " (Beginn)",
     "phaseSteady": " (stabil)",
     "phaseDecay": " (Abklingen)",
