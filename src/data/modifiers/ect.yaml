@@ -1,0 +1,28 @@
+category: other
+order: 1
+icon: "⚡"
+color: "#ffe600"
+halfLife: 9
+onset: 0.2
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.25
+    w: 0.20
+  - cx: 0.00
+    depth: 0.65
+    w: 0.35
+  - cx: 0.68
+    depth: 0.25
+    w: 0.20
+damping: 0.985
+gravity: 19
+barrierH: 0
+jitter: 0
+refs:
+  - cite: "UK ECT Review Group 2003 (Lancet)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/14643118/"
+  - cite: "Dierckx et al. 2012 — ECT meta-analysis"
+    url: "https://pubmed.ncbi.nlm.nih.gov/22450444/"
+  - cite: "Versiani et al. 2011 — ECT in mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/22189930/"

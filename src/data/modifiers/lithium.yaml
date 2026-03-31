@@ -1,0 +1,34 @@
+category: stabilizers
+order: 1
+icon: "⚛️"
+color: "#27ae60"
+halfLife: 25
+onset: 8
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.65
+    w: 0.20
+  - cx: 0.00
+    depth: 2.10
+    w: 0.30
+  - cx: 0.68
+    depth: 0.65
+    w: 0.20
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0
+refs:
+  - cite: "Geddes et al. 2004 — lithium meta-analysis in bipolar"
+    url: "https://pubmed.ncbi.nlm.nih.gov/15056503/"
+  - cite: "Cipriani et al. 2013 — lithium and suicide risk"
+    url: "https://pubmed.ncbi.nlm.nih.gov/23472047/"
+  - cite: "Malhi et al. 2013 — mechanism of lithium action"
+    url: "https://pubmed.ncbi.nlm.nih.gov/23362251/"
+  - cite: "Machado-Vieira 2018 — lithium, mitochondria and GSK-3"
+    url: "https://pubmed.ncbi.nlm.nih.gov/29307493/"
+  - cite: "Bauer et al. 2022 — dynamic models of bipolarity"
+    url: "https://www.nature.com/articles/s41398-022-02194-4"
+  - cite: "Mertens et al. 2015 — neuronal hyperexcitability (Nature)"
+    url: "https://www.nature.com/articles/nature15526"

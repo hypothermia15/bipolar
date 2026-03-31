@@ -1,0 +1,26 @@
+category: stabilizers
+order: 3
+icon: "🛡️"
+color: "#e67e22"
+halfLife: 30
+onset: 10
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.2
+    w: 0.20
+  - cx: 0.00
+    depth: 0.35
+    w: 0.25
+  - cx: 0.68
+    depth: 0.55
+    w: 0.22
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0
+refs:
+  - cite: "Calabrese et al. 1999 — lamotrigine in depression"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10084637/"
+  - cite: "Geddes et al. 2009 — lamotrigine meta-analysis"
+    url: "https://pubmed.ncbi.nlm.nih.gov/19169266/"

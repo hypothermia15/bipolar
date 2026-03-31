@@ -1,0 +1,26 @@
+category: substances
+order: 2
+icon: "🌿"
+color: "#f39c12"
+halfLife: 8
+onset: 1
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.6
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.4
+    w: 0.20
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0.45
+refs:
+  - cite: "Gibbs et al. 2015 — cannabis and mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/25534936/"
+  - cite: "Mammen et al. 2018 — cannabis and relapse"
+    url: "https://pubmed.ncbi.nlm.nih.gov/29995353/"

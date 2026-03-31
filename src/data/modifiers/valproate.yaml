@@ -1,0 +1,26 @@
+category: stabilizers
+order: 2
+icon: "🛡️"
+color: "#9b59b6"
+halfLife: 18
+onset: 4
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.2
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.88
+gravity: 4
+barrierH: 0
+jitter: 0
+refs:
+  - cite: "Bowden et al. 1994 — valproate vs lithium in mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/8133987/"
+  - cite: "Macritchie et al. 2003 — Cochrane review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/12535471/"

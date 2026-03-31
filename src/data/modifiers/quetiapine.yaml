@@ -1,0 +1,28 @@
+category: antipsychotics
+order: 2
+icon: "🧠"
+color: "#2980b9"
+halfLife: 16
+onset: 2.5
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.9
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 1.2
+    w: 0.20
+damping: 0.94
+gravity: 8
+barrierH: 1.6
+jitter: 0
+refs:
+  - cite: "Calabrese et al. 2005 — BOLDER I study"
+    url: "https://pubmed.ncbi.nlm.nih.gov/16135615/"
+  - cite: "Thase et al. 2006 — BOLDER II study"
+    url: "https://pubmed.ncbi.nlm.nih.gov/17196055/"
+  - cite: "Bowden et al. 2005 — quetiapine in mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/15889941/"

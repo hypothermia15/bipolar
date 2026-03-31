@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { W, H, PAD, BALL_R, X_LO, X_HI, BARRIER } from "../constants";
 import { toX, toY, fromX, energy, lerp, hexRgb } from "../utils/physics";
-import { DRUGS, BASE } from "../data/drugs";
-import { translations } from "../locales";
+import { MODIFIERS, BASE } from "../data/modifiers";
 
-function blendSingleDrug(key, conc) {
-  const d = DRUGS[key];
+function blendSingleModifier(key, conc) {
+  const d = MODIFIERS[key];
   const result = {
     wallStr: BASE.wallStr,
     wells: BASE.wells.map(w => ({ ...w })),
@@ -26,10 +26,10 @@ function blendSingleDrug(key, conc) {
   return result;
 }
 
-export default function SimulationCanvas({ sim, loop, disturb, lang }) {
+export default function SimulationCanvas({ sim, loop, disturb }) {
+  const { t } = useTranslation();
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
-  const t = translations[lang].ui;
 
   const onDown = (e) => {
     const s = sim.current;
@@ -104,30 +104,30 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
     ctx.lineWidth = activeList.length > 0 ? 1.5 : 2.5;
     ctx.stroke();
 
-    // ── 2. Per-drug colored fills ────────────────────────────────────
+    // ── 2. Per-modifier colored fills ────────────────────────────────────
     if (hasNonLithium || lithConc > 0.01) {
       for (const { key, conc } of activeList) {
         if (conc < 0.01 || key === "lithium") continue;
-        const d = DRUGS[key];
+        const d = MODIFIERS[key];
         const [dr, dg, db] = hexRgb(d.color);
 
-        const drugTarget = blendSingleDrug(key, conc);
-        const drugPts = [];
+        const modifierTarget = blendSingleModifier(key, conc);
+        const modifierPts = [];
         for (let i = 0; i <= N; i++) {
           const lx = X_LO + (X_HI - X_LO) * (i / N);
-          drugPts.push(toY(energy(lx, drugTarget)));
+          modifierPts.push(toY(energy(lx, modifierTarget)));
         }
 
-        // Fill where drug raises the landscape (fills a dip)
+        // Fill where modifier raises the landscape (fills a dip)
         ctx.beginPath();
         let drawing = false;
         for (let i = 0; i <= N; i++) {
           const baseY = basePts[i][1];
-          const drugY = drugPts[i];
+          const modifierY = modifierPts[i];
           const x = basePts[i][0];
-          if (drugY < baseY - 0.5) {
+          if (modifierY < baseY - 0.5) {
             if (!drawing) { ctx.moveTo(x, baseY); drawing = true; }
-            ctx.lineTo(x, drugY);
+            ctx.lineTo(x, modifierY);
           } else {
             if (drawing) { ctx.lineTo(x, basePts[i][1]); drawing = false; }
           }
@@ -143,11 +143,11 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
         ctx.beginPath();
         for (let i = 0; i <= N; i++) {
           const baseY = basePts[i][1];
-          const drugY = drugPts[i];
+          const modifierY = modifierPts[i];
           const x = basePts[i][0];
-          if (drugY < baseY - 0.5) {
-            if (i === 0 || !(drugPts[i-1] < basePts[i-1][1] - 0.5)) ctx.moveTo(x, drugY);
-            else ctx.lineTo(x, drugY);
+          if (modifierY < baseY - 0.5) {
+            if (i === 0 || !(modifierPts[i-1] < basePts[i-1][1] - 0.5)) ctx.moveTo(x, modifierY);
+            else ctx.lineTo(x, modifierY);
           }
         }
         ctx.strokeStyle = `rgba(${dr},${dg},${db},${fillAlpha + 0.15})`;
@@ -160,7 +160,7 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
 
     // ── 3. Lithium terrain ───────────────────────────────────────────
     if (lithConc > 0.01) {
-      const [lr, lg, lb] = hexRgb(DRUGS.lithium.color);
+      const [lr, lg, lb] = hexRgb(MODIFIERS.lithium.color);
       ctx.beginPath();
       ctx.moveTo(physPts[0][0], H);
       for (const [px, py] of physPts) ctx.lineTo(px, py);
@@ -182,7 +182,7 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
       ctx.stroke();
     }
 
-    // ── 4. Effective physics curve (when non-lithium drugs active) ───
+    // ── 4. Effective physics curve (when non-lithium modifiers active) ───
     if (hasNonLithium) {
       ctx.beginPath();
       for (let i = 0; i <= N; i++) {
@@ -211,14 +211,14 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
       ctx.fillStyle = `rgba(52,152,219,${alpha})`;
       ctx.font = "bold 8px system-ui, sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText(t.barrier, bx, bTop - 55);
+      ctx.fillText(t("ui.barrier"), bx, bTop - 55);
     }
 
     // ── 6. Zone labels ───────────────────────────────────────────────
     const zones = [
-      { lx: -0.68, label: t.mania,       zc: "#e74c3c" },
-      { lx:  0.00, label: t.euthymia,    zc: "#f1c40f" },
-      { lx:  0.68, label: t.depression,  zc: "#3498db" },
+      { lx: -0.68, label: t("ui.mania"),      zc: "#e74c3c" },
+      { lx:  0.00, label: t("ui.euthymia"),   zc: "#f1c40f" },
+      { lx:  0.68, label: t("ui.depression"), zc: "#3498db" },
     ];
     for (const z of zones) {
       const ly  = energy(z.lx, physP);
@@ -256,7 +256,7 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
       ctx.fillStyle = `rgba(26,188,156,${oilAlpha + 0.15})`;
       ctx.font = "bold 9px system-ui, sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("GABA 'OLEJ'", W / 2, PAD - 8);
+      ctx.fillText(t("ui.gabaOil"), W / 2, PAD - 8);
     }
 
     // ── 8. Valproate trail ───────────────────────────────────────────
@@ -304,7 +304,7 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
     ctx.fill();
 
     rafRef.current = requestAnimationFrame(draw);
-  }, [loop, sim, t]);
+  }, [loop, sim, t]); // t changes when language changes, triggering redraw
 
   useEffect(() => {
     rafRef.current = requestAnimationFrame(draw);
@@ -327,7 +327,7 @@ export default function SimulationCanvas({ sim, loop, disturb, lang }) {
           backdropFilter: "blur(4px)", transition: "all 0.2s"
         }}
       >
-        {t.stressor}
+        {t("ui.stressor")}
       </button>
     </div>
   );

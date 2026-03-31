@@ -1,0 +1,26 @@
+category: antipsychotics
+order: 4
+icon: "🧠"
+color: "#85c1e9"
+halfLife: 18
+onset: 2.5
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.75
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.975
+gravity: 11
+barrierH: 1.8
+jitter: 0
+refs:
+  - cite: "Hirschfeld et al. 2004 — risperidone in mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/15118480/"
+  - cite: "Yatham et al. 2003 — risperidone as augmentation"
+    url: "https://pubmed.ncbi.nlm.nih.gov/12587190/"

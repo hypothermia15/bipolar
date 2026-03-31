@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSimulation } from "./hooks/useSimulation";
 import SimulationCanvas from "./components/SimulationCanvas";
-import DrugControls from "./components/DrugControls";
+import ModifierControls from "./components/ModifierControls";
 import InfoPanel from "./components/InfoPanel";
-import { translations } from "./locales";
 
 export default function App() {
-  const [lang, setLang] = useState("pl");
-  const { sim, activeDrugs, toggleDrug, disturb, loop } = useSimulation();
-  const t = translations[lang];
+  const { t, i18n } = useTranslation();
+  const { sim, activeModifiers, toggleModifier, disturb, loop } = useSimulation();
 
   return (
     <div className="app-container" style={{
@@ -19,20 +18,20 @@ export default function App() {
       <style>{`
         * { box-sizing: border-box; }
         .app-container { flex-direction: row; gap: 0; }
-        .sidebar { 
+        .sidebar {
           flex: 0 0 15%;
           min-width: 180px;
           max-width: 240px;
-          border-right: 1px solid rgba(255,255,255,0.06); 
-          padding: 24px 16px; 
+          border-right: 1px solid rgba(255,255,255,0.06);
+          padding: 24px 16px;
           background: rgba(255,255,255,0.01);
           overflow-y: auto;
           max-height: 100vh;
         }
-        .content-area { 
-          flex: 1; 
-          padding: 24px; 
-          overflow-y: auto; 
+        .content-area {
+          flex: 1;
+          padding: 24px;
+          overflow-y: auto;
           overflow-x: hidden;
           position: relative;
           display: flex;
@@ -41,7 +40,7 @@ export default function App() {
         }
         .main-visuals {
           display: flex;
-          gap: 24px; /* Unified gap */
+          gap: 24px;
           align-items: flex-start;
           width: 100%;
           min-width: 0;
@@ -73,13 +72,12 @@ export default function App() {
         canvas { max-width: 100%; height: auto !important; background: #0d0d1b; }
       `}</style>
 
-      {/* Language Switcher */}
       <div style={{ position: "absolute", top: 15, right: 15, display: "flex", gap: 8, zIndex: 100 }}>
         {["pl", "en", "de"].map(l => (
-          <button key={l} onClick={() => setLang(l)} style={{
-            background: lang === l ? "rgba(255,255,255,0.15)" : "transparent",
+          <button key={l} onClick={() => i18n.changeLanguage(l)} style={{
+            background: i18n.language === l ? "rgba(255,255,255,0.15)" : "transparent",
             border: "1px solid rgba(255,255,255,0.1)", color: "#fff", padding: "4px 8px",
-            borderRadius: 4, cursor: "pointer", fontSize: 11, fontWeight: lang === l ? 700 : 400
+            borderRadius: 4, cursor: "pointer", fontSize: 11, fontWeight: i18n.language === l ? 700 : 400
           }}>
             {l.toUpperCase()}
           </button>
@@ -87,25 +85,25 @@ export default function App() {
       </div>
 
       <aside className="sidebar">
-        <DrugControls activeDrugs={activeDrugs} toggleDrug={toggleDrug} lang={lang} />
+        <ModifierControls activeModifiers={activeModifiers} toggleModifier={toggleModifier} />
       </aside>
 
       <main className="content-area">
         <header style={{ marginBottom: 30, textAlign: "center" }}>
           <h2 style={{ margin: "0 0 8px 0", fontSize: 22, fontWeight: 600, letterSpacing: 0.4 }}>
-            {t.title}
+            {t("title")}
           </h2>
           <p style={{ color: "rgba(255,255,255,0.35)", margin: 0, fontSize: 13, maxWidth: 800, marginLeft: "auto", marginRight: "auto" }}>
-            {t.subtitle}
+            {t("subtitle")}
           </p>
         </header>
 
         <div className="main-visuals">
           <div className="canvas-wrapper">
-            <SimulationCanvas sim={sim} loop={loop} disturb={disturb} lang={lang} />
+            <SimulationCanvas sim={sim} loop={loop} disturb={disturb} />
           </div>
           <div className="info-wrapper">
-            <InfoPanel activeDrugs={activeDrugs} lang={lang} />
+            <InfoPanel activeModifiers={activeModifiers} />
           </div>
         </div>
       </main>

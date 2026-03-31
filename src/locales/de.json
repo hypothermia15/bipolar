@@ -1,0 +1,121 @@
+{
+  "title": "Energielandschaft — Attraktoren bei bipolarer Störung",
+  "subtitle": "Medikamente zum Umschalten anklicken. Mehrere kombinierbar. Onset und Abklingen beobachten.",
+  "sections": {
+    "stabilizers": "Stimmungsstabilisierer",
+    "antipsychotics": "Antipsychotika",
+    "psychedelics": "Psychedelika",
+    "substances": "Substanzen",
+    "other": "Andere"
+  },
+  "ui": {
+    "noActive": "⚡ Ohne Medikation: Euthymie ist ein Gipfel — jede Störung stößt den Ball in Manie oder Depression.",
+    "phaseOnset": " (Beginn)",
+    "phaseSteady": " (stabil)",
+    "phaseDecay": " (Abklingen)",
+    "phaseOff": " (abgesetzt)",
+    "stressor": "⚡ Stressor",
+    "gabaOil": "GABA 'ÖL'",
+    "mania": "MANIE",
+    "euthymia": "EUTHYMIE",
+    "depression": "DEPRESSION",
+    "barrier": "D2 BARRIERE"
+  },
+  "modifiers": {
+    "lithium": {
+      "label": "Lithium",
+      "desc": "Das EINZIGE Medikament, das die gesamte Landschaft umgestaltet. Euthymie wird zu einer tiefen, stabilen Mulde.",
+      "detail": "Der älteste und am besten dokumentierte Stabilisator. Als einziger mit starker neuroprotektiver Wirkung und signifikanter Suizidrisikosenkung.",
+      "sections": [
+        {
+          "heading": "Nachgewiesene Mechanismen",
+          "items": [
+            "Inositol-Pfad — hemmt IMPase, begrenzt übermäßige Signalgebung in überaktiven Neuronen",
+            "GSK-3beta-Blockade — stabilisiert die synaptische Plastizität und den zirkadianen Rhythmus",
+            "Neuroprotektion — erhöht BDNF, kehrt Graue-Substanz-Verlust in Hippocampus und Präfrontalkortex um",
+            "Glutamat/GABA-Modulation — verschiebt das Gleichgewicht in Richtung Hemmung",
+            "Mitochondrien — verbessert die Zellatmung und reduziert oxidativen Stress"
+          ]
+        },
+        {
+          "heading": "Klinische Fakten",
+          "items": [
+            "Reduziert Rückfallrisiko um ~40% vs. Placebo",
+            "Einziges psychiatrisches Medikament mit signifikanter Suizidprävention",
+            "Kehrt krankheitsbedingten Hirnvolumenverlust um"
+          ]
+        },
+        {
+          "heading": "Systemhypothese",
+          "items": [
+            "Bipolarität ist eine Krankheit der Attraktordynamik — das Gehirn hat zu tiefe, instabile Becken (Manie/Depression) und eine flache Mitte (Euthymie)",
+            "Lithium zielt nicht auf einen Rezeptor — es reduziert den 'Gain' in Rückkopplungsschleifen auf vielen Ebenen gleichzeitig",
+            "Wirkt als Netzwerkrauschunterdrücker — stabilisiert den mitochondrialen Stoffwechsel in Netzwerkknoten",
+            "Stellt metabolische Flexibilität wieder her — erweitert den Stabilitätsbereich des Schalters zwischen glykolytisch (Manie) und oxidativ (Depression)",
+            "Dynamische Modelle bestätigen: Lithium verändert die Topologie der Energielandschaft, nicht nur einzelne Signalstärken"
+          ]
+        }
+      ]
+    },
+    "valproate": {
+      "label": "Valproat",
+      "desc": "Der Ball bewegt sich wie durch 'Honig' — Übergänge zwischen Zuständen sind langsamer, aber die Landschaft bleibt gleich.",
+      "detail": "Verstärkt die GABAerge Transmission und blockiert spannungsgesteuerte Natriumkanäle. Wirksam vor allem bei akuter Manie. Die Landschaft (Mulden) bleibt unverändert."
+    },
+    "lamotrigine": {
+      "label": "Lamotrigin",
+      "desc": "Flacht die depressive Mulde ab (Glutamat-Blockade) — aber die Manie bleibt tief. Asymmetrischer Schutz.",
+      "detail": "Blockiert spannungsgesteuerte Natriumkanäle und hemmt die Glutamatfreisetzung. Gut dokumentierte Wirksamkeit bei der Vorbeugung depressiver Episoden."
+    },
+    "aripiprazole": {
+      "label": "Aripiprazol",
+      "desc": "Flacht die manische Mulde ab und setzt eine moderate Barriere ('D2-Thermostat'). Wenn der Ball in Manie ist, fließt er allmählich ab.",
+      "detail": "Partieller D2-Agonist und 5-HT2A-Antagonist. 'Moduliert' Dopamin, anstatt es vollständig zu blockieren. Verhindert manische Rückfälle."
+    },
+    "quetiapine": {
+      "label": "Quetiapin",
+      "desc": "Flacht beide Mulden ab (Manie und Depression) + Sedierung + Barriere. Bidirektional.",
+      "detail": "Breites Rezeptorprofil (D2, 5-HT2A, H1). Wirksam bei Manie UND bipolarer Depression (BOLDER-Studien). Niedrige Gravitation repräsentiert Sedierung."
+    },
+    "olanzapine": {
+      "label": "Olanzapin",
+      "desc": "Stärkste Abflachung der manischen Mulde. Starke Sedierung.",
+      "detail": "Hohe Affinität zu D2, 5-HT2A, H1 und muskarinischen Rezeptoren. Eines der effektivsten Medikamente bei akuter Manie."
+    },
+    "risperidone": {
+      "label": "Risperidon",
+      "desc": "Deutliche Abflachung der Manie + Barriere. Schnelle Wirkung, aber Risiko von Steifigkeit.",
+      "detail": "Potenter D2-Antagonist. Reduziert manische Erregung schnell. Risiko für extrapyramidale Symptome."
+    },
+    "clonazepam": {
+      "label": "Clonazepam",
+      "desc": "Flutet die Landschaft mit Öl (massive GABA). Schnelle Linderung, keine strukturelle Reparatur.",
+      "detail": "Benzodiazepin. Starke Verlangsamung (Damping), aber kein Einfluss auf die Muldentiefe. Abhängigkeitsrisiko."
+    },
+    "thc": {
+      "label": "THC",
+      "desc": "Dysreguliert die Landschaft — Mulden oszillieren zufällig. Vorübergehende Linderung, aber höheres Episodenrisiko.",
+      "detail": "Stört die Neurotransmitter-Regulation. Jitter in der Visualisierung repräsentiert Stimmungsinstabilität."
+    },
+    "ketamine": {
+      "label": "Ketamin",
+      "desc": "Füllt die depressive Mulde sofort auf (NMDA-Blockade). Spektakulär, aber kurzlebige Wirkung.",
+      "detail": "Schnelle antidepressive Wirkung über NMDA-Blockade und Synaptogenese. Verändert Topologie nicht dauerhaft."
+    },
+    "mdma": {
+      "label": "MDMA",
+      "desc": "Flacht beide Mulden ab (massive 5-HT/DA-Ausschüttung) + hohes Chaos. Manierisiko.",
+      "detail": "Massive Monoamin-Freisetzung. Hohes Risiko bei Bipolarität — kann Manie auslösen oder Depression verschlimmern."
+    },
+    "ect": {
+      "label": "EKT",
+      "desc": "Landschafts-Reset — Manie und Depression fast flach, Euthymie wird zum wahren Attraktor.",
+      "detail": "Elektrokonvulsionstherapie. Stärkste Methode zur Unterbrechung schwerer Episoden. Dramatische topologische Veränderung."
+    },
+    "alcohol": {
+      "label": "Alkohol",
+      "desc": "Destabilisiert die Landschaft, indem beide pathologischen Becken vertieft werden. Kurzzeitige Verlangsamung weicht erhöhtem Chaos und Rückfallrisiko.",
+      "detail": "ZNS-Depressivum (GABAerg). Während es den Ball anfangs verlangsamt (Sedierung), vertiefen Langzeitfolgen und Rebound-Effekte sowohl manische als auch depressive Mulden. Erhöht das Cycling- und Impulsivitätsrisiko."
+    }
+  }
+}

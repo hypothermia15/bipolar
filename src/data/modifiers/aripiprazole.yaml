@@ -1,0 +1,28 @@
+category: antipsychotics
+order: 1
+icon: "🧠"
+color: "#3498db"
+halfLife: 22
+onset: 4
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 1.0
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.982
+gravity: 13
+barrierH: 1.4
+jitter: 0
+refs:
+  - cite: "Keck et al. 2003 — aripiprazole in acute mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/12668363/"
+  - cite: "Marcus et al. 2008 — augmentation in depression"
+    url: "https://pubmed.ncbi.nlm.nih.gov/18344725/"
+  - cite: "Shapiro et al. 2003 — D2 partial agonism mechanism"
+    url: "https://pubmed.ncbi.nlm.nih.gov/12700681/"

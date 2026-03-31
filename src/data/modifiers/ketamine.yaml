@@ -1,0 +1,26 @@
+category: psychedelics
+order: 1
+icon: "💉"
+color: "#f39c12"
+halfLife: 5
+onset: 0.5
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.2
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 0.12
+    w: 0.22
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0
+refs:
+  - cite: "Zarate et al. 2006 — ketamine in depression"
+    url: "https://pubmed.ncbi.nlm.nih.gov/16894061/"
+  - cite: "Diazgranados et al. 2010 — bipolar depression"
+    url: "https://pubmed.ncbi.nlm.nih.gov/20679587/"

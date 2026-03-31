@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { DRUGS, BASE } from "../data/drugs";
+import { MODIFIERS, BASE } from "../data/modifiers";
 import { lerp, grad } from "../utils/physics";
 import { X_LO, X_HI } from "../constants";
 
 export function useSimulation() {
-  const [activeDrugs, setActiveDrugs] = useState({});
-  const drugsRef = useRef({});
+  const [activeModifiers, setActiveModifiers] = useState({});
+  const modifiersRef = useRef({});
   const [, forceUpdate] = useState(0);
 
   const sim = useRef({
@@ -15,14 +15,14 @@ export function useSimulation() {
     lastTime: null,
   });
 
-  const toggleDrug = useCallback((key) => {
-    const cur = drugsRef.current[key];
+  const toggleModifier = useCallback((key) => {
+    const cur = modifiersRef.current[key];
     if (cur && cur.on) {
-      drugsRef.current[key] = { on: false, conc: 0, phase: "decay", kicked: false };
+      modifiersRef.current[key] = { on: false, conc: 0, phase: "decay", kicked: false };
     } else {
-      drugsRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset", kicked: false };
+      modifiersRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset", kicked: false };
     }
-    setActiveDrugs({ ...drugsRef.current });
+    setActiveModifiers({ ...modifiersRef.current });
   }, []);
 
   const disturb = useCallback(() => {
@@ -42,7 +42,7 @@ export function useSimulation() {
 
     for (const { key, conc } of activeList) {
       if (conc < 0.001) continue;
-      const d = DRUGS[key];
+      const d = MODIFIERS[key];
       totalWeight += conc;
       result.wallStr  = lerp(result.wallStr,  d.wallStr,  conc / totalWeight);
       result.damping  = lerp(result.damping,  d.damping,  conc / totalWeight);
@@ -64,10 +64,10 @@ export function useSimulation() {
     s.lastTime = ts;
 
     let changed = false;
-    const drugs = drugsRef.current;
-    for (const key of Object.keys(drugs)) {
-      const d = drugs[key];
-      const cfg = DRUGS[key];
+    const modifiers = modifiersRef.current;
+    for (const key of Object.keys(modifiers)) {
+      const d = modifiers[key];
+      const cfg = MODIFIERS[key];
       if (d.phase === "onset") {
         const rate = dt / cfg.onset;
         d.conc = Math.min(1, d.conc + rate);
@@ -86,7 +86,7 @@ export function useSimulation() {
     }
     if (changed) forceUpdate(n => n + 1);
 
-    const activeList = Object.entries(drugs)
+    const activeList = Object.entries(modifiers)
       .filter(([, d]) => d.conc > 0.001)
       .map(([key, d]) => ({ key, conc: d.conc }));
 
@@ -134,5 +134,5 @@ export function useSimulation() {
     sim.current.physP = physP;
   }, [blendParams]);
 
-  return { sim, activeDrugs, toggleDrug, disturb, loop };
+  return { sim, activeModifiers, toggleModifier, disturb, loop };
 }

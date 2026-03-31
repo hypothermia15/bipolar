@@ -1,0 +1,26 @@
+category: antipsychotics
+order: 3
+icon: "🧠"
+color: "#5dade2"
+halfLife: 20
+onset: 2
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.5
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.93
+gravity: 6
+barrierH: 2.0
+jitter: 0
+refs:
+  - cite: "Tohen et al. 1999 — olanzapine in acute mania"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10025435/"
+  - cite: "Tohen et al. 2003 — olanzapine + fluoxetine"
+    url: "https://pubmed.ncbi.nlm.nih.gov/14702556/"

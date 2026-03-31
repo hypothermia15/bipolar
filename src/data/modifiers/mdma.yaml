@@ -1,0 +1,26 @@
+category: psychedelics
+order: 2
+icon: "💊"
+color: "#e91e8c"
+halfLife: 3
+onset: 0.5
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 1.5
+    w: 0.22
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 1.3
+    w: 0.22
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0.60
+refs:
+  - cite: "Mitchell et al. 2021 — MDMA in PTSD (Nature Medicine)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/34031603/"
+  - cite: "Reiff et al. 2020 — psychedelics review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/32100483/"

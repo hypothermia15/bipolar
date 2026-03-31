@@ -1,0 +1,15 @@
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.2
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0
