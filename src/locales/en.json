@@ -1,6 +1,6 @@
 {
-  "title": "Energy Landscape — Attractors in Bipolar Disorder",
-  "subtitle": "Click drugs to toggle. You can combine many. Observe onset and decay.",
+  "title": "Bipolar Mood Landscape",
+  "subtitle": "Dynamics of affective states and mood attractors",
   "sections": {
     "stabilizers": "Mood Stabilizers",
     "antipsychotics": "Antipsychotics",
@@ -10,10 +10,11 @@
   },
   "ui": {
     "noActive": "⚡ No active medication",
+    "instructions": "Click medications in the left sidebar to see how they reshape the mood landscape. You can combine multiple substances and observe their dynamics over time.",
     "attractorTheory": {
-      "title": "Attractor Theory of Bipolar Disorder",
-      "description": "Bipolar disorder can be understood as a disease of the brain's 'energy landscape'. In this model, states like Mania and Depression are stable 'basins' (attractors) that the system naturally falls into. Without treatment, Euthymia (stable mood) is often an unstable peak — like a ball balanced on a hill — where any stressor can easily push the system into a pathological state. Medications like Lithium work by reshaping this landscape, making euthymia a stable attractor.",
-      "link": "Read more: 'A dynamic energy landscape of the genome organization in bipolar disorder' (Nature, 2022)"
+      "title": "The Landscape and Attractor Model",
+      "description": "Bipolar disorder can be modeled as an 'energy landscape' where Mania and Depression are stable basins (attractors). Without treatment, Euthymia (stable mood) is often an unstable point — any stressor can push the system into a pathological state. Lithium works by reshaping this landscape, making euthymia a safe point of balance.",
+      "link": "Source publication: 'A dynamic energy landscape... (Nature, 2022)'"
     },
     "phaseOnset": " (onset)",
     "phaseSteady": " (steady)",

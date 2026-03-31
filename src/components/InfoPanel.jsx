@@ -24,6 +24,10 @@ export default function InfoPanel({ activeModifiers }) {
             padding: 12, borderRadius: 8, background: "rgba(255,255,255,0.02)",
             border: "1px solid rgba(255,255,255,0.05)"
           }}>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, margin: "0 0 12px 0", lineHeight: 1.5 }}>
+              {t("ui.instructions")}
+            </p>
+            <hr style={{ border: "none", borderTop: "1px solid rgba(255,255,255,0.05)", margin: "12px 0" }} />
             <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, margin: "0 0 8px 0", fontWeight: 700 }}>
               {t("ui.attractorTheory.title")}
             </p>

@@ -1,6 +1,6 @@
 {
-  "title": "Energielandschaft — Attraktoren bei bipolarer Störung",
-  "subtitle": "Medikamente zum Umschalten anklicken. Mehrere kombinierbar. Onset und Abklingen beobachten.",
+  "title": "Stimmungslandschaft bei bipolarer Störung",
+  "subtitle": "Dynamik affektiver Zustände und Stimmungsattraktoren",
   "sections": {
     "stabilizers": "Stimmungsstabilisierer",
     "antipsychotics": "Antipsychotika",
@@ -10,10 +10,11 @@
   },
   "ui": {
     "noActive": "⚡ Keine aktive Medikation",
+    "instructions": "Klicken Sie auf die Medikamente in der linken Leiste, um zu sehen, jak sie die Stimmungslandschaft umgestalten. Sie können mehrere Substanzen kombinieren und deren Dynamik über die Zeit beobachten.",
     "attractorTheory": {
-      "title": "Attraktortheorie der bipolaren Störung",
-      "description": "Die bipolare Störung kann als eine Erkrankung der 'Energielandschaft' des Gehirns verstanden werden. In diesem Modell sind Zustände wie Manie und Depression stabile 'Becken' (Attraktoren), in die das System natürlicherweise fällt. Ohne Behandlung ist die Euthymie (stabile Stimmung) oft ein instabiler Gipfel — wie ein Ball, der auf einem Hügel balanciert — auf dem jeder Stressor das System leicht in einen pathologischen Zustand stoßen kann. Medikamente wie Lithium wirken durch die Umgestaltung dieser Landschaft und machen die Euthymie zu einem stabilen Attraktor.",
-      "link": "Mehr lesen: 'A dynamic energy landscape of the genome organization in bipolar disorder' (Nature, 2022)"
+      "title": "Das Landschafts- und Attraktormodell",
+      "description": "Die bipolare Störung kann als 'Energielandschaft' modelliert werden, in der Manie und Depression stabile Becken (Attraktoren) sind. Ohne Behandlung ist die Euthymie oft ein instabiler Punkt — jeder Stressor kann das System in einen pathologischen Zustand stoßen. Lithium wirkt durch die Umgestaltung dieser Landschaft und macht die Euthymie zu einem sicheren Gleichgewichtspunkt.",
+      "link": "Quellpublikation: 'A dynamic energy landscape... (Nature, 2022)'"
     },
     "phaseOnset": " (Beginn)",
     "phaseSteady": " (stabil)",

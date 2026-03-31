@@ -89,11 +89,25 @@ export default function App() {
       </aside>
 
       <main className="content-area">
-        <header style={{ marginBottom: 30, textAlign: "center" }}>
-          <h2 style={{ margin: "0 0 8px 0", fontSize: 22, fontWeight: 600, letterSpacing: 0.4 }}>
+        <header style={{ marginBottom: 32, textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.05)", paddingBottom: 20 }}>
+          <h2 style={{ 
+            margin: "0 0 6px 0", 
+            fontSize: 22, 
+            fontWeight: 900, 
+            letterSpacing: "2px", 
+            textTransform: "uppercase",
+            color: "#fff"
+          }}>
             {t("title")}
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.35)", margin: 0, fontSize: 13, maxWidth: 800, marginLeft: "auto", marginRight: "auto" }}>
+          <p style={{ 
+            color: "rgba(255,255,255,0.4)", 
+            margin: 0, 
+            fontSize: 11, 
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "1px"
+          }}>
             {t("subtitle")}
           </p>
         </header>

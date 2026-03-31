@@ -1,6 +1,6 @@
 {
-  "title": "Krajobraz energetyczny — atraktory w chorobie dwubiegunowej",
-  "subtitle": "Klikaj leki aby je włączać/wyłączać. Możesz łączyć wiele naraz. Obserwuj onset i zanik.",
+  "title": "Krajobraz nastroju w chorobie dwubiegunowej",
+  "subtitle": "Dynamika stanów afektywnych i atraktorów nastroju",
   "sections": {
     "stabilizers": "Stabilizatory nastroju",
     "antipsychotics": "Antypsychotyki",
@@ -10,10 +10,11 @@
   },
   "ui": {
     "noActive": "⚡ Brak aktywnego leczenia",
+    "instructions": "Klikaj leki w menu po lewej, aby zobaczyć jak wpływają na krajobraz nastroju. Możesz łączyć wiele substancji naraz i obserwować dynamikę ich działania w czasie.",
     "attractorTheory": {
-      "title": "Teoria Atraktorów w ChAD",
-      "description": "Chorobę dwubiegunową można rozumieć jako chorobę „krajobrazu energetycznego” mózgu. W tym modelu stany takie jak Mania i Depresja to stabilne „baseny” (atraktory), do których system naturalnie wpada. Bez leczenia Eutymia (stabilny nastrój) jest często niestabilnym szczytem — jak kulka balansująca na wzgórzu — gdzie każdy stresor może łatwo zepchnąć system w stan patologiczny. Leki takie jak Lit działają poprzez przebudowę tego krajobrazu, czyniąc eutymię stabilnym atraktorem.",
-      "link": "Czytaj więcej: 'A dynamic energy landscape of the genome organization in bipolar disorder' (Nature, 2022)"
+      "title": "Model krajobrazu i atraktorów",
+      "description": "W tym modelu stany takie jak Mania i Depresja to stabilne „baseny” (atraktory), do których system naturalnie wpada. Bez leczenia Eutymia (stabilny nastrój) jest często niestabilnym punktem — każde zaburzenie może łatwo zepchnąć system w stan patologiczny. Leki takie jak Lit działają poprzez przebudowę tego krajobrazu, czyniąc eutymię bezpiecznym punktem równowagi.",
+      "link": "Publikacja źródłowa: 'A dynamic energy landscape... (Nature, 2022)'"
     },
     "phaseOnset": " (narasta)",
     "phaseSteady": " (stabilny)",
