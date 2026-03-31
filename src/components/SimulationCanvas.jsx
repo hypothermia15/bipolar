@@ -119,35 +119,52 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
         }
 
         // Fill where modifier raises the landscape (fills a dip)
-        ctx.beginPath();
         let drawing = false;
-        for (let i = 0; i <= N; i++) {
-          const baseY = basePts[i][1];
-          const modifierY = modifierPts[i];
-          const x = basePts[i][0];
-          if (modifierY < baseY - 0.5) {
-            if (!drawing) { ctx.moveTo(x, baseY); drawing = true; }
-            ctx.lineTo(x, modifierY);
-          } else {
-            if (drawing) { ctx.lineTo(x, basePts[i][1]); drawing = false; }
-          }
-        }
-        if (drawing) ctx.lineTo(basePts[N][0], basePts[N][1]);
-        ctx.closePath();
-
+        let startIdx = 0;
         const fillAlpha = Math.min(0.35, conc * 0.4);
         ctx.fillStyle = `rgba(${dr},${dg},${db},${fillAlpha})`;
-        ctx.fill();
 
-        // Top edge of fill
-        ctx.beginPath();
         for (let i = 0; i <= N; i++) {
           const baseY = basePts[i][1];
+          const physY = physPts[i][1];
           const modifierY = modifierPts[i];
           const x = basePts[i][0];
-          if (modifierY < baseY - 0.5) {
-            if (i === 0 || !(modifierPts[i-1] < basePts[i-1][1] - 0.5)) ctx.moveTo(x, modifierY);
-            else ctx.lineTo(x, modifierY);
+          // Clip fill surface to the current smoothed landscape (physY)
+          const fillTopY = Math.max(modifierY, physY);
+
+          if (fillTopY < baseY - 0.5) {
+            if (!drawing) {
+              ctx.beginPath();
+              ctx.moveTo(x, baseY);
+              startIdx = i;
+              drawing = true;
+            }
+            ctx.lineTo(x, fillTopY);
+          } else if (drawing) {
+            // Trace base curve backward to close correctly
+            for (let j = i - 1; j >= startIdx; j--) ctx.lineTo(basePts[j][0], basePts[j][1]);
+            ctx.closePath();
+            ctx.fill();
+            drawing = false;
+          }
+        }
+        if (drawing) {
+          for (let j = N; j >= startIdx; j--) ctx.lineTo(basePts[j][0], basePts[j][1]);
+          ctx.closePath();
+          ctx.fill();
+        }
+
+        // Top edge of fill (dashed line along the surface of the fill)
+        ctx.beginPath();
+        let edgeDrawing = false;
+        for (let i = 0; i <= N; i++) {
+          const baseY = basePts[i][1];
+          const fillTopY = Math.max(modifierPts[i], physPts[i][1]);
+          if (fillTopY < baseY - 0.5) {
+            if (!edgeDrawing) { ctx.moveTo(basePts[i][0], fillTopY); edgeDrawing = true; }
+            else ctx.lineTo(basePts[i][0], fillTopY);
+          } else {
+            edgeDrawing = false;
           }
         }
         ctx.strokeStyle = `rgba(${dr},${dg},${db},${fillAlpha + 0.15})`;

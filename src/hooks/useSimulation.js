@@ -31,28 +31,43 @@ export function useSimulation() {
 
   const blendParams = useCallback((activeList) => {
     let totalWeight = 0;
-    const result = {
+    const avg = {
       wallStr: BASE.wallStr,
       wells: BASE.wells.map(w => ({ ...w })),
       damping: BASE.damping,
       gravity: BASE.gravity,
-      barrierH: BASE.barrierH,
-      jitter: BASE.jitter,
+      barrierH: 0,
+      jitter: 0,
     };
 
     for (const { key, conc } of activeList) {
       if (conc < 0.001) continue;
       const d = MODIFIERS[key];
       totalWeight += conc;
-      result.wallStr  = lerp(result.wallStr,  d.wallStr,  conc / totalWeight);
-      result.damping  = lerp(result.damping,  d.damping,  conc / totalWeight);
-      result.gravity  = lerp(result.gravity,  d.gravity,  conc / totalWeight);
-      result.barrierH = Math.max(result.barrierH, (d.barrierH || 0) * conc);
-      result.jitter   = Math.max(result.jitter, (d.jitter || 0) * conc);
+      const w = conc / totalWeight;
+      avg.wallStr = lerp(avg.wallStr, d.wallStr, w);
+      avg.damping = lerp(avg.damping, d.damping, w);
+      avg.gravity = lerp(avg.gravity, d.gravity, w);
+      avg.barrierH = Math.max(avg.barrierH, (d.barrierH || 0) * conc);
+      avg.jitter = Math.max(avg.jitter, (d.jitter || 0) * conc);
       for (let i = 0; i < 3; i++) {
-        result.wells[i].depth = lerp(result.wells[i].depth, d.wells[i].depth, conc / totalWeight);
-        result.wells[i].w     = lerp(result.wells[i].w,     d.wells[i].w,     conc / totalWeight);
+        avg.wells[i].depth = lerp(avg.wells[i].depth, d.wells[i].depth, w);
+        avg.wells[i].w = lerp(avg.wells[i].w, d.wells[i].w, w);
       }
+    }
+
+    if (totalWeight < 0.001) return BASE;
+
+    const blend = Math.min(1, totalWeight);
+    const result = { ...BASE, wells: BASE.wells.map(w => ({ ...w })) };
+    result.wallStr = lerp(BASE.wallStr, avg.wallStr, blend);
+    result.damping = lerp(BASE.damping, avg.damping, blend);
+    result.gravity = lerp(BASE.gravity, avg.gravity, blend);
+    result.barrierH = avg.barrierH;
+    result.jitter = avg.jitter;
+    for (let i = 0; i < 3; i++) {
+      result.wells[i].depth = lerp(BASE.wells[i].depth, avg.wells[i].depth, blend);
+      result.wells[i].w = lerp(BASE.wells[i].w, avg.wells[i].w, blend);
     }
     return result;
   }, []);
