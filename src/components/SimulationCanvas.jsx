@@ -60,7 +60,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     const ctx = canvas.getContext("2d");
 
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = "#0d0d1b";
+    ctx.fillStyle = "#0a0b18";
     ctx.fillRect(0, 0, W, H);
 
     // Grid
@@ -331,17 +331,18 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
   return (
     <div className="canvas-container" style={{ position: "relative", flexShrink: 1, minWidth: 0 }}>
       <canvas ref={canvasRef} width={W} height={H}
-        style={{ borderRadius: 14, border: "1px solid rgba(255,255,255,0.06)", cursor: "grab", touchAction: "none", display: "block" }}
+        style={{ borderRadius: 12, border: "1px solid rgba(255,255,255,0.07)", cursor: "grab", touchAction: "none", display: "block", boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
         onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
         onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp}
       />
       <button
         onClick={(e) => { e.stopPropagation(); disturb(); }}
         style={{
-          position: "absolute", bottom: 15, left: 15, zIndex: 10,
-          padding: "6px 12px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 12,
-          border: "2px solid #ffbe3c55", color: "#ffbe3cbb", background: "rgba(255,190,60,0.1)",
-          backdropFilter: "blur(4px)", transition: "all 0.2s"
+          position: "absolute", bottom: 14, left: 14, zIndex: 10,
+          padding: "5px 11px", borderRadius: 6, cursor: "pointer", fontWeight: 600, fontSize: 11,
+          border: "1px solid rgba(255,190,60,0.35)", color: "rgba(255,190,60,0.75)",
+          background: "rgba(255,190,60,0.07)", backdropFilter: "blur(6px)",
+          transition: "all 0.2s", fontFamily: "'DM Sans', system-ui, sans-serif"
         }}
       >
         {t("ui.stressor")}

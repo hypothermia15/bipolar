@@ -16,27 +16,28 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
   })).filter(s => s.keys.length > 0);
 
   const pillStyle = (active, color) => ({
-    padding: "6px 10px", borderRadius: 6, cursor: "pointer",
-    fontWeight: 600, fontSize: 11.5, transition: "all 0.25s", lineHeight: 1.1,
-    border: `2px solid ${active ? color : "rgba(255,255,255,0.08)"}`,
-    background: active ? `${color}22` : "rgba(255,255,255,0.02)",
-    color: active ? color : "rgba(255,255,255,0.35)",
+    padding: "5px 9px", borderRadius: 5, cursor: "pointer",
+    fontWeight: 600, fontSize: 11, transition: "background 0.2s, border-color 0.2s, color 0.2s", lineHeight: 1.2,
+    border: `1px solid ${active ? color + "99" : "rgba(255,255,255,0.07)"}`,
+    background: active ? `${color}1a` : "rgba(255,255,255,0.02)",
+    color: active ? color : "rgba(255,255,255,0.3)",
     display: "flex", alignItems: "center", gap: 6,
-    width: "100%", textAlign: "left"
+    width: "100%", textAlign: "left", boxShadow: active ? `0 0 12px ${color}18` : "none"
   });
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+    <div className="modifier-controls">
       {sections.map((sec) => (
-        <div key={sec.title} style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+        <div key={sec.title} className="modifier-category">
           <span style={{
-            color: "rgba(255,255,255,0.15)", fontSize: 9, fontWeight: 800,
-            textTransform: "uppercase", letterSpacing: 1.2, borderBottom: "1px solid rgba(255,255,255,0.04)",
-            paddingBottom: 4
+            color: "rgba(255,255,255,0.18)", fontSize: 8.5, fontWeight: 700,
+            textTransform: "uppercase", letterSpacing: 1.5,
+            borderBottom: "1px solid rgba(255,255,255,0.05)",
+            paddingBottom: 4, display: "block", fontFamily: "'Space Mono', monospace"
           }}>
             {sec.title}
           </span>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <div className="modifier-items">
             {sec.keys.map(k => {
               const d = MODIFIERS[k];
               const isOn = activeModifiers[k]?.on;
@@ -44,13 +45,13 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
               return (
                 <div key={k} style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   <button className="pill-button" onClick={() => toggleModifier(k)} style={pillStyle(isOn, d.color)}>
-                    <span style={{ fontSize: 14 }}>{d.icon}</span>
+                    <span style={{ fontSize: 13, lineHeight: 1 }}>{d.icon}</span>
                     <span style={{ flex: 1 }}>{t(`modifiers.${k}.label`)}</span>
-                    {conc > 0.01 && <span style={{ fontSize: 9, opacity: 0.6 }}>{Math.round(conc * 100)}%</span>}
+                    {conc > 0.01 && <span style={{ fontSize: 8.5, opacity: 0.55, fontFamily: "'Space Mono', monospace" }}>{Math.round(conc * 100)}%</span>}
                   </button>
                   {conc > 0.005 && (
-                    <div style={{ height: 2, background: "rgba(255,255,255,0.04)", borderRadius: 1, overflow: "hidden", margin: "0 2px" }}>
-                      <div style={{ width: `${conc * 100}%`, height: "100%", background: d.color, transition: "width 0.1s linear" }} />
+                    <div style={{ height: 1.5, background: "rgba(255,255,255,0.04)", borderRadius: 1, overflow: "hidden", margin: "0 2px" }}>
+                      <div style={{ width: `${conc * 100}%`, height: "100%", background: d.color, transition: "width 0.1s linear", opacity: 0.7 }} />
                     </div>
                   )}
                 </div>
