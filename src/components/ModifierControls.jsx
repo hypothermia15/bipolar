@@ -17,7 +17,7 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
 
   const pillStyle = (active, color) => ({
     padding: "5px 9px", borderRadius: 5, cursor: "pointer",
-    fontWeight: 600, fontSize: 11, transition: "background 0.2s, border-color 0.2s, color 0.2s", lineHeight: 1.2,
+    fontWeight: 600, fontSize: 11, transition: "background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)", lineHeight: 1.2,
     border: `1px solid ${active ? color + "99" : "rgba(255,255,255,0.07)"}`,
     background: active ? `${color}1a` : "rgba(255,255,255,0.02)",
     color: active ? color : "rgba(255,255,255,0.3)",

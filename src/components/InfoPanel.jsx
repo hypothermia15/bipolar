@@ -47,7 +47,7 @@ export default function InfoPanel({ activeModifiers }) {
               onMouseOver={e => e.currentTarget.style.opacity = 0.8}
               onMouseOut={e => e.currentTarget.style.opacity = 1}
             >
-              📄 {t("ui.attractorTheory.link")}
+              ↗ {t("ui.attractorTheory.link")}
             </a>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function InfoPanel({ activeModifiers }) {
                         onMouseOver={e => e.currentTarget.style.opacity = 1}
                         onMouseOut={e => e.currentTarget.style.opacity = 0.7}
                       >
-                        📄 {ref.cite}
+                        ↗ {ref.cite}
                       </a>
                     ))}
                   </div>

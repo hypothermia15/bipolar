@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 
+:root {
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --color-accent: #7eb8f7;
+}
+
+::selection {
+  background: rgba(126, 184, 247, 0.22);
+  color: #eaf2ff;
+}
+
+:focus-visible {
+  outline: 1.5px solid rgba(126, 184, 247, 0.45);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 * { box-sizing: border-box; }
 
 .app-container { flex-direction: row; }
@@ -13,15 +35,16 @@
   max-height: 100vh;
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.08) transparent;
+  animation: fadeUp 0.55s var(--ease-expo) 0.05s both;
 }
 
 .sidebar-wordmark {
   font-family: 'Space Mono', monospace;
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(160,200,255,0.3);
+  color: rgba(160,200,255,0.22);
   margin-bottom: 22px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -35,6 +58,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  animation: fadeUp 0.65s var(--ease-expo) 0.1s both;
 }
 
 .app-header {
@@ -58,14 +82,14 @@
 }
 
 .main-title {
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
   font-family: 'Space Mono', monospace;
-  font-size: 17px;
+  font-size: clamp(20px, 3vw, 42px);
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #e8eeff;
-  line-height: 1.2;
+  color: #eaf2ff;
+  line-height: 1.0;
 }
 
 .main-subtitle {
@@ -73,8 +97,8 @@
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
-  color: rgba(255,255,255,0.28);
+  letter-spacing: 2.2px;
+  color: rgba(200, 220, 255, 0.32);
 }
 
 .main-visuals {
@@ -85,9 +109,29 @@
   min-width: 0;
 }
 
-.canvas-wrapper { flex: 1 1 60%; min-width: 0; }
+.pill-button {
+  transform: translateX(0) scale(1);
+}
+.pill-button:hover { transform: translateX(2px) scale(1); }
+.pill-button:active { transform: translateX(1px) scale(0.98); }
 
 .info-wrapper { flex: 0 0 300px; min-width: 260px; }
+
+.canvas-wrapper {
+  flex: 1 1 60%;
+  min-width: 0;
+  position: relative;
+}
+
+.canvas-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(126,184,247,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
 
 canvas { width: 100%; height: auto !important; background: #0a0b18; display: block; border-radius: 12px; }
 
@@ -124,23 +168,24 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   position: absolute;
   top: 2px;
   height: calc(100% - 4px);
-  background: rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.1);
   border-radius: 5px;
-  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.3s var(--ease-quart);
   z-index: 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
 .github-link {
-  opacity: 0.4;
-  transition: opacity 0.2s;
+  opacity: 0.35;
+  transition: opacity 0.3s var(--ease-quart), transform 0.3s var(--ease-expo);
   display: flex;
   align-items: center;
   padding: 4px;
   color: #fff;
   border-radius: 4px;
+  transform: translateY(0);
 }
-.github-link:hover { opacity: 0.9; }
+.github-link:hover { opacity: 0.85; transform: translateY(-1px); }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
@@ -178,7 +223,7 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
 }
 
 @media (max-width: 600px) {
-  .main-title { font-size: 13px; }
+  .main-title { font-size: clamp(16px, 5vw, 22px); letter-spacing: -0.02em; }
   .main-subtitle { font-size: 9px; letter-spacing: 1px; }
   .content-area { padding: 12px; }
   .app-header { margin-bottom: 12px; padding-bottom: 12px; }
