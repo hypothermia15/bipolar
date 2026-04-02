@@ -2,7 +2,9 @@
 
 A visual model of bipolar disorder as a dynamic energy landscape — where mood is a ball rolling between states of mania, euthymia, and depression, and each drug reshapes the terrain it rolls through.
 
-**[Try it live →](https://michalc.github.io/bipolar)**
+**[Try it live →](https://bipolar.kisielos.com)**
+
+![Simulation Preview 2](assets/demo.gif)
 
 ---
 
@@ -128,8 +130,6 @@ That's enough to turn into a pull request.
 npm install
 npm run dev
 ```
-
-The live demo is always up to date with the main branch.
 
 ---
 
