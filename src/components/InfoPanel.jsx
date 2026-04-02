@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MODIFIERS } from "../data/modifiers";
 
 export default function InfoPanel({ activeModifiers }) {
   const { t } = useTranslation();
+  const [openWarnings, setOpenWarnings] = useState({});
 
   const activeDescs = Object.entries(activeModifiers)
     .filter(([, d]) => d.conc > 0.01)
@@ -90,15 +91,31 @@ export default function InfoPanel({ activeModifiers }) {
                 ))}
 
                 {Array.isArray(warnings) && warnings.length > 0 && (
-                  <div style={{ marginTop: 6, padding: "8px 10px", borderRadius: 6, background: "rgba(255,180,50,0.05)", border: "1px solid rgba(255,180,50,0.12)" }}>
-                    <p style={{ color: "rgba(255,180,50,0.7)", fontSize: 10.5, margin: "0 0 5px 0", fontWeight: 700, textTransform: "uppercase", letterSpacing: 1 }}>
-                      ⚠ {t("ui.warnings")}
-                    </p>
-                    {warnings.map((w, i) => (
-                      <p key={i} style={{ color: "rgba(255,200,100,0.5)", fontSize: 11.5, margin: "3px 0", lineHeight: 1.6, paddingLeft: 10 }}>
-                        <span style={{ marginRight: 5, opacity: 0.6 }}>–</span>{w}
-                      </p>
-                    ))}
+                  <div style={{ marginTop: 6, borderRadius: 6, background: "rgba(255,180,50,0.05)", border: "1px solid rgba(255,180,50,0.12)", overflow: "hidden" }}>
+                    <button
+                      onClick={() => setOpenWarnings(prev => ({ ...prev, [key]: !prev[key] }))}
+                      style={{
+                        display: "flex", alignItems: "center", justifyContent: "space-between",
+                        width: "100%", padding: "7px 10px", background: "none", border: "none",
+                        cursor: "pointer", textAlign: "left",
+                      }}
+                    >
+                      <span style={{ color: "rgba(255,180,50,0.7)", fontSize: 10.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1 }}>
+                        ⚠ {t("ui.warnings")}
+                      </span>
+                      <span style={{ color: "rgba(255,180,50,0.5)", fontSize: 11, marginLeft: 6 }}>
+                        {openWarnings[key] ? "▲" : "▼"}
+                      </span>
+                    </button>
+                    {openWarnings[key] && (
+                      <div style={{ padding: "0 10px 8px 10px" }}>
+                        {warnings.map((w, i) => (
+                          <p key={i} style={{ color: "rgba(255,200,100,0.5)", fontSize: 11.5, margin: "3px 0", lineHeight: 1.6, paddingLeft: 10 }}>
+                            <span style={{ marginRight: 5, opacity: 0.6 }}>–</span>{w}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
 
