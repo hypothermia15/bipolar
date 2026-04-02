@@ -2,6 +2,29 @@ category: stabilizers
 order: 1
 icon: "⚛️"
 color: "#27ae60"
+label: "Lithium"
+desc: "The ONLY drug that reshapes the entire landscape. Euthymia becomes a deep, stable well. Other drugs only fill wells or slow the ball."
+detail: "The oldest and best-documented stabilizer. The only one with strong neuroprotective effects and significant suicide risk reduction."
+sections:
+  - heading: "Proven mechanisms"
+    items:
+      - "Inositol pathway — inhibits IMPase, limiting excessive signaling in overactive neurons"
+      - "GSK-3beta blockade — stabilizes synaptic plasticity and circadian rhythms"
+      - "Neuroprotection — increases BDNF, reverses gray matter loss in hippocampus and prefrontal cortex"
+      - "Glutamate/GABA modulation — shifts the balance towards inhibition"
+      - "Mitochondria — improves cellular respiration and reduces oxidative stress"
+  - heading: "Key clinical facts"
+    items:
+      - "Reduces relapse risk by ~40% vs placebo"
+      - "The only psychiatric drug significantly lowering suicide risk"
+      - "Reverses brain volume loss associated with the disease"
+  - heading: "Systemic hypothesis"
+    items:
+      - "Bipolarity is a disease of attractor dynamics — the brain has too deep, unstable basins (mania/depression) and a flattened center (euthymia)"
+      - "Lithium doesn't target one receptor — it reduces 'gain' in feedback loops across many levels simultaneously"
+      - "Acts as a network noise reducer — stabilizes mitochondrial metabolism in network nodes"
+      - "Restores metabolic flexibility — widens the stability range of the glycolytic (mania) to oxidative (depression) switch"
+      - "Dynamic models confirm: lithium changes energy landscape topology, not just individual signal strength"
 halfLife: 25
 onset: 8
 wallStr: 1.5

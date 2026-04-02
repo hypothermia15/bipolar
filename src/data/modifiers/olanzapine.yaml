@@ -2,6 +2,9 @@ category: antipsychotics
 order: 3
 icon: "🧠"
 color: "#5dade2"
+label: "Olanzapine"
+desc: "Strongest shallowing of the manic well — ball is pushed out even from deep mania. Strong sedation."
+detail: "High affinity for D2, 5-HT2A, H1 and muscarinic receptors. One of the most effective drugs for acute mania. High metabolic risk."
 halfLife: 20
 onset: 2
 wallStr: 1.5
@@ -20,8 +23,8 @@ gravity: 6
 barrierH: 2.0
 jitter: 0
 warnings:
-  - "[Black box] Elderly patients with dementia-related psychosis have increased mortality risk; olanzapine is not approved for this population."
-  - "[Black box] IM olanzapine combined with parenteral benzodiazepines carries risk of severe cardiorespiratory depression and death."
+  - "Elderly patients with dementia-related psychosis have increased mortality risk; olanzapine is not approved for this population."
+  - "IM olanzapine combined with parenteral benzodiazepines carries risk of severe cardiorespiratory depression and death."
   - "Carries among the highest metabolic risk of any second-generation antipsychotic — significant weight gain, hyperglycemia, and dyslipidemia are common; metabolic monitoring is essential."
   - "Cases of diabetic ketoacidosis (DKA), sometimes fatal, have been reported in patients with no prior diabetes history."
   - "Causes significant sedation, orthostatic hypotension, and anticholinergic effects (constipation, urinary retention, cognitive blunting)."

@@ -13,6 +13,29 @@ order: 1
 icon: "💊"
 color: "#27ae60"
 
+# ── Display content (English — primary language) ───────────────
+# These fields are the single source of truth for UI text.
+# Translations for other languages live in src/locales/{pl,de}.json
+# under modifiers.<key>.label / desc / detail / sections / warnings.
+# Missing translations automatically fall back to the English text here.
+#
+# label    – short display name shown in the sidebar and info panel
+# desc     – one-sentence description of what this modifier does
+#            to the landscape (shown prominently in the info panel)
+# detail   – longer mechanistic explanation (one paragraph)
+# sections – optional list of collapsible sections with bullet points
+#            (used for detailed mechanism breakdowns; see lithium.yaml)
+
+label: "Substance Name"
+desc: "One-sentence description of the landscape effect."
+detail: "Longer mechanistic explanation of how this substance works."
+
+# sections:           # optional — remove if not needed
+#   - heading: "Section heading"
+#     items:
+#       - "First bullet point"
+#       - "Second bullet point"
+
 # ── Pharmacokinetics ─────────────────────────────────────────
 # halfLife   – elimination half-life in hours
 # onset      – time to meaningful clinical effect in hours
@@ -71,13 +94,12 @@ jitter: 0
 
 # ── Warnings ──────────────────────────────────────────────────
 # List of clinically important warnings and precautions.
-# Prefix with "[Black box]" for FDA black box warnings.
-# Keep each item to one sentence. Order: black box first, then
-# serious risks, then monitoring requirements.
+# Keep each item to one sentence. Order: most serious risks first,
+# then monitoring requirements and drug interactions.
 
 warnings:
-  - "[Black box] Brief description of the most critical FDA black box warning."
-  - "Second serious risk or precaution in one sentence."
+  - "Most serious risk or safety warning in one sentence."
+  - "Second risk or precaution."
   - "Monitoring requirement or important drug interaction."
 
 # ── References ────────────────────────────────────────────────

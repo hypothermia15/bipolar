@@ -3,10 +3,27 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import pl from './locales/pl.json';
 import de from './locales/de.json';
+import { MODIFIERS } from './data/modifiers';
+
+// Build the English modifier translations from YAML data.
+// YAML is the single source of truth for modifier display content.
+// Other locales override keys where translated; missing keys fall back to English.
+const enModifiers = Object.fromEntries(
+  Object.entries(MODIFIERS).map(([key, d]) => [
+    key,
+    {
+      label: d.label ?? key,
+      desc: d.desc ?? '',
+      detail: d.detail ?? '',
+      ...(d.sections && { sections: d.sections }),
+      ...(d.warnings && { warnings: d.warnings }),
+    },
+  ])
+);
 
 i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: en },
+    en: { translation: { ...en, modifiers: enModifiers } },
     pl: { translation: pl },
     de: { translation: de },
   },

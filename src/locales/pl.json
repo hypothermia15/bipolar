@@ -25,7 +25,8 @@
     "mania": "MANIA",
     "euthymia": "EUTYMIA",
     "depression": "DEPRESJA",
-    "barrier": "BARIERA D2"
+    "barrier": "BARIERA D2",
+    "warnings": "Ostrzeżenia i środki ostrożności"
   },
   "modifiers": {
     "lithium": {

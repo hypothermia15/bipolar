@@ -2,6 +2,9 @@ category: antipsychotics
 order: 2
 icon: "🧠"
 color: "#2980b9"
+label: "Quetiapine"
+desc: "Shallows both wells (mania and depression) + sedation + barrier. Bidirectional, but metabolically heavy."
+detail: "Broad receptor profile (D2, 5-HT2A, H1). Effective in both mania AND bipolar depression (BOLDER studies). Low gravity represents sedation."
 halfLife: 16
 onset: 2.5
 wallStr: 1.5
@@ -20,7 +23,7 @@ gravity: 8
 barrierH: 1.6
 jitter: 0
 warnings:
-  - "[Black box] Elderly patients with dementia-related psychosis have increased mortality risk; quetiapine is not approved for this use."
+  - "Elderly patients with dementia-related psychosis have increased mortality risk; quetiapine is not approved for this use."
   - "Causes significant metabolic effects including weight gain, hyperglycemia, new-onset type 2 diabetes, and dyslipidemia; metabolic parameters should be monitored regularly."
   - "QTc prolongation can occur, increasing the risk of ventricular arrhythmias — use cautiously with other QT-prolonging drugs."
   - "Pronounced sedation and orthostatic hypotension at initiation; has misuse potential due to its sedative properties."

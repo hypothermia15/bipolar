@@ -2,6 +2,9 @@ category: psychedelics
 order: 1
 icon: "💉"
 color: "#f39c12"
+label: "Ketamine"
+desc: "Instantly fills the depressive well (NMDA blockade). Spectacular but short-lived effect."
+detail: "Rapid antidepressant effect via NMDA blockade and synaptogenesis. Does not permanently change topology."
 halfLife: 5
 onset: 0.5
 wallStr: 1.5

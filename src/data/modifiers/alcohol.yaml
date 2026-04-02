@@ -2,6 +2,9 @@ category: substances
 order: 3
 icon: "🍺"
 color: "#e67e22"
+label: "Alcohol"
+desc: "Destabilizes the landscape by deepening both pathological basins. Temporary slowing gives way to increased chaos and relapse risk."
+detail: "CNS depressant (GABAergic). While initially slowing the ball (sedation), its long-term effects and rebound deepen both manic and depressive wells, making them stronger attractors. Increases cycling and impulsivity."
 halfLife: 6
 onset: 1
 wallStr: 1.5

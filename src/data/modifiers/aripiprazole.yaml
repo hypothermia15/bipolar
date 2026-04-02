@@ -2,6 +2,9 @@ category: antipsychotics
 order: 1
 icon: "🧠"
 color: "#3498db"
+label: "Aripiprazole"
+desc: "Shallows the manic well and sets a moderate barrier ('D2 thermostat'). If the ball is in mania, it gradually flows out."
+detail: "Acts as a partial D2 agonist and 5-HT2A antagonist. 'Modulates' dopamine rather than blocking it completely. Prevents manic relapse."
 halfLife: 22
 onset: 4
 wallStr: 1.5
@@ -20,7 +23,7 @@ gravity: 13
 barrierH: 1.4
 jitter: 0
 warnings:
-  - "[Black box] Elderly patients with dementia-related psychosis have an increased risk of death; aripiprazole is not approved for this use."
+  - "Elderly patients with dementia-related psychosis have an increased risk of death; aripiprazole is not approved for this use."
   - "Can cause compulsive behaviors (pathological gambling, hypersexuality, binge eating) that may not be recognized as drug-related; patients and caregivers should be counseled proactively."
   - "Neuroleptic malignant syndrome (NMS) — potentially fatal hyperthermia, rigidity, and autonomic instability — can occur with any antipsychotic."
   - "Tardive dyskinesia (TD), a potentially irreversible movement disorder, can develop with long-term use."

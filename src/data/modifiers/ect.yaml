@@ -2,6 +2,9 @@ category: other
 order: 1
 icon: "⚡"
 color: "#ffe600"
+label: "ECT"
+desc: "Landscape reset — mania and depression become almost flat, euthymia becomes a true attractor."
+detail: "Electroconvulsive therapy. Most potent method for breaking severe episodes. Dramatic topological change."
 halfLife: 9
 onset: 0.2
 wallStr: 1.5

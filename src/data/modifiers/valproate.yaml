@@ -2,6 +2,9 @@ category: stabilizers
 order: 2
 icon: "🛡️"
 color: "#9b59b6"
+label: "Valproate"
+desc: "The ball moves through 'honey' — transitions between states are slower, but the landscape remains the same."
+detail: "Enhances GABAergic transmission and blocks voltage-gated sodium channels. Effective mainly in acute mania and rapid cycling. Terrain (wells) remains unchanged — the drug slows ball dynamics."
 halfLife: 18
 onset: 4
 wallStr: 1.5
@@ -20,9 +23,9 @@ gravity: 4
 barrierH: 0
 jitter: 0
 warnings:
-  - "[Black box] Highly teratogenic: causes neural tube defects in 1–2% of exposures and is associated with lower IQ and autism spectrum disorder in children exposed in utero — avoid in people of childbearing potential unless alternatives have failed."
-  - "[Black box] Potentially fatal hepatotoxicity has been reported, especially in children under 2 and polypharmacy patients; monitor liver function, particularly in the first 6 months."
-  - "[Black box] Life-threatening pancreatitis has been reported; patients should seek immediate care for new abdominal pain, nausea, or vomiting."
+  - "Highly teratogenic: causes neural tube defects in 1–2% of exposures and is associated with lower IQ and autism spectrum disorder in children exposed in utero — avoid in people of childbearing potential unless alternatives have failed."
+  - "Potentially fatal hepatotoxicity has been reported, especially in children under 2 and polypharmacy patients; monitor liver function, particularly in the first 6 months."
+  - "Life-threatening pancreatitis has been reported; patients should seek immediate care for new abdominal pain, nausea, or vomiting."
   - "Causes dose-dependent thrombocytopenia and platelet dysfunction, increasing bleeding risk; periodic CBC monitoring is recommended."
   - "Inhibits CYP450 and glucuronidation enzymes — doubles lamotrigine levels and has clinically significant interactions with other antiepileptics."
   - "Associated with polycystic ovary syndrome (PCOS) and hyperandrogenism, particularly when started in adolescence."

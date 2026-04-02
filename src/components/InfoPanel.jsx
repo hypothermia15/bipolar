@@ -62,6 +62,7 @@ export default function InfoPanel({ activeModifiers }) {
 
             const sections = t(`modifiers.${key}.sections`, { returnObjects: true, defaultValue: null });
             const detail = t(`modifiers.${key}.detail`, { defaultValue: "" });
+            const warnings = t(`modifiers.${key}.warnings`, { returnObjects: true, defaultValue: null });
 
             return (
               <div key={key} style={{ borderLeft: `2px solid ${d.color}60`, paddingLeft: 12, display: "flex", flexDirection: "column", gap: 5 }}>
@@ -87,6 +88,19 @@ export default function InfoPanel({ activeModifiers }) {
                     ))}
                   </div>
                 ))}
+
+                {Array.isArray(warnings) && warnings.length > 0 && (
+                  <div style={{ marginTop: 6, padding: "8px 10px", borderRadius: 6, background: "rgba(255,180,50,0.05)", border: "1px solid rgba(255,180,50,0.12)" }}>
+                    <p style={{ color: "rgba(255,180,50,0.7)", fontSize: 10.5, margin: "0 0 5px 0", fontWeight: 700, textTransform: "uppercase", letterSpacing: 1 }}>
+                      ⚠ {t("ui.warnings")}
+                    </p>
+                    {warnings.map((w, i) => (
+                      <p key={i} style={{ color: "rgba(255,200,100,0.5)", fontSize: 11.5, margin: "3px 0", lineHeight: 1.6, paddingLeft: 10 }}>
+                        <span style={{ marginRight: 5, opacity: 0.6 }}>–</span>{w}
+                      </p>
+                    ))}
+                  </div>
+                )}
 
                 {d.refs && d.refs.length > 0 && (
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 12px", marginTop: 4 }}>

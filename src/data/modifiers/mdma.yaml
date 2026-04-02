@@ -2,6 +2,9 @@ category: psychedelics
 order: 2
 icon: "💊"
 color: "#e91e8c"
+label: "MDMA"
+desc: "Shallows both wells (massive 5-HT/DA) + high chaos. Mania risk."
+detail: "Massive monoamine release. High risk in bipolar — may trigger mania or worsen depression (crash)."
 halfLife: 3
 onset: 0.5
 wallStr: 1.5

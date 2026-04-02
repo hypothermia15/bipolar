@@ -9,6 +9,7 @@ export const MODIFIERS = Object.fromEntries(
       path.replace('./modifiers/', '').replace('.yaml', ''),
       mod.default ?? mod,
     ])
+    .filter(([key]) => !key.startsWith('_'))
 );
 
 export const BASE = base.default ?? base;

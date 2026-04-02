@@ -2,6 +2,9 @@ category: stabilizers
 order: 3
 icon: "🛡️"
 color: "#e67e22"
+label: "Lamotrigine"
+desc: "Shallows the depressive well (glutamate blockade) — but mania remains deep. Asymmetric protection."
+detail: "Blocks voltage-gated sodium channels and inhibits glutamate release. Well-documented efficacy in preventing depressive episodes. Requires slow dose titration."
 halfLife: 30
 onset: 10
 wallStr: 1.5
@@ -20,7 +23,7 @@ gravity: 14
 barrierH: 0
 jitter: 0
 warnings:
-  - "[Black box] Can cause serious, potentially life-threatening skin reactions including Stevens-Johnson Syndrome (SJS) and toxic epidermal necrolysis (TEN); risk is highest with rapid dose titration and concurrent valproate use."
+  - "Can cause serious, potentially life-threatening skin reactions including Stevens-Johnson Syndrome (SJS) and toxic epidermal necrolysis (TEN); risk is highest with rapid dose titration and concurrent valproate use."
   - "Dose must be titrated very slowly; valproate roughly doubles lamotrigine levels (requiring halved doses), while enzyme inducers like carbamazepine roughly halve them."
   - "Hormonal contraceptives can reduce lamotrigine plasma levels by up to 50%, potentially reducing efficacy; dose adjustments are often needed."
   - "Carries an FDA class-wide antiepileptic warning for increased suicidal ideation and behavior."
