@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 import { MODIFIERS, BASE } from "../data/modifiers";
 import { lerp, grad } from "../utils/physics";
 import { X_LO, X_HI } from "../constants";
@@ -26,6 +26,7 @@ export function useSimulation() {
   }, []);
 
   const disturb = useCallback(() => {
+    // Random lateral kick — magnitude 3.5–4.7 in physics units/s, direction randomised
     sim.current.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2);
   }, []);
 
@@ -75,6 +76,7 @@ export function useSimulation() {
   const loop = useCallback((ts) => {
     const s = sim.current;
     if (!s.lastTime) s.lastTime = ts;
+    // Cap dt at 40 ms so physics don't explode if the tab is backgrounded
     const dt = Math.min((ts - s.lastTime) / 1000, 0.04);
     s.lastTime = ts;
 
@@ -86,6 +88,9 @@ export function useSimulation() {
       if (d.phase === "onset") {
         const rate = dt / cfg.onset;
         d.conc = Math.min(1, d.conc + rate);
+        // Trigger the "kick" once when the drug crosses 50% peak concentration —
+        // models the acute destabilising effect some drugs have on initial onset.
+        // The ±30% jitter (0.7–1.3 multiplier) prevents identical-looking effects.
         if (cfg.kick && !d.kicked && d.conc >= 0.5) {
           s.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (cfg.kick * (0.7 + Math.random() * 0.6));
           d.kicked = true;
@@ -93,6 +98,7 @@ export function useSimulation() {
         if (d.conc >= 0.999) { d.conc = 1; d.phase = "decay"; }
         changed = true;
       } else if (d.phase === "decay") {
+        // When manually turned off, use a 3× faster decay to simulate abrupt discontinuation
         const hl = d.on ? cfg.halfLife : cfg.halfLife / 3;
         d.conc *= Math.pow(0.5, dt / hl);
         if (d.conc < 0.005) { d.conc = 0; }
@@ -108,6 +114,8 @@ export function useSimulation() {
     sim.current.activeList = activeList;
 
     const target = activeList.length > 0 ? blendParams(activeList) : BASE;
+    // Smoothing speed: parameters follow the target with a ~3.5× real-time rate,
+    // giving a ~0.3 s visual transition when a drug activates or wears off
     const t = Math.min(dt * 3.5, 1);
 
     s.p.wallStr  += (target.wallStr  - s.p.wallStr)  * t;
@@ -123,6 +131,10 @@ export function useSimulation() {
 
     const physP = {
       ...s.p,
+      // Jitter: superimpose two sine waves at different frequencies on the mania and
+      // depression wells (not euthymia, i === 1) to simulate the unpredictability of
+      // those states. The two frequencies per well are chosen to be incommensurate so
+      // the combined motion never exactly repeats.
       wells: s.p.wells.map((w, i) => {
         if (s.p.jitter < 0.01 || i === 1) return w;
         const time = ts / 1000;
@@ -139,6 +151,7 @@ export function useSimulation() {
       s.ball.vx += -slope * s.p.gravity * dt;
       s.ball.vx *= Math.pow(s.p.damping, dt * 60);
       s.ball.x  += s.ball.vx * dt;
+      // Soft wall: bounce with 0.3 restitution to keep the ball visible at canvas edges
       if (s.ball.x < X_LO + 0.02) { s.ball.x = X_LO + 0.02; s.ball.vx *= -0.3; }
       if (s.ball.x > X_HI - 0.02) { s.ball.x = X_HI - 0.02; s.ball.vx *= -0.3; }
     }

@@ -1,30 +1,8 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { W, H, PAD, BALL_R, X_LO, X_HI, BARRIER } from "../constants";
-import { toX, toY, fromX, energy, lerp, hexRgb } from "../utils/physics";
-import { MODIFIERS, BASE } from "../data/modifiers";
-
-function blendSingleModifier(key, conc) {
-  const d = MODIFIERS[key];
-  const result = {
-    wallStr: BASE.wallStr,
-    wells: BASE.wells.map(w => ({ ...w })),
-    damping: BASE.damping,
-    gravity: BASE.gravity,
-    barrierH: BASE.barrierH,
-    jitter: BASE.jitter,
-  };
-  result.wallStr  = lerp(result.wallStr,  d.wallStr,  conc);
-  result.damping  = lerp(result.damping,  d.damping,  conc);
-  result.gravity  = lerp(result.gravity,  d.gravity,  conc);
-  result.barrierH = Math.max(result.barrierH, (d.barrierH || 0) * conc);
-  result.jitter   = Math.max(result.jitter,   (d.jitter   || 0) * conc);
-  for (let i = 0; i < 3; i++) {
-    result.wells[i].depth = lerp(result.wells[i].depth, d.wells[i].depth, conc);
-    result.wells[i].w     = lerp(result.wells[i].w,     d.wells[i].w,     conc);
-  }
-  return result;
-}
+import { toX, toY, fromX, energy, hexRgb } from "../utils/physics";
+import { MODIFIERS, BASE, blendSingleModifier } from "../data/modifiers";
 
 export default function SimulationCanvas({ sim, loop, disturb }) {
   const { t } = useTranslation();
@@ -71,7 +49,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       ctx.beginPath(); ctx.moveTo(0, cy); ctx.lineTo(W, cy); ctx.stroke();
     }
 
-    const N = 500;
+    const N = 500; // curve sample resolution — 500 points gives smooth curves at 800px wide
     const basePts = [];
     const physPts = [];
     for (let i = 0; i <= N; i++) {
@@ -132,6 +110,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
           // Clip fill surface to the current smoothed landscape (physY)
           const fillTopY = Math.max(modifierY, physY);
 
+          // 0.5 px threshold filters out near-zero differences caused by floating-point noise
           if (fillTopY < baseY - 0.5) {
             if (!drawing) {
               ctx.beginPath();
@@ -214,6 +193,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     }
 
     // ── 5. D2 Barrier (antipsychotics) ───────────────────────────────
+    // Only render the barrier glow once the barrier height exceeds a visible threshold
     if (s.p.barrierH > 0.15) {
       const bx = toX(BARRIER.cx);
       const bTop = toY(energy(BARRIER.cx, physP));
@@ -241,6 +221,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       const ly  = energy(z.lx, physP);
       const cx  = toX(z.lx);
       const cy  = toY(ly);
+      // Finite-difference second derivative: positive → concave up → local minimum → stable well
       const g2  = energy(z.lx + 0.01, physP) - 2 * energy(z.lx, physP) + energy(z.lx - 0.01, physP);
       const stb = g2 > 0;
       ctx.strokeStyle = z.zc + "44";
@@ -261,6 +242,8 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     }
 
     // ── 7. GABA oil (clonazepam) ─────────────────────────────────────
+    // damping < 0.86 = active sedation; gravity < 4 = not dominated by a stimulant
+    // (stimulants override the sedation effect so we skip the oil overlay)
     if (s.p.damping < 0.86 && s.p.gravity < 4) {
       const oilAlpha = Math.min(0.18, (0.86 - s.p.damping) * 2);
       ctx.beginPath();
@@ -277,7 +260,8 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     }
 
     // ── 8. Valproate trail ───────────────────────────────────────────
-    const valpConc = activeList.find(a => a.key === "valproate")?.conc || 0;
+    // Show a ghost trail when damping is mildly elevated (0.86–0.96) — the range
+    // valproate produces without the full sedation of benzodiazepines (< 0.86)
     if (s.p.damping < 0.96 && s.p.damping >= 0.86 && s.trail.length > 4) {
       for (let i = 0; i < s.trail.length - 1; i++) {
         const a = (i / s.trail.length) * 0.28;
