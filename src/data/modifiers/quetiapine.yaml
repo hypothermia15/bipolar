@@ -19,6 +19,13 @@ damping: 0.94
 gravity: 8
 barrierH: 1.6
 jitter: 0
+warnings:
+  - "[Black box] Elderly patients with dementia-related psychosis have increased mortality risk; quetiapine is not approved for this use."
+  - "Causes significant metabolic effects including weight gain, hyperglycemia, new-onset type 2 diabetes, and dyslipidemia; metabolic parameters should be monitored regularly."
+  - "QTc prolongation can occur, increasing the risk of ventricular arrhythmias — use cautiously with other QT-prolonging drugs."
+  - "Pronounced sedation and orthostatic hypotension at initiation; has misuse potential due to its sedative properties."
+  - "Tardive dyskinesia and NMS risks are present with long-term or high-dose use, consistent with the antipsychotic class."
+
 refs:
   - cite: "A randomized, double-blind, placebo-controlled trial of quetiapine in the treatment of bipolar I or II depression."
     url: "https://pubmed.ncbi.nlm.nih.gov/15994719/"

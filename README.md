@@ -61,6 +61,7 @@ Here's what each parameter controls:
 | `halfLife` | Elimination half-life in hours | Lithium: 25h; clonazepam: 12h |
 | `onset` | Hours until the drug reaches meaningful clinical effect | Lithium: 8h; quetiapine: 2h |
 | `wallStr` | Steepness of the outer landscape walls (usually leave at 1.5) | 1.5 |
+| `warnings` | List of clinically important warnings and precautions; prefix with `[Black box]` for FDA black box warnings | See any existing modifier |
 
 The three wells are ordered left to right: **mania**, **euthymia**, **depression**.
 
@@ -85,6 +86,9 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0
+warnings:
+  - "[Black box] Toxicity risk at serum levels >1.5 mEq/L — regular blood level monitoring required."
+  - "Long-term use can cause hypothyroidism and chronic kidney disease."
 refs:
   - cite: "Long-term lithium therapy for bipolar disorder..."
     url: "https://pubmed.ncbi.nlm.nih.gov/14754766/"

@@ -69,6 +69,17 @@ gravity: 14
 barrierH: 0
 jitter: 0
 
+# ── Warnings ──────────────────────────────────────────────────
+# List of clinically important warnings and precautions.
+# Prefix with "[Black box]" for FDA black box warnings.
+# Keep each item to one sentence. Order: black box first, then
+# serious risks, then monitoring requirements.
+
+warnings:
+  - "[Black box] Brief description of the most critical FDA black box warning."
+  - "Second serious risk or precaution in one sentence."
+  - "Monitoring requirement or important drug interaction."
+
 # ── References ────────────────────────────────────────────────
 # List of supporting clinical / scientific literature.
 # Each entry needs a cite (human-readable) and url.

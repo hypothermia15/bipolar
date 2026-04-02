@@ -19,6 +19,13 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0
+warnings:
+  - "Significant misuse potential and psychological dependence risk; esketamine (Spravato) is Schedule III and requires a REMS program with a minimum 2-hour monitored observation period after each dose."
+  - "Causes dose-dependent dissociation and perceptual disturbances; at high doses can induce a profound dissociative state ('k-hole')."
+  - "Chronic heavy use causes ketamine-induced uropathy — severe, often irreversible bladder damage requiring cystectomy in extreme cases."
+  - "Raises blood pressure and heart rate significantly; use with caution in patients with uncontrolled hypertension or cardiovascular disease."
+  - "Antidepressant effects are typically transient (days to weeks); long-term dosing protocols and cumulative safety remain under active investigation."
+
 refs:
   - cite: "A randomized trial of an N-methyl-D-aspartate antagonist in treatment-resistant major depression."
     url: "https://pubmed.ncbi.nlm.nih.gov/16894061/"

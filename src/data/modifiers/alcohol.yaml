@@ -19,6 +19,14 @@ damping: 0.90
 gravity: 8
 barrierH: 0
 jitter: 0.40
+warnings:
+  - "Alcohol withdrawal in physically dependent individuals can be life-threatening — seizures and delirium tremens (DTs) require medically supervised detoxification."
+  - "Chronic heavy use causes alcoholic liver disease, cardiomyopathy, pancreatitis, and peripheral neuropathy."
+  - "Potentiates the effects of benzodiazepines, opioids, antipsychotics, and other CNS depressants — potentially fatal additive respiratory depression."
+  - "Worsens the long-term course of bipolar disorder: increases episode frequency, suicide risk, and treatment non-adherence."
+  - "Group 1 IARC carcinogen causally linked to cancers of the mouth, throat, esophagus, liver, colon, and breast — risk increases linearly with consumption."
+  - "No safe level of alcohol use in pregnancy has been established; prenatal exposure causes Fetal Alcohol Spectrum Disorders (FASD)."
+
 refs:
   - cite: "Alcohol and depression."
     url: "https://pubmed.ncbi.nlm.nih.gov/21382111/"

@@ -19,6 +19,13 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0.60
+warnings:
+  - "Causes acute hyponatremia (dangerously low sodium) due to excessive water intake combined with antidiuretic effects — a leading cause of MDMA-related deaths, particularly in young women."
+  - "Induces hyperthermia through increased physical activity and impaired thermoregulation; combined with serotonin syndrome, can cause multi-organ failure, rhabdomyolysis, and death."
+  - "Combined with SSRIs, MAOIs, lithium, or other serotonergic drugs, creates serious risk of serotonin syndrome."
+  - "Repeated or heavy use is associated with lasting serotonergic neurotoxicity and persistent deficits in verbal memory, executive function, and mood regulation."
+  - "Street ecstasy tablets are frequently adulterated with fentanyl, methamphetamine, or other unknown substances, substantially increasing overdose risk."
+
 refs:
   - cite: "MDMA-assisted therapy for severe PTSD: a randomized, double-blind, placebo-controlled phase 3 study."
     url: "https://pubmed.ncbi.nlm.nih.gov/33972795/"

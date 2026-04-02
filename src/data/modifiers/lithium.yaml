@@ -19,6 +19,14 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0
+warnings:
+  - "Narrow therapeutic index: toxicity risk at serum levels >1.5 mEq/L — regular blood level monitoring is required."
+  - "Sodium depletion, dehydration, NSAIDs, ACE inhibitors, and diuretics can precipitate toxic levels by reducing renal clearance."
+  - "Early toxicity signs include tremor, ataxia, and confusion; severe toxicity can cause seizures, coma, and irreversible neurological damage."
+  - "Long-term use can cause hypothyroidism and chronic kidney disease; thyroid and renal function require periodic monitoring."
+  - "Teratogenic (Ebstein's anomaly risk) and excreted in breast milk; use in pregnancy and lactation requires careful risk–benefit assessment."
+  - "Abrupt discontinuation substantially increases risk of manic relapse — taper gradually."
+
 refs:
   - cite: "Long-term lithium therapy for bipolar disorder: systematic review and meta-analysis of randomized controlled trials."
     url: "https://pubmed.ncbi.nlm.nih.gov/14754766/"

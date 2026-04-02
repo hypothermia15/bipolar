@@ -19,6 +19,13 @@ damping: 0.83
 gravity: 2.5
 barrierH: 0
 jitter: 0
+warnings:
+  - "[Black box] Concurrent use with opioids significantly increases risk of profound sedation, respiratory depression, coma, and death; this combination should be avoided or used only when no alternatives exist."
+  - "[Black box] Physical dependence occurs with regular use; abrupt discontinuation can cause life-threatening withdrawal seizures — tapering must be gradual."
+  - "Schedule IV controlled substance with significant misuse and addiction potential, particularly in individuals with a history of substance use disorders."
+  - "Causes CNS depression including sedation, psychomotor impairment, and anterograde amnesia; patients should avoid driving, alcohol, and other CNS depressants."
+  - "Paradoxical reactions (increased anxiety, agitation, aggression) can occur, particularly in children and elderly patients."
+
 refs:
   - cite: "Antimanic effect of clonazepam."
     url: "https://pubmed.ncbi.nlm.nih.gov/6407539/"

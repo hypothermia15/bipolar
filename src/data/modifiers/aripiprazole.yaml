@@ -19,6 +19,13 @@ damping: 0.982
 gravity: 13
 barrierH: 1.4
 jitter: 0
+warnings:
+  - "[Black box] Elderly patients with dementia-related psychosis have an increased risk of death; aripiprazole is not approved for this use."
+  - "Can cause compulsive behaviors (pathological gambling, hypersexuality, binge eating) that may not be recognized as drug-related; patients and caregivers should be counseled proactively."
+  - "Neuroleptic malignant syndrome (NMS) — potentially fatal hyperthermia, rigidity, and autonomic instability — can occur with any antipsychotic."
+  - "Tardive dyskinesia (TD), a potentially irreversible movement disorder, can develop with long-term use."
+  - "Can cause orthostatic hypotension and dizziness during initial titration, increasing fall risk."
+
 refs:
   - cite: "A placebo-controlled, double-blind study of the efficacy and safety of aripiprazole in patients with acute bipolar mania."
     url: "https://pubmed.ncbi.nlm.nih.gov/12944341/"

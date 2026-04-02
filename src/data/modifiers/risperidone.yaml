@@ -19,6 +19,13 @@ damping: 0.975
 gravity: 11
 barrierH: 1.8
 jitter: 0
+warnings:
+  - "[Black box] Elderly patients with dementia-related psychosis have increased mortality risk and notably higher rates of stroke; risperidone is not approved for this use."
+  - "Carries the highest hyperprolactinemia risk among second-generation antipsychotics — can cause galactorrhea, menstrual irregularities, gynecomastia, and long-term bone density loss."
+  - "Extrapyramidal side effects (akathisia, parkinsonism, dystonia) occur more frequently than with many other second-generation antipsychotics, especially above 6 mg/day."
+  - "QTc prolongation has been reported; use cautiously with other QT-prolonging agents or in patients with cardiac risk factors."
+  - "Causes weight gain and metabolic effects (hyperglycemia, dyslipidemia); metabolic monitoring is recommended."
+
 refs:
   - cite: "Rapid antimanic effect of risperidone monotherapy: a 3-week multicenter, double-blind, placebo-controlled trial."
     url: "https://pubmed.ncbi.nlm.nih.gov/15169694/"

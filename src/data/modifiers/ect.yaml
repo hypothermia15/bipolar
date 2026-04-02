@@ -19,6 +19,13 @@ damping: 0.985
 gravity: 19
 barrierH: 0
 jitter: 0
+warnings:
+  - "Performed under general anesthesia; primary risks include aspiration, transient cardiovascular stress (hypertension, tachycardia), and rare mortality (~1 per 10,000 patients)."
+  - "Anterograde and retrograde amnesia are the most common adverse effects; retrograde amnesia for autobiographical events can persist for months and is occasionally permanent, especially with bilateral electrode placement."
+  - "Patients with space-occupying brain lesions, recent MI, elevated intracranial pressure, or recent cerebrovascular events are at substantially increased risk — these are relative contraindications."
+  - "Lithium should generally be held before ECT due to increased risk of prolonged seizures, confusion, and cognitive impairment."
+  - "Requires repeated general anesthesia (typically 6–12 acute sessions); cumulative anesthesia exposure carries its own systemic risks."
+
 refs:
   - cite: "Efficacy and safety of electroconvulsive therapy in depressive disorders: a systematic review and meta-analysis."
     url: "https://pubmed.ncbi.nlm.nih.gov/12642045/"

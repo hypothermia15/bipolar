@@ -19,6 +19,13 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0.45
+warnings:
+  - "Heavy or early-onset use significantly increases risk of psychosis, schizophrenia spectrum disorders, and manic episodes, particularly in individuals with genetic vulnerability."
+  - "Cannabis use disorder develops in approximately 9% of users overall, rising to ~17% of those who begin in adolescence and ~50% of daily users; withdrawal causes irritability, insomnia, and dysphoria."
+  - "Prenatal exposure is associated with low birth weight, preterm birth, and neurodevelopmental problems including attention and memory deficits."
+  - "Inhaled cannabis delivers combustion byproducts similar to tobacco smoke, causing chronic bronchitis; acute cardiovascular risk includes MI triggered by smoking."
+  - "Worsens the long-term course of bipolar disorder, increasing episode frequency, suicide risk, and treatment non-adherence."
+
 refs:
   - cite: "Cannabis use and mania symptoms: a systematic review and meta-analysis."
     url: "https://pubmed.ncbi.nlm.nih.gov/25285897/"

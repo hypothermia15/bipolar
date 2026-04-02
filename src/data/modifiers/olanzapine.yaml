@@ -19,6 +19,13 @@ damping: 0.93
 gravity: 6
 barrierH: 2.0
 jitter: 0
+warnings:
+  - "[Black box] Elderly patients with dementia-related psychosis have increased mortality risk; olanzapine is not approved for this population."
+  - "[Black box] IM olanzapine combined with parenteral benzodiazepines carries risk of severe cardiorespiratory depression and death."
+  - "Carries among the highest metabolic risk of any second-generation antipsychotic — significant weight gain, hyperglycemia, and dyslipidemia are common; metabolic monitoring is essential."
+  - "Cases of diabetic ketoacidosis (DKA), sometimes fatal, have been reported in patients with no prior diabetes history."
+  - "Causes significant sedation, orthostatic hypotension, and anticholinergic effects (constipation, urinary retention, cognitive blunting)."
+
 refs:
   - cite: "Olanzapine versus placebo in the treatment of acute mania. Olanzapine HGEH Study Group."
     url: "https://pubmed.ncbi.nlm.nih.gov/10327902/"

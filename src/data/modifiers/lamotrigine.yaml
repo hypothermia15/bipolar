@@ -19,6 +19,12 @@ damping: 0.985
 gravity: 14
 barrierH: 0
 jitter: 0
+warnings:
+  - "[Black box] Can cause serious, potentially life-threatening skin reactions including Stevens-Johnson Syndrome (SJS) and toxic epidermal necrolysis (TEN); risk is highest with rapid dose titration and concurrent valproate use."
+  - "Dose must be titrated very slowly; valproate roughly doubles lamotrigine levels (requiring halved doses), while enzyme inducers like carbamazepine roughly halve them."
+  - "Hormonal contraceptives can reduce lamotrigine plasma levels by up to 50%, potentially reducing efficacy; dose adjustments are often needed."
+  - "Carries an FDA class-wide antiepileptic warning for increased suicidal ideation and behavior."
+
 refs:
   - cite: "A double-blind placebo-controlled study of lamotrigine monotherapy in outpatients with bipolar I depression. Lamictal 602 Study Group."
     url: "https://pubmed.ncbi.nlm.nih.gov/10084633/"
