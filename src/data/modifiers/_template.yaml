@@ -1,0 +1,80 @@
+# ──────────────────────────────────────────────────────────────
+# Modifier template — copy this file and rename to <substance>.yaml
+# ──────────────────────────────────────────────────────────────
+
+# ── Metadata ──────────────────────────────────────────────────
+# category   – UI grouping: stabilizers | antipsychotics | substances
+# order      – sort position within the category (1 = first)
+# icon       – emoji shown on the button
+# color      – hex colour for the button and chart accent
+
+category: stabilizers
+order: 1
+icon: "💊"
+color: "#27ae60"
+
+# ── Pharmacokinetics ─────────────────────────────────────────
+# halfLife   – elimination half-life in hours
+# onset      – time to meaningful clinical effect in hours
+
+halfLife: 12
+onset: 2
+
+# ── Landscape boundary ───────────────────────────────────────
+# wallStr    – steepness of the outer walls that keep the ball
+#              inside the landscape (usually leave at 1.5)
+
+wallStr: 1.5
+
+# ── Wells ─────────────────────────────────────────────────────
+# Three wells define the energy landscape, left to right:
+#   [0] mania   –  cx ≈ -0.68
+#   [1] euthymia – cx ≈  0.00
+#   [2] depression – cx ≈  0.68
+#
+# Each well has:
+#   cx    – horizontal center position (keep at the defaults above)
+#   depth – how deep (attractive) the state is
+#           0   = flat / no pull
+#           2.2 = baseline depth for mania & depression
+#           higher = harder to escape that state
+#   w     – width of the well (wider = broader basin of attraction)
+
+wells:
+  - cx: -0.68
+    depth: 2.2       # mania depth   (baseline: 2.2)
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0        # euthymia depth (baseline: 0 = unstable hilltop)
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2        # depression depth (baseline: 2.2)
+    w: 0.20
+
+# ── Dynamics ──────────────────────────────────────────────────
+# damping    – friction coefficient (0–1)
+#              lower = more damped, ball loses energy faster (sedation)
+#              baseline: 0.985
+# gravity    – overall force multiplier — how reactive the system is
+#              baseline: 14; lower = sluggish / sedated
+# barrierH   – height of a barrier in front of the manic well
+#              models dopamine D2 blockade (antipsychotics)
+#              0 = no barrier
+# jitter     – random noise added each frame
+#              models restlessness / agitation
+#              0 = calm; >0 used for stimulants, substances
+
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0
+
+# ── References ────────────────────────────────────────────────
+# List of supporting clinical / scientific literature.
+# Each entry needs a cite (human-readable) and url.
+
+refs:
+  - cite: "Author et al. Title of paper. Journal, Year."
+    url: "https://pubmed.ncbi.nlm.nih.gov/..."
+  - cite: "Another Author et al. Second supporting paper. Journal, Year."
+    url: "https://pubmed.ncbi.nlm.nih.gov/..."
