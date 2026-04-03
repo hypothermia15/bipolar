@@ -4,6 +4,8 @@ A visual model of bipolar disorder as a dynamic energy landscape — mood is a b
 
 **[Try it live →](https://bipolar.kisielos.com)**
 
+> **Disclaimer:** This is an educational visualization, not a medical tool. Parameter values are simplified approximations and do not constitute clinical guidance. Never make treatment decisions based on this simulation. Always consult a qualified psychiatrist.
+
 <p align="center">
   <img src="assets/demo.gif" width="820" alt="Simulation Preview">
 </p>
