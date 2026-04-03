@@ -21,3 +21,6 @@ npm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Lock file (regenerated per-platform on CI)
+package-lock.json
