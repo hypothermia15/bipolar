@@ -5,6 +5,7 @@ import { MODIFIERS } from "../data/modifiers";
 export default function InfoPanel({ activeModifiers }) {
   const { t } = useTranslation();
   const [openWarnings, setOpenWarnings] = useState({});
+  const [openSources, setOpenSources] = useState({});
 
   const activeDescs = Object.entries(activeModifiers)
     .filter(([, d]) => d.conc > 0.01)
@@ -120,20 +121,39 @@ export default function InfoPanel({ activeModifiers }) {
                 )}
 
                 {d.refs && d.refs.length > 0 && (
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 12px", marginTop: 4 }}>
-                    {d.refs.map((ref, i) => (
-                      <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer"
-                        style={{
-                          color: d.color, opacity: 0.7, fontSize: 11.5,
-                          textDecoration: "none", borderBottom: `1px dotted ${d.color}55`,
-                          transition: "opacity 0.2s"
-                        }}
-                        onMouseOver={e => e.currentTarget.style.opacity = 1}
-                        onMouseOut={e => e.currentTarget.style.opacity = 0.7}
-                      >
-                        ↗ {ref.cite}
-                      </a>
-                    ))}
+                  <div style={{ marginTop: 6, borderRadius: 6, background: `${d.color}08`, border: `1px solid ${d.color}20`, overflow: "hidden" }}>
+                    <button
+                      onClick={() => setOpenSources(prev => ({ ...prev, [key]: !prev[key] }))}
+                      style={{
+                        display: "flex", alignItems: "center", justifyContent: "space-between",
+                        width: "100%", padding: "7px 10px", background: "none", border: "none",
+                        cursor: "pointer", textAlign: "left",
+                      }}
+                    >
+                      <span style={{ color: `${d.color}b3`, fontSize: 10.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1 }}>
+                        ↗ {t("ui.sources")}
+                      </span>
+                      <span style={{ color: `${d.color}80`, fontSize: 11, marginLeft: 6 }}>
+                        {openSources[key] ? "▲" : "▼"}
+                      </span>
+                    </button>
+                    {openSources[key] && (
+                      <div style={{ padding: "0 10px 8px 10px", display: "flex", flexDirection: "column", gap: 4 }}>
+                        {d.refs.map((ref, i) => (
+                          <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer"
+                            style={{
+                              color: d.color, opacity: 0.7, fontSize: 11.5,
+                              textDecoration: "none", borderBottom: `1px dotted ${d.color}55`,
+                              transition: "opacity 0.2s", lineHeight: 1.5
+                            }}
+                            onMouseOver={e => e.currentTarget.style.opacity = 1}
+                            onMouseOut={e => e.currentTarget.style.opacity = 0.7}
+                          >
+                            ↗ {ref.cite}
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

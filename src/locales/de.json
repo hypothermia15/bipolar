@@ -26,7 +26,8 @@
     "euthymia": "EUTHYMIE",
     "depression": "DEPRESSION",
     "barrier": "D2 BARRIERE",
-    "warnings": "Warnhinweise und Vorsichtsmaßnahmen"
+    "warnings": "Warnhinweise und Vorsichtsmaßnahmen",
+    "sources": "Quellen"
   },
   "modifiers": {
     "lithium": {
