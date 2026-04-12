@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSimulation } from "./hooks/useSimulation";
 import SimulationCanvas from "./components/SimulationCanvas";
 import ModifierControls from "./components/ModifierControls";
@@ -8,7 +9,14 @@ import "./App.css";
 
 export default function App() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const { sim, activeModifiers, toggleModifier, disturb, loop } = useSimulation();
+
+  const switchLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    // English is default — use root path; other languages get /:lang prefix
+    navigate(lang === "en" ? "/" : `/${lang}`, { replace: true });
+  };
 
   return (
     <div className="app-container" style={{
@@ -32,7 +40,7 @@ export default function App() {
               {["en", "pl", "de"].map((l) => (
                 <button
                   key={l}
-                  onClick={() => i18n.changeLanguage(l)}
+                  onClick={() => switchLanguage(l)}
                   className={`lang-item ${i18n.language === l ? "active" : ""}`}
                 >
                   {l.toUpperCase()}

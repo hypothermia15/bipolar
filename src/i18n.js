@@ -21,13 +21,18 @@ const enModifiers = Object.fromEntries(
   ])
 );
 
+// Detect language from URL path prefix (e.g. /pl, /de)
+const SUPPORTED_LANGS = ['en', 'pl', 'de'];
+const pathLang = window.location.pathname.split('/')[1];
+const initialLang = SUPPORTED_LANGS.includes(pathLang) ? pathLang : 'en';
+
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: { ...en, modifiers: enModifiers } },
     pl: { translation: pl },
     de: { translation: de },
   },
-  lng: 'en',
+  lng: initialLang,
   fallbackLng: 'en',
   interpolation: { escapeValue: false },
 });
