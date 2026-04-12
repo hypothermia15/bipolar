@@ -34,6 +34,14 @@
       "label": "Lithium",
       "desc": "Das einzige Medikament, das die gesamte Landschaft umgestaltet. Euthymie wird zu einer tiefen, stabilen Mulde.",
       "detail": "Der älteste und am besten dokumentierte Stabilisator. Als einziger mit starker neuroprotektiver Wirkung und signifikanter Suizidrisikosenkung.",
+      "warnings": [
+        "Enger therapeutischer Index: Toxizitätsrisiko bei Serumspiegeln >1,5 mEq/L — regelmäßige Blutspiegelüberwachung ist erforderlich.",
+        "Natriumdepletion, Dehydration, NSAIDs, ACE-Hemmer und Diuretika können toxische Spiegel durch reduzierte renale Clearance auslösen.",
+        "Frühe Toxizitätszeichen sind Tremor, Ataxie und Verwirrtheit; schwere Toxizität kann Anfälle, Koma und irreversible neurologische Schäden verursachen.",
+        "Langzeitgebrauch kann Hypothyreose und chronische Nierenerkrankung verursachen; Schilddrüsen- und Nierenfunktion erfordern regelmäßige Überwachung.",
+        "Teratogen (Ebstein-Anomalie-Risiko) und in Muttermilch ausgeschieden; die Verwendung in Schwangerschaft und Stillzeit erfordert sorgfältige Nutzen-Risiko-Bewertung.",
+        "Abruptes Absetzen erhöht das Risiko manischer Rückfälle erheblich — graduelles Ausschleichen erforderlich."
+      ],
       "sections": [
         {
           "heading": "Nachgewiesene Mechanismen",
@@ -68,62 +76,147 @@
     "valproate": {
       "label": "Valproat",
       "desc": "Der Ball bewegt sich wie durch 'Honig' — Übergänge zwischen Zuständen sind langsamer, aber die Landschaft bleibt gleich.",
-      "detail": "Verstärkt die GABAerge Transmission und blockiert spannungsgesteuerte Natriumkanäle. Wirksam vor allem bei akuter Manie. Die Landschaft (Mulden) bleibt unverändert."
+      "detail": "Verstärkt die GABAerge Transmission und blockiert spannungsgesteuerte Natriumkanäle. Wirksam vor allem bei akuter Manie. Die Landschaft (Mulden) bleibt unverändert.",
+      "warnings": [
+        "Hochgradig teratogen: verursacht Neuralrohrdefekte bei 1–2 % der Expositionen und ist mit niedrigerem IQ und Autismus-Spektrum-Störung bei Kindern mit pränataler Exposition assoziiert — vermeiden bei Menschen im gebärfähigen Alter, es sei denn, Alternativen haben versagt.",
+        "Potenziell tödliche Hepatotoxizität wurde berichtet, besonders bei Kindern unter 2 Jahren und bei Polypharmaka-Patienten; Leberfunktion überwachen, besonders in den ersten 6 Monaten.",
+        "Lebensbedrohliche Pankreatitis wurde berichtet; Patienten sollten sofortige ärztliche Hilfe bei neuen Bauchschmerzen, Übelkeit oder Erbrechen suchen.",
+        "Verursacht dosisabhängige Thrombozytopenie und Thrombozytendysfunktion, erhöht Blutungsrisiko; regelmäßige CBC-Überwachung wird empfohlen.",
+        "Hemmt CYP450- und Glukuronidierungsenzyme — verdoppelt Lamotriginspiegeln und hat klinisch signifikante Wechselwirkungen mit anderen Antiepileptika.",
+        "Assoziiert mit Polyzystischem Ovarialsyndrom (PCOS) und Hyperandrogenismus, besonders wenn in der Adoleszenz begonnen."
+      ]
     },
     "lamotrigine": {
       "label": "Lamotrigin",
       "desc": "Flacht die depressive Mulde ab (Glutamat-Blockade) — aber die Manie bleibt tief. Asymmetrischer Schutz.",
-      "detail": "Blockiert spannungsgesteuerte Natriumkanäle und hemmt die Glutamatfreisetzung. Gut dokumentierte Wirksamkeit bei der Vorbeugung depressiver Episoden."
+      "detail": "Blockiert spannungsgesteuerte Natriumkanäle und hemmt die Glutamatfreisetzung. Gut dokumentierte Wirksamkeit bei der Vorbeugung depressiver Episoden.",
+      "warnings": [
+        "Kann ernsthafte, möglicherweise lebensbedrohliche Hautreaktionen verursachen, einschließlich Stevens-Johnson-Syndrom (SJS) und toxischer epidermaler Nekrolyse (TEN); das Risiko ist höchst bei schneller Dosistitration und gleichzeitiger Valproat-Verwendung.",
+        "Dosis muss sehr langsam titriert werden; Valproat verdoppelt ungefähr Lamotriginspiegeln (erfordert halbierte Dosen), während Enzyminduktoren wie Carbamazepin sie ungefähr halbieren.",
+        "Hormonale Kontrazeptiva können Lamotrigin-Plasmaspiegel um bis zu 50 % reduzieren, was möglicherweise die Wirksamkeit verringert; Dosisanpassungen sind oft erforderlich.",
+        "Trägt eine FDA-Klasse-Warnung für Antiepileprika bezüglich erhöhter Suizidalität und suizidalen Verhaltens."
+      ]
     },
     "aripiprazole": {
       "label": "Aripiprazol",
       "desc": "Flacht die manische Mulde ab und setzt eine moderate Barriere ('D2-Thermostat'). Wenn der Ball in Manie ist, fließt er allmählich ab.",
-      "detail": "Partieller D2-Agonist und 5-HT2A-Antagonist. 'Moduliert' Dopamin, anstatt es vollständig zu blockieren. Verhindert manische Rückfälle."
+      "detail": "Partieller D2-Agonist und 5-HT2A-Antagonist. 'Moduliert' Dopamin, anstatt es vollständig zu blockieren. Verhindert manische Rückfälle.",
+      "warnings": [
+        "Ältere Patienten mit psychosen im Zusammenhang mit Demenz haben ein erhöhtes Todesrisiko; Aripiprazol ist nicht für diese Verwendung zugelassen.",
+        "Kann zwanghafte Verhaltensweisen verursachen (pathologisches Glücksspiel, Hypersexualität, Essanfälle), die möglicherweise nicht als arzneimittelbedingt erkannt werden; Patienten und Betreuer sollten proaktiv beraten werden.",
+        "Malignes neuroleptisches Syndrom (NMS) — potenziell tödliche Hyperthermie, Rigor und autonome Instabilität — kann bei jedem Antipsychotikum auftreten.",
+        "Tardive Dyskinesie (TD), eine möglicherweise irreversible Bewegungsstörung, kann sich bei Langzeitgebrauch entwickeln.",
+        "Kann orthostatische Hypotension und Schwindel während der anfänglichen Titration verursachen, was das Sturzrisiko erhöht."
+      ]
     },
     "quetiapine": {
       "label": "Quetiapin",
       "desc": "Flacht beide Mulden ab (Manie und Depression) + Sedierung + Barriere. Bidirektional.",
-      "detail": "Breites Rezeptorprofil (D2, 5-HT2A, H1). Wirksam bei Manie UND bipolarer Depression (BOLDER-Studien). Niedrige Gravitation repräsentiert Sedierung."
+      "detail": "Breites Rezeptorprofil (D2, 5-HT2A, H1). Wirksam bei Manie UND bipolarer Depression (BOLDER-Studien). Niedrige Gravitation repräsentiert Sedierung.",
+      "warnings": [
+        "Ältere Patienten mit psychosen im Zusammenhang mit Demenz haben erhöhtes Mortalitätsrisiko; Quetiapin ist nicht für diese Verwendung zugelassen.",
+        "Verursacht signifikante metabolische Effekte einschließlich Gewichtszunahme, Hyperglykämie, neu auftretender Typ-2-Diabetes und Dyslipidämie; metabolische Parameter sollten regelmäßig überwacht werden.",
+        "QTc-Verlängerung kann auftreten, erhöht das Risiko ventrikulärer Arrhythmien — mit Vorsicht anwenden bei anderen QT-verlängernden Arzneimitteln.",
+        "Ausgeprägte Sedierung und orthostatische Hypotension bei Einleitung; hat Missbrauchspotenzial aufgrund seiner sedativen Eigenschaften.",
+        "Tardive-Dyskinesie- und NMS-Risiken sind bei Langzeitgebrauch oder hoher Dosis vorhanden, konsistent mit der Antipsychotika-Klasse."
+      ]
     },
     "olanzapine": {
       "label": "Olanzapin",
       "desc": "Stärkste Abflachung der manischen Mulde. Starke Sedierung.",
-      "detail": "Hohe Affinität zu D2, 5-HT2A, H1 und muskarinischen Rezeptoren. Eines der effektivsten Medikamente bei akuter Manie."
+      "detail": "Hohe Affinität zu D2, 5-HT2A, H1 und muskarinischen Rezeptoren. Eines der effektivsten Medikamente bei akuter Manie.",
+      "warnings": [
+        "Ältere Patienten mit psychosen im Zusammenhang mit Demenz haben erhöhtes Mortalitätsrisiko; Olanzapin ist nicht für diese Bevölkerung zugelassen.",
+        "IM-Olanzapin kombiniert mit parenteralen Benzodiazepinen trägt Risiko schwerer kardiorespiratorischer Depression und Tod.",
+        "Trägt unter den höchsten metabolischen Risiken aller Second-Generation-Antipsychotika — erhebliche Gewichtszunahme, Hyperglykämie und Dyslipidämie sind häufig; metabolische Überwachung ist essentiell.",
+        "Fälle von diabetischer Ketoazidose (DKA), manchmal tödlich, wurden bei Patienten ohne vorherige Diabetes-Geschichte berichtet.",
+        "Verursacht erhebliche Sedierung, orthostatische Hypotension und anticholinerge Effekte (Verstopfung, Harnverhalt, kognitives Abstumpfen)."
+      ]
     },
     "risperidone": {
       "label": "Risperidon",
       "desc": "Deutliche Abflachung der Manie + Barriere. Schnelle Wirkung, aber Risiko von Steifigkeit.",
-      "detail": "Potenter D2-Antagonist. Reduziert manische Erregung schnell. Risiko für extrapyramidale Symptome."
+      "detail": "Potenter D2-Antagonist. Reduziert manische Erregung schnell. Risiko für extrapyramidale Symptome.",
+      "warnings": [
+        "Ältere Patienten mit psychosen im Zusammenhang mit Demenz haben erhöhtes Mortalitätsrisiko und besonders höhere Schlaganfallraten; Risperidon ist nicht für diese Verwendung zugelassen.",
+        "Trägt das höchste Hyperprolaktinämie-Risiko unter Second-Generation-Antipsychotika — kann Galaktorrhoe, Menstruationsstörungen, Gynäkomastie und langfristigen Knochendichteverlust verursachen.",
+        "Extrapyramidale Nebenwirkungen (Akathisie, Parkinsonismus, Dystonie) treten häufiger auf als bei vielen anderen Second-Generation-Antipsychotika, besonders über 6 mg/Tag.",
+        "QTc-Verlängerung wurde berichtet; mit Vorsicht anwenden bei anderen QT-verlängernden Mitteln oder bei Patienten mit Kardiovaskulären Risikofaktoren.",
+        "Verursacht Gewichtszunahme und metabolische Effekte (Hyperglykämie, Dyslipidämie); metabolische Überwachung wird empfohlen."
+      ]
     },
     "clonazepam": {
       "label": "Clonazepam",
       "desc": "Flutet die Landschaft mit Öl (massive GABA). Schnelle Linderung, keine strukturelle Reparatur.",
-      "detail": "Benzodiazepin. Starke Verlangsamung (Damping), aber kein Einfluss auf die Muldentiefe. Abhängigkeitsrisiko."
+      "detail": "Benzodiazepin. Starke Verlangsamung (Damping), aber kein Einfluss auf die Muldentiefe. Abhängigkeitsrisiko.",
+      "warnings": [
+        "Gleichzeitige Anwendung mit Opioidenutzung erhöht signifikant das Risiko tiefes Sedierung, Atemlähmung, Koma und Tod; diese Kombination sollte vermieden oder nur verwendet werden, wenn keine Alternativen vorhanden sind.",
+        "Physische Abhängigkeit tritt bei regelmäßiger Anwendung auf; abruptes Absetzen kann lebensbedrohliche Entzugskrämpfe verursachen — Ausschleichen muss graduell erfolgen.",
+        "Schedule-IV-regulierte Substanz mit signifikantem Missbrauch- und Suchtpotenzial, besonders bei Personen mit Geschichte von Substanzgebrauchsstörungen.",
+        "Verursacht ZNS-Dämpfung einschließlich Sedierung, psychomotorischer Beeinträchtigung und anterograder Amnesie; Patienten sollten Fahren, Alkohol und andere ZNS-Dämpfungsmittel vermeiden.",
+        "Paradoxe Reaktionen (erhöhte Angst, Agitation, Aggression) können auftreten, besonders bei Kindern und älteren Patienten."
+      ]
     },
     "thc": {
       "label": "THC",
       "desc": "Dysreguliert die Landschaft — Mulden oszillieren zufällig. Vorübergehende Linderung, aber höheres Episodenrisiko.",
-      "detail": "Stört die Neurotransmitter-Regulation. Jitter in der Visualisierung repräsentiert Stimmungsinstabilität."
+      "detail": "Stört die Neurotransmitter-Regulation. Jitter in der Visualisierung repräsentiert Stimmungsinstabilität.",
+      "warnings": [
+        "Schwerer oder früher Cannabisgebrauch erhöht signifikant das Risiko von Psychosen, Schizophrenie-Spektrum-Störungen und manischen Episoden, besonders bei Personen mit genetischer Anfälligkeit.",
+        "Cannabisgebrauchsstörung entwickelt sich bei ungefähr 9 % der Nutzer insgesamt, ansteigend auf ~17 % derer, die in der Adoleszenz beginnen und ~50 % täglicher Nutzer; Entzug verursacht Reizbarkeit, Insomnie und Dysphorie.",
+        "Prenatale Exposition ist assoziiert mit niedrigem Geburtsgewicht, Frühgeburten und Neuronalen Entwicklungsproblemen einschließlich Aufmerksamkeits- und Gedächtnisdefiziten.",
+        "Inhalierter Cannabis liefert Verbrennungsnebenprodukte ähnlich wie Tabakrauch, verursacht chronische Bronchitis; akutes kardiovaskuläres Risiko umfasst MI ausgelöst durch Rauchen.",
+        "Verschlimmert den Langzeitverlauf der bipolaren Störung, erhöht Episodenhäufigkeit, Suizidrisiko und Therapie-Nicht-Adhärenz."
+      ]
     },
     "ketamine": {
       "label": "Ketamin",
       "desc": "Füllt die depressive Mulde sofort auf (NMDA-Blockade). Spektakulär, aber kurzlebige Wirkung.",
-      "detail": "Schnelle antidepressive Wirkung über NMDA-Blockade und Synaptogenese. Verändert Topologie nicht dauerhaft."
+      "detail": "Schnelle antidepressive Wirkung über NMDA-Blockade und Synaptogenese. Verändert Topologie nicht dauerhaft.",
+      "warnings": [
+        "Signifikantes Missbrauchspotenzial und Risiko psychologischer Abhängigkeit; Esketamin (Spravato) ist Schedule III und erfordert ein REMS-Programm mit mindestens 2-stündiger beaufsichtigter Beobachtung nach jeder Dosis.",
+        "Verursacht dosisabhängige Dissoziation und Wahrnehmungsstörungen; bei hohen Dosen kann einen tiefen dissoziativen Zustand (,K-Hole') hervorrufen.",
+        "Chronischer starker Gebrauch verursacht Ketamin-induzierte Urothpathie — schwere, oft irreversible Blasenschäden, die in extremen Fällen Zystektomie erfordern.",
+        "Erhöht Blutdruck und Herzfrequenz signifikant; mit Vorsicht anwenden bei Patienten mit unkontrollierter Hypertonie oder kardiovaskulärer Erkrankung.",
+        "Antidepressive Effekte sind typischerweise vorübergehend (Tage bis Wochen); Langzeit-Dosierungsprotokolle und kumulative Sicherheit bleiben unter aktiver Untersuchung."
+      ]
     },
     "mdma": {
       "label": "MDMA",
       "desc": "Flacht beide Mulden ab (massive 5-HT/DA-Ausschüttung) + hohes Chaos. Manierisiko.",
-      "detail": "Massive Monoamin-Freisetzung. Hohes Risiko bei Bipolarität — kann Manie auslösen oder Depression verschlimmern."
+      "detail": "Massive Monoamin-Freisetzung. Hohes Risiko bei Bipolarität — kann Manie auslösen oder Depression verschlimmern.",
+      "warnings": [
+        "Verursacht akute Hyponatriämie (gefährlich niedriges Natrium) durch übermäßige Wasseraufnahme in Kombination mit antidiuretischen Effekten — eine Hauptursache für MDMA-bedingte Todesfälle, besonders bei jungen Frauen.",
+        "Induziert Hyperthermie durch erhöhte körperliche Aktivität und beeinträchtigte Thermoregulation; in Kombination mit Serotonin-Syndrom kann Multiple-Organ-Versagen, Rhabdomyolyse und Tod verursachen.",
+        "In Kombination mit SSRIs, MAOIs, Lithium oder anderen serotonergenen Medikamenten erzeugt ernsthaftes Risiko für Serotonin-Syndrom.",
+        "Wiederholter oder starker Gebrauch ist assoziiert mit lang andauernder serotonergener Neurotoxizität und persistenten Defiziten in verbaler Gedächtnisleistung, Exekutivfunktion und Stimmungsregulation.",
+        "Straßen-Ecstasy-Tabletten sind häufig verfälscht mit Fentanyl, Methamphetamin oder anderen unbekannten Substanzen, was das Überdosisrisiko erheblich erhöht."
+      ]
     },
     "ect": {
       "label": "EKT",
       "desc": "Landschafts-Reset — Manie und Depression fast flach, Euthymie wird zum wahren Attraktor.",
-      "detail": "Elektrokonvulsionstherapie. Stärkste Methode zur Unterbrechung schwerer Episoden. Dramatische topologische Veränderung."
+      "detail": "Elektrokonvulsionstherapie. Stärkste Methode zur Unterbrechung schwerer Episoden. Dramatische topologische Veränderung.",
+      "warnings": [
+        "Wird unter Allgemeinanästhesie durchgeführt; primäre Risiken umfassen Aspiration, vorübergehende kardiovaskuläre Belastung (Hypertonie, Tachykardie) und seltene Mortalität (~1 pro 10.000 Patienten).",
+        "Anterograde und retrograde Amnesie sind die häufigsten Nebenwirkungen; retrograde Amnesie für autobiographische Ereignisse kann Monate andauern und ist gelegentlich dauerhaft, besonders bei bipolarer Elektrodenplatzierung.",
+        "Patienten mit raumfordernden Hirnläsionen, neuem MI, erhöhtem Hirndruck oder neuem zerebrovaskulärem Ereignis sind bei erheblich erhöhtem Risiko — dies sind relative Kontraindikationen.",
+        "Lithium sollte allgemein vor EKT pausiert werden aufgrund erhöhten Risikos verlängerter Anfälle, Verwirrtheit und kognitiver Beeinträchtigung.",
+        "Erfordert wiederholte Allgemeinanästhesie (typischerweise 6–12 akute Sitzungen); kumulative Anästhesie-Exposition trägt ihre eigenen systemischen Risiken."
+      ]
     },
     "alcohol": {
       "label": "Alkohol",
       "desc": "Destabilisiert die Landschaft, indem beide pathologischen Becken vertieft werden. Kurzzeitige Verlangsamung weicht erhöhtem Chaos und Rückfallrisiko.",
-      "detail": "ZNS-Depressivum (GABAerg). Während es den Ball anfangs verlangsamt (Sedierung), vertiefen Langzeitfolgen und Rebound-Effekte sowohl manische als auch depressive Mulden. Erhöht das Cycling- und Impulsivitätsrisiko."
+      "detail": "ZNS-Depressivum (GABAerg). Während es den Ball anfangs verlangsamt (Sedierung), vertiefen Langzeitfolgen und Rebound-Effekte sowohl manische als auch depressive Mulden. Erhöht das Cycling- und Impulsivitätsrisiko.",
+      "warnings": [
+        "Alkoholentzug bei körperlich abhängigen Personen kann lebensbedrohlich sein — Anfälle und Delirium tremens (DTs) erfordern medizinisch beaufsichtigte Entgiftung.",
+        "Chronischer starker Gebrauch verursacht alkoholbedingte Lebererkrankung, Kardiomyopathie, Pankreatitis und periphere Neuropathie.",
+        "Potenziert die Effekte von Benzodiazepinen, Opioidenutzung, Antipsychotika und anderen ZNS-Dämpfungsmitteln — möglicherweise tödliche additive Atemlähmung.",
+        "Verschlimmert den Langzeitverlauf der bipolaren Störung: erhöht Episodenhäufigkeit, Suizidrisiko und Therapie-Nicht-Adhärenz.",
+        "IARC-Gruppe-1-Karzinogen, kausales Verknüpfung mit Krebsen von Mund, Rachen, Speiseröhre, Leber, Dickdarm und Brust — Risiko erhöht sich linear mit Konsum.",
+        "Keine sichere Ebene von Alkoholgebrauch in Schwangerschaft ist etabliert worden; prenatale Exposition verursacht Fetal-Alkohol-Spektrum-Störungen (FASD)."
+      ]
     }
   }
 }

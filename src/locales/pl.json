@@ -34,6 +34,14 @@
       "label": "Lit",
       "desc": "Jedyny lek przebudowujący cały krajobraz. Eutymia staje się głębokim, stabilnym dolkiem — mania i depresja płytnieją. Reszta leków tylko zasypuje dolki lub spowalnia kulkę.",
       "detail": "Najstarszy i najlepiej udokumentowany stabilizator. Jako jedyny wykazuje silne działanie neuroprotekcyjne i istotnie obniża ryzyko samobójstwa.",
+      "warnings": [
+        "Wąskie okno terapeutyczne: ryzyko toksyczności przy stężeniu w surowicy >1,5 mEq/L — wymagane są regularne pomiary poziomu w krwi.",
+        "Deplekcja sodu, odwodnienie, niesteroidowe leki przeciwzapalne, inhibitory ACE i diuretyki mogą precipytować stany toksyczne przez zmniejszenie klirensу przez nerki.",
+        "Wczesne objawy toksyczności: drżenie, ataksja, zamieszanie; ciężka toksyczność może powodować drgawki, śpiączkę i nieodwracalne uszkodzenie neurologiczne.",
+        "Długotrwałe stosowanie może powodować niedoczynność tarczycy i przewlekłą chorobę nerek; funkcja tarczycy i nerek wymagają okresowej obserwacji.",
+        "Teratogenny (ryzyko anomalii Ebsteina) i wydzielany w mleku matki; stosowanie w ciąży i laktacji wymaga starannej oceny stosunku korzyści do ryzyka.",
+        "Gwałtowne przerwanie istotnie zwiększa ryzyko nawrotu manii — konieczne jest stopniowe obniżanie dawki."
+      ],
       "sections": [
         {
           "heading": "Udowodnione mechanizmy",
@@ -68,62 +76,147 @@
     "valproate": {
       "label": "Walproinian",
       "desc": "Kulka porusza się w 'miodzie' — przejścia między stanami są wolniejsze, ale krajobraz się nie zmienia.",
-      "detail": "Wzmacnia transmisję GABA-ergiczną i blokuje kanały sodowe zależne od napięcia. Skuteczny głównie w ostrej manii i u pacjentów z szybkim cyklowaniem. Terrain (studnie) pozostaje bez zmian — lek spowalnia dynamikę kulki."
+      "detail": "Wzmacnia transmisję GABA-ergiczną i blokuje kanały sodowe zależne od napięcia. Skuteczny głównie w ostrej manii i u pacjentów z szybkim cyklowaniem. Terrain (studnie) pozostaje bez zmian — lek spowalnia dynamikę kulki.",
+      "warnings": [
+        "Wysoce teratogenny: powoduje wady rurkę nerwowej w 1–2% ekspozycji i wiąże się z niższym IQ oraz autyzmem spektrum u dzieci eksponowanych in utero — należy unikać u osób w wieku reprodukcyjnym, chyba że alternatywne leki nie zadziałały.",
+        "Potencjalnie śmiertelna hepatotoksyczność, szczególnie u dzieci poniżej 2 lat i pacjentów ze skojarzonym leczeniem; monitoruj czynności wątroby, szczególnie w ciągu pierwszych 6 miesięcy.",
+        "Zagrażające życiu zapalenie trzustki zostało zgłoszone; pacjenci powinni niezwłocznie zwrócić się o opiekę medyczną przy nowych bólach brzucha, nudnościach lub wymiotach.",
+        "Powoduje zależne od dawki małopłytkowość i dysfunkcję płytek krwi, zwiększając ryzyko krwawienia; zalecane jest okresowe badanie morfologii.",
+        "Hamuje enzymy CYP450 i glukuronidacji — podwaja stężenie lamotriginy i ma klinicznie istotne interakcje z innymi lekami przeciwpadaczkowymi.",
+        "Wiąże się z zespołem policystycznych jajników (PCOS) i hiperAndroginizmem, szczególnie gdy rozpoczęte w okresie adolescencji."
+      ]
     },
     "lamotrigine": {
       "label": "Lamotrigina",
       "desc": "Spłyca depresyjny dolek (blokada glutaminianu) — ale mania pozostaje głęboka. Asymetryczna ochrona.",
-      "detail": "Blokuje napięciozależne kanały sodowe i hamuje uwalnianie glutaminianu. Wykazuje dobrze udokumentowaną skuteczność w zapobieganiu epizodom depresji. Wymaga wolnego miareczkowania dawki."
+      "detail": "Blokuje napięciozależne kanały sodowe i hamuje uwalnianie glutaminianu. Wykazuje dobrze udokumentowaną skuteczność w zapobieganiu epizodom depresji. Wymaga wolnego miareczkowania dawki.",
+      "warnings": [
+        "Może powodować poważne, potencjalnie zagrażające życiu reakcje skórne, w tym zespół Stevensa-Johnsona (SJS) i toksyczną nekrolizę naskórkową (TEN); ryzyko jest najwyższe przy szybkim miareckowaniu dawki i równoczesnym stosowaniu walproinianu.",
+        "Dawka musi być miareczkowana bardzo wolno; walproinian w przybliżeniu podwaja stężenie lamotriginy w osoczu (wymagające zmniejszenia dawki o połowę), podczas gdy enzymy indukujące, takie jak karbamazepina, przybliżnie je zmniejszają o połowę.",
+        "Hormonalne środki antykoncepcyjne mogą zmniejszać stężenie lamotriginy w osoczu do 50%, potencjalnie zmniejszając skuteczność; często potrzebne są korekty dawki.",
+        "Niesie ostrzeżenie FDA dotyczące całej klasy leków przeciwpadaczkowych o zwiększonym ryzyku myśli i zachowań samobójczych."
+      ]
     },
     "aripiprazole": {
       "label": "Aripiprazol",
       "desc": "Spłyca dolek manii i stawia umiarkowaną barierę ('termostat' D2). Jeśli kulka jest w manii — stopniowo z niej wypływa.",
-      "detail": "Działa jako agonista częściowy receptorów D2 oraz antagonista 5-HT2A. 'Moduluje' dopaminę zamiast ją całkowicie blokować. Zapobiega nawrotom manii."
+      "detail": "Działa jako agonista częściowy receptorów D2 oraz antagonista 5-HT2A. 'Moduluje' dopaminę zamiast ją całkowicie blokować. Zapobiega nawrotom manii.",
+      "warnings": [
+        "Starsi pacjenci z psychozą związaną z otępieniem mają zwiększone ryzyko śmierci; aripiprazol nie jest zatwierdzony do takiego zastosowania.",
+        "Może powodować zachowania przymusowe (patologiczny hazard, hiperseksualność, objadanie się), które mogą nie być rozpoznane jako związane z lekiem; pacjenci i opiekunowie powinni być proaktywnie poinformowani.",
+        "Złośliwy zespół neuroleptyczny (NMS) — potencjalnie śmiertelna hipertermia, sztywność i niestabilność autonomiczna — mogą wystąpić przy każdym antypychotyk.",
+        "Dyskineza spóźniona (TD), potencjalnie nieodwracalne zaburzenie ruchowe, może się rozwinąć przy długotrwałym stosowaniu.",
+        "Może powodować hipotensję ortostatyczną i zawroty głowy podczas początkowego miareczkowania, zwiększając ryzyko upadków."
+      ]
     },
     "quetiapine": {
       "label": "Kwetiapina",
       "desc": "Spłyca oba dolki (mania i depresja) + sedacja + bariera. Dwukierunkowa.",
-      "detail": "Szeroki profil receptorowy (D2, 5-HT2A, H1). Skuteczna w manii i depresji (badania BOLDER). Niska grawitacja oddaje efekt sedatywny."
+      "detail": "Szeroki profil receptorowy (D2, 5-HT2A, H1). Skuteczna w manii i depresji (badania BOLDER). Niska grawitacja oddaje efekt sedatywny.",
+      "warnings": [
+        "Starsi pacjenci z psychozą związaną z otępieniem mają zwiększone ryzyko śmierci; kwetiapina nie jest zatwierdzona do takiego zastosowania.",
+        "Powoduje znaczące skutki metaboliczne, w tym przyrost masy ciała, hiperglikemię, nową cukrzycę typu 2 i dyslipidемię; parametry metaboliczne powinny być regularnie monitorowane.",
+        "Wydłużenie QTc może się pojawić, zwiększając ryzyko arytmii komorowych — stosuj z ostrożnością razem z innymi lekami wydłużającymi QT.",
+        "Wyraźna sedacja i hipotensja ortostatyczna na etapie inicjacji; ma potencjał do nadużywania ze względu na właściwości sedatywne.",
+        "Dyskineza spóźniona i ryzyko NMS są obecne przy długotrwałym lub wysokodawkowym stosowaniu, zgodnie z klasą leków antypychotycznych."
+      ]
     },
     "olanzapine": {
       "label": "Olanzapina",
       "desc": "Najsilniejsze spłycenie dolka manii — kulka wypycha się nawet z głębokiej manii. Silna sedacja.",
-      "detail": "Silny antagonista wielu receptorów. Uznawana za jeden z najskuteczniejszych leków w ostrej manii. Wysokie ryzyko metaboliczne."
+      "detail": "Silny antagonista wielu receptorów. Uznawana za jeden z najskuteczniejszych leków w ostrej manii. Wysokie ryzyko metaboliczne.",
+      "warnings": [
+        "Starsi pacjenci z psychozą związaną z otępieniem mają zwiększone ryzyko śmierci; olanzapina nie jest zatwierdzona dla tej populacji.",
+        "Podawanie domieszne olanzapiny w połączeniu z parenteralnymi benzodiazepinami niesie ryzyko ciężkiej depresji oddechowo-sercowej i śmierci.",
+        "Wykazuje jedne z najwyższych ryzyk metabolicznych spośród wszystkich antypychotków drugiej generacji — znaczny przyrost masy ciała, hiperglikemia i dyslipidemia są powszechne; monitorowanie metaboliczne jest niezbędne.",
+        "Zgłoszono przypadki kwasicy ketonowej cukrzycy (DKA), czasami śmiertelne, u pacjentów bez wcześniejszej historii cukrzycy.",
+        "Powoduje istotną sedację, hipotensję ortostatyczną i efekty antycholinergiczne (zaparcia, retencja moczu, rozmycie poznawcze)."
+      ]
     },
     "risperidone": {
       "label": "Risperidon",
       "desc": "Wyraźne spłycenie manii + bariera. Szybki efekt, ale ryzyko sztywności.",
-      "detail": "Silny antagonista D2. Szybko redukuje pobudzenie maniakalne. Ryzyko objawów pozapiramidowych."
+      "detail": "Silny antagonista D2. Szybko redukuje pobudzenie maniakalne. Ryzyko objawów pozapiramidowych.",
+      "warnings": [
+        "Starsi pacjenci z psychozą związaną z otępieniem mają zwiększone ryzyko śmierci i znacznie wyższe wskaźniki udaru; risperidon nie jest zatwierdzony do takiego zastosowania.",
+        "Wykazuje najwyższe ryzyko hiperprolaktynemii spośród antypychotków drugiej generacji — może powodować galaktoreę, nieprawidłowości miesiączkowe, żynekomatię i długoterminową utratę gęstości костной.",
+        "Objawy pozapiramidowe (akatyzja, parkinsonizm, dystonia) występują częściej niż u wielu innych antypychotków drugiej generacji, szczególnie powyżej 6 mg/dzień.",
+        "Zgłoszono wydłużenie QTc; stosuj z ostrożnością z innymi lekami wydłużającymi QT lub u pacjentów z czynnikami ryzyka sercowo-naczyniowego.",
+        "Powoduje przyrost masy ciała i skutki metaboliczne (hiperglikemia, dyslipidemia); zalecane jest monitorowanie metaboliczne."
+      ]
     },
     "clonazepam": {
       "label": "Klonazepam",
       "desc": "Zalewa krajobraz olejem (masywne GABA). Szybka ulga, zero naprawy struktury.",
-      "detail": "Benzodiazepina. Silne spowolnienie (damping), ale brak wpływu na głębokość studni. Ryzyko uzależnienia."
+      "detail": "Benzodiazepina. Silne spowolnienie (damping), ale brak wpływu na głębokość studni. Ryzyko uzależnienia.",
+      "warnings": [
+        "Równoczesne stosowanie z opioidami istotnie zwiększa ryzyko głębokie sedacji, depresji oddechowej, śpiączki i śmierci; kombinacja ta powinna być unikana lub stosowana wyłącznie gdy brak alternatyw.",
+        "Uzależnienie fizykalne rozwija się przy regularnym stosowaniu; gwałtowne przerwanie może powodować zagrażające życiu drgawki z objawami ubóstwa — tapering musi być stopniowy.",
+        "Kontrolowana substancja klasy IV o znacznym potencjale nadużycia i uzależnienia, szczególnie u osób z historią zaburzeń związanych z substancjami.",
+        "Powoduje depresję OUN, w tym sedację, zaburzenia psychomotoryczne i amnezję anterogradową; pacjenci powinni unikać jazdy, alkoholu i innych depresantów OUN.",
+        "Paradoksalne reakcje (zwiększona lęk, agitacja, agresja) mogą się pojawiać, szczególnie u dzieci i starszych pacjentów."
+      ]
     },
     "thc": {
       "label": "THC",
       "desc": "Rozregulowuje krajobraz — dolki oscylują losowo. Chwilowa ulga, ale ryzyko epizodów.",
-      "detail": "Zaburza homeostazę neuroprzekaźnikową. Jitter w wizualizacji oddaje niestabilność nastroju."
+      "detail": "Zaburza homeostazę neuroprzekaźnikową. Jitter w wizualizacji oddaje niestabilność nastroju.",
+      "warnings": [
+        "Intensywne lub wczesne stosowanie istotnie zwiększa ryzyko psychozy, zaburzeń ze spektrum schizofrenii i epizodów maniakalnych, szczególnie u osób z podatnością genetyczną.",
+        "Zaburzenie związane z używaniem konopi rozwija się u około 9% użytkowników, wzrastając do ~17% osób rozpoczynających w okresie adolescencji i ~50% codziennych użytkowników; wycofanie powoduje drażliwość, bezsenność i dysforię.",
+        "Ekspozycja prenatalna wiąże się z niską wagą urodzeniową, porodem przedwczesnym i problemami neurorozwojowymi, w tym deficytami uwagi i pamięci.",
+        "Inhalowana marihuana dostarcza produkty spalania podobne do dymu tytoniowego, powodując przewlekłe zapalenie oskrzeli; ostre ryzyko sercowo-naczyniowe obejmuje MI wyzwolone paleniem.",
+        "Pogarsza długoterminowy przebieg zaburzenia dwubiegunowego, zwiększając częstość epizodów, ryzyko samobójstwa i brak adhezji do leczenia."
+      ]
     },
     "ketamine": {
       "label": "Ketamina",
       "desc": "Błyskawicznie zasypuje depresyjny dolek (blokada NMDA). Efekt spektakularny, ale krótkotrwały.",
-      "detail": "Szybki efekt antydepresyjny przez blokadę NMDA i synaptogenezę. Nie zmienia trwale topologii."
+      "detail": "Szybki efekt antydepresyjny przez blokadę NMDA i synaptogenezę. Nie zmienia trwale topologii.",
+      "warnings": [
+        "Znaczny potencjał nadużycia i ryzyko uzależnienia psychologicznego; esketamina (Spravato) to substancja klasy III wymagająca programu REMS z minimalnym okresem 2-godzinnej obserwacji monitorowanej po każdej dawce.",
+        "Powoduje zaburzenia dysocjacji zależne od dawki i zaburzenia percepcji; w wysokich dawkach może indukować głębokie stanu dysocjacyjny ('k-hole').",
+        "Chroniczne intensywne stosowanie powoduje ketaminę indukowaną uropatię — ciężkie, często nieodwracalne uszkodzenie pęcherza moczowego wymagające cystektomii w ekstremalnych przypadkach.",
+        "Istotnie podnosi ciśnienie krwi i częstość serca; stosuj z ostrożnością u pacjentów z niekontrolowanym nadciśnieniem lub chorobą sercowo-naczyniową.",
+        "Efekty antydepresyjne są typowo przejściowe (dni do tygodni); długoterminowe protokoły dawkowania i kumulatywne bezpieczeństwo pozostają pod aktywną obserwacją badawczą."
+      ]
     },
     "mdma": {
       "label": "MDMA",
       "desc": "Spłyca oba dolki (masywne 5-HT/DA) + silny chaos. Ryzyko manii.",
-      "detail": "Masywne uwolnienie monoamin. Ryzykowne w ChAD — może wywołać manię lub pogłębić depresję (crash)."
+      "detail": "Masywne uwolnienie monoamin. Ryzykowne w ChAD — może wywołać manię lub pogłębić depresję (crash).",
+      "warnings": [
+        "Powoduje ostrą hipona tremia (niebezpiecznie niskie stężenie sodu) ze względu na nadmierne spożycie wody w połączeniu z efektami antydiuretycznymi — wiodąca przyczyna śmierci związanej z MDMA, szczególnie u młodych kobiet.",
+        "Indukuje hipertermię poprzez zwiększoną aktywność fizyczną i zaburzenia termoregulacji; w połączeniu z zespołem serotoninowym może powodować niewydolność wielonarządową, rabdomiolizę i śmierć.",
+        "W połączeniu z SSRI, IMAO, litem lub innymi lekami serotoninergicznymi stwarza poważne ryzyko zespołu serotoninowego.",
+        "Wielokrotne lub intensywne stosowanie wiąże się z trwałą neurotoksycznością serotoninergiczną i trwałymi deficytami werbalnej pamięci, funkcji wykonawczych i regulacji nastroju.",
+        "Ulice tabletek ekstazy są często zafałszowane fentanylem, metamfetaminą lub innymi nieznanymi substancjami, istotnie zwiększając ryzyko przedawkowania."
+      ]
     },
     "ect": {
       "label": "EW",
       "desc": "Reset krajobrazu — mania i depresja prawie płaskie, eutymia staje się prawdziwym atraktorem.",
-      "detail": "Elektrowstrząsy. Najsilniejsza metoda przerywania epizodów. Dramatyczna zmiana topologii."
+      "detail": "Elektrowstrząsy. Najsilniejsza metoda przerywania epizodów. Dramatyczna zmiana topologii.",
+      "warnings": [
+        "Wykonywane w ogólnym znieczuleniu; główne ryzyko obejmuje aspirację, przejściowy stres sercowo-naczyniowy (nadciśnienie, tachykardia) i rzadką śmiertelność (~1 na 10 000 pacjentów).",
+        "Amnezja anterogradowa i wsteczna to najczęstsze niezgodne działania; amnezja wsteczna na wydarzenia autobiograficzne może utrzymywać się przez miesiące i niekiedy jest trwała, szczególnie przy bilateralnym umieszczeniu elektrod.",
+        "Pacjenci z zajmującymi miejsce zmianami mózgu, niedawnym MI, podwyższonym ciśnieniem wewnątrzczaszkowym lub niedawnym zdarzeniami naczyniowo-mózgowymi mają istotnie zwiększone ryzyko — są to względne przeciwwskazania.",
+        "Lit generalnie powinien być wstrzymany przed EW ze względu na zwiększone ryzyko przedłużonych drgawek, zamieszania i zaburzeń poznawczych.",
+        "Wymaga wielokrotnego znieczulenia ogólnego (zazwyczaj 6–12 sesji ostrych); kumulacyjna ekspozycja na znieczulenie niesie swoje własne ryzyko systemowe."
+      ]
     },
     "alcohol": {
       "label": "Alkohol",
       "desc": "Destabilizuje krajobraz, pogłębiając oba patologiczne baseny. Chwilowe spowolnienie ustępuje miejsca zwiększonemu chaosowi i ryzyku nawrotu.",
-      "detail": "Działa hamująco na OUN (GABA), co doraźnie spowalnia kulkę (sedacja). Jednak metabolity i efekt 'rebound' pogłębiają dolki manii i depresji, czyniąc je silniejszymi atraktorami. Zwiększa cyklowanie i ryzyko zachowań impulsywnych."
+      "detail": "Działa hamująco na OUN (GABA), co doraźnie spowalnia kulkę (sedacja). Jednak metabolity i efekt 'rebound' pogłębiają dolki manii i depresji, czyniąc je silniejszymi atraktorami. Zwiększa cyklowanie i ryzyko zachowań impulsywnych.",
+      "warnings": [
+        "Objaw abstynencji alkoholowej u osób fizycznie uzależnionych może być zagrażający życiu — drgawki i delirium tremens (DTs) wymagają medycznie nadzorowanej detoksykacji.",
+        "Chroniczne intensywne stosowanie powoduje alkoholową chorobę wątroby, kardiomiopatię, zapalenie trzustki i polineuropatię obwodową.",
+        "Potęguje efekty benzodiazpin, opioidów, antypychotków i innych depresantów OUN — potencjalnie śmiertelna addytywna depresja oddechowa.",
+        "Pogarsza długoterminowy przebieg zaburzenia dwubiegunowego: zwiększa częstość epizodów, ryzyko samobójstwa i brak adhezji do leczenia.",
+        "Kancerogen grupy 1 IARC przyczynowo związany z rakami ust, gardła, przełyku, wątroby, jelita grubego i piersi — ryzyko wzrasta liniowo wraz ze spożyciem.",
+        "Nie ustalono bezpiecznego poziomu stosowania alkoholu w ciąży; ekspozycja prenatalna powoduje zaburzenia ze spektrum alkoholowego płodu (FASD)."
+      ]
     }
   }
 }
