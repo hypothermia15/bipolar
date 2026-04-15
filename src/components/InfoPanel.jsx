@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MODIFIERS } from "../data/modifiers";
+import PharmacologyCard from "./PharmacologyCard";
 
 export default function InfoPanel({ activeModifiers }) {
   const { t } = useTranslation();
@@ -119,6 +120,8 @@ export default function InfoPanel({ activeModifiers }) {
                     )}
                   </div>
                 )}
+
+                <PharmacologyCard drugKey={key} modifier={d} />
 
                 {d.refs && d.refs.length > 0 && (
                   <div style={{ marginTop: 6, borderRadius: 6, background: `${d.color}08`, border: `1px solid ${d.color}20`, overflow: "hidden" }}>

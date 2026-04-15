@@ -34,3 +34,20 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/16894061/"
   - cite: "A randomized add-on trial of an N-methyl-D-aspartate antagonist in treatment-resistant bipolar depression."
     url: "https://pubmed.ncbi.nlm.nih.gov/20679587/"
+pharmacology:
+  chemblId: "CHEMBL742"
+  firstApproved: 1970
+  molecularFormula: "C₁₃H₁₆ClNO"
+  molecularWeight: 237.73
+  qed: 0.86
+  blackBoxWarning: false
+  smiles: "CNC1(c2ccccc2Cl)CCCCC1=O"
+  mechanisms:
+    - action: "Negative allosteric modulator"
+      target: "Glutamate NMDA receptor"
+  keyTargets:
+    - target: "NMDA-R"
+      type: "Ion channel"
+      Ki: 180
+      unit: "nM"
+      note: "Channel blocker at PCP site — rapid antidepressant mechanism"

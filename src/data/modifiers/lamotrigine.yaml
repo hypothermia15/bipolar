@@ -33,3 +33,20 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/10084633/"
   - cite: "Lamotrigine for treatment of bipolar depression: independent meta-analysis and meta-regression of individual patient data from five randomised trials."
     url: "https://pubmed.ncbi.nlm.nih.gov/19118318/"
+pharmacology:
+  chemblId: "CHEMBL741"
+  firstApproved: 1994
+  molecularFormula: "C₉H₇Cl₂N₅"
+  molecularWeight: 256.10
+  qed: 0.81
+  blackBoxWarning: true
+  smiles: "Nc1nnc(-c2cccc(Cl)c2Cl)c(N)n1"
+  mechanisms:
+    - action: "Blocker"
+      target: "Sodium channel alpha subunit"
+  keyTargets:
+    - target: "Nav1.2"
+      type: "Ion channel"
+      Ki: 10000
+      unit: "nM (IC50)"
+      note: "Voltage-gated sodium channel blocker — reduces glutamate release"

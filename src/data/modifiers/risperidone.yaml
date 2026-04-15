@@ -34,3 +34,44 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/15169694/"
   - cite: "Mood stabilisers plus risperidone or placebo in the treatment of acute mania. International, double-blind, randomised controlled trial."
     url: "https://pubmed.ncbi.nlm.nih.gov/12562742/"
+pharmacology:
+  chemblId: "CHEMBL85"
+  firstApproved: 1993
+  molecularFormula: "C₂₃H₂₇FN₄O₂"
+  molecularWeight: 410.49
+  qed: 0.66
+  blackBoxWarning: true
+  smiles: "Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2"
+  mechanisms:
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2A receptor"
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2C receptor"
+    - action: "Antagonist"
+      target: "Dopamine D2 receptor"
+  keyTargets:
+    - target: "5-HT2A"
+      type: "Receptor"
+      Ki: 0.31
+      unit: "nM"
+      note: "Exceptionally potent — picomolar affinity"
+    - target: "5-HT7"
+      type: "Receptor"
+      Ki: 1.4
+      unit: "nM"
+      note: "High affinity — may contribute to mood effects"
+    - target: "D2"
+      type: "Receptor"
+      Ki: 2.1
+      unit: "nM"
+      note: "Tight binding — EPS risk at higher doses"
+    - target: "α1-adrenergic"
+      type: "Receptor"
+      Ki: 3.0
+      unit: "nM"
+      note: "Strong adrenergic blockade"
+    - target: "D1"
+      type: "Receptor"
+      Ki: 22
+      unit: "nM"
+      note: "Moderate D1 affinity"

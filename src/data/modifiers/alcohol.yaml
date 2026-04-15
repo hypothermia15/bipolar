@@ -35,3 +35,21 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/21382111/"
   - cite: "Efficacy of valproate maintenance in patients with bipolar disorder and alcoholism: a double-blind placebo-controlled study."
     url: "https://pubmed.ncbi.nlm.nih.gov/15630071/"
+pharmacology:
+  chemblId: "CHEMBL545"
+  firstApproved: null
+  molecularFormula: "C₂H₆O"
+  molecularWeight: 46.07
+  qed: 0.41
+  blackBoxWarning: false
+  smiles: "CCO"
+  mechanisms: []
+  keyTargets:
+    - target: "GABA-A"
+      type: "Ion channel"
+      Ki: null
+      note: "Positive modulator — sedation and anxiolysis"
+    - target: "NMDA-R"
+      type: "Ion channel"
+      Ki: null
+      note: "Inhibitor — contributes to cognitive impairment"

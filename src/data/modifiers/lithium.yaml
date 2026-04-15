@@ -63,3 +63,24 @@ refs:
     url: "https://www.nature.com/articles/s41398-022-02194-4"
   - cite: "Differential responses to lithium in hyperexcitable neurons from patients with bipolar disorder."
     url: "https://www.nature.com/articles/nature15526"
+
+pharmacology:
+  chemblId: "CHEMBL1200826"
+  firstApproved: 1970
+  molecularFormula: "CLi₂O₃"
+  molecularWeight: 73.89
+  qed: null
+  blackBoxWarning: true
+  smiles: "O=C([O-])[O-].[Li+].[Li+]"
+  mechanisms:
+    - action: "Inhibitor"
+      target: "Inositol monophosphatase 1"
+    - action: "Inhibitor"
+      target: "Glycogen synthase kinase-3"
+  keyTargets:
+    - target: "IMPase"
+      type: "Enzyme"
+      note: "Depletes inositol, dampens overactive signaling"
+    - target: "GSK-3β"
+      type: "Kinase"
+      note: "Stabilizes circadian rhythms and synaptic plasticity"
