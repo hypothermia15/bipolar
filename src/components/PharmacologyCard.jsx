@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const CHEMBL_IMG = (id) =>
-  `https://www.ebi.ac.uk/chembl/api/utils/image/${id}?format=svg&engine=rdkit&dimensions=220`;
 const CHEMBL_URL = (id) =>
   `https://www.ebi.ac.uk/chembl/compound_report_card/${id}/`;
 
@@ -22,6 +21,7 @@ function kiLabel(ki, unit) {
 }
 
 export default function PharmacologyCard({ drugKey, modifier }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const p = modifier?.pharmacology;
   if (!p || !p.chemblId) return null;
@@ -48,7 +48,7 @@ export default function PharmacologyCard({ drugKey, modifier }) {
           color: `${color}b3`, fontSize: 10.5, fontWeight: 700,
           textTransform: "uppercase", letterSpacing: 1,
         }}>
-          🧬 Pharmacology
+          🧬 {t("ui.pharmacology")}
         </span>
         <span style={{ color: `${color}80`, fontSize: 11, marginLeft: 6 }}>
           {open ? "▲" : "▼"}
@@ -58,38 +58,21 @@ export default function PharmacologyCard({ drugKey, modifier }) {
       {open && (
         <div style={{ padding: "0 10px 10px 10px", display: "flex", flexDirection: "column", gap: 10 }}>
 
-          {/* Molecule image + metadata row */}
-          <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-            {p.smiles && (
-              <a href={CHEMBL_URL(p.chemblId)} target="_blank" rel="noopener noreferrer"
-                style={{ flexShrink: 0 }}>
-                <img
-                  src={CHEMBL_IMG(p.chemblId)}
-                  alt={`${modifier.label} structure`}
-                  style={{
-                    width: 90, height: 90, borderRadius: 6,
-                    background: "rgba(255,255,255,0.92)",
-                    padding: 4, objectFit: "contain",
-                  }}
-                  onError={(e) => { e.target.style.display = "none"; }}
-                />
-              </a>
+          {/* Metadata */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+            <MetaRow label={t("ui.pharm.formula")} value={p.molecularFormula} color={color} />
+            <MetaRow label={t("ui.pharm.mw")} value={p.molecularWeight ? `${p.molecularWeight} Da` : null} color={color} />
+            <MetaRow
+              label={t("ui.pharm.approved")}
+              value={p.firstApproved ? p.firstApproved : (p.maxPhase ? `${t("ui.pharm.phase")} ${p.maxPhase}` : "N/A")}
+              color={color}
+            />
+            {p.qed != null && <MetaRow label="QED" value={p.qed.toFixed(2)} color={color} />}
+            {p.blackBoxWarning && (
+              <span style={{ fontSize: 10, color: "rgba(255,120,80,0.8)", fontWeight: 600 }}>
+                ⬥ {t("ui.pharm.blackBox")}
+              </span>
             )}
-            <div style={{ display: "flex", flexDirection: "column", gap: 3, minWidth: 0 }}>
-              <MetaRow label="Formula" value={p.molecularFormula} color={color} />
-              <MetaRow label="MW" value={p.molecularWeight ? `${p.molecularWeight} Da` : null} color={color} />
-              <MetaRow
-                label="Approved"
-                value={p.firstApproved ? p.firstApproved : (p.maxPhase ? `Phase ${p.maxPhase}` : "N/A")}
-                color={color}
-              />
-              {p.qed != null && <MetaRow label="QED" value={p.qed.toFixed(2)} color={color} />}
-              {p.blackBoxWarning && (
-                <span style={{ fontSize: 10, color: "rgba(255,120,80,0.8)", fontWeight: 600 }}>
-                  ⬥ FDA Black Box Warning
-                </span>
-              )}
-            </div>
           </div>
 
           {/* Mechanisms */}
@@ -99,7 +82,7 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                 color: `${color}99`, fontSize: 10, fontWeight: 700,
                 textTransform: "uppercase", letterSpacing: 0.8,
               }}>
-                Mechanism of Action
+                {t("ui.pharm.mechanism")}
               </span>
               {p.mechanisms.map((m, i) => (
                 <p key={i} style={{
@@ -121,19 +104,19 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                 color: `${color}99`, fontSize: 10, fontWeight: 700,
                 textTransform: "uppercase", letterSpacing: 0.8,
               }}>
-                Binding Profile
+                {t("ui.pharm.bindingProfile")}
               </span>
               <div style={{ marginTop: 4, display: "flex", flexDirection: "column", gap: 4 }}>
-                {p.keyTargets.map((t, i) => (
+                {p.keyTargets.map((kt, i) => (
                   <div key={i} style={{ display: "flex", flexDirection: "column", gap: 1 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                       <span style={{
                         color: "rgba(255,255,255,0.6)", fontSize: 11,
                         fontWeight: 600, minWidth: 62, fontFamily: "'Space Mono', monospace",
                       }}>
-                        {t.target}
+                        {kt.target}
                       </span>
-                      {t.Ki != null && (
+                      {kt.Ki != null && (
                         <>
                           <div style={{
                             flex: 1, height: 5, borderRadius: 3,
@@ -141,7 +124,7 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                           }}>
                             <div style={{
                               height: "100%", borderRadius: 3,
-                              width: `${kiToBarPct(t.Ki)}%`,
+                              width: `${kiToBarPct(kt.Ki)}%`,
                               background: `linear-gradient(90deg, ${color}cc, ${color}55)`,
                               transition: "width 0.4s ease",
                             }} />
@@ -151,17 +134,17 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                             minWidth: 48, textAlign: "right",
                             fontFamily: "'Space Mono', monospace",
                           }}>
-                            {kiLabel(t.Ki, t.unit)}
+                            {kiLabel(kt.Ki, kt.unit)}
                           </span>
                         </>
                       )}
                     </div>
-                    {t.note && (
+                    {kt.note && (
                       <span style={{
                         color: "rgba(255,255,255,0.3)", fontSize: 10,
                         paddingLeft: 68, lineHeight: 1.3,
                       }}>
-                        {t.note}
+                        {kt.note}
                       </span>
                     )}
                   </div>
@@ -184,7 +167,7 @@ export default function PharmacologyCard({ drugKey, modifier }) {
             onMouseOver={(e) => (e.currentTarget.style.opacity = 1)}
             onMouseOut={(e) => (e.currentTarget.style.opacity = 0.7)}
           >
-            ↗ View on ChEMBL ({p.chemblId})
+            ↗ {t("ui.pharm.viewOnChembl")} ({p.chemblId})
           </a>
         </div>
       )}

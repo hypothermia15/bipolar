@@ -27,7 +27,18 @@
     "depression": "DEPRESJA",
     "barrier": "BARIERA D2",
     "warnings": "Ostrzeżenia i środki ostrożności",
-    "sources": "Źródła"
+    "sources": "Źródła",
+    "pharmacology": "Farmakologia",
+    "pharm": {
+      "formula": "Wzór",
+      "mw": "Masa cz.",
+      "approved": "Zatwierdzono",
+      "phase": "Faza",
+      "blackBox": "Ostrzeżenie FDA Black Box",
+      "mechanism": "Mechanizm działania",
+      "bindingProfile": "Profil wiązania",
+      "viewOnChembl": "Zobacz w ChEMBL"
+    }
   },
   "modifiers": {
     "lithium": {

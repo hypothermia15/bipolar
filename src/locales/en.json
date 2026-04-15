@@ -27,6 +27,17 @@
     "depression": "DEPRESSION",
     "barrier": "D2 BARRIER",
     "warnings": "Warnings & Precautions",
-    "sources": "Sources"
+    "sources": "Sources",
+    "pharmacology": "Pharmacology",
+    "pharm": {
+      "formula": "Formula",
+      "mw": "MW",
+      "approved": "Approved",
+      "phase": "Phase",
+      "blackBox": "FDA Black Box Warning",
+      "mechanism": "Mechanism of Action",
+      "bindingProfile": "Binding Profile",
+      "viewOnChembl": "View on ChEMBL"
+    }
   }
 }

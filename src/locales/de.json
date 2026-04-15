@@ -10,7 +10,7 @@
   },
   "ui": {
     "noActive": "⚡ Keine aktive Medikation",
-    "instructions": "Klicken Sie auf die Medikamente in der linken Leiste, um zu sehen, jak sie die Stimmungslandschaft umgestalten. Sie können mehrere Substanzen kombinieren und deren Dynamik über die Zeit beobachten.",
+    "instructions": "Klicken Sie auf die Medikamente in der linken Leiste, um zu sehen, wie sie die Stimmungslandschaft umgestalten. Sie können mehrere Substanzen kombinieren und deren Dynamik über die Zeit beobachten.",
     "attractorTheory": {
       "title": "Das Landschafts- und Attraktormodell",
       "description": "Die bipolare Störung kann als 'Energielandschaft' modelliert werden, in der Manie und Depression stabile Becken (Attraktoren) sind. Ohne Behandlung ist die Euthymie oft ein instabiler Punkt — jeder Stressor kann das System in einen pathologischen Zustand stoßen. Lithium wirkt durch die Umgestaltung dieser Landschaft und macht die Euthymie zu einem sicheren Gleichgewichtspunkt.",
@@ -27,7 +27,18 @@
     "depression": "DEPRESSION",
     "barrier": "D2 BARRIERE",
     "warnings": "Warnhinweise und Vorsichtsmaßnahmen",
-    "sources": "Quellen"
+    "sources": "Quellen",
+    "pharmacology": "Pharmakologie",
+    "pharm": {
+      "formula": "Formel",
+      "mw": "MG",
+      "approved": "Zugelassen",
+      "phase": "Phase",
+      "blackBox": "FDA Black-Box-Warnung",
+      "mechanism": "Wirkmechanismus",
+      "bindingProfile": "Bindungsprofil",
+      "viewOnChembl": "Auf ChEMBL ansehen"
+    }
   },
   "modifiers": {
     "lithium": {
