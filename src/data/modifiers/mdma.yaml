@@ -34,3 +34,35 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/33972795/"
   - cite: "Psychedelics and Psychedelic-Assisted Psychotherapy."
     url: "https://pubmed.ncbi.nlm.nih.gov/32098487/"
+pharmacology:
+  chemblId: "CHEMBL43048"
+  firstApproved: null
+  molecularFormula: "C₁₁H₁₅NO₂"
+  molecularWeight: 193.25
+  qed: 0.79
+  blackBoxWarning: false
+  maxPhase: 3
+  smiles: "CNC(C)Cc1ccc2c(c1)OCO2"
+  mechanisms:
+    - action: "Releasing agent"
+      target: "Serotonin transporter (SERT)"
+    - action: "Releasing agent"
+      target: "Noradrenaline transporter (NET)"
+    - action: "Releasing agent"
+      target: "Dopamine transporter (DAT)"
+  keyTargets:
+    - target: "SERT"
+      type: "Transporter"
+      Ki: 0.73
+      unit: "nM"
+      note: "Primary target — massive serotonin release"
+    - target: "NET"
+      type: "Transporter"
+      Ki: 398
+      unit: "nM"
+      note: "Noradrenaline release — sympathomimetic effects"
+    - target: "DAT"
+      type: "Transporter"
+      Ki: 897
+      unit: "nM"
+      note: "Dopamine release — empathogenic/rewarding effects"

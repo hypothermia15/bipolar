@@ -34,3 +34,25 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/25285897/"
   - cite: "Association of Cannabis With Long-Term Clinical Symptoms in Anxiety and Mood Disorders: A Systematic Review of Prospective Studies."
     url: "https://pubmed.ncbi.nlm.nih.gov/29877641/"
+pharmacology:
+  chemblId: "CHEMBL465"
+  firstApproved: 1985
+  molecularFormula: "C₂₁H₃₀O₂"
+  molecularWeight: 314.47
+  qed: 0.57
+  blackBoxWarning: false
+  smiles: "CCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21"
+  mechanisms:
+    - action: "Agonist"
+      target: "Cannabinoid CB1 receptor"
+  keyTargets:
+    - target: "CB2"
+      type: "Receptor"
+      Ki: 32.2
+      unit: "nM"
+      note: "Immune modulation"
+    - target: "CB1"
+      type: "Receptor"
+      Ki: 41
+      unit: "nM"
+      note: "Primary psychoactive target — euphoria, altered perception"

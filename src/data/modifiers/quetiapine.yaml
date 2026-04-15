@@ -36,3 +36,44 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/17110817/"
   - cite: "A randomized, double-blind, placebo-controlled efficacy and safety study of quetiapine or lithium as monotherapy for mania in bipolar disorder."
     url: "https://pubmed.ncbi.nlm.nih.gov/15669897/"
+pharmacology:
+  chemblId: "CHEMBL716"
+  firstApproved: 1997
+  molecularFormula: "C₂₁H₂₅N₃O₂S"
+  molecularWeight: 383.52
+  qed: 0.80
+  blackBoxWarning: true
+  smiles: "OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1"
+  mechanisms:
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2A receptor"
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2C receptor"
+    - action: "Antagonist"
+      target: "Dopamine D2 receptor"
+  keyTargets:
+    - target: "α1-adrenergic"
+      type: "Receptor"
+      Ki: 4.5
+      unit: "nM"
+      note: "Highest affinity — explains orthostatic hypotension"
+    - target: "H1"
+      type: "Receptor"
+      Ki: 19
+      unit: "nM"
+      note: "Histamine blockade — strong sedation"
+    - target: "M1"
+      type: "Receptor"
+      Ki: 56
+      unit: "nM"
+      note: "Muscarinic — anticholinergic effects"
+    - target: "D2"
+      type: "Receptor"
+      Ki: 63
+      unit: "nM"
+      note: "Loose binding — low EPS risk"
+    - target: "5-HT2A"
+      type: "Receptor"
+      Ki: 82
+      unit: "nM"
+      note: "Serotonin antagonism — antidepressant action"

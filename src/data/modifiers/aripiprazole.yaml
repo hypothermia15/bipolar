@@ -36,3 +36,44 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/18344725/"
   - cite: "Aripiprazole, a novel atypical antipsychotic drug with a unique and robust pharmacology."
     url: "https://pubmed.ncbi.nlm.nih.gov/12784105/"
+pharmacology:
+  chemblId: "CHEMBL1112"
+  firstApproved: 2002
+  molecularFormula: "C₂₃H₂₇Cl₂N₃O₂"
+  molecularWeight: 448.39
+  qed: 0.61
+  blackBoxWarning: true
+  smiles: "O=C1CCc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc2N1"
+  mechanisms:
+    - action: "Partial agonist"
+      target: "Dopamine D2 receptor"
+    - action: "Partial agonist"
+      target: "Serotonin 5-HT1A receptor"
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2A receptor"
+  keyTargets:
+    - target: "5-HT2B"
+      type: "Receptor"
+      Ki: 1.26
+      unit: "nM"
+      note: "Highest affinity target"
+    - target: "D2"
+      type: "Receptor"
+      Ki: 1.82
+      unit: "nM"
+      note: "Partial agonist — unique 'dopamine stabilizer' action"
+    - target: "D3"
+      type: "Receptor"
+      Ki: 3.98
+      unit: "nM"
+      note: "High affinity dopamine D3 binding"
+    - target: "5-HT1A"
+      type: "Receptor"
+      Ki: 7.94
+      unit: "nM"
+      note: "Partial agonist — anxiolytic component"
+    - target: "5-HT2A"
+      type: "Receptor"
+      Ki: 15.85
+      unit: "nM"
+      note: "Antagonist — reduces psychotic symptoms"

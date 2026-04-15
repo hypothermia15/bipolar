@@ -34,3 +34,20 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/6407539/"
   - cite: "The diagnosis and management of benzodiazepine dependence."
     url: "https://pubmed.ncbi.nlm.nih.gov/16639148/"
+pharmacology:
+  chemblId: "CHEMBL452"
+  firstApproved: 1975
+  molecularFormula: "C₁₅H₁₀ClN₃O₃"
+  molecularWeight: 315.72
+  qed: 0.68
+  blackBoxWarning: true
+  smiles: "O=C1CN=C(c2ccccc2Cl)c2cc([N+](=O)[O-])ccc2N1"
+  mechanisms:
+    - action: "Positive allosteric modulator"
+      target: "GABA-A receptor (benzodiazepine site)"
+  keyTargets:
+    - target: "GABA-A (BzR)"
+      type: "Ion channel"
+      Ki: 0.85
+      unit: "nM"
+      note: "Extremely potent benzodiazepine — enhances GABA inhibition"

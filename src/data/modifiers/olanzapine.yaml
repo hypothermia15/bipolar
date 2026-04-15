@@ -34,3 +34,44 @@ refs:
     url: "https://pubmed.ncbi.nlm.nih.gov/10327902/"
   - cite: "Efficacy of olanzapine and olanzapine-fluoxetine combination in the treatment of bipolar I depression."
     url: "https://pubmed.ncbi.nlm.nih.gov/14609883/"
+pharmacology:
+  chemblId: "CHEMBL715"
+  firstApproved: 1996
+  molecularFormula: "C₁₇H₂₀N₄S"
+  molecularWeight: 312.44
+  qed: 0.81
+  blackBoxWarning: true
+  smiles: "Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1"
+  mechanisms:
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2A receptor"
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2C receptor"
+    - action: "Antagonist"
+      target: "D2-like dopamine receptor"
+  keyTargets:
+    - target: "5-HT2A"
+      type: "Receptor"
+      Ki: 4.0
+      unit: "nM"
+      note: "Very high affinity — key to antipsychotic effect"
+    - target: "H1"
+      type: "Receptor"
+      Ki: 7.0
+      unit: "nM"
+      note: "Potent histamine blockade — sedation and weight gain"
+    - target: "5-HT2"
+      type: "Receptor"
+      Ki: 10
+      unit: "nM"
+      note: "Broad serotonin antagonism"
+    - target: "α1-adrenergic"
+      type: "Receptor"
+      Ki: 15
+      unit: "nM"
+      note: "Adrenergic blockade"
+    - target: "D2"
+      type: "Receptor"
+      Ki: 20
+      unit: "nM"
+      note: "Moderate D2 binding — effective but metabolic risk"
