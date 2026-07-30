@@ -3,10 +3,19 @@
   "subtitle": "Dynamik affektiver Zustände und Stimmungsattraktoren",
   "sections": {
     "stabilizers": "Stimmungsstabilisierer",
-    "antipsychotics": "Antipsychotika",
-    "psychedelics": "Psychedelika",
-    "substances": "Substanzen",
-    "other": "Andere"
+    "stabilizers_hint": "Grundlage der Behandlung, wirken über Monate",
+    "antipsychotics": "Atypische Antipsychotika",
+    "antipsychotics_hint": "zweite Generation — Manie und Psychose",
+    "typicals": "Klassische Antipsychotika",
+    "typicals_hint": "erste Generation — stärker, mehr Bewegungsstörungen",
+    "benzodiazepines": "Benzodiazepine",
+    "benzodiazepines_hint": "kurzfristige Beruhigung, keine Heilung",
+    "psychedelics": "Psychedelika und Ketamin",
+    "psychedelics_hint": "schnell wirksam, noch experimentell",
+    "substances": "Psychoaktive Substanzen",
+    "substances_hint": "nicht verordnet — verschlechtern den Verlauf",
+    "other": "Nicht-medikamentöse Verfahren",
+    "other_hint": "Eingriffe, keine Medikamente"
   },
   "ui": {
     "noActive": "⚡ Keine aktive Medikation",
@@ -156,6 +165,19 @@
         "Verursacht Gewichtszunahme und metabolische Effekte (Hyperglykämie, Dyslipidämie); metabolische Überwachung wird empfohlen."
       ]
     },
+    "haloperidol": {
+      "label": "Haloperidol",
+      "desc": "Die steilste Wand vor der Manie — und danach die tiefste Rutschbahn in die Depression.",
+      "detail": "Hochpotentes Antipsychotikum der ersten Generation. Seine D2-Blockade (Ki 1,6 nM) ist die stärkste in dieser Auswahl, weshalb es die manische Mulde flacher macht als jedes atypische Präparat und die höchste Barriere davor errichtet. Die schwache H1-Affinität bedeutet vergleichsweise wenig Sedierung, doch die schwache 5-HT2A-Affinität nimmt den serotonergen Puffer, der atypische Wirkstoffe vor extrapyramidalen Effekten schützt — hier als Jitter (Akathisie) modelliert. Gegen Depression wirkt es nicht und führt häufiger in sie hinein.",
+      "warnings": [
+        "Bei älteren Patienten mit demenzbedingter Psychose erhöhen Antipsychotika die Sterblichkeit; Haloperidol ist für diese Anwendung nicht zugelassen.",
+        "Extrapyramidale Symptome (akute Dystonie, Akathisie, Parkinsonismus, Rigor) treten deutlich häufiger auf als bei Antipsychotika der zweiten Generation, und Spätdyskinesien nach langer Anwendung können irreversibel sein.",
+        "Das maligne neuroleptische Syndrom — Hyperthermie, generalisierte Muskelrigidität, autonome Instabilität, Bewusstseinsstörung und erhöhte Kreatinkinase — ist selten, aber potenziell tödlich und erfordert sofortiges Absetzen.",
+        "QTc-Verlängerung, ventrikuläre Arrhythmien einschließlich Torsade de pointes und plötzliche Todesfälle wurden berichtet; EKG-Kontrollen sind angeraten, besonders bei weiteren QT-verlängernden Medikamenten, Hypokaliämie oder hohen intravenösen Dosen.",
+        "Ein Umschwung in die postmanische Depression ist etwa 42% wahrscheinlicher als unter Antipsychotika der zweiten Generation; nach Abklingen der Manie ist die Stimmung engmaschig zu beobachten.",
+        "Starke Prolaktinerhöhung kann Galaktorrhoe, Amenorrhoe, sexuelle Dysfunktion und langfristigen Knochendichteverlust verursachen."
+      ]
+    },
     "clonazepam": {
       "label": "Clonazepam",
       "desc": "Flutet die Landschaft mit Öl (massive GABA). Schnelle Linderung, keine strukturelle Reparatur.",
@@ -166,6 +188,18 @@
         "Schedule-IV-regulierte Substanz mit signifikantem Missbrauch- und Suchtpotenzial, besonders bei Personen mit Geschichte von Substanzgebrauchsstörungen.",
         "Verursacht ZNS-Dämpfung einschließlich Sedierung, psychomotorischer Beeinträchtigung und anterograder Amnesie; Patienten sollten Fahren, Alkohol und andere ZNS-Dämpfungsmittel vermeiden.",
         "Paradoxe Reaktionen (erhöhte Angst, Agitation, Aggression) können auftreten, besonders bei Kindern und älteren Patienten."
+      ]
+    },
+    "lorazepam": {
+      "label": "Lorazepam",
+      "desc": "Überflutet die Landschaft mit Öl und drückt zusätzlich die manische Mulde tatsächlich — wenn auch flach — ein. Das Benzodiazepin, das Manie wirklich behandelt.",
+      "detail": "Benzodiazepin, positiver allosterischer Modulator am GABA-A-Rezeptor. Im direkten Vergleich mit Clonazepam bei akuter Manie erreichte es 61% Response und 38,5% Remission, während Clonazepam keine erzielte — es verflacht daher die manische Mulde und bremst den Ball nicht nur. Ausscheidung über Glucuronidierung ohne aktive Metaboliten, weshalb es das Benzodiazepin der Wahl bei Lebererkrankungen ist. Keine strukturelle Reparatur: Toleranz und Abhängigkeit entwickeln sich innerhalb von Wochen.",
+      "warnings": [
+        "Die gleichzeitige Anwendung mit Opioiden erhöht das Risiko für tiefe Sedierung, Atemdepression, Koma und Tod erheblich; diese Kombination sollte vermieden oder nur bei fehlenden Alternativen eingesetzt werden.",
+        "Körperliche Abhängigkeit entsteht innerhalb von Wochen regelmäßiger Einnahme; ein abruptes Absetzen kann lebensbedrohliche Entzugsanfälle und ein Delir auslösen — das Ausschleichen muss langsam erfolgen.",
+        "Kontrollierte Substanz (Schedule IV) mit erheblichem Missbrauchs- und Abhängigkeitspotenzial, besonders bei Personen mit Suchtanamnese.",
+        "Verursacht ZNS-Dämpfung mit Sedierung, psychomotorischer Beeinträchtigung und anterograder Amnesie; Autofahren, Alkohol und andere ZNS-Dämpfer sind zu meiden.",
+        "Bei älteren Patienten erhöht es das Risiko für Stürze, Verwirrtheit und paradoxe Agitation; niedrigere Dosen und kürzere Behandlungen sind erforderlich."
       ]
     },
     "thc": {

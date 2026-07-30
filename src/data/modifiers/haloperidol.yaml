@@ -1,0 +1,76 @@
+category: typicals
+order: 1
+icon: "🧠"
+color: "#6c7ae0"
+label: "Haloperidol"
+desc: "The steepest wall in front of mania — and the deepest slide into depression afterwards."
+detail: "High-potency first-generation antipsychotic. Its D2 blockade (Ki 1.6 nM) is the strongest in this set, which is why it flattens the manic well further than any atypical and raises the tallest barrier in front of it. Weak H1 affinity means comparatively little sedation, but weak 5-HT2A affinity removes the serotonergic buffer that protects atypicals from extrapyramidal effects — modelled here as jitter (akathisia). It does nothing for depression and carries a higher rate of switching into it."
+halfLife: 24
+onset: 2
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 0.40
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.45
+    w: 0.20
+damping: 0.965
+gravity: 10
+barrierH: 2.6
+jitter: 0.12
+warnings:
+  - "Elderly patients with dementia-related psychosis treated with antipsychotics have an increased risk of death; haloperidol is not approved for this use."
+  - "Extrapyramidal symptoms (acute dystonia, akathisia, parkinsonism, rigidity) are markedly more frequent than with second-generation antipsychotics, and tardive dyskinesia after long-term use may be irreversible."
+  - "Neuroleptic malignant syndrome — hyperthermia, generalised muscle rigidity, autonomic instability, altered consciousness and raised creatine kinase — is rare but potentially fatal and requires immediate discontinuation."
+  - "QTc prolongation, ventricular arrhythmias including torsade de pointes, and sudden death have been reported; ECG monitoring is advised, especially with other QT-prolonging drugs, hypokalaemia, or high intravenous doses."
+  - "Switch into post-manic depression is about 42% more likely than with second-generation antipsychotics; mood should be monitored closely once mania resolves."
+  - "Potent prolactin elevation can cause galactorrhoea, amenorrhoea, sexual dysfunction, and long-term bone density loss."
+
+refs:
+  - cite: "Cipriani A et al. Comparative efficacy and acceptability of antimanic drugs in acute mania: a multiple-treatments meta-analysis. Lancet, 2011."
+    url: "https://pubmed.ncbi.nlm.nih.gov/21851976/"
+  - cite: "Goikolea JM et al. Lower rate of depressive switch following antimanic treatment with second-generation antipsychotics versus haloperidol. J Affect Disord, 2013."
+    url: "https://pubmed.ncbi.nlm.nih.gov/23089129/"
+pharmacology:
+  chemblId: "CHEMBL54"
+  firstApproved: 1967
+  molecularFormula: "C₂₁H₂₃ClFNO₂"
+  molecularWeight: 375.87
+  qed: 0.76
+  blackBoxWarning: true
+  smiles: "O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1"
+  mechanisms:
+    - action: "Inverse agonist"
+      target: "D2-like dopamine receptors"
+    - action: "Antagonist"
+      target: "Serotonin 5-HT2A receptor"
+  keyTargets:
+    - target: "D2"
+      type: "Receptor"
+      Ki: 1.6
+      unit: "nM"
+      note: "Strongest D2 blockade in this set — highest barrier, highest EPS risk"
+    - target: "σ1 (sigma-1)"
+      type: "Receptor"
+      Ki: 2.53
+      unit: "nM"
+      note: "Near-D2 affinity; role in mood and cognition still unclear"
+    - target: "D4"
+      type: "Receptor"
+      Ki: 5.0
+      unit: "nM"
+      note: "High affinity across the D2-like family"
+    - target: "D3"
+      type: "Receptor"
+      Ki: 6.3
+      unit: "nM"
+      note: "High affinity across the D2-like family"
+    - target: "5-HT2A"
+      type: "Receptor"
+      Ki: 120
+      unit: "nM"
+      note: "75× weaker than D2 — no serotonergic buffer, hence extrapyramidal symptoms"

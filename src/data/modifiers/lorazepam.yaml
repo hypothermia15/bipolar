@@ -1,0 +1,53 @@
+category: benzodiazepines
+order: 2
+icon: "💊"
+color: "#48c9b0"
+label: "Lorazepam"
+desc: "Heavy oil across the landscape, plus a real — if shallow — dent in the manic well. The benzodiazepine that genuinely treats mania."
+detail: "Benzodiazepine, positive allosteric modulator at the GABA-A receptor. Head-to-head against clonazepam in acute mania it produced 61% response and 38.5% remission where clonazepam produced none, so it shallows the manic well rather than merely slowing the ball. Cleared by glucuronidation with no active metabolites, which makes it the benzodiazepine of choice in liver disease. No structural repair: tolerance and dependence develop within weeks."
+halfLife: 12
+onset: 1
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 1.6
+    w: 0.20
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.2
+    w: 0.20
+damping: 0.85
+gravity: 3.0
+barrierH: 0
+jitter: 0
+warnings:
+  - "Concurrent use with opioids significantly increases risk of profound sedation, respiratory depression, coma, and death; this combination should be avoided or used only when no alternatives exist."
+  - "Physical dependence develops within weeks of regular use; abrupt discontinuation can cause life-threatening withdrawal seizures and delirium — tapering must be gradual."
+  - "Schedule IV controlled substance with significant misuse and addiction potential, particularly in people with a history of substance use disorders."
+  - "Causes CNS depression including sedation, psychomotor impairment, and anterograde amnesia; patients should avoid driving, alcohol, and other CNS depressants."
+  - "In elderly patients it increases the risk of falls, confusion, and paradoxical agitation; lower doses and shorter courses are required."
+
+refs:
+  - cite: "Bradwejn J et al. Double-blind comparison of the effects of clonazepam and lorazepam in acute mania. J Clin Psychopharmacol, 1990."
+    url: "https://pubmed.ncbi.nlm.nih.gov/2126794/"
+  - cite: "Yatham LN et al. CANMAT and ISBD 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord, 2018."
+    url: "https://pubmed.ncbi.nlm.nih.gov/29536616/"
+pharmacology:
+  chemblId: "CHEMBL580"
+  firstApproved: 1977
+  molecularFormula: "C₁₅H₁₀Cl₂N₂O₂"
+  molecularWeight: 321.16
+  qed: 0.85
+  blackBoxWarning: true
+  smiles: "O=C1Nc2ccc(Cl)cc2C(c2ccccc2Cl)=NC1O"
+  mechanisms:
+    - action: "Positive allosteric modulator"
+      target: "GABA-A receptor (benzodiazepine site)"
+  keyTargets:
+    - target: "GABA-A (BzR)"
+      type: "Ion channel"
+      Ki: 2.0
+      unit: "nM"
+      note: "High-potency benzodiazepine — roughly half the affinity of clonazepam"

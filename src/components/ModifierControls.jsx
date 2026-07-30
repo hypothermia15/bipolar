@@ -2,13 +2,22 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { MODIFIERS } from "../data/modifiers";
 
-const CATEGORY_ORDER = ["stabilizers", "antipsychotics", "psychedelics", "substances", "other"];
+const CATEGORY_ORDER = [
+  "stabilizers",
+  "antipsychotics",
+  "typicals",
+  "benzodiazepines",
+  "psychedelics",
+  "substances",
+  "other",
+];
 
 export default function ModifierControls({ activeModifiers, toggleModifier }) {
   const { t } = useTranslation();
 
   const sections = CATEGORY_ORDER.map(cat => ({
     title: t(`sections.${cat}`),
+    hint: t(`sections.${cat}_hint`, { defaultValue: "" }),
     keys: Object.entries(MODIFIERS)
       .filter(([, d]) => d.category === cat)
       .sort(([, a], [, b]) => (a.order || 0) - (b.order || 0))
@@ -29,14 +38,25 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
     <div className="modifier-controls">
       {sections.map((sec) => (
         <div key={sec.title} className="modifier-category">
-          <span style={{
-            color: "rgba(255,255,255,0.18)", fontSize: 8.5, fontWeight: 700,
-            textTransform: "uppercase", letterSpacing: 1.5,
+          <div style={{
             borderBottom: "1px solid rgba(255,255,255,0.05)",
-            paddingBottom: 4, display: "block", fontFamily: "'Space Mono', monospace"
+            paddingBottom: 4, fontFamily: "'Space Mono', monospace"
           }}>
-            {sec.title}
-          </span>
+            <span style={{
+              color: "rgba(255,255,255,0.28)", fontSize: 8.5, fontWeight: 700,
+              textTransform: "uppercase", letterSpacing: 1.5, display: "block"
+            }}>
+              {sec.title}
+            </span>
+            {sec.hint && (
+              <span style={{
+                color: "rgba(255,255,255,0.19)", fontSize: 8, fontWeight: 400,
+                letterSpacing: 0.2, display: "block", marginTop: 2.5, lineHeight: 1.4
+              }}>
+                {sec.hint}
+              </span>
+            )}
+          </div>
           <div className="modifier-items">
             {sec.keys.map(k => {
               const d = MODIFIERS[k];
