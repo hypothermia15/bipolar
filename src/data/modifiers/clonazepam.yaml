@@ -1,11 +1,11 @@
-category: substances
+category: benzodiazepines
 order: 1
 icon: "💊"
 color: "#1abc9c"
 label: "Clonazepam"
 desc: "Floods the landscape with oil (massive GABA). Rapid relief, no structural repair — 'rebound' after withdrawal."
 detail: "Benzodiazepine. Potent slowing (damping) but no effect on well depth. Risk of tolerance and dependence."
-halfLife: 12
+halfLife: 35
 onset: 1.5
 wallStr: 1.5
 wells:

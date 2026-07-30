@@ -3,10 +3,19 @@
   "subtitle": "Dynamika stanów afektywnych i atraktorów nastroju",
   "sections": {
     "stabilizers": "Stabilizatory nastroju",
-    "antipsychotics": "Antypsychotyki",
-    "psychedelics": "Psychodeliki",
-    "substances": "Substancje",
-    "other": "Inne"
+    "stabilizers_hint": "podstawa leczenia, działają miesiącami",
+    "antipsychotics": "Neuroleptyki atypowe",
+    "antipsychotics_hint": "II generacja — mania i psychoza",
+    "typicals": "Neuroleptyki klasyczne",
+    "typicals_hint": "I generacja — silniejsze, więcej skutków ruchowych",
+    "benzodiazepines": "Benzodiazepiny",
+    "benzodiazepines_hint": "doraźne uspokojenie, nie leczą przyczyny",
+    "psychedelics": "Psychodeliki i ketamina",
+    "psychedelics_hint": "działają szybko, wciąż eksperymentalne",
+    "substances": "Substancje psychoaktywne",
+    "substances_hint": "nieprzepisywane — pogarszają przebieg",
+    "other": "Metody niefarmakologiczne",
+    "other_hint": "zabiegi, nie leki"
   },
   "ui": {
     "noActive": "⚡ Brak aktywnego leczenia",
@@ -156,6 +165,19 @@
         "Powoduje przyrost masy ciała i skutki metaboliczne (hiperglikemia, dyslipidemia); zalecane jest monitorowanie metaboliczne."
       ]
     },
+    "haloperidol": {
+      "label": "Haloperidol",
+      "desc": "Najwyższa ściana przed manią — i najgłębszy zjazd w depresję później.",
+      "detail": "Silnie działający neuroleptyk I generacji. Jego blokada D2 (Ki 1,6 nM) jest najmocniejsza w całym zestawie, dlatego spłaszcza studnię manii bardziej niż którykolwiek lek atypowy i stawia przed nią najwyższą barierę. Słabe powinowactwo do H1 oznacza względnie małą sedację, ale słabe powinowactwo do 5-HT2A odbiera serotoninowy bufor chroniący leki atypowe przed objawami pozapiramidowymi — modelowane tu jako jitter (akatyzja). Nie robi nic dla depresji i częściej niż atypowe przełącza w nią chorego.",
+      "warnings": [
+        "U osób starszych z psychozą w przebiegu demencji leczenie neuroleptykami zwiększa ryzyko zgonu; haloperidol nie jest w tym wskazaniu zarejestrowany.",
+        "Objawy pozapiramidowe (dystonia ostra, akatyzja, parkinsonizm, sztywność) występują wyraźnie częściej niż przy neuroleptykach II generacji, a późne dyskinezy po długim stosowaniu mogą być nieodwracalne.",
+        "Złośliwy zespół neuroleptyczny — gorączka, ogólna sztywność mięśni, niestabilność autonomiczna, zaburzenia świadomości i podwyższona kinaza kreatynowa — jest rzadki, ale potencjalnie śmiertelny i wymaga natychmiastowego odstawienia leku.",
+        "Opisywano wydłużenie QTc, arytmie komorowe w tym torsade de pointes oraz nagłe zgony; zalecana jest kontrola EKG, zwłaszcza przy innych lekach wydłużających QT, hipokaliemii lub wysokich dawkach dożylnych.",
+        "Przełączenie w depresję pomaniakalną jest o około 42% bardziej prawdopodobne niż przy neuroleptykach II generacji; po ustąpieniu manii nastrój wymaga uważnej obserwacji.",
+        "Silnie podnosi prolaktynę, co może powodować mlekotok, brak miesiączki, zaburzenia seksualne i długoterminową utratę gęstości kości."
+      ]
+    },
     "clonazepam": {
       "label": "Klonazepam",
       "desc": "Zalewa krajobraz olejem (masywne GABA). Szybka ulga, zero naprawy struktury.",
@@ -166,6 +188,18 @@
         "Kontrolowana substancja klasy IV o znacznym potencjale nadużycia i uzależnienia, szczególnie u osób z historią zaburzeń związanych z substancjami.",
         "Powoduje depresję OUN, w tym sedację, zaburzenia psychomotoryczne i amnezję anterogradową; pacjenci powinni unikać jazdy, alkoholu i innych depresantów OUN.",
         "Paradoksalne reakcje (zwiększona lęk, agitacja, agresja) mogą się pojawiać, szczególnie u dzieci i starszych pacjentów."
+      ]
+    },
+    "lorazepam": {
+      "label": "Lorazepam",
+      "desc": "Zalewa krajobraz olejem, ale dodatkowo realnie — choć płytko — spłaszcza studnię manii. Benzodiazepina, która faktycznie leczy manię.",
+      "detail": "Benzodiazepina, dodatni modulator allosteryczny receptora GABA-A. W bezpośrednim porównaniu z klonazepamem w ostrej manii dał 61% odpowiedzi i 38,5% remisji, podczas gdy klonazepam nie dał żadnej — dlatego spłaszcza studnię manii, a nie tylko zwalnia kulkę. Metabolizowany przez glukuronidację, bez czynnych metabolitów, co czyni go benzodiazepiną pierwszego wyboru w chorobach wątroby. Bez naprawy struktury: tolerancja i uzależnienie rozwijają się w ciągu tygodni.",
+      "warnings": [
+        "Równoczesne stosowanie z opioidami istotnie zwiększa ryzyko głębokiej sedacji, depresji oddechowej, śpiączki i śmierci; tę kombinację należy unikać lub stosować wyłącznie gdy nie ma alternatyw.",
+        "Uzależnienie fizyczne rozwija się w ciągu tygodni regularnego stosowania; nagłe odstawienie może wywołać zagrażające życiu drgawki i delirium — odstawianie musi być stopniowe.",
+        "Substancja kontrolowana klasy IV o znacznym potencjale nadużywania i uzależnienia, szczególnie u osób z historią zaburzeń używania substancji.",
+        "Powoduje depresję układu nerwowego: sedację, zaburzenia psychomotoryczne i amnezję następczą; pacjenci powinni unikać prowadzenia pojazdów, alkoholu i innych depresantów OUN.",
+        "U osób starszych zwiększa ryzyko upadków, splątania i paradoksalnego pobudzenia; wymaga niższych dawek i krótszych kuracji."
       ]
     },
     "thc": {

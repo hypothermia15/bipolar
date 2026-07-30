@@ -3,10 +3,19 @@
   "subtitle": "Dynamics of affective states and mood attractors",
   "sections": {
     "stabilizers": "Mood Stabilizers",
-    "antipsychotics": "Antipsychotics",
-    "psychedelics": "Psychedelics",
-    "substances": "Substances",
-    "other": "Other"
+    "stabilizers_hint": "the foundation — they work over months",
+    "antipsychotics": "Atypical Antipsychotics",
+    "antipsychotics_hint": "second generation — mania and psychosis",
+    "typicals": "Typical Antipsychotics",
+    "typicals_hint": "first generation — stronger, more motor side effects",
+    "benzodiazepines": "Benzodiazepines",
+    "benzodiazepines_hint": "short-term calming, not a cure",
+    "psychedelics": "Psychedelics & Ketamine",
+    "psychedelics_hint": "fast acting, still experimental",
+    "substances": "Psychoactive Substances",
+    "substances_hint": "not prescribed — they worsen the course",
+    "other": "Non-Drug Treatments",
+    "other_hint": "procedures, not medication"
   },
   "ui": {
     "noActive": "⚡ No active medication",
