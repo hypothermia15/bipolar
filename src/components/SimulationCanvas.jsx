@@ -36,6 +36,10 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
     const canvas = canvasRef.current;
     if (!canvas) { rafRef.current = requestAnimationFrame(draw); return; }
     const ctx = canvas.getContext("2d");
+    // Label scale: the canvas is 800 logical px wide but is shown much narrower on phones;
+    // keep labels at roughly 10–11 CSS px whatever the display width.
+    const fs = Math.min(3, Math.max(1, (1.25 * W) / (canvas.clientWidth || W)));
+    const off = 1 + (fs - 1) * 0.45;
 
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = "#0a0b18";
@@ -206,7 +210,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       ctx.fillStyle = bg;
       ctx.fillRect(bx - 5, bTop - 50, 10, H - bTop + 50);
       ctx.fillStyle = `rgba(52,152,219,${alpha})`;
-      ctx.font = "bold 8px system-ui, sans-serif";
+      ctx.font = `bold ${Math.round(8 * fs)}px system-ui, sans-serif`;
       ctx.textAlign = "center";
       ctx.fillText(t("ui.barrier"), bx, bTop - 55);
     }
@@ -233,10 +237,10 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       ctx.stroke();
       ctx.setLineDash([]);
       ctx.fillStyle = z.zc + "bb";
-      ctx.font = "bold 9px system-ui, sans-serif";
+      ctx.font = `bold ${Math.round(9 * fs)}px system-ui, sans-serif`;
       ctx.textAlign = "center";
-      ctx.fillText(z.label, cx, cy + (stb ? 38 : -36));
-      ctx.font = "8px system-ui";
+      ctx.fillText(z.label, cx, cy + (stb ? 38 * off : -36 * off));
+      ctx.font = `${Math.round(8 * Math.min(fs, 1.6))}px system-ui`;
       ctx.fillStyle = z.zc + "77";
       ctx.fillText(stb ? "▼" : "▲", cx, cy + (stb ? 27 : -26));
     }
@@ -254,7 +258,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       ctx.fillStyle = `rgba(26,188,156,${oilAlpha})`;
       ctx.fill();
       ctx.fillStyle = `rgba(26,188,156,${oilAlpha + 0.15})`;
-      ctx.font = "bold 9px system-ui, sans-serif";
+      ctx.font = `bold ${Math.round(9 * fs)}px system-ui, sans-serif`;
       ctx.textAlign = "center";
       ctx.fillText(t("ui.gabaOil"), W / 2, PAD - 8);
     }
@@ -323,7 +327,7 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
         onClick={(e) => { e.stopPropagation(); disturb(); }}
         style={{
           position: "absolute", bottom: 14, left: 14, zIndex: 10,
-          padding: "5px 11px", borderRadius: 6, cursor: "pointer", fontWeight: 600, fontSize: 11,
+          padding: "8px 14px", minHeight: 36, borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 13,
           border: "1px solid rgba(255,190,60,0.35)", color: "rgba(255,190,60,0.75)",
           background: "rgba(255,190,60,0.07)", backdropFilter: "blur(6px)",
           transition: "all 0.2s", fontFamily: "'DM Sans', system-ui, sans-serif"

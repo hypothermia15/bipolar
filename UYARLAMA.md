@@ -15,6 +15,8 @@ Uyarlamanın dayandığı özgün sürüm: `91c96c1` (30 Temmuz 2026).
 - "Kaynak yayın" bağlantısının metni, bağlantının gittiği makalenin gerçek başlığı ve dergisiyle düzeltildi (Translational Psychiatry, 2022).
 - ABD'ye özgü düzenleyici ifadeler (FDA kutulu uyarısı, Çizelge III/IV, REMS) çeviride "ABD'de" diye belirtildi.
 
+- **Telefon görünümü** (yalnızca yerleşim ve yazı boyutu): 900 pikselin altında başlık ve manzara üstte, madde şeridi altında, açıklama en altta sıralanır; manzara üzerindeki etiketler ekran genişliğine göre ölçeklenir; dil düğmeleri, “Stresör” düğmesi ve küçük yazılar büyütüldü. Model ve metin değişmedi.
+
 ## Sınırlılıklar
 
 Eğitim amaçlı bir görselleştirmedir, tıbbi bir araç değildir. Parametreler basitleştirilmiş yaklaşık değerlerdir ve klinik yönlendirme niteliği taşımaz. Metinlerdeki klinik ifadeler özgün çalışmadan çevrilmiştir; güncel kılavuzlar ve Kısa Ürün Bilgisi ile tek tek doğrulanmamıştır.
