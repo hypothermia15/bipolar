@@ -4,7 +4,7 @@ import { MODIFIERS } from "../data/modifiers";
 import PharmacologyCard from "./PharmacologyCard";
 
 export default function InfoPanel({ activeModifiers }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [openWarnings, setOpenWarnings] = useState({});
   const [openSources, setOpenSources] = useState({});
 
@@ -66,6 +66,8 @@ export default function InfoPanel({ activeModifiers }) {
             const sections = t(`modifiers.${key}.sections`, { returnObjects: true, defaultValue: null });
             const detail = t(`modifiers.${key}.detail`, { defaultValue: "" });
             const warnings = t(`modifiers.${key}.warnings`, { returnObjects: true, defaultValue: null });
+            // Adapter's notes exist only in the Turkish adaptation; no fallback to other languages.
+            const adapterNotes = i18n.language === "tr" ? t(`modifiers.${key}.adapterNotes`, { returnObjects: true, defaultValue: null }) : null;
 
             return (
               <div key={key} style={{ borderLeft: `2px solid ${d.color}60`, paddingLeft: 12, display: "flex", flexDirection: "column", gap: 5 }}>
@@ -91,6 +93,20 @@ export default function InfoPanel({ activeModifiers }) {
                     ))}
                   </div>
                 ))}
+
+                {Array.isArray(adapterNotes) && adapterNotes.length > 0 && (
+                  <aside className="adapter-note">
+                    <p className="adapter-note-title">✎ {t("ui.adapterNote")}</p>
+                    {adapterNotes.map((n, ni) => (
+                      <div key={ni} className="adapter-note-item">
+                        <p>{n.text}</p>
+                        {Array.isArray(n.refs) && n.refs.map((r, ri) => (
+                          <a key={ri} href={r.url} target="_blank" rel="noopener noreferrer">↗ {r.cite}</a>
+                        ))}
+                      </div>
+                    ))}
+                  </aside>
+                )}
 
                 {Array.isArray(warnings) && warnings.length > 0 && (
                   <div style={{ marginTop: 6, borderRadius: 6, background: "rgba(255,180,50,0.05)", border: "1px solid rgba(255,180,50,0.12)", overflow: "hidden" }}>

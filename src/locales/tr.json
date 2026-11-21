@@ -52,7 +52,8 @@
     "credit": "Özgün çalışma: Michał Ciesielski, Bipolar Attractors (MIT lisansı)",
     "adaptation": "Türkçe uyarlama: Doç. Dr. Miraç Barış Usta (2026)",
     "originalLink": "Özgün çalışma",
-    "sourceLink": "Kaynak kod"
+    "sourceLink": "Kaynak kod",
+    "adapterNote": "Uyarlayanın notu"
   },
   "pharmAction": {
     "Antagonist": "Antagonist",
@@ -129,6 +130,34 @@
       "ktNotes": [
         "İnozitolü tüketir, aşırı etkin sinyal iletimini baskılar",
         "Sirkadiyen ritimleri ve sinaptik plastisiteyi dengeler"
+      ],
+      "adapterNotes": [
+        {
+          "text": "“İntihar riskini anlamlı ölçüde azaltan tek psikiyatrik ilaç” ifadesi fazla kesindir. Duygudurum bozukluklarındaki randomize çalışmaların meta-analizinde lityumla intihar ölümleri plaseboya göre daha az bulunmuştur (Cipriani ve ark., 2013). Öte yandan şizofreni ve şizoaffektif bozuklukta klozapin, olanzapine kıyasla intihar davranışını azaltmıştır (InterSePT; Meltzer ve ark., 2003). Yakın zamanda intiharla ilişkili bir olay yaşamış, majör depresyonu ya da bipolar bozukluğu olan gazilerde yürütülen randomize çalışmada ise tedaviye lityum eklenmesi yineleyen olayları azaltmamış ve çalışma yararsızlık nedeniyle erken sonlandırılmıştır (Katz ve ark., 2022).",
+          "refs": [
+            {
+              "cite": "Cipriani A ve ark. Lithium in the prevention of suicide in mood disorders: updated systematic review and meta-analysis. BMJ, 2013;346:f3646.",
+              "url": "https://doi.org/10.1136/bmj.f3646"
+            },
+            {
+              "cite": "Meltzer HY ve ark. Clozapine treatment for suicidality in schizophrenia: International Suicide Prevention Trial (InterSePT). Arch Gen Psychiatry, 2003;60(1):82-91.",
+              "url": "https://doi.org/10.1001/archpsyc.60.1.82"
+            },
+            {
+              "cite": "Katz IR ve ark. Lithium Treatment in the Prevention of Repeat Suicide-Related Outcomes in Veterans With Major Depression or Bipolar Disorder: A Randomized Clinical Trial. JAMA Psychiatry, 2022;79(1):24-32.",
+              "url": "https://doi.org/10.1001/jamapsychiatry.2021.3170"
+            }
+          ]
+        },
+        {
+          "text": "“Beyin hacmi kaybını geri çevirir” ifadesi kanıtın ötesine geçer. ENIGMA Bipolar Bozukluk Çalışma Grubu’nun 6503 kişilik MRG analizinde lityum kullanımı kortikal kalınlık ve yüzey alanı ölçümleriyle ilişkili bulunmuştur (Hibar ve ark., 2018). Bu tür gruplar arası karşılaştırmalar bir ilişki gösterir; nedenselliği ya da kaybın geri döndüğünü göstermez.",
+          "refs": [
+            {
+              "cite": "Hibar DP ve ark. Cortical abnormalities in bipolar disorder: an MRI analysis of 6503 individuals from the ENIGMA Bipolar Disorder Working Group. Mol Psychiatry, 2018;23(4):932-942.",
+              "url": "https://doi.org/10.1038/mp.2017.73"
+            }
+          ]
+        }
       ]
     },
     "valproate": {
@@ -256,6 +285,17 @@
         "D2 benzeri ailenin tümüne yüksek afinite",
         "D2 benzeri ailenin tümüne yüksek afinite",
         "D2'ye göre 75 kat zayıf: serotonerjik tampon yok, bu yüzden ekstrapiramidal belirtiler"
+      ],
+      "adapterNotes": [
+        {
+          "text": "“Yaklaşık %42 daha olası” ifadesi kaynağı tersinden okur. Goikolea ve ark. (2013) meta-analizinde, aykırı bir aripiprazol çalışması dışlandığında atipik antipsikotiklerle depresyona kayma riski haloperidole göre %42 daha düşük bulunmuştur (risk oranı 0,58; %95 GA 0,42–0,82). Tüm çalışmalar birlikte alındığında karma etkiler modelinde risk oranı 0,71’dir (0,52–0,96); rastgele etkiler modelinde fark istatistiksel anlamlılığa ulaşmamıştır. Yazarlar bunun bir sınıf etkisi sayılmaması gerektiğini, çalışmaların tümünün endüstri destekli olduğunu ve depresyona kaymanın birincil sonlanım olmadığını belirtir.",
+          "refs": [
+            {
+              "cite": "Goikolea JM ve ark. Lower rate of depressive switch following antimanic treatment with second-generation antipsychotics versus haloperidol. J Affect Disord, 2013;144(3):191-8.",
+              "url": "https://doi.org/10.1016/j.jad.2012.07.038"
+            }
+          ]
+        }
       ]
     },
     "clonazepam": {
@@ -286,6 +326,17 @@
       ],
       "ktNotes": [
         "Yüksek potensli benzodiazepin: afinitesi klonazepamın yaklaşık yarısı"
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu oranlar tek ve küçük bir çalışmaya dayanır: akut manili 24 hastada yapılmış 14 günlük çift kör karşılaştırma (Bradwejn ve ark., 1990). Aynı çalışmada klonazepamla yanıt oranı %18,2, remisyon oranı %0’dır; özgün metindeki “yanıt elde edilmemiştir” ifadesi remisyon için geçerlidir. Örneklemin küçüklüğü nedeniyle “maniyi gerçekten tedavi eden benzodiazepin” nitelemesi temkinle okunmalıdır.",
+          "refs": [
+            {
+              "cite": "Bradwejn J ve ark. Double-blind comparison of the effects of clonazepam and lorazepam in acute mania. J Clin Psychopharmacol, 1990;10(6):403-8.",
+              "url": "https://doi.org/10.1097/00004714-199010060-00004"
+            }
+          ]
+        }
       ]
     },
     "ketamine": {
