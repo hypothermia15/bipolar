@@ -26,10 +26,10 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
 
   const pillStyle = (active, color) => ({
     padding: "5px 9px", borderRadius: 5, cursor: "pointer",
-    fontWeight: 600, fontSize: 11, transition: "background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)", lineHeight: 1.2,
+    fontWeight: 600, fontSize: 12, transition: "background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)", lineHeight: 1.2,
     border: `1px solid ${active ? color + "99" : "rgba(255,255,255,0.07)"}`,
     background: active ? `${color}1a` : "rgba(255,255,255,0.02)",
-    color: active ? color : "rgba(255,255,255,0.3)",
+    color: active ? color : "rgba(255,255,255,0.62)",
     display: "flex", alignItems: "center", gap: 6,
     width: "100%", textAlign: "left", boxShadow: active ? `0 0 12px ${color}18` : "none"
   });
@@ -43,14 +43,14 @@ export default function ModifierControls({ activeModifiers, toggleModifier }) {
             paddingBottom: 4, fontFamily: "'Space Mono', monospace"
           }}>
             <span style={{
-              color: "rgba(255,255,255,0.28)", fontSize: 8.5, fontWeight: 700,
-              textTransform: "uppercase", letterSpacing: 1.5, display: "block"
+              color: "rgba(255,255,255,0.55)", fontSize: 9.5, fontWeight: 700,
+              textTransform: "uppercase", letterSpacing: 1.2, display: "block"
             }}>
               {sec.title}
             </span>
             {sec.hint && (
               <span style={{
-                color: "rgba(255,255,255,0.19)", fontSize: 8, fontWeight: 400,
+                color: "rgba(255,255,255,0.42)", fontSize: 9.5, fontWeight: 400,
                 letterSpacing: 0.2, display: "block", marginTop: 2.5, lineHeight: 1.4
               }}>
                 {sec.hint}

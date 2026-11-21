@@ -90,8 +90,8 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                   margin: "2px 0", lineHeight: 1.5, paddingLeft: 8,
                 }}>
                   <span style={{ color, opacity: 0.6, marginRight: 4 }}>›</span>
-                  <span style={{ color: "rgba(255,255,255,0.7)", fontWeight: 600 }}>{m.action}</span>
-                  {" → "}{m.target}
+                  <span style={{ color: "rgba(255,255,255,0.7)", fontWeight: 600 }}>{t(`pharmAction.${m.action}`, { defaultValue: m.action })}</span>
+                  {" → "}{t(`pharmTarget.${m.target}`, { defaultValue: m.target })}
                 </p>
               ))}
             </div>
@@ -144,7 +144,7 @@ export default function PharmacologyCard({ drugKey, modifier }) {
                         color: "rgba(255,255,255,0.3)", fontSize: 10,
                         paddingLeft: 68, lineHeight: 1.3,
                       }}>
-                        {kt.note}
+                        {t(`modifiers.${drugKey}.ktNotes.${i}`, { defaultValue: kt.note })}
                       </span>
                     )}
                   </div>

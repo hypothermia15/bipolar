@@ -44,7 +44,7 @@
   font-weight: 700;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(160,200,255,0.22);
+  color: rgba(160,200,255,0.5);
   margin-bottom: 22px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -98,7 +98,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2.2px;
-  color: rgba(200, 220, 255, 0.32);
+  color: rgba(200, 220, 255, 0.55);
 }
 
 .main-visuals {
@@ -229,3 +229,28 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   .app-header { margin-bottom: 12px; padding-bottom: 12px; }
   .info-wrapper { min-width: 0; }
 }
+
+/* Turkish adaptation: always-visible disclaimer and credits */
+.app-footer {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-disclaimer {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: rgba(255, 210, 140, 0.78);
+  max-width: 900px;
+}
+.footer-credit {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.5);
+}
+.footer-credit a { color: rgba(160,200,255,0.8); text-decoration: none; border-bottom: 1px dotted rgba(160,200,255,0.45); }
+.footer-credit a:hover { color: #cfe3ff; }

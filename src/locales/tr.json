@@ -1,0 +1,369 @@
+{
+  "title": "Bipolar Duygudurum Manzarası",
+  "subtitle": "Duygudurum durumlarının dinamiği ve çekiciler (atraktörler)",
+  "sections": {
+    "stabilizers": "Duygudurum Dengeleyiciler",
+    "stabilizers_hint": "tedavinin temeli, etkileri aylar içinde yerleşir",
+    "antipsychotics": "Atipik Antipsikotikler",
+    "antipsychotics_hint": "ikinci kuşak: mani ve psikoz",
+    "typicals": "Tipik Antipsikotikler",
+    "typicals_hint": "birinci kuşak: daha güçlü, daha çok motor yan etki",
+    "benzodiazepines": "Benzodiazepinler",
+    "benzodiazepines_hint": "kısa süreli yatıştırma, tedavi değil",
+    "psychedelics": "Psikedelikler ve Ketamin",
+    "psychedelics_hint": "hızlı etkili, hâlâ deneysel",
+    "substances": "Psikoaktif Maddeler",
+    "substances_hint": "reçete edilmez, gidişi kötüleştirir",
+    "other": "İlaç Dışı Tedaviler",
+    "other_hint": "ilaç değil, işlem"
+  },
+  "ui": {
+    "noActive": "⚡ Etkin ilaç yok",
+    "instructions": "Duygudurum manzarasını nasıl değiştirdiklerini görmek için ilaç listesinden ilaçlara tıklayın. Birden çok maddeyi birlikte açıp zaman içindeki dinamiklerini izleyebilirsiniz. Topu fareyle sürükleyebilir, “Stresör” düğmesiyle sistemi sarsabilirsiniz.",
+    "attractorTheory": {
+      "title": "Manzara ve çekici modeli",
+      "description": "Bipolar bozukluk, mani ve depresyonun kararlı havzalar (çekiciler) olduğu bir “enerji manzarası” olarak modellenebilir. Tedavi olmadığında ötimi (dengeli duygudurum) çoğu kez kararsız bir noktadır: herhangi bir stresör sistemi patolojik bir duruma itebilir. Lityum bu manzarayı yeniden biçimlendirerek ötimiyi güvenli bir denge noktasına dönüştürür.",
+      "link": "Kaynak yayın: “A critical evaluation of dynamical systems models of bipolar disorder” (Translational Psychiatry, 2022)"
+    },
+    "phaseOnset": " (etki başlıyor)",
+    "phaseSteady": " (kararlı düzey)",
+    "phaseDecay": " (azalıyor)",
+    "phaseOff": " (kesildi)",
+    "stressor": "⚡ Stresör",
+    "gabaOil": "GABA “YAĞI”",
+    "mania": "MANİ",
+    "euthymia": "ÖTİMİ",
+    "depression": "DEPRESYON",
+    "barrier": "D2 BARİYERİ",
+    "warnings": "Uyarılar ve önlemler",
+    "sources": "Kaynaklar",
+    "pharmacology": "Farmakoloji",
+    "pharm": {
+      "formula": "Formül",
+      "mw": "MA",
+      "approved": "Onay yılı",
+      "phase": "Faz",
+      "blackBox": "FDA kutulu uyarısı (black box)",
+      "mechanism": "Etki mekanizması",
+      "bindingProfile": "Bağlanma profili",
+      "viewOnChembl": "ChEMBL'de görüntüle"
+    },
+    "disclaimer": "Eğitim amaçlı bir görselleştirmedir, tıbbi bir araç değildir. Parametreler basitleştirilmiş yaklaşık değerlerdir ve klinik yönlendirme niteliği taşımaz; tedavi kararları bu simülasyona dayandırılamaz.",
+    "credit": "Özgün çalışma: Michał Ciesielski, Bipolar Attractors (MIT lisansı)",
+    "adaptation": "Türkçe uyarlama: Doç. Dr. Miraç Barış Usta (2026)",
+    "originalLink": "Özgün çalışma",
+    "sourceLink": "Kaynak kod"
+  },
+  "pharmAction": {
+    "Antagonist": "Antagonist",
+    "Partial agonist": "Kısmi agonist",
+    "Agonist": "Agonist",
+    "Inverse agonist": "Ters agonist",
+    "Inhibitor": "İnhibitör",
+    "Blocker": "Blokör",
+    "Positive allosteric modulator": "Pozitif allosterik modülatör",
+    "Negative allosteric modulator": "Negatif allosterik modülatör",
+    "Releasing agent": "Salıverici ajan"
+  },
+  "pharmTarget": {
+    "Dopamine D2 receptor": "Dopamin D2 reseptörü",
+    "D2-like dopamine receptor": "D2 benzeri dopamin reseptörü",
+    "D2-like dopamine receptors": "D2 benzeri dopamin reseptörleri",
+    "Serotonin 5-HT1A receptor": "Serotonin 5-HT1A reseptörü",
+    "Serotonin 5-HT2A receptor": "Serotonin 5-HT2A reseptörü",
+    "Serotonin 5-HT2C receptor": "Serotonin 5-HT2C reseptörü",
+    "GABA-A receptor (benzodiazepine site)": "GABA-A reseptörü (benzodiazepin bölgesi)",
+    "Glutamate NMDA receptor": "Glutamat NMDA reseptörü",
+    "Sodium channel alpha subunit": "Sodyum kanalı alfa alt birimi",
+    "Inositol monophosphatase 1": "İnozitol monofosfataz 1",
+    "Glycogen synthase kinase-3": "Glikojen sentaz kinaz-3",
+    "Serotonin transporter (SERT)": "Serotonin taşıyıcısı (SERT)",
+    "Noradrenaline transporter (NET)": "Noradrenalin taşıyıcısı (NET)",
+    "Dopamine transporter (DAT)": "Dopamin taşıyıcısı (DAT)",
+    "Cannabinoid CB1 receptor": "Kannabinoid CB1 reseptörü",
+    "Succinate semialdehyde dehydrogenase": "Süksinat semialdehit dehidrogenaz"
+  },
+  "modifiers": {
+    "lithium": {
+      "label": "Lityum",
+      "desc": "Manzaranın tamamını yeniden biçimlendiren tek ilaç. Ötimi derin, kararlı bir çukura dönüşür. Diğer ilaçlar yalnızca çukurları doldurur ya da topu yavaşlatır.",
+      "detail": "En eski ve en iyi belgelenmiş duygudurum dengeleyici. Güçlü nöroprotektif etkisi ve intihar riskinde anlamlı azalma gösterilmiş tek dengeleyici.",
+      "sections": [
+        {
+          "heading": "Gösterilmiş mekanizmalar",
+          "items": [
+            "İnozitol yolağı: IMPaz'ı inhibe eder, aşırı etkin nöronlardaki fazla sinyal iletimini sınırlar",
+            "GSK-3beta blokajı: sinaptik plastisiteyi ve sirkadiyen ritimleri dengeler",
+            "Nöroproteksiyon: BDNF'yi artırır, hipokampus ve prefrontal korteksteki gri madde kaybını geri çevirir",
+            "Glutamat/GABA modülasyonu: dengeyi inhibisyon yönüne kaydırır",
+            "Mitokondri: hücresel solunumu iyileştirir, oksidatif stresi azaltır"
+          ]
+        },
+        {
+          "heading": "Temel klinik bilgiler",
+          "items": [
+            "Plaseboya göre nüks riskini yaklaşık %40 azaltır",
+            "İntihar riskini anlamlı ölçüde azaltan tek psikiyatrik ilaç",
+            "Hastalıkla ilişkili beyin hacmi kaybını geri çevirir"
+          ]
+        },
+        {
+          "heading": "Sistemik hipotez",
+          "items": [
+            "Bipolarite bir çekici dinamiği hastalığıdır: beyinde fazla derin, kararsız havzalar (mani/depresyon) ve düzleşmiş bir merkez (ötimi) vardır",
+            "Lityum tek bir reseptörü hedeflemez; geri bildirim döngülerindeki “kazancı” aynı anda birçok düzeyde azaltır",
+            "Ağdaki gürültüyü azaltır: ağ düğümlerinde mitokondriyal metabolizmayı dengeler",
+            "Metabolik esnekliği geri kazandırır: glikolitik (mani) durumdan oksidatif (depresyon) duruma geçişin kararlılık aralığını genişletir",
+            "Dinamik modeller doğruluyor: lityum yalnızca tek tek sinyallerin gücünü değil, enerji manzarasının topolojisini değiştirir"
+          ]
+        }
+      ],
+      "warnings": [
+        "Dar terapötik indeks: serum düzeyi >1,5 mEq/L olduğunda toksisite riski vardır; düzenli kan düzeyi izlemi gerekir.",
+        "Sodyum eksikliği, dehidratasyon, NSAİİ'ler, ACE inhibitörleri ve diüretikler böbrek klirensini azaltarak toksik düzeylere yol açabilir.",
+        "Erken toksisite belirtileri tremor, ataksi ve konfüzyondur; ağır toksisite nöbet, koma ve geri dönüşsüz nörolojik hasara neden olabilir.",
+        "Uzun süreli kullanım hipotiroidi ve kronik böbrek hastalığına yol açabilir; tiroit ve böbrek işlevleri belirli aralıklarla izlenmelidir.",
+        "Teratojeniktir (Ebstein anomalisi riski) ve anne sütüne geçer; gebelik ve emzirmede kullanımı dikkatli bir yarar-risk değerlendirmesi gerektirir.",
+        "Ani kesilmesi manik nüks riskini belirgin biçimde artırır; kademeli olarak azaltılmalıdır."
+      ],
+      "ktNotes": [
+        "İnozitolü tüketir, aşırı etkin sinyal iletimini baskılar",
+        "Sirkadiyen ritimleri ve sinaptik plastisiteyi dengeler"
+      ]
+    },
+    "valproate": {
+      "label": "Valproat",
+      "desc": "Top “balın” içinde hareket eder: durumlar arası geçişler yavaşlar, ama manzara aynı kalır.",
+      "detail": "GABAerjik iletimi güçlendirir ve voltaja bağlı sodyum kanallarını bloke eder. Başlıca akut manide ve hızlı döngülülükte etkilidir. Arazi (çukurlar) değişmez; ilaç topun dinamiğini yavaşlatır.",
+      "warnings": [
+        "Yüksek derecede teratojeniktir: maruziyetlerin %1–2'sinde nöral tüp defektine yol açar ve rahim içinde maruz kalan çocuklarda daha düşük IQ ve otizm spektrum bozukluğu ile ilişkilidir. Seçenekler başarısız olmadıkça doğurganlık potansiyeli olan kişilerde kullanılmamalıdır.",
+        "Özellikle 2 yaşından küçük çocuklarda ve çoklu ilaç kullananlarda ölümcül olabilen hepatotoksisite bildirilmiştir; özellikle ilk 6 ayda karaciğer işlevleri izlenmelidir.",
+        "Yaşamı tehdit eden pankreatit bildirilmiştir; yeni başlayan karın ağrısı, bulantı ya da kusmada hasta hemen başvurmalıdır.",
+        "Doza bağlı trombositopeni ve trombosit işlev bozukluğu yaparak kanama riskini artırır; belirli aralıklarla tam kan sayımı önerilir.",
+        "CYP450 ve glukuronidasyon enzimlerini inhibe eder: lamotrijin düzeylerini iki katına çıkarır ve diğer antiepileptiklerle klinik açıdan önemli etkileşimleri vardır.",
+        "Özellikle ergenlikte başlandığında polikistik over sendromu (PKOS) ve hiperandrojenizm ile ilişkilidir."
+      ],
+      "ktNotes": [
+        "Yıkımını engelleyerek GABA düzeylerini artırır",
+        "Histon deasetilaz inhibitörü: epigenetik etkiler"
+      ]
+    },
+    "lamotrigine": {
+      "label": "Lamotrijin",
+      "desc": "Depresyon çukurunu sığlaştırır (glutamat blokajı), ama mani derin kalır. Asimetrik koruma.",
+      "detail": "Voltaja bağlı sodyum kanallarını bloke eder ve glutamat salınımını baskılar. Depresif dönemleri önlemedeki etkinliği iyi belgelenmiştir. Dozun yavaş titre edilmesi gerekir.",
+      "warnings": [
+        "Stevens-Johnson sendromu (SJS) ve toksik epidermal nekroliz (TEN) dahil ciddi, yaşamı tehdit edebilen deri reaksiyonlarına yol açabilir; risk hızlı doz titrasyonunda ve valproatla birlikte kullanımda en yüksektir.",
+        "Doz çok yavaş titre edilmelidir; valproat lamotrijin düzeylerini yaklaşık iki katına çıkarır (dozun yarıya indirilmesi gerekir), karbamazepin gibi enzim indükleyiciler ise yaklaşık yarıya düşürür.",
+        "Hormonal kontraseptifler lamotrijinin plazma düzeyini %50'ye kadar azaltarak etkinliği düşürebilir; çoğu kez doz ayarı gerekir.",
+        "FDA'nın antiepileptik ilaç sınıfının tümü için yayımladığı, intihar düşüncesi ve davranışında artış uyarısını taşır."
+      ],
+      "ktNotes": [
+        "Voltaja bağlı sodyum kanalı blokörü: glutamat salınımını azaltır"
+      ]
+    },
+    "aripiprazole": {
+      "label": "Aripiprazol",
+      "desc": "Mani çukurunu sığlaştırır ve orta yükseklikte bir bariyer kurar (“D2 termostatı”). Top manideyse yavaş yavaş dışarı akar.",
+      "detail": "Kısmi D2 agonisti ve 5-HT2A antagonisti olarak etki eder. Dopamini tümüyle bloke etmek yerine “modüle eder”. Manik nüksü önler.",
+      "warnings": [
+        "Demansa bağlı psikozu olan yaşlı hastalarda ölüm riski artar; aripiprazol bu kullanım için onaylı değildir.",
+        "İlaca bağlı olduğu fark edilmeyebilen kompulsif davranışlara (patolojik kumar, hiperseksüalite, tıkınırcasına yeme) yol açabilir; hastalar ve bakım verenler önceden bilgilendirilmelidir.",
+        "Nöroleptik malign sendrom (NMS), yani ölümcül olabilen hipertermi, rijidite ve otonom dengesizlik, her antipsikotikle görülebilir.",
+        "Uzun süreli kullanımda, geri dönüşsüz olabilen bir hareket bozukluğu olan tardif diskinezi (TD) gelişebilir.",
+        "Başlangıç titrasyonunda ortostatik hipotansiyon ve baş dönmesi yaparak düşme riskini artırabilir."
+      ],
+      "ktNotes": [
+        "En yüksek afiniteli hedef",
+        "Kısmi agonist: kendine özgü “dopamin dengeleyici” etki",
+        "Dopamin D3'e yüksek afiniteyle bağlanma",
+        "Kısmi agonist: anksiyolitik bileşen",
+        "Antagonist: psikotik belirtileri azaltır"
+      ]
+    },
+    "quetiapine": {
+      "label": "Ketiapin",
+      "desc": "Her iki çukuru da (mani ve depresyon) sığlaştırır + sedasyon + bariyer. Çift yönlü, ama metabolik yükü ağır.",
+      "detail": "Geniş reseptör profili (D2, 5-HT2A, H1). Hem manide HEM DE bipolar depresyonda etkilidir (BOLDER çalışmaları). Düşük yerçekimi sedasyonu temsil eder.",
+      "warnings": [
+        "Demansa bağlı psikozu olan yaşlı hastalarda ölüm riski artar; ketiapin bu kullanım için onaylı değildir.",
+        "Kilo artışı, hiperglisemi, yeni başlangıçlı tip 2 diyabet ve dislipidemi gibi belirgin metabolik etkilere yol açar; metabolik parametreler düzenli izlenmelidir.",
+        "QTc uzaması görülebilir ve ventriküler aritmi riskini artırır; QT'yi uzatan diğer ilaçlarla birlikte dikkatle kullanılmalıdır.",
+        "Başlangıçta belirgin sedasyon ve ortostatik hipotansiyon yapar; sedatif özellikleri nedeniyle kötüye kullanım potansiyeli vardır.",
+        "Antipsikotik sınıfının geneliyle uyumlu olarak, uzun süreli ya da yüksek dozlu kullanımda tardif diskinezi ve NMS riski vardır."
+      ],
+      "ktNotes": [
+        "En yüksek afinite: ortostatik hipotansiyonu açıklar",
+        "Histamin blokajı: güçlü sedasyon",
+        "Muskarinik: antikolinerjik etkiler",
+        "Gevşek bağlanma: düşük EPS riski",
+        "Serotonin antagonizması: antidepresan etki"
+      ]
+    },
+    "olanzapine": {
+      "label": "Olanzapin",
+      "desc": "Mani çukurunu en güçlü biçimde sığlaştırır; top derin maniden bile dışarı itilir. Güçlü sedasyon.",
+      "detail": "D2, 5-HT2A, H1 ve muskarinik reseptörlere yüksek afinite gösterir. Akut manide en etkili ilaçlardan biridir. Metabolik riski yüksektir.",
+      "warnings": [
+        "Demansa bağlı psikozu olan yaşlı hastalarda ölüm riski artar; olanzapin bu hasta grubu için onaylı değildir.",
+        "Kas içi olanzapinin parenteral benzodiazepinlerle birlikte verilmesi ağır kardiyorespiratuvar depresyon ve ölüm riski taşır.",
+        "İkinci kuşak antipsikotikler arasında metabolik riski en yüksek olanlardandır: belirgin kilo artışı, hiperglisemi ve dislipidemi sıktır; metabolik izlem şarttır.",
+        "Daha önce diyabet öyküsü olmayan hastalarda, bazıları ölümle sonuçlanan diyabetik ketoasidoz (DKA) olguları bildirilmiştir.",
+        "Belirgin sedasyon, ortostatik hipotansiyon ve antikolinerjik etkiler (kabızlık, idrar retansiyonu, bilişsel küntleşme) yapar."
+      ],
+      "ktNotes": [
+        "Çok yüksek afinite: antipsikotik etkinin anahtarı",
+        "Güçlü histamin blokajı: sedasyon ve kilo artışı",
+        "Geniş serotonin antagonizması",
+        "Adrenerjik blokaj",
+        "Orta düzeyde D2 bağlanması: etkili, ama metabolik risk var"
+      ]
+    },
+    "risperidone": {
+      "label": "Risperidon",
+      "desc": "Maniyi belirgin biçimde sığlaştırır + bariyer. Hızlı etki, ama katılık (rijidite) riski.",
+      "detail": "Güçlü D2 antagonisti. Manik ajitasyonu hızla azaltır. Ekstrapiramidal belirti riski vardır.",
+      "warnings": [
+        "Demansa bağlı psikozu olan yaşlı hastalarda ölüm riski artar ve inme oranları belirgin olarak daha yüksektir; risperidon bu kullanım için onaylı değildir.",
+        "İkinci kuşak antipsikotikler arasında hiperprolaktinemi riski en yüksek olandır: galaktore, adet düzensizlikleri, jinekomasti ve uzun dönemde kemik yoğunluğu kaybına yol açabilir.",
+        "Ekstrapiramidal yan etkiler (akatizi, parkinsonizm, distoni), özellikle 6 mg/gün üzerinde, diğer birçok ikinci kuşak antipsikotiğe göre daha sık görülür.",
+        "QTc uzaması bildirilmiştir; QT'yi uzatan diğer ilaçlarla birlikte ya da kardiyak risk etmenleri olan hastalarda dikkatle kullanılmalıdır.",
+        "Kilo artışı ve metabolik etkiler (hiperglisemi, dislipidemi) yapar; metabolik izlem önerilir."
+      ],
+      "ktNotes": [
+        "Olağanüstü güçlü: pikomolar afinite",
+        "Yüksek afinite: duygudurum üzerindeki etkilere katkı sağlayabilir",
+        "Sıkı bağlanma: yüksek dozlarda EPS riski",
+        "Güçlü adrenerjik blokaj",
+        "Orta düzeyde D1 afinitesi"
+      ]
+    },
+    "haloperidol": {
+      "label": "Haloperidol",
+      "desc": "Maninin önündeki en dik duvar ve ardından depresyona en derin kayış.",
+      "detail": "Yüksek potensli birinci kuşak antipsikotik. D2 blokajı (Ki 1,6 nM) bu listedekilerin en güçlüsüdür; bu yüzden mani çukurunu bütün atipiklerden daha çok düzleştirir ve önüne en yüksek bariyeri kurar. H1 afinitesinin zayıf olması görece az sedasyon demektir; ancak 5-HT2A afinitesinin zayıflığı, atipikleri ekstrapiramidal etkilerden koruyan serotonerjik tamponu ortadan kaldırır. Bu durum burada titreşim (akatizi) olarak modellenmiştir. Depresyona hiçbir etkisi yoktur ve depresyona kayma oranı daha yüksektir.",
+      "warnings": [
+        "Antipsikotik kullanan, demansa bağlı psikozu olan yaşlı hastalarda ölüm riski artar; haloperidol bu kullanım için onaylı değildir.",
+        "Ekstrapiramidal belirtiler (akut distoni, akatizi, parkinsonizm, rijidite) ikinci kuşak antipsikotiklere göre belirgin olarak daha sıktır; uzun süreli kullanımdan sonra gelişen tardif diskinezi geri dönüşsüz olabilir.",
+        "Nöroleptik malign sendrom (hipertermi, yaygın kas rijiditesi, otonom dengesizlik, bilinç değişikliği ve kreatin kinaz yüksekliği) nadirdir, ama ölümcül olabilir ve ilacın hemen kesilmesini gerektirir.",
+        "QTc uzaması, torsade de pointes dahil ventriküler aritmiler ve ani ölüm bildirilmiştir; özellikle QT'yi uzatan diğer ilaçlarla, hipokalemide ya da yüksek intravenöz dozlarda EKG izlemi önerilir.",
+        "Mani sonrası depresyona kayma, ikinci kuşak antipsikotiklere göre yaklaşık %42 daha olasıdır; mani yatıştıktan sonra duygudurum yakından izlenmelidir.",
+        "Prolaktini güçlü biçimde yükseltir; galaktore, amenore, cinsel işlev bozukluğu ve uzun dönemde kemik yoğunluğu kaybına yol açabilir."
+      ],
+      "ktNotes": [
+        "Bu listedeki en güçlü D2 blokajı: en yüksek bariyer, en yüksek EPS riski",
+        "D2'ye yakın afinite; duygudurum ve bilişteki rolü henüz net değil",
+        "D2 benzeri ailenin tümüne yüksek afinite",
+        "D2 benzeri ailenin tümüne yüksek afinite",
+        "D2'ye göre 75 kat zayıf: serotonerjik tampon yok, bu yüzden ekstrapiramidal belirtiler"
+      ]
+    },
+    "clonazepam": {
+      "label": "Klonazepam",
+      "desc": "Manzarayı yağa boğar (yoğun GABA etkisi). Hızlı rahatlama sağlar, yapısal onarım yapmaz; kesilince “rebound” görülür.",
+      "detail": "Benzodiazepin. Güçlü yavaşlatma (sönümleme) yapar, ama çukur derinliğini etkilemez. Tolerans ve bağımlılık riski vardır.",
+      "warnings": [
+        "Opioidlerle birlikte kullanımı derin sedasyon, solunum depresyonu, koma ve ölüm riskini belirgin biçimde artırır; bu birliktelikten kaçınılmalı ya da yalnızca başka seçenek yoksa kullanılmalıdır.",
+        "Düzenli kullanımda fiziksel bağımlılık gelişir; ani kesilmesi yaşamı tehdit eden yoksunluk nöbetlerine yol açabilir, doz kademeli olarak azaltılmalıdır.",
+        "ABD'de Çizelge IV (Schedule IV) kontrollü maddedir; özellikle madde kullanım bozukluğu öyküsü olanlarda kötüye kullanım ve bağımlılık potansiyeli belirgindir.",
+        "Sedasyon, psikomotor bozulma ve anterograd amnezi dahil MSS depresyonu yapar; hastalar araç kullanmaktan, alkolden ve diğer MSS depresanlarından kaçınmalıdır.",
+        "Özellikle çocuklarda ve yaşlılarda paradoksal reaksiyonlar (kaygı, ajitasyon ve saldırganlıkta artış) görülebilir."
+      ],
+      "ktNotes": [
+        "Son derece güçlü benzodiazepin: GABA inhibisyonunu artırır"
+      ]
+    },
+    "lorazepam": {
+      "label": "Lorazepam",
+      "desc": "Manzaranın her yanında yoğun yağ ve buna ek olarak mani çukurunda sığ da olsa gerçek bir düzleşme. Maniyi gerçekten tedavi eden benzodiazepin.",
+      "detail": "Benzodiazepin, GABA-A reseptöründe pozitif allosterik modülatör. Akut manide klonazepamla doğrudan karşılaştırıldığında %61 yanıt ve %38,5 remisyon sağlamış, klonazepamla ise yanıt elde edilmemiştir; yani yalnızca topu yavaşlatmakla kalmaz, mani çukurunu da sığlaştırır. Etkin metaboliti olmadan glukuronidasyonla atılır; bu da onu karaciğer hastalığında tercih edilen benzodiazepin yapar. Yapısal onarım yapmaz: tolerans ve bağımlılık haftalar içinde gelişir.",
+      "warnings": [
+        "Opioidlerle birlikte kullanımı derin sedasyon, solunum depresyonu, koma ve ölüm riskini belirgin biçimde artırır; bu birliktelikten kaçınılmalı ya da yalnızca başka seçenek yoksa kullanılmalıdır.",
+        "Düzenli kullanımda haftalar içinde fiziksel bağımlılık gelişir; ani kesilmesi yaşamı tehdit eden yoksunluk nöbetlerine ve deliryuma yol açabilir, doz kademeli olarak azaltılmalıdır.",
+        "ABD'de Çizelge IV (Schedule IV) kontrollü maddedir; özellikle madde kullanım bozukluğu öyküsü olanlarda kötüye kullanım ve bağımlılık potansiyeli belirgindir.",
+        "Sedasyon, psikomotor bozulma ve anterograd amnezi dahil MSS depresyonu yapar; hastalar araç kullanmaktan, alkolden ve diğer MSS depresanlarından kaçınmalıdır.",
+        "Yaşlı hastalarda düşme, konfüzyon ve paradoksal ajitasyon riskini artırır; daha düşük dozlar ve daha kısa kullanım süreleri gerekir."
+      ],
+      "ktNotes": [
+        "Yüksek potensli benzodiazepin: afinitesi klonazepamın yaklaşık yarısı"
+      ]
+    },
+    "ketamine": {
+      "label": "Ketamin",
+      "desc": "Depresyon çukurunu anında doldurur (NMDA blokajı). Çarpıcı, ama kısa süreli bir etki.",
+      "detail": "NMDA blokajı ve sinaptogenez yoluyla hızlı antidepresan etki gösterir. Topolojiyi kalıcı olarak değiştirmez.",
+      "warnings": [
+        "Kötüye kullanım potansiyeli ve psikolojik bağımlılık riski belirgindir; esketamin (Spravato) ABD'de Çizelge III maddedir ve her dozdan sonra en az 2 saatlik gözlem içeren bir REMS programı gerektirir.",
+        "Doza bağlı disosiyasyon ve algı bozukluklarına yol açar; yüksek dozlarda derin bir disosiyatif durum (“k-hole”) oluşturabilir.",
+        "Kronik yoğun kullanım ketamine bağlı üropatiye, yani en ağır olgularda sistektomi gerektiren, çoğu kez geri dönüşsüz ağır mesane hasarına neden olur.",
+        "Kan basıncını ve kalp hızını belirgin biçimde yükseltir; kontrolsüz hipertansiyonu ya da kardiyovasküler hastalığı olanlarda dikkatle kullanılmalıdır.",
+        "Antidepresan etkisi genellikle geçicidir (günler ile haftalar arası); uzun dönem doz şemaları ve kümülatif güvenlilik hâlâ araştırılmaktadır."
+      ],
+      "ktNotes": [
+        "PCP bölgesinde kanal blokörü: hızlı antidepresan etkinin mekanizması"
+      ]
+    },
+    "mdma": {
+      "label": "MDMA",
+      "desc": "Her iki çukuru da sığlaştırır (yoğun 5-HT/DA salınımı) + yüksek kaos. Mani riski.",
+      "detail": "Yoğun monoamin salınımı yapar. Bipolar bozuklukta yüksek risklidir: maniyi tetikleyebilir ya da depresyonu ağırlaştırabilir (çöküş).",
+      "warnings": [
+        "Aşırı su alımı ile antidiüretik etkinin birleşmesi sonucu akut hiponatremiye (tehlikeli düzeyde düşük sodyum) yol açar; bu, özellikle genç kadınlarda MDMA'ya bağlı ölümlerin önde gelen nedenlerindendir.",
+        "Artan fiziksel etkinlik ve bozulan ısı düzenlemesi yoluyla hipertermi yapar; serotonin sendromuyla birleştiğinde çoklu organ yetmezliği, rabdomiyoliz ve ölüme neden olabilir.",
+        "SSRI'lar, MAO inhibitörleri, lityum ya da diğer serotonerjik ilaçlarla birlikte alındığında ciddi serotonin sendromu riski doğurur.",
+        "Yinelenen ya da yoğun kullanım kalıcı serotonerjik nörotoksisiteyle ve sözel bellek, yürütücü işlevler ve duygudurum düzenlemesinde süregen bozulmayla ilişkilidir.",
+        "Sokakta satılan ekstazi tabletlerine sıklıkla fentanil, metamfetamin ya da bilinmeyen başka maddeler karıştırılır; bu da aşırı doz riskini belirgin biçimde artırır."
+      ],
+      "ktNotes": [
+        "Birincil hedef: yoğun serotonin salınımı",
+        "Noradrenalin salınımı: sempatomimetik etkiler",
+        "Dopamin salınımı: empatojenik ve ödüllendirici etkiler"
+      ]
+    },
+    "thc": {
+      "label": "THC",
+      "desc": "Manzaranın düzenini bozar; çukurlar rastgele salınır. Geçici rahatlama sağlar, ama zamanla atak riskini artırır.",
+      "detail": "Nörotransmitter düzenlenmesini bozar. Görselleştirmedeki titreşim duygudurum dengesizliğini temsil eder.",
+      "warnings": [
+        "Yoğun ya da erken başlangıçlı kullanım, özellikle genetik yatkınlığı olanlarda psikoz, şizofreni spektrumu bozuklukları ve manik atak riskini belirgin biçimde artırır.",
+        "Kullananların yaklaşık %9'unda kannabis kullanım bozukluğu gelişir; bu oran ergenlikte başlayanlarda yaklaşık %17'ye, her gün kullananlarda yaklaşık %50'ye çıkar. Yoksunlukta irritabilite, uykusuzluk ve disfori görülür.",
+        "Doğum öncesi maruziyet düşük doğum ağırlığı, erken doğum ve dikkat ile bellek sorunlarını da içeren nörogelişimsel sorunlarla ilişkilidir.",
+        "Solunan kannabis, tütün dumanındakine benzer yanma ürünleri içerir ve kronik bronşite yol açar; akut kardiyovasküler riskler arasında içimle tetiklenen miyokart enfarktüsü vardır.",
+        "Bipolar bozukluğun uzun dönem gidişini kötüleştirir: atak sıklığını, intihar riskini ve tedaviye uyumsuzluğu artırır."
+      ],
+      "ktNotes": [
+        "Bağışıklık modülasyonu",
+        "Birincil psikoaktif hedef: öfori, algı değişikliği"
+      ]
+    },
+    "alcohol": {
+      "label": "Alkol",
+      "desc": "Her iki patolojik havzayı derinleştirerek manzaranın dengesini bozar. Geçici yavaşlama yerini artan kaosa ve nüks riskine bırakır.",
+      "detail": "MSS depresanı (GABAerjik). Başlangıçta topu yavaşlatsa da (sedasyon), uzun dönem etkileri ve rebound hem mani hem depresyon çukurunu derinleştirir ve onları daha güçlü çekicilere dönüştürür. Döngülülüğü ve dürtüselliği artırır.",
+      "warnings": [
+        "Fiziksel bağımlılığı olan kişilerde alkol yoksunluğu yaşamı tehdit edebilir; nöbetler ve deliryum tremens tıbbi gözetim altında detoksifikasyon gerektirir.",
+        "Kronik yoğun kullanım alkolik karaciğer hastalığı, kardiyomiyopati, pankreatit ve periferik nöropatiye neden olur.",
+        "Benzodiazepinlerin, opioidlerin, antipsikotiklerin ve diğer MSS depresanlarının etkilerini güçlendirir; ölümcül olabilen, toplanan (aditif) solunum depresyonu yapabilir.",
+        "Bipolar bozukluğun uzun dönem gidişini kötüleştirir: atak sıklığını, intihar riskini ve tedaviye uyumsuzluğu artırır.",
+        "IARC Grup 1 kanserojendir; ağız, boğaz, yemek borusu, karaciğer, kolon ve meme kanserleriyle nedensel ilişkisi vardır ve risk tüketimle doğrusal olarak artar.",
+        "Gebelikte güvenli bir alkol kullanım düzeyi belirlenmemiştir; doğum öncesi maruziyet fetal alkol spektrum bozukluklarına (FASB) neden olur."
+      ],
+      "ktNotes": [
+        "Pozitif modülatör: sedasyon ve anksiyoliz",
+        "İnhibitör: bilişsel bozulmaya katkıda bulunur"
+      ]
+    },
+    "ect": {
+      "label": "EKT",
+      "desc": "Manzaranın sıfırlanması: mani ve depresyon neredeyse düzleşir, ötimi gerçek bir çekiciye dönüşür.",
+      "detail": "Elektrokonvülsif tedavi. Ağır atakları kırmada en güçlü yöntemdir. Topolojide çarpıcı bir değişiklik yapar.",
+      "warnings": [
+        "Genel anestezi altında uygulanır; başlıca riskler aspirasyon, geçici kardiyovasküler yüklenme (hipertansiyon, taşikardi) ve nadir görülen ölümdür (yaklaşık 10.000 hastada 1).",
+        "En sık yan etkiler anterograd ve retrograd amnezidir; otobiyografik olaylara ilişkin retrograd amnezi aylarca sürebilir ve özellikle bilateral elektrot yerleşiminde kimi zaman kalıcıdır.",
+        "Yer kaplayan beyin lezyonu, yakın zamanda geçirilmiş miyokart enfarktüsü, artmış kafa içi basıncı ya da yakın zamanda geçirilmiş serebrovasküler olayı bulunan hastalarda risk belirgin olarak artar; bunlar göreli kontrendikasyonlardır.",
+        "Uzamış nöbet, konfüzyon ve bilişsel bozulma riskini artırdığı için lityuma EKT öncesinde genellikle ara verilmelidir.",
+        "Yinelenen genel anestezi gerektirir (akut dönemde genellikle 6–12 seans); kümülatif anestezi maruziyetinin kendi sistemik riskleri vardır."
+      ]
+    }
+  }
+}

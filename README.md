@@ -1,3 +1,17 @@
+# Bipolar Duygudurum Manzarası
+
+Michał Ciesielski'nin **Bipolar Attractors** çalışmasının Türkçe uyarlaması. Bipolar bozukluğu dinamik bir enerji manzarası olarak gösterir: duygudurum mani, ötimi ve depresyon arasında yuvarlanan bir toptur; her ilaç araziyi yeniden biçimlendirir.
+
+- **Yayın:** https://miracbarisusta.com/bipolar-manzarasi/
+- **Özgün çalışma:** https://github.com/ciessielski/bipolar (MIT) · canlı sürüm: https://bipolar.kisielos.com
+- **Uyarlayan:** Doç. Dr. Miraç Barış Usta (2026). Yapılan değişiklikler: [UYARLAMA.md](UYARLAMA.md)
+
+> **Uyarı:** Eğitim amaçlı bir görselleştirmedir, tıbbi bir araç değildir. Parametreler basitleştirilmiş yaklaşık değerlerdir ve klinik yönlendirme niteliği taşımaz. Tedavi kararları bu simülasyona dayandırılamaz.
+
+Aşağıdaki bölüm özgün çalışmanın README metnidir.
+
+---
+
 # Bipolar Attractors
 
 A visual model of bipolar disorder as a dynamic energy landscape — mood is a ball rolling between mania, euthymia, and depression, and each drug reshapes the terrain.
