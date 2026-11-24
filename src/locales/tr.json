@@ -82,7 +82,8 @@
     "Noradrenaline transporter (NET)": "Noradrenalin taşıyıcısı (NET)",
     "Dopamine transporter (DAT)": "Dopamin taşıyıcısı (DAT)",
     "Cannabinoid CB1 receptor": "Kannabinoid CB1 reseptörü",
-    "Succinate semialdehyde dehydrogenase": "Süksinat semialdehit dehidrogenaz"
+    "Succinate semialdehyde dehydrogenase": "Süksinat semialdehit dehidrogenaz",
+    "Monoamine transporters": "Monoamin taşıyıcıları"
   },
   "modifiers": {
     "lithium": {
@@ -402,6 +403,37 @@
       "ktNotes": [
         "Pozitif modülatör: sedasyon ve anksiyoliz",
         "İnhibitör: bilişsel bozulmaya katkıda bulunur"
+      ]
+    },
+    "methamphetamine": {
+      "label": "Metamfetamin",
+      "desc": "Mani çukurunu derinleştirir ve güçlü kaos ekler. Depresyon çukuru da derinleşir (çöküş ve yoksunluk).",
+      "detail": "Monoamin taşıyıcıları üzerinden etki eden bir psikostimülandır. Düşük ve orta dozlar uyarılma ve olumlu duygudurum yaratır. Daha yüksek dozlar psikoza yol açabilir. Yinelenen kullanımın kesilmesi çökkün duygudurum, kaygı ve uyku bozukluğuyla giden bir yoksunluk sendromuna neden olur. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Yasa dışı kullanımda görülen yüksek dozlarda (50 mg ve üzeri) metamfetamin psikoza yol açabilir. Psikotik belirtiler kullanıcıların yaklaşık %40’ına varan bölümünde görülür ve ajitasyon, şiddet ve sanrıları içerebilir.",
+        "Kullanıcıların bir bölümünde psikoz yineler ve kalıcılaşır. Birincil bir psikotik bozukluktan ayırt edilmesi güç olabilir.",
+        "Kan basıncını yükseltici etkisi akut ve süregen kardiyovasküler komplikasyonlara yol açabilir.",
+        "Yinelenen kullanım nörotoksisiteye neden olabilir. Bu durum uzun süren psikiyatrik belirtiler, bilişsel bozulma ve artmış Parkinson hastalığı riskiyle ilişkilidir.",
+        "Yinelenen kullanımın birden kesilmesi çökkün duygudurum, kaygı ve uyku bozukluğuyla giden yoksunluğa yol açar. Akut dönem tipik olarak 7-10 gün sürer."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Yarılanma ömrü (yaklaşık 10 saat) ve uyarılar aşağıdaki üç kaynağın özetlerine dayanır. Çukur derinlikleri, kaos düzeyi ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Manzaradaki “mani” çukuru burada uyarılmayı, yükselmiş duygudurumu ve psikoz riskini birlikte temsil eder. Bu bir basitleştirmedir. Kaynaklar genel kullanıcı örneklemlerine dayanır. Bipolar bozukluğu olan kişilerde metamfetaminin gidişe etkisine ilişkin kaynak taranmamıştır.",
+          "refs": [
+            {
+              "cite": "Cruickshank CC, Dyer KR. A review of the clinical pharmacology of methamphetamine. Addiction, 2009;104(7):1085-99.",
+              "url": "https://doi.org/10.1111/j.1360-0443.2009.02564.x"
+            },
+            {
+              "cite": "Glasner-Edwards S, Mooney LJ. Methamphetamine psychosis: epidemiology and management. CNS Drugs, 2014;28(12):1115-26.",
+              "url": "https://doi.org/10.1007/s40263-014-0209-8"
+            },
+            {
+              "cite": "McGregor C ve ark. The nature, time course and severity of methamphetamine withdrawal. Addiction, 2005;100(9):1320-9.",
+              "url": "https://doi.org/10.1111/j.1360-0443.2005.01160.x"
+            }
+          ]
+        }
       ]
     },
     "ect": {

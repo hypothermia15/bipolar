@@ -1,0 +1,52 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters below are the adapter's illustrative choices, not measurements.
+category: substances
+order: 3
+icon: "🧪"
+color: "#d35400"
+label: "Methamphetamine"
+desc: "Deepens the manic basin and adds strong chaos; the depressive basin deepens too (crash and withdrawal)."
+detail: "Psychostimulant acting on monoamine transporters. Low-to-moderate doses produce arousal and positive mood; higher doses can produce psychosis. Stopping repeated use leads to a withdrawal syndrome with depressed mood, anxiety and sleep disturbance. Added in the Turkish adaptation; landscape parameters are illustrative."
+halfLife: 10
+onset: 0.5
+wallStr: 1.5
+wells:
+  - cx: -0.68
+    depth: 2.9
+    w: 0.24
+  - cx: 0.00
+    depth: 0.0
+    w: 0.25
+  - cx: 0.68
+    depth: 2.5
+    w: 0.22
+damping: 0.985
+gravity: 16
+barrierH: 0
+jitter: 0.70
+warnings:
+  - "At the higher doses typical of illicit use (50 mg or more) methamphetamine can produce psychosis; psychotic symptoms affect up to about 40% of users and can include agitation, violence and delusions."
+  - "In a subset of users psychosis recurs and persists, and may be difficult to distinguish from a primary psychotic disorder."
+  - "Its hypertensive effect can produce acute and chronic cardiovascular complications."
+  - "Repeated use may induce neurotoxicity, associated with prolonged psychiatric symptoms, cognitive impairment and an increased risk of Parkinson's disease."
+  - "Abrupt cessation after repeated use leads to withdrawal with depressed mood, anxiety and sleep disturbance; the acute phase typically lasts 7 to 10 days."
+
+refs:
+  - cite: "A review of the clinical pharmacology of methamphetamine."
+    url: "https://pubmed.ncbi.nlm.nih.gov/19426289/"
+  - cite: "Methamphetamine psychosis: epidemiology and management."
+    url: "https://pubmed.ncbi.nlm.nih.gov/25373627/"
+  - cite: "The nature, time course and severity of methamphetamine withdrawal."
+    url: "https://pubmed.ncbi.nlm.nih.gov/16128721/"
+pharmacology:
+  chemblId: "CHEMBL1201201"
+  firstApproved: 1943
+  molecularFormula: "C₁₀H₁₅N"
+  molecularWeight: 149.24
+  qed: 0.69
+  blackBoxWarning: true
+  smiles: "CN[C@@H](C)Cc1ccccc1"
+  mechanisms:
+    - action: "Inhibitor"
+      target: "Monoamine transporters"
+  keyTargets: []
