@@ -1,0 +1,36 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: lifestyle
+order: 3
+icon: 📱
+color: '#ff5c8a'
+label: Short-video scrolling (problematic use)
+desc: Deepens the depressive basin and adds restlessness; the manic basin is unchanged.
+detail: Not a drug. Refers to problematic, compulsive use of short-form video (TikTok, Reels, Shorts), not to routine use. Problematic use is associated with depression, anxiety and stress in mostly cross-sectional studies. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 6
+onset: 0.5
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.2
+  w: 0.2
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 2.5
+  w: 0.21
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0.3
+warnings:
+- In a meta-analysis of 58 studies (96,676 participants), short-form video use was positively correlated with depression (r = 0.24), anxiety (r = 0.26), stress (r = 0.41) and loneliness (r = 0.33).
+- Problematic use was associated with lower subjective well-being (r = -0.25); routine use showed no significant association with negative affect or anxiety.
+- A systematic review of 20 studies in adolescents raised concerns about lower life satisfaction, problematic usage patterns and spread of psychiatric symptom behaviors, alongside opportunities for self-expression and peer connection.
+- Longitudinal and experimental studies are needed to establish causality.
+refs:
+- cite: 'Association Between Short-Form Video Use and Mental Health: Systematic Review and Meta-Analysis.'
+  url: https://pubmed.ncbi.nlm.nih.gov/41849573/
+- cite: 'Scrolling through adolescence: a systematic review of the impact of TikTok on adolescent mental health.'
+  url: https://pubmed.ncbi.nlm.nih.gov/39412670/

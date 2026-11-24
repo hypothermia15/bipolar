@@ -1,0 +1,38 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: lifestyle
+order: 2
+icon: 🎮
+color: '#8e44ad'
+label: Problematic gaming
+desc: Deepens the depressive basin and adds restlessness; the manic basin deepens slightly through lost sleep.
+detail: Not a drug. Refers to problematic gaming or gaming disorder, not to ordinary play. It is associated with depression and with poorer sleep in observational studies. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 10
+onset: 2
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.4
+  w: 0.21
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 2.6
+  w: 0.21
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0.25
+warnings:
+- In a meta-analysis of people with internet gaming disorder, about one in three had comorbid depression (pooled rate 0.32).
+- Problematic gamers reported shorter sleep, poorer sleep quality (odds ratio 2.02) and more sleep problems (odds ratio 2.60); the effect on sleep duration was larger in adolescent samples.
+- ICD-11 excludes a diagnosis of gaming disorder when disordered gaming occurs only during an episode of elevated mood in bipolar disorder.
+- These are observational associations; they do not show that gaming causes mood episodes.
+refs:
+- cite: 'Depressive symptoms and depression in individuals with internet gaming disorder: A systematic review and meta-analysis.'
+  url: https://pubmed.ncbi.nlm.nih.gov/33592432/
+- cite: 'Problematic Gaming and Sleep: A Systematic Review and Meta-Analysis.'
+  url: https://pubmed.ncbi.nlm.nih.gov/34163386/
+- cite: Bipolar Disorder and Gaming Disorder-Compatible or Incompatible Diagnoses?
+  url: https://pubmed.ncbi.nlm.nih.gov/37834895/

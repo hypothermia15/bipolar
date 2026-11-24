@@ -19,7 +19,9 @@
     "switchers": "Drugs That Can Trigger Mania",
     "switchers_hint": "prescribed, but risky when used alone",
     "triggers": "Triggers",
-    "triggers_hint": "not drugs, but they jolt the course"
+    "triggers_hint": "not drugs, but they jolt the course",
+    "lifestyle": "Lifestyle and Screens",
+    "lifestyle_hint": "not drugs; the evidence is associational"
   },
   "ui": {
     "noActive": "⚡ No active medication",

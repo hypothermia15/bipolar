@@ -19,7 +19,9 @@
     "switchers": "Maniye Kaydırabilen İlaçlar",
     "switchers_hint": "reçete edilir, tek başına risklidir",
     "triggers": "Tetikleyiciler",
-    "triggers_hint": "ilaç değil, gidişi sarsar"
+    "triggers_hint": "ilaç değil, gidişi sarsar",
+    "lifestyle": "Yaşam Tarzı ve Ekran",
+    "lifestyle_hint": "ilaç değil, kanıt ilişki düzeyinde"
   },
   "ui": {
     "noActive": "⚡ Etkin ilaç yok",
@@ -593,6 +595,84 @@
             {
               "cite": "Boland EM ve ark. J Clin Psychiatry, 2017;78(8):e1020-e1034. Meta-Analysis of the Antidepressant Effects of Acute Sleep Deprivation.",
               "url": "https://doi.org/10.4088/JCP.16r11332"
+            }
+          ]
+        }
+      ]
+    },
+    "exercise": {
+      "label": "Egzersiz",
+      "desc": "Depresyon çukurunu biraz sığlaştırır. Mani çukuru çok az derinleşir (yoğun egzersiz).",
+      "detail": "İlaç değildir. Bipolar bozukluğu olan kişilerde fiziksel etkinlik daha az depresif belirti, daha iyi yaşam kalitesi ve daha iyi işlevsellikle ilişkili bulunmuştur. Bazı kanıtlar yoğun egzersiz ile mani arasında bir ilişkiye işaret eder. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "31 çalışmayı (bipolar bozukluğu olan 15.587 hasta) kapsayan sistematik derlemede fiziksel etkinlik daha az depresif belirti, daha iyi yaşam kalitesi ve artmış işlevsellikle ilişkilidir.",
+        "Bazı kanıtlar yoğun egzersiz ile mani arasında bir ilişkiye işaret eder.",
+        "Hareketsiz yaşam biçimi hastaların %40 ile %64,9'unda bildirilmiştir.",
+        "Çalışmaların çoğu kesitseldir ve randomize kontrollü çalışma bulunamamıştır. Duygudurum ile egzersiz arasında neden-sonuç ilişkisi kurmak için kanıt yetersizdir."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu kayıt özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, süre ve başlangıç değerleri uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Derleme 2016'ya kadarki çalışmaları kapsar. Sonraki çalışmalar taranmamıştır.",
+          "refs": [
+            {
+              "cite": "Melo MC ve ark. J Affect Disord, 2016;198:32-8. Exercise in bipolar patients: A systematic review.",
+              "url": "https://doi.org/10.1016/j.jad.2016.03.004"
+            }
+          ]
+        }
+      ]
+    },
+    "gaming": {
+      "label": "Sorunlu oyun oynama",
+      "desc": "Depresyon çukurunu derinleştirir ve huzursuzluk ekler. Mani çukuru uyku kaybı üzerinden biraz derinleşir.",
+      "detail": "İlaç değildir. Olağan oyun oynamayı değil, sorunlu oyun oynamayı ya da oyun oynama bozukluğunu temsil eder. Gözlemsel çalışmalarda depresyonla ve daha kötü uykuyla ilişkilidir. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "İnternette oyun oynama bozukluğu olan kişilerde yapılan meta-analizde yaklaşık üç kişiden birinde eşlik eden depresyon bulunmuştur (birleştirilmiş oran 0,32).",
+        "Sorunlu oyun oynayanlar daha kısa uyku, daha kötü uyku kalitesi (olasılık oranı 2,02) ve daha çok uyku sorunu (olasılık oranı 2,60) bildirmiştir. Uyku süresindeki etki ergen örneklemlerinde daha büyüktür.",
+        "ICD-11, sorunlu oyun oynama yalnızca bipolar bozukluğun yükselmiş duygudurum dönemi sırasında görülüyorsa oyun oynama bozukluğu tanısını dışlar.",
+        "Bunlar gözlemsel ilişkilerdir. Oyunun duygudurum dönemlerine neden olduğunu göstermez."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu kayıt özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, süre ve başlangıç değerleri uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Depresyon ve uyku kaynakları bipolar bozukluğa özgü değildir. Mani çukurundaki küçük derinleşme uyarlayanın çıkarımıdır: uyku kaybı üzerinden kurulmuştur ve doğrudan bir kaynağa dayanmaz. Bipolar bozuklukla ilgili tek kaynak bir anlatı derlemesidir.",
+          "refs": [
+            {
+              "cite": "Ostinelli EG ve ark. J Affect Disord, 2021;284:136-142. Depressive symptoms and depression in individuals with internet gaming disorder: A systematic review and meta-analysis.",
+              "url": "https://doi.org/10.1016/j.jad.2021.02.014"
+            },
+            {
+              "cite": "Kristensen JH ve ark. Front Psychiatry, 2021;12:675237. Problematic Gaming and Sleep: A Systematic Review and Meta-Analysis.",
+              "url": "https://doi.org/10.3389/fpsyt.2021.675237"
+            },
+            {
+              "cite": "Floros G, Mylona I. J Clin Med, 2023;12(19). Bipolar Disorder and Gaming Disorder-Compatible or Incompatible Diagnoses?",
+              "url": "https://doi.org/10.3390/jcm12196251"
+            }
+          ]
+        }
+      ]
+    },
+    "shortvideo": {
+      "label": "Kısa video kaydırma (sorunlu kullanım)",
+      "desc": "Depresyon çukurunu derinleştirir ve huzursuzluk ekler. Mani çukuru değişmez.",
+      "detail": "İlaç değildir. Olağan kullanımı değil, kısa videoların (TikTok, Reels, Shorts) sorunlu ve zorlantılı kullanımını temsil eder. Çoğu kesitsel olan çalışmalarda sorunlu kullanım depresyon, kaygı ve stresle ilişkilidir. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "58 çalışmayı (96.676 katılımcı) kapsayan meta-analizde kısa video kullanımı depresyon (r = 0,24), kaygı (r = 0,26), stres (r = 0,41) ve yalnızlıkla (r = 0,33) pozitif ilişkili bulunmuştur.",
+        "Sorunlu kullanım daha düşük öznel iyi oluşla ilişkilidir (r = -0,25). Olağan kullanım olumsuz duygulanım ya da kaygıyla anlamlı bir ilişki göstermemiştir.",
+        "Ergenlerde 20 çalışmayı kapsayan sistematik derleme daha düşük yaşam doyumu, sorunlu kullanım örüntüleri ve psikiyatrik belirti davranışlarının yayılması konusunda kaygıları dile getirmiş, kendini ifade etme ve akran bağı fırsatlarına da değinmiştir.",
+        "Nedenselliği göstermek için boylamsal ve deneysel çalışmalara gerek vardır."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu kayıt özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, süre ve başlangıç değerleri uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Kaynakların hiçbiri bipolar bozukluğa özgü değildir. Bulgular ilişki düzeyindedir ve yönü bilinmez: çökkün duygudurum da kullanımı artırıyor olabilir. Bu kaydın bir bipolar modelinde yer alması uyarlayanın tercihidir.",
+          "refs": [
+            {
+              "cite": "Tang D ve ark. J Med Internet Res, 2026;28:e82503. Association Between Short-Form Video Use and Mental Health: Systematic Review and Meta-Analysis.",
+              "url": "https://doi.org/10.2196/82503"
+            },
+            {
+              "cite": "Conte G ve ark. Eur Child Adolesc Psychiatry, 2025;34(5):1511-1527. Scrolling through adolescence: a systematic review of the impact of TikTok on adolescent mental health.",
+              "url": "https://doi.org/10.1007/s00787-024-02581-w"
             }
           ]
         }

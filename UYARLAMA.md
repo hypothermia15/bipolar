@@ -34,6 +34,11 @@ Uyarlamanın dayandığı özgün sürüm: `91c96c1` (30 Temmuz 2026).
   - Model birden çok maddeyi ağırlıklı ortalamayla harmanlar. Antidepresan ya da metilfenidat lityumla birlikte açıldığında mani çukuru başlangıç değerinin altına iner; bu, kayıt çalışmalarındaki "duygudurum dengeleyiciyle birlikteyken risk artışı yok" bulgusunun yalnızca kaba bir temsilidir.
   - İki yeni grup başlığı İngilizce sürüme de eklendi. Lehçe ve Almanca sürümlerde yeni kayıtlar İngilizce görünür.
 
+- **Üç yaşam tarzı kaydı eklendi (24 Kasım 2026, kullanıcı isteği):** yeni grup "Yaşam Tarzı ve Ekran". Hiçbiri özgün çalışmada yoktur. Kanıt ilişki düzeyindedir ve bu, grup başlığının altında ve her kaydın "Uyarlayanın notu" kutusunda yazılıdır.
+  - **Egzersiz:** mani çukuru 2,3, depresyon çukuru 1,8. Melo ve ark. 2016, doi:10.1016/j.jad.2016.03.004 (bipolar bozukluğa özgü sistematik derleme; randomize çalışma yok).
+  - **Sorunlu oyun oynama:** mani çukuru 2,4, depresyon çukuru 2,6, kaos 0,25. Ostinelli ve ark. 2021, doi:10.1016/j.jad.2021.02.014; Kristensen ve ark. 2021, doi:10.3389/fpsyt.2021.675237; Floros ve Mylona 2023, doi:10.3390/jcm12196251. Mani çukurundaki küçük derinleşme uyku kaybı üzerinden kurulmuş bir çıkarımdır, doğrudan kaynağı yoktur.
+  - **Kısa video kaydırma (sorunlu kullanım):** mani çukuru 2,2 (değişmez), depresyon çukuru 2,5, kaos 0,30. Tang ve ark. 2026, doi:10.2196/82503; Conte ve ark. 2025, doi:10.1007/s00787-024-02581-w. Kaynaklar bipolar bozukluğa özgü değildir; olağan kullanımda anlamlı ilişki bulunmamıştır.
+
 ## Sınırlılıklar
 
 Eğitim amaçlı bir görselleştirmedir, tıbbi bir araç değildir. Parametreler basitleştirilmiş yaklaşık değerlerdir ve klinik yönlendirme niteliği taşımaz. Metinlerdeki klinik ifadeler özgün çalışmadan çevrilmiştir; güncel kılavuzlar ve Kısa Ürün Bilgisi ile tek tek doğrulanmamıştır.

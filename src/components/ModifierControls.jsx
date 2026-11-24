@@ -11,6 +11,7 @@ const CATEGORY_ORDER = [
   "psychedelics",
   "substances",
   "triggers",
+  "lifestyle",
   "other",
 ];
 
