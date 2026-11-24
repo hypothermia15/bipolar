@@ -15,7 +15,11 @@
     "substances": "Psychoactive Substances",
     "substances_hint": "not prescribed — they worsen the course",
     "other": "Non-Drug Treatments",
-    "other_hint": "procedures, not medication"
+    "other_hint": "procedures, not medication",
+    "switchers": "Drugs That Can Trigger Mania",
+    "switchers_hint": "prescribed, but risky when used alone",
+    "triggers": "Triggers",
+    "triggers_hint": "not drugs, but they jolt the course"
   },
   "ui": {
     "noActive": "⚡ No active medication",

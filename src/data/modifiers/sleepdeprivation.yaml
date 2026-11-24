@@ -1,0 +1,35 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: triggers
+order: 1
+icon: 🌙
+color: '#5dade2'
+label: Sleep deprivation
+desc: 'Deepens the manic basin and shallows the depressive basin: sleep loss can lift low mood and trigger high mood.'
+detail: Not a drug. Sleep loss may trigger mood episodes in bipolar disorder, and acute sleep deprivation has an antidepressant effect in depression. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 8
+onset: 1
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.8
+  w: 0.22
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 1.5
+  w: 0.2
+damping: 0.985
+gravity: 15
+barrierH: 0
+jitter: 0.35
+warnings:
+- Among 3,140 people with bipolar disorder, sleep loss triggering episodes of high mood was associated with bipolar I subtype (odds ratio 2.81) and female gender (odds ratio 1.43).
+- This should be considered where patients encounter sleep disruption, such as shift work and international travel.
+- 'Acute sleep deprivation has an antidepressant effect: the overall response rate was 45% in studies with a randomized control group and 50% in those without.'
+refs:
+- cite: 'Sleep loss as a trigger of mood episodes in bipolar disorder: individual differences based on diagnostic subtype and gender.'
+  url: https://pubmed.ncbi.nlm.nih.gov/28684405/
+- cite: Meta-Analysis of the Antidepressant Effects of Acute Sleep Deprivation.
+  url: https://pubmed.ncbi.nlm.nih.gov/28937707/

@@ -7,8 +7,10 @@ const CATEGORY_ORDER = [
   "antipsychotics",
   "typicals",
   "benzodiazepines",
+  "switchers",
   "psychedelics",
   "substances",
+  "triggers",
   "other",
 ];
 

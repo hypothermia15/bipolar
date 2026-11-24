@@ -1,0 +1,34 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: switchers
+order: 3
+icon: 💉
+color: '#af7ac5'
+label: Corticosteroid
+desc: Deepens the manic basin (short-term euphoria and hypomania) and, less so, the depressive basin (long-term use).
+detail: Represents systemic corticosteroids as a class. Short-term therapy most commonly causes euphoria and hypomania; long-term therapy tends to induce depressive symptoms. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 12
+onset: 2
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.7
+  w: 0.21
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 2.4
+  w: 0.21
+damping: 0.985
+gravity: 14
+barrierH: 0
+jitter: 0.3
+warnings:
+- 'Psychiatric adverse effects of systemic corticosteroids are common: severe reactions in nearly 6% and mild to moderate reactions in about 28% of patients.'
+- Short-term therapy most commonly causes euphoria and hypomania; long-term therapy tends to induce depressive symptoms. Delirium and psychosis are possible.
+- Dosage is directly related to the incidence of adverse effects, but not to their timing, severity or duration.
+- Symptoms often appear early and typically resolve with dose reduction or discontinuation; severe cases may require antipsychotics or mood stabilizers.
+refs:
+- cite: Psychiatric adverse effects of corticosteroids.
+  url: https://pubmed.ncbi.nlm.nih.gov/17036562/

@@ -1,0 +1,50 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: antipsychotics
+order: 5
+icon: 🧠
+color: '#48c9b0'
+label: Lurasidone
+desc: Shallows the depressive basin; the manic basin is unchanged.
+detail: Atypical antipsychotic studied in bipolar depression. The studies cited here do not test an antimanic effect, so this model leaves the manic basin and the barrier unchanged. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 18
+onset: 2.5
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.2
+  w: 0.2
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 1.2
+  w: 0.2
+damping: 0.975
+gravity: 12
+barrierH: 0
+jitter: 0
+warnings:
+- In a 6-week randomized trial in adults with bipolar I depression, lurasidone 20 to 120 mg/day reduced depressive symptoms more than placebo (effect size about 0.5).
+- The most frequent adverse events in that trial were nausea, headache, akathisia and somnolence; changes in weight, lipids and glycemic measures were minimal.
+- In youths aged 10 to 18, a network meta-analysis of four randomized trials found lurasidone and the olanzapine-fluoxetine combination, but not quetiapine, efficacious for bipolar depression.
+- In the same analysis lurasidone was associated with smaller changes in weight, cholesterol and triglycerides than quetiapine and the olanzapine-fluoxetine combination.
+refs:
+- cite: 'Lurasidone monotherapy in the treatment of bipolar I depression: a randomized, double-blind, placebo-controlled study.'
+  url: https://pubmed.ncbi.nlm.nih.gov/24170180/
+- cite: 'Systematic Review and Network Meta-analysis: Efficacy and Safety of Second-Generation Antipsychotics in Youths With Bipolar Depression.'
+  url: https://pubmed.ncbi.nlm.nih.gov/34420839/
+pharmacology:
+  chemblId: CHEMBL1237021
+  firstApproved: 2010
+  molecularFormula: C₂₈H₃₆N₄O₂S
+  molecularWeight: 492.69
+  qed: 0.58
+  blackBoxWarning: true
+  smiles: O=C1[C@@H]2[C@H]3CC[C@H](C3)[C@@H]2C(=O)N1C[C@@H]1CCCC[C@H]1CN1CCN(c2nsc3ccccc23)CC1
+  mechanisms:
+  - action: Antagonist
+    target: Serotonin 5-HT2A receptor
+  - action: Antagonist
+    target: Dopamine D2 receptor
+  keyTargets: []

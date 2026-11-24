@@ -15,7 +15,11 @@
     "substances": "Psikoaktif Maddeler",
     "substances_hint": "reçete edilmez, gidişi kötüleştirir",
     "other": "İlaç Dışı Tedaviler",
-    "other_hint": "ilaç değil, işlem"
+    "other_hint": "ilaç değil, işlem",
+    "switchers": "Maniye Kaydırabilen İlaçlar",
+    "switchers_hint": "reçete edilir, tek başına risklidir",
+    "triggers": "Tetikleyiciler",
+    "triggers_hint": "ilaç değil, gidişi sarsar"
   },
   "ui": {
     "noActive": "⚡ Etkin ilaç yok",
@@ -446,6 +450,152 @@
         "Yer kaplayan beyin lezyonu, yakın zamanda geçirilmiş miyokart enfarktüsü, artmış kafa içi basıncı ya da yakın zamanda geçirilmiş serebrovasküler olayı bulunan hastalarda risk belirgin olarak artar; bunlar göreli kontrendikasyonlardır.",
         "Uzamış nöbet, konfüzyon ve bilişsel bozulma riskini artırdığı için lityuma EKT öncesinde genellikle ara verilmelidir.",
         "Yinelenen genel anestezi gerektirir (akut dönemde genellikle 6–12 seans); kümülatif anestezi maruziyetinin kendi sistemik riskleri vardır."
+      ]
+    },
+    "carbamazepine": {
+      "label": "Karbamazepin",
+      "desc": "Mani çukurunu sığlaştırır ve topu biraz yavaşlatır. Depresyon çukuru değişmez.",
+      "detail": "Duygudurum dengeleyici olarak kullanılan bir antikonvülzandır. Burada dayanılan çalışma yalnızca akut manik ve karma dönemleri incelemiştir, bu yüzden modelde yalnızca mani çukuru değişir. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Uzatılmış salımlı karbamazepin, 3 haftalık randomize bir çalışmada (N = 239) akut manik ve karma dönemlerde plasebodan daha etkili bulunmuştur. Düzelme 7. günden itibaren görülmüştür.",
+        "Plaseboya göre daha sık görülen yan etkiler baş dönmesi (%39,3), uyku hâli (%30,3) ve bulantıdır (%23,8). Toplam kolesterol yükselmiştir.",
+        "HLA-B*1502, Han Çinlilerinde karbamazepine bağlı Stevens-Johnson sendromuyla güçlü biçimde ilişkilidir."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. İdame tedavisi ve bipolar depresyon için kaynak taranmamıştır.",
+          "refs": [
+            {
+              "cite": "Weisler RH ve ark. J Clin Psychiatry, 2005;66(3):323-30. Extended-release carbamazepine capsules as monotherapy for acute mania in bipolar disorder: a multicenter, randomized, double-blind, placebo-controlled trial.",
+              "url": "https://doi.org/10.4088/jcp.v66n0308"
+            },
+            {
+              "cite": "Chung WH ve ark. Nature, 2004;428(6982):486. Medical genetics: a marker for Stevens-Johnson syndrome.",
+              "url": "https://doi.org/10.1038/428486a"
+            }
+          ]
+        }
+      ]
+    },
+    "lurasidone": {
+      "label": "Lurasidon",
+      "desc": "Depresyon çukurunu sığlaştırır. Mani çukuru değişmez.",
+      "detail": "Bipolar depresyonda incelenmiş atipik bir antipsikotiktir. Burada dayanılan çalışmalar antimanik etkiyi sınamamıştır, bu yüzden modelde mani çukuru ve bariyer değişmez. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Bipolar I depresyonu olan erişkinlerde 6 haftalık randomize bir çalışmada günde 20-120 mg lurasidon, depresif belirtileri plasebodan daha fazla azaltmıştır (etki büyüklüğü yaklaşık 0,5).",
+        "Bu çalışmada en sık görülen yan etkiler bulantı, baş ağrısı, akatizi ve uyku hâlidir. Kilo, lipid ve glisemi ölçümlerindeki değişiklikler çok küçüktür.",
+        "10-18 yaş arası gençlerde dört randomize çalışmayı kapsayan bir ağ meta-analizi, bipolar depresyonda lurasidonu ve olanzapin-fluoksetin kombinasyonunu etkili bulmuş, ketiapini etkili bulmamıştır.",
+        "Aynı analizde lurasidon, ketiapine ve olanzapin-fluoksetin kombinasyonuna göre kilo, kolesterol ve trigliseritte daha küçük değişikliklerle ilişkilidir."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Ağ meta-analizi üretici firma çalışanlarının yazarlığıyla yayımlanmıştır. Türkiye'deki ruhsat ve onay yaşı için Kısa Ürün Bilgisi'ne bakılmalıdır.",
+          "refs": [
+            {
+              "cite": "Loebel A ve ark. Am J Psychiatry, 2014;171(2):160-8. Lurasidone monotherapy in the treatment of bipolar I depression: a randomized, double-blind, placebo-controlled study.",
+              "url": "https://doi.org/10.1176/appi.ajp.2013.13070984"
+            },
+            {
+              "cite": "DelBello MP ve ark. J Am Acad Child Adolesc Psychiatry, 2022;61(2):243-254. Systematic Review and Network Meta-analysis: Efficacy and Safety of Second-Generation Antipsychotics in Youths With Bipolar Depression.",
+              "url": "https://doi.org/10.1016/j.jaac.2021.03.021"
+            }
+          ]
+        }
+      ]
+    },
+    "ssri": {
+      "label": "Antidepresan (SSRI)",
+      "desc": "Depresyon çukurunu sığlaştırır ama tek başına verildiğinde mani çukurunu derinleştirir. Duygudurum dengeleyiciyle ve onsuz deneyin.",
+      "detail": "Serotonin geri alım inhibitörlerini bir sınıf olarak temsil eder. İsveç ulusal kayıt çalışmasında tedaviyle ortaya çıkan mani riskindeki artış yalnızca tek başına antidepresan kullananlarda görülmüştür. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Bipolar bozuklukta tek başına antidepresan kullanımı artmış mani riskiyle ilişkilidir (tehlike oranı 2,83). Eş zamanlı duygudurum dengeleyici kullananlarda akut bir risk artışı görülmemiştir.",
+        "ISBD çalışma grubu: bipolar I bozuklukta antidepresanlar yalnızca duygudurum dengeleyici tedaviye ek olarak reçete edilmelidir.",
+        "ISBD çalışma grubu: başlıca kaygı hipomani, mani ve karma durumlara kaymadır. Serotonin geri alım inhibitörleri ve bupropiyonda kayma oranı trisiklik, tetrasiklik ve SNRI grubuna göre daha düşük olabilir.",
+        "ISBD çalışma grubu: bipolar bozuklukta antidepresanların etkililiği ve güvenliliğine dair kanıt temeli zayıftır."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Kayıt çalışması erişkinlerde yapılmıştır ve antidepresanları sınıf ayırmadan incelemiştir. Çocuk ve ergenlere özgü kaynak taranmamıştır. Depresyon çukurunun sığlaşması temsilidir: çalışma grubu etkililik kanıtını zayıf bulmuştur.",
+          "refs": [
+            {
+              "cite": "Viktorin A ve ark. Am J Psychiatry, 2014;171(10):1067-73. The risk of switch to mania in patients with bipolar disorder during treatment with an antidepressant alone and in combination with a mood stabilizer.",
+              "url": "https://doi.org/10.1176/appi.ajp.2014.13111501"
+            },
+            {
+              "cite": "Pacchiarotti I ve ark. Am J Psychiatry, 2013;170(11):1249-62. The International Society for Bipolar Disorders (ISBD) task force report on antidepressant use in bipolar disorders.",
+              "url": "https://doi.org/10.1176/appi.ajp.2013.13020185"
+            }
+          ]
+        }
+      ]
+    },
+    "methylphenidate": {
+      "label": "Metilfenidat",
+      "desc": "Tek başına verildiğinde mani çukurunu derinleştirir ve huzursuzluk ekler. Duygudurum dengeleyiciyle ve onsuz deneyin.",
+      "detail": "DEHB tedavisinde kullanılan bir uyarıcıdır. Bipolar bozukluğu olan erişkinlerde yapılan İsveç ulusal kayıt çalışmasında mani oranındaki artış tek başına metilfenidat kullananlarda görülmüş, eş zamanlı duygudurum dengeleyici kullananlarda görülmemiştir. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Bipolar bozukluğu olan erişkinlerde tek başına metilfenidat, başlandıktan sonraki 3 ay içinde artmış manik dönem oranıyla ilişkilidir (tehlike oranı 6,7).",
+        "Duygudurum dengeleyici kullanan hastalarda metilfenidata başlandıktan sonra mani riski daha düşük bulunmuştur (tehlike oranı 0,6).",
+        "Tek başına uyarıcı tedaviye başlamadan önce bipolar bozukluğu dışlamak için dikkatli bir değerlendirme gerekir.",
+        "Bipolar bozukluğu olan kişilerin %20'ye varan bölümünde DEHB eşlik eder."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Dayanılan çalışma erişkinlerde yapılmıştır. Çocuk ve ergenlerde bipolar bozukluk ve DEHB birlikteliği için kaynak taranmamıştır. Bu kayıt, DEHB'si olan ve bipolar bozukluğu olmayan çocuklar için bir risk bildirmez.",
+          "refs": [
+            {
+              "cite": "Viktorin A ve ark. Am J Psychiatry, 2017;174(4):341-348. The Risk of Treatment-Emergent Mania With Methylphenidate in Bipolar Disorder.",
+              "url": "https://doi.org/10.1176/appi.ajp.2016.16040467"
+            }
+          ]
+        }
+      ]
+    },
+    "corticosteroid": {
+      "label": "Kortikosteroid",
+      "desc": "Mani çukurunu derinleştirir (kısa sürede öfori ve hipomani). Depresyon çukurunu da daha az ölçüde derinleştirir (uzun süreli kullanım).",
+      "detail": "Sistemik kortikosteroidleri bir sınıf olarak temsil eder. Kısa süreli tedavide en sık öfori ve hipomani görülür. Uzun süreli tedavi depresif belirtilere yol açma eğilimindedir. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Sistemik kortikosteroidlerin psikiyatrik yan etkileri sıktır: hastaların yaklaşık %6'sında ağır, yaklaşık %28'inde hafif ya da orta şiddette tepkiler bildirilmiştir.",
+        "Kısa süreli tedavide en sık öfori ve hipomani görülür. Uzun süreli tedavi depresif belirtilere yol açma eğilimindedir. Deliryum ve psikoz da görülebilir.",
+        "Doz, yan etkilerin sıklığıyla doğrudan ilişkilidir. Zamanlaması, şiddeti ya da süresiyle ilişkili değildir.",
+        "Belirtiler çoğu kez tedavinin başında ortaya çıkar ve dozun azaltılması ya da ilacın kesilmesiyle genellikle düzelir. Ağır olgularda antipsikotik ya da duygudurum dengeleyici gerekebilir."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. Kaynak genel hasta gruplarını ele alan bir derlemedir, bipolar bozukluğa özgü değildir.",
+          "refs": [
+            {
+              "cite": "Warrington TP, Bostwick JM. Mayo Clin Proc, 2006;81(10):1361-7. Psychiatric adverse effects of corticosteroids.",
+              "url": "https://doi.org/10.4065/81.10.1361"
+            }
+          ]
+        }
+      ]
+    },
+    "sleepdeprivation": {
+      "label": "Uyku yoksunluğu",
+      "desc": "Mani çukurunu derinleştirir, depresyon çukurunu sığlaştırır: uykusuzluk çökkün duygudurumu yükseltebilir ve yükselmiş duygudurumu tetikleyebilir.",
+      "detail": "İlaç değildir. Uyku kaybı bipolar bozuklukta duygudurum dönemlerini tetikleyebilir. Akut uyku yoksunluğunun depresyonda antidepresan etkisi vardır. Türkçe uyarlamada eklenmiştir, manzara parametreleri temsilidir.",
+      "warnings": [
+        "Bipolar bozukluğu olan 3140 kişide, uyku kaybının yükselmiş duygudurum dönemlerini tetiklemesi bipolar I alt tipiyle (olasılık oranı 2,81) ve kadın cinsiyetle (olasılık oranı 1,43) ilişkili bulunmuştur.",
+        "Vardiyalı çalışma ve kıtalar arası yolculuk gibi uykunun bozulduğu durumlarda bu göz önünde tutulmalıdır.",
+        "Akut uyku yoksunluğunun antidepresan etkisi vardır: genel yanıt oranı randomize kontrol grubu olan çalışmalarda %45, olmayanlarda %50'dir."
+      ],
+      "adapterNotes": [
+        {
+          "text": "Bu madde özgün çalışmada yoktur, Türkçe uyarlamada eklenmiştir (Kasım 2026). Uyarılar aşağıdaki kaynakların özetlerine dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir, bir ölçüme dayanmaz. İlk kaynak kişilerin kendi bildirimine dayanır. Meta-analiz depresyon örneklemlerini kapsar ve yanıtın ne kadar sürdüğünü bildirmez. Bu kayıt uyku yoksunluğunun tedavi olarak uygulanmasını önermez.",
+          "refs": [
+            {
+              "cite": "Lewis KS ve ark. Br J Psychiatry, 2017;211(3):169-174. Sleep loss as a trigger of mood episodes in bipolar disorder: individual differences based on diagnostic subtype and gender.",
+              "url": "https://doi.org/10.1192/bjp.bp.117.202259"
+            },
+            {
+              "cite": "Boland EM ve ark. J Clin Psychiatry, 2017;78(8):e1020-e1034. Meta-Analysis of the Antidepressant Effects of Acute Sleep Deprivation.",
+              "url": "https://doi.org/10.4088/JCP.16r11332"
+            }
+          ]
+        }
       ]
     }
   }

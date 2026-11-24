@@ -23,6 +23,17 @@ Uyarlamanın dayandığı özgün sürüm: `91c96c1` (30 Temmuz 2026).
   - Uyarlayanın seçtiği temsili değerler: mani çukuru derinliği 2,9, depresyon çukuru 2,5, kaos 0,70, tepkisellik 16, etki başlangıcı 0,5 saat. Bunlar bir ölçüme dayanmaz; diğer maddelerin değerleriyle orantılı olacak biçimde seçildi.
   - Doğrulanmayan: bipolar bozukluğu olan kişilerde metamfetaminin gidişe etkisi için kaynak taranmadı. Lehçe ve Almanca sürümlerde metin İngilizce görünür.
 
+- **Altı kayıt daha eklendi (24 Kasım 2026, kullanıcı isteği).** Hiçbiri özgün çalışmada yoktur; her biri Türkçe sürümde "Uyarlayanın notu" kutusuyla işaretlidir. Uyarılar yalnızca aşağıdaki kaynakların PubMed özetlerindeki ifadelere dayanır. Çukur derinlikleri, yarılanma ömrü ve etki başlangıcı uyarlayanın seçtiği temsili değerlerdir.
+  - **Karbamazepin** (duygudurum dengeleyiciler): mani çukuru 1,3. Weisler ve ark. 2005, doi:10.4088/jcp.v66n0308; Chung ve ark. 2004, doi:10.1038/428486a. İdame ve bipolar depresyon için kaynak taranmadı.
+  - **Lurasidon** (atipik antipsikotikler): depresyon çukuru 1,2, mani çukuru ve bariyer değişmez. Loebel ve ark. 2014, doi:10.1176/appi.ajp.2013.13070984; DelBello ve ark. 2022, doi:10.1016/j.jaac.2021.03.021.
+  - **Antidepresan (SSRI)** (yeni grup: maniye kaydırabilen ilaçlar): mani çukuru 2,6, depresyon çukuru 1,5. Viktorin ve ark. 2014, doi:10.1176/appi.ajp.2014.13111501; Pacchiarotti ve ark. 2013, doi:10.1176/appi.ajp.2013.13020185. Sınıf olarak temsil edilir, farmakoloji kartı yoktur.
+  - **Metilfenidat** (aynı grup): mani çukuru 2,6, kaos 0,30. Viktorin ve ark. 2017, doi:10.1176/appi.ajp.2016.16040467. Çalışma erişkinlerdedir; çocuk ve ergenler için kaynak taranmadı.
+  - **Kortikosteroid** (aynı grup): mani çukuru 2,7, depresyon çukuru 2,4. Warrington ve Bostwick 2006, doi:10.4065/81.10.1361. Bipolar bozukluğa özgü değildir.
+  - **Uyku yoksunluğu** (yeni grup: tetikleyiciler): mani çukuru 2,8, depresyon çukuru 1,5. Lewis ve ark. 2017, doi:10.1192/bjp.bp.117.202259; Boland ve ark. 2017, doi:10.4088/JCP.16r11332.
+  - Farmakoloji kartları (karbamazepin CHEMBL108, lurasidon CHEMBL1237021, metilfenidat CHEMBL796) ChEMBL kayıtlarından alındı; hedef bazında Ki değerleri konmadı.
+  - Model birden çok maddeyi ağırlıklı ortalamayla harmanlar. Antidepresan ya da metilfenidat lityumla birlikte açıldığında mani çukuru başlangıç değerinin altına iner; bu, kayıt çalışmalarındaki "duygudurum dengeleyiciyle birlikteyken risk artışı yok" bulgusunun yalnızca kaba bir temsilidir.
+  - İki yeni grup başlığı İngilizce sürüme de eklendi. Lehçe ve Almanca sürümlerde yeni kayıtlar İngilizce görünür.
+
 ## Sınırlılıklar
 
 Eğitim amaçlı bir görselleştirmedir, tıbbi bir araç değildir. Parametreler basitleştirilmiş yaklaşık değerlerdir ve klinik yönlendirme niteliği taşımaz. Metinlerdeki klinik ifadeler özgün çalışmadan çevrilmiştir; güncel kılavuzlar ve Kısa Ürün Bilgisi ile tek tek doğrulanmamıştır.

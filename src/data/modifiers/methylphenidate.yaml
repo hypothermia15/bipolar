@@ -1,0 +1,48 @@
+# Added in the Turkish adaptation (November 2026); not part of the original work.
+# Landscape parameters, half-life and onset are the adapter's illustrative choices.
+category: switchers
+order: 2
+icon: 🎯
+color: '#e74c3c'
+label: Methylphenidate
+desc: Deepens the manic basin and adds restlessness when used alone. Try it with and without a mood stabilizer.
+detail: Stimulant used for ADHD. In a Swedish registry study of adults with bipolar disorder, the increased rate of mania was seen with methylphenidate monotherapy, not with a concurrent mood stabilizer. Added in the Turkish adaptation; landscape parameters are illustrative.
+halfLife: 3
+onset: 0.5
+wallStr: 1.5
+wells:
+- cx: -0.68
+  depth: 2.6
+  w: 0.21
+- cx: 0.0
+  depth: 0.0
+  w: 0.25
+- cx: 0.68
+  depth: 2.2
+  w: 0.2
+damping: 0.985
+gravity: 15
+barrierH: 0
+jitter: 0.3
+warnings:
+- In adults with bipolar disorder, methylphenidate monotherapy was associated with an increased rate of manic episodes within 3 months of initiation (hazard ratio 6.7).
+- In patients taking mood stabilizers, the risk of mania was lower after starting methylphenidate (hazard ratio 0.6).
+- Careful assessment to rule out bipolar disorder is indicated before starting stimulant monotherapy.
+- Up to 20% of people with bipolar disorder have comorbid ADHD.
+refs:
+- cite: The Risk of Treatment-Emergent Mania With Methylphenidate in Bipolar Disorder.
+  url: https://pubmed.ncbi.nlm.nih.gov/27690517/
+pharmacology:
+  chemblId: CHEMBL796
+  firstApproved: 1955
+  molecularFormula: C₁₄H₁₉NO₂
+  molecularWeight: 233.31
+  qed: 0.81
+  blackBoxWarning: true
+  smiles: COC(=O)C(c1ccccc1)C1CCCCN1
+  mechanisms:
+  - action: Inhibitor
+    target: Dopamine transporter (DAT)
+  - action: Inhibitor
+    target: Noradrenaline transporter (NET)
+  keyTargets: []
