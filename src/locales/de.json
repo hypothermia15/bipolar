@@ -45,6 +45,15 @@
       "Arbeitet trotz gedrückter Stimmung die Nacht hindurch und berichtet von rasenden Gedanken."
     ]
   },
+  "timing": {
+    "title": "Zeitabstand zweier Stressoren",
+    "hint": "Beide Versuche beginnen an der gewählten Position in der Ausgangslandschaft. Zwei gleich starke Impulse wirken mit der gewählten Stärke nach links. Der erste erfolgt zum Zeitpunkt null. Die Markierungen zeigen den zweiten Impuls.",
+    "interval": "Abstand zwischen den Stressoren",
+    "reference": "Kurzer Abstand",
+    "selected": "Gewählter Abstand",
+    "axes": "Vertikal: Position. Horizontal: Modellzeit (s).",
+    "speed": "Beim gewählten Abstand ändert der zweite Impuls das Tempo von {{before}} auf {{after}} Positionseinheiten/s."
+  },
   "experiment": {
     "title": "Überwindest du die Schwelle?",
     "hint": "Jeder Stoß startet an der gewählten Position. Ändere die Landschaft und wiederhole den letzten Stoß.",

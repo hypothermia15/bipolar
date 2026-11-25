@@ -51,6 +51,15 @@
       "While still feeling low, works on projects through the night and describes racing thoughts."
     ]
   },
+  "timing": {
+    "title": "Timing two stressors",
+    "hint": "Both trials start at the selected position on the baseline landscape. Two equal impulses push left at the selected intensity. The first is applied at time zero. Markers show the second impulse.",
+    "interval": "Interval between stressors",
+    "reference": "Short interval",
+    "selected": "Selected interval",
+    "axes": "Vertical axis: position. Horizontal axis: model time (s).",
+    "speed": "At the selected interval, the second impulse changes speed from {{before}} to {{after}} position units/s."
+  },
   "experiment": {
     "title": "Can you cross the barrier?",
     "hint": "Each push launches the ball from the selected starting position. Change the landscape and repeat the last push.",

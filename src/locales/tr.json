@@ -51,6 +51,15 @@
       "Çökkünlük sürerken gece boyunca projeleriyle uğraşıyor ve düşüncelerinin hızlandığını anlatıyor."
     ]
   },
+  "timing": {
+    "title": "İki stresörün zamanlaması",
+    "hint": "Her iki denemede top seçili konumdan başlar. Temel manzarada, seçili şiddette iki eşit itki sola uygulanır. İlk itki sıfır anında gelir. Grafikteki işaretler ikinci itkiyi gösterir.",
+    "interval": "İki stresör arasındaki süre",
+    "reference": "Peş peşe",
+    "selected": "Seçilen aralık",
+    "axes": "Dikey eksen konumu, yatay eksen model zamanını (s) gösterir.",
+    "speed": "Seçilen aralıkta ikinci itkiyle topun sürati {{before}} → {{after}} konum birimi/s."
+  },
   "experiment": {
     "title": "Eşiği aşabilir misin?",
     "hint": "Her itme topu seçili başlangıç konumundan fırlatır. Manzarayı değiştirip son itmeyi tekrarlayabilirsiniz.",

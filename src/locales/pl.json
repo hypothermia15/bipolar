@@ -45,6 +45,15 @@
       "Mimo obniżonego nastroju pracuje nad projektami przez całą noc i opisuje gonitwę myśli."
     ]
   },
+  "timing": {
+    "title": "Odstęp między dwoma stresorami",
+    "hint": "Obie próby zaczynają się w wybranej pozycji na podstawowym krajobrazie. Dwa równe impulsy o wybranym natężeniu działają w lewo. Pierwszy następuje w chwili zero. Znaczniki pokazują drugi impuls.",
+    "interval": "Odstęp między stresorami",
+    "reference": "Krótki odstęp",
+    "selected": "Wybrany odstęp",
+    "axes": "Oś pionowa: pozycja. Oś pozioma: czas modelu (s).",
+    "speed": "Przy wybranym odstępie drugi impuls zmienia szybkość z {{before}} na {{after}} jednostek pozycji/s."
+  },
   "experiment": {
     "title": "Czy pokonasz barierę?",
     "hint": "Każde pchnięcie zaczyna się z wybranej pozycji. Zmień krajobraz i powtórz ostatnie pchnięcie.",

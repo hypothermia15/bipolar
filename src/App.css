@@ -356,3 +356,11 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
 .case-plot { margin: 0; text-align: center; font-size: 13px; }
 .case-plot svg { display: block; width: min(100%, 320px); margin: auto; }
 .threshold-experiment a { color: #9cceff; }
+
+.timing-experiment figure { margin: 12px 0; }
+.timing-experiment svg { display: block; width: 100%; max-width: 680px; }
+.timing-experiment svg text { fill: currentColor; font: 13px system-ui, sans-serif; }
+.timing-experiment figcaption, .timing-legend { font-size: 13px; }
+.timing-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 8px 0; }
+.timing-legend span::before { content: ''; display: inline-block; width: 20px; margin-right: 6px; vertical-align: middle; border-top: 3px dashed #83bdf8; }
+.timing-legend span + span::before { border-top: 3px solid #f7cb72; }
