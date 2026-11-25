@@ -135,6 +135,39 @@
 
 canvas { width: 100%; height: auto !important; background: #0a0b18; display: block; border-radius: 12px; }
 
+.simulation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.simulation-controls label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.simulation-controls button,
+.simulation-controls select {
+  min-height: 44px;
+  padding: 6px 10px;
+  background: #151a30;
+  color: #eaf2ff;
+  border: 1px solid #52637d;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.canvas-container button:disabled {
+  opacity: 0.45;
+  cursor: default !important;
+}
+
 /* Language picker */
 .lang-picker {
   display: flex;

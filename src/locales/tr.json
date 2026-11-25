@@ -24,6 +24,10 @@
     "lifestyle_hint": "ilaç değil, kanıt ilişki düzeyinde"
   },
   "ui": {
+    "startPosition": "Başlangıç konumu",
+    "pauseSimulation": "Duraklat",
+    "resumeSimulation": "Sürdür",
+    "resetSimulation": "Sıfırla",
     "noActive": "⚡ Etkin ilaç yok",
     "instructions": "Duygudurum manzarasını nasıl değiştirdiklerini görmek için ilaç listesinden ilaçlara tıklayın. Birden çok maddeyi birlikte açıp zaman içindeki dinamiklerini izleyebilirsiniz. Topu fareyle sürükleyebilir, “Stresör” düğmesiyle sistemi sarsabilirsiniz.",
     "attractorTheory": {

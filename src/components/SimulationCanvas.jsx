@@ -4,12 +4,13 @@ import { W, H, PAD, BALL_R, X_LO, X_HI, BARRIER } from "../constants";
 import { toX, toY, fromX, energy, hexRgb } from "../utils/physics";
 import { MODIFIERS, BASE, blendSingleModifier } from "../data/modifiers";
 
-export default function SimulationCanvas({ sim, loop, disturb }) {
+export default function SimulationCanvas({ sim, loop, disturb, isPaused }) {
   const { t } = useTranslation();
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
 
   const onDown = (e) => {
+    if (isPaused) return;
     const s = sim.current;
     if (Math.abs(mouseX(e) - toX(s.ball.x)) < 30) {
       s.ball.dragging = true; s.ball.vx = 0;
@@ -321,9 +322,10 @@ export default function SimulationCanvas({ sim, loop, disturb }) {
       <canvas ref={canvasRef} width={W} height={H}
         style={{ borderRadius: 12, border: "1px solid rgba(255,255,255,0.07)", cursor: "grab", touchAction: "none", display: "block", boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
         onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
-        onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp}
+        onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp} onTouchCancel={onUp}
       />
       <button
+        disabled={isPaused}
         onClick={(e) => { e.stopPropagation(); disturb(); }}
         style={{
           position: "absolute", bottom: 14, left: 14, zIndex: 10,

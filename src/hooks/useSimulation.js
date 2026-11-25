@@ -3,17 +3,37 @@ import { MODIFIERS, BASE } from "../data/modifiers";
 import { lerp, grad } from "../utils/physics";
 import { X_LO, X_HI } from "../constants";
 
-export function useSimulation() {
-  const [activeModifiers, setActiveModifiers] = useState({});
-  const modifiersRef = useRef({});
-  const [, forceUpdate] = useState(0);
-
-  const sim = useRef({
-    ball: { x: 0.68, vx: 0, dragging: false },
+function createRun(startIndex) {
+  return {
+    ball: { x: BASE.wells[startIndex].cx, vx: 0, dragging: false },
     p: { ...BASE, wells: BASE.wells.map(w => ({ ...w })) },
     trail: [],
     lastTime: null,
-  });
+    elapsed: 0,
+  };
+}
+
+export function useSimulation() {
+  const [activeModifiers, setActiveModifiers] = useState({});
+  const [isPaused, setIsPaused] = useState(false);
+  const [startIndex, setStartIndex] = useState(2);
+  const modifiersRef = useRef({});
+  const [, forceUpdate] = useState(0);
+  const sim = useRef(null);
+  if (sim.current === null) sim.current = createRun(startIndex);
+
+  const reset = (index = startIndex) => {
+    sim.current = createRun(index);
+    modifiersRef.current = {};
+    setActiveModifiers({});
+    setStartIndex(index);
+  };
+
+  const togglePause = () => {
+    sim.current.lastTime = null;
+    sim.current.ball.dragging = false;
+    setIsPaused(paused => !paused);
+  };
 
   const toggleModifier = useCallback((key) => {
     const cur = modifiersRef.current[key];
@@ -74,11 +94,13 @@ export function useSimulation() {
   }, []);
 
   const loop = useCallback((ts) => {
+    if (isPaused) return;
     const s = sim.current;
-    if (!s.lastTime) s.lastTime = ts;
+    if (s.lastTime === null) s.lastTime = ts;
     // Cap dt at 40 ms so physics don't explode if the tab is backgrounded
     const dt = Math.min((ts - s.lastTime) / 1000, 0.04);
     s.lastTime = ts;
+    s.elapsed += dt;
 
     let changed = false;
     const modifiers = modifiersRef.current;
@@ -137,7 +159,7 @@ export function useSimulation() {
       // the combined motion never exactly repeats.
       wells: s.p.wells.map((w, i) => {
         if (s.p.jitter < 0.01 || i === 1) return w;
-        const time = ts / 1000;
+        const time = s.elapsed;
         const j = s.p.jitter * (
           Math.sin(time * (i === 0 ? 2.3 : 1.7) + i * 1.5) * 0.35 +
           Math.sin(time * (i === 0 ? 3.9 : 4.3) + i * 0.8) * 0.2
@@ -160,7 +182,7 @@ export function useSimulation() {
     if (s.trail.length > 28) s.trail.shift();
 
     sim.current.physP = physP;
-  }, [blendParams]);
+  }, [blendParams, isPaused]);
 
-  return { sim, activeModifiers, toggleModifier, disturb, loop };
+  return { sim, activeModifiers, toggleModifier, disturb, loop, isPaused, togglePause, startIndex, reset };
 }

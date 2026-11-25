@@ -9,7 +9,10 @@ import "./App.css";
 
 export default function App() {
   const { t, i18n } = useTranslation();
-  const { sim, activeModifiers, toggleModifier, disturb, loop } = useSimulation();
+  const {
+    sim, activeModifiers, toggleModifier, disturb, loop,
+    isPaused, togglePause, startIndex, reset,
+  } = useSimulation();
 
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -60,7 +63,21 @@ export default function App() {
 
         <div className="main-visuals">
           <div className="canvas-wrapper">
-            <SimulationCanvas sim={sim} loop={loop} disturb={disturb} />
+            <SimulationCanvas sim={sim} loop={loop} disturb={disturb} isPaused={isPaused} />
+            <div className="simulation-controls">
+              <label>
+                {t("ui.startPosition")}
+                <select value={startIndex} onChange={(event) => reset(Number(event.target.value))}>
+                  <option value={0}>{t("ui.mania")}</option>
+                  <option value={1}>{t("ui.euthymia")}</option>
+                  <option value={2}>{t("ui.depression")}</option>
+                </select>
+              </label>
+              <button type="button" onClick={togglePause}>
+                {t(isPaused ? "ui.resumeSimulation" : "ui.pauseSimulation")}
+              </button>
+              <button type="button" onClick={() => reset()}>{t("ui.resetSimulation")}</button>
+            </div>
           </div>
           <div className="info-wrapper">
             <InfoPanel activeModifiers={activeModifiers} />

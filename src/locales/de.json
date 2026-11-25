@@ -18,6 +18,10 @@
     "other_hint": "Eingriffe, keine Medikamente"
   },
   "ui": {
+    "startPosition": "Startposition",
+    "pauseSimulation": "Pausieren",
+    "resumeSimulation": "Fortsetzen",
+    "resetSimulation": "Zurücksetzen",
     "noActive": "⚡ Keine aktive Medikation",
     "instructions": "Klicken Sie auf die Medikamente in der linken Leiste, um zu sehen, wie sie die Stimmungslandschaft umgestalten. Sie können mehrere Substanzen kombinieren und deren Dynamik über die Zeit beobachten.",
     "attractorTheory": {

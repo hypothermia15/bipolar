@@ -24,6 +24,10 @@
     "lifestyle_hint": "not drugs; the evidence is associational"
   },
   "ui": {
+    "startPosition": "Starting position",
+    "pauseSimulation": "Pause",
+    "resumeSimulation": "Resume",
+    "resetSimulation": "Reset",
     "noActive": "⚡ No active medication",
     "instructions": "Click medications in the left sidebar to see how they reshape the mood landscape. You can combine multiple substances and observe their dynamics over time.",
     "attractorTheory": {

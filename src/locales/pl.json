@@ -18,6 +18,10 @@
     "other_hint": "zabiegi, nie leki"
   },
   "ui": {
+    "startPosition": "Pozycja początkowa",
+    "pauseSimulation": "Wstrzymaj",
+    "resumeSimulation": "Wznów",
+    "resetSimulation": "Zresetuj",
     "noActive": "⚡ Brak aktywnego leczenia",
     "instructions": "Klikaj leki w menu po lewej, aby zobaczyć jak wpływają na krajobraz nastroju. Możesz łączyć wiele substancji naraz i obserwować dynamikę ich działania w czasie.",
     "attractorTheory": {
