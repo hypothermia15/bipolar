@@ -28,13 +28,6 @@ export function useSimulation() {
     setStartIndex(index);
   };
 
-  const launch = (velocity) => {
-    const state = sim.current;
-    state.ball = { x: BASE.wells[startIndex].cx, vx: velocity, dragging: false };
-    state.trail = [];
-    state.lastTime = null;
-  };
-
   const togglePause = () => {
     sim.current.lastTime = null;
     sim.current.ball.dragging = false;
@@ -183,5 +176,5 @@ export function useSimulation() {
     sim.current.physP = physP;
   }, [blendParams, isPaused]);
 
-  return { sim, activeModifiers, toggleModifier, disturb, loop, isPaused, togglePause, startIndex, reset, launch };
+  return { sim, activeModifiers, toggleModifier, disturb, loop, isPaused, togglePause, startIndex, reset };
 }

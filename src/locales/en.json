@@ -51,24 +51,25 @@
       "While still feeling low, works on projects through the night and describes racing thoughts."
     ]
   },
-  "timing": {
-    "title": "Timing two stressors",
-    "hint": "Both trials start at the selected position on the baseline landscape. Two equal impulses push left at the selected intensity. The first is applied at time zero. Markers show the second impulse.",
-    "interval": "Interval between stressors",
-    "reference": "Short interval",
-    "selected": "Selected interval",
-    "axes": "Vertical axis: position. Horizontal axis: model time (s).",
-    "speed": "At the selected interval, the second impulse changes speed from {{before}} to {{after}} position units/s."
-  },
-  "experiment": {
-    "title": "Can you cross the barrier?",
-    "hint": "Each push launches the ball from the selected starting position. Change the landscape and repeat the last push.",
-    "direction": "Direction",
-    "left": "Left",
-    "right": "Right",
-    "strength": "Push strength",
-    "push": "Push",
-    "repeat": "Repeat last push"
+  "interview": {
+    "title": "Clinical interview · A teenager sleeping less during exams",
+    "intro": "Fictional case. On Friday you see Deniz, 16, with their mother. “It started with the exam and got worse after an argument with a friend.” Explore all three topics and choose an initial assessment.",
+    "history": "Explore the history",
+    "sequence": "Ask Deniz · What happened first this week?",
+    "sequenceReply": "Deniz: “I studied on Monday. After the exam on Tuesday I was still up late. On Wednesday morning I posted three project ideas to the class chat. I argued with my friend on Thursday.”",
+    "sleep": "Ask Deniz · How did you feel the next morning?",
+    "sleepReply": "Deniz: “On Monday I slept three hours and could barely keep my eyes open in the exam. The next two nights I had no studying to do. Four hours felt enough and I woke refreshed. I usually sleep eight.”",
+    "function": "Ask the mother · What changed at home and school?",
+    "functionReply": "Mother: “Since Tuesday evening Deniz has been talking much faster. They rearranged their room at midnight. The teacher said they kept speaking up on Wednesday. This is new.”",
+    "assess": "Which initial assessment would you document?",
+    "situational": "Exam demands and conflict explain the change.",
+    "situationalFeedback": "Limited sleep opportunity and fatigue fit the first night. Later, Deniz had time to sleep and felt rested after four hours. Increased activity and rapid speech preceded the argument.",
+    "possible": "Explore a possible mood episode given reduced need for sleep and new behavioral changes.",
+    "possibleFeedback": "Best supported. Feeling rested after little sleep coincides with changes reported at home and school. Assess mood quality, duration, impairment, safety and medication or substance use. Ask about earlier episodes and follow the course.",
+    "confirmed": "The history confirms a manic episode.",
+    "confirmedFeedback": "An episodic change warrants assessment. Mood quality, total duration, degree of impairment and alternative explanations still need clarification.",
+    "restart": "Restart interview",
+    "source": "Source · Assessment of bipolar disorder in children and adolescents"
   },
   "ui": {
     "startPosition": "Starting position",

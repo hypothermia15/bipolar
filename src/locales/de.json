@@ -45,24 +45,25 @@
       "Arbeitet trotz gedrückter Stimmung die Nacht hindurch und berichtet von rasenden Gedanken."
     ]
   },
-  "timing": {
-    "title": "Zeitabstand zweier Stressoren",
-    "hint": "Beide Versuche beginnen an der gewählten Position in der Ausgangslandschaft. Zwei gleich starke Impulse wirken mit der gewählten Stärke nach links. Der erste erfolgt zum Zeitpunkt null. Die Markierungen zeigen den zweiten Impuls.",
-    "interval": "Abstand zwischen den Stressoren",
-    "reference": "Kurzer Abstand",
-    "selected": "Gewählter Abstand",
-    "axes": "Vertikal: Position. Horizontal: Modellzeit (s).",
-    "speed": "Beim gewählten Abstand ändert der zweite Impuls das Tempo von {{before}} auf {{after}} Positionseinheiten/s."
-  },
-  "experiment": {
-    "title": "Überwindest du die Schwelle?",
-    "hint": "Jeder Stoß startet an der gewählten Position. Ändere die Landschaft und wiederhole den letzten Stoß.",
-    "direction": "Richtung",
-    "left": "Links",
-    "right": "Rechts",
-    "strength": "Stoßstärke",
-    "push": "Anstoßen",
-    "repeat": "Letzten Stoß wiederholen"
+  "interview": {
+    "title": "Klinisches Gespräch · Wenig Schlaf in der Prüfungswoche",
+    "intro": "Fiktiver Fall. Am Freitag kommen Deniz (16) und die Mutter in die Sprechstunde. „Mit der Prüfung fing es an. Nach einem Streit wurde es schlimmer.“ Erfragen Sie alle drei Bereiche und wählen Sie eine erste Einschätzung.",
+    "history": "Anamnese erheben",
+    "sequence": "An Deniz · Was geschah diese Woche zuerst?",
+    "sequenceReply": "Deniz: „Montag habe ich gelernt. Auch nach der Prüfung am Dienstag blieb ich lange wach. Mittwochfrüh schrieb ich drei Projektideen in den Klassenchat. Der Streit war am Donnerstag.“",
+    "sleep": "An Deniz · Wie ging es dir am nächsten Morgen?",
+    "sleepReply": "Deniz: „Montag schlief ich drei Stunden. In der Prüfung fielen mir die Augen zu. Die nächsten zwei Nächte musste ich nicht lernen. Vier Stunden reichten, morgens war ich fit. Sonst schlafe ich acht.“",
+    "function": "An die Mutter · Was hat sich zu Hause und in der Schule verändert?",
+    "functionReply": "Mutter: „Seit Dienstagabend spricht Deniz viel schneller. Um Mitternacht wurde das Zimmer umgeräumt. Laut Lehrkraft meldete sich Deniz am Mittwoch ständig. Das ist neu.“",
+    "assess": "Welche erste Einschätzung dokumentieren Sie?",
+    "situational": "Prüfung und Streit erklären die Veränderung.",
+    "situationalFeedback": "Wenig Zeit zum Schlafen und Müdigkeit passen zur ersten Nacht. Später war Zeit zum Schlafen, doch Deniz war nach vier Stunden erholt. Schnelles Sprechen und mehr Aktivität begannen vor dem Streit.",
+    "possible": "Wegen verminderten Schlafbedürfnisses und neuer Verhaltensänderungen eine mögliche affektive Episode abklären.",
+    "possibleFeedback": "Am besten gestützt. Das Erholtsein passt zeitlich zu den Veränderungen in Familie und Schule. Stimmung, Dauer, Beeinträchtigung, Sicherheit sowie Medikamenten- und Substanzkonsum erfragen. Frühere Episoden und weiteren Verlauf erheben.",
+    "confirmed": "Die Anamnese bestätigt eine manische Episode.",
+    "confirmedFeedback": "Eine mögliche episodische Veränderung bedarf der Abklärung. Stimmung, Gesamtdauer, Ausmaß der Beeinträchtigung und alternative Erklärungen sind noch offen.",
+    "restart": "Gespräch neu beginnen",
+    "source": "Quelle · Diagnostik bipolarer Störungen bei Kindern und Jugendlichen"
   },
   "ui": {
     "startPosition": "Startposition",

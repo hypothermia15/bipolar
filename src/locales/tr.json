@@ -51,24 +51,25 @@
       "Çökkünlük sürerken gece boyunca projeleriyle uğraşıyor ve düşüncelerinin hızlandığını anlatıyor."
     ]
   },
-  "timing": {
-    "title": "İki stresörün zamanlaması",
-    "hint": "Her iki denemede top seçili konumdan başlar. Temel manzarada, seçili şiddette iki eşit itki sola uygulanır. İlk itki sıfır anında gelir. Grafikteki işaretler ikinci itkiyi gösterir.",
-    "interval": "İki stresör arasındaki süre",
-    "reference": "Peş peşe",
-    "selected": "Seçilen aralık",
-    "axes": "Dikey eksen konumu, yatay eksen model zamanını (s) gösterir.",
-    "speed": "Seçilen aralıkta ikinci itkiyle topun sürati {{before}} → {{after}} konum birimi/s."
-  },
-  "experiment": {
-    "title": "Eşiği aşabilir misin?",
-    "hint": "Her itme topu seçili başlangıç konumundan fırlatır. Manzarayı değiştirip son itmeyi tekrarlayabilirsiniz.",
-    "direction": "Yön",
-    "left": "Sola",
-    "right": "Sağa",
-    "strength": "İtme şiddeti",
-    "push": "İt",
-    "repeat": "Son itmeyi tekrarla"
+  "interview": {
+    "title": "Klinik görüşme · Sınav haftasında az uyuyan ergen",
+    "intro": "Kurgusal olgu. Cuma günü poliklinikte 16 yaşındaki Deniz ve annesiyle görüşüyorsunuz. Annesi “Sınavla başladı, arkadaşıyla da tartışınca iyice değişti” diyor. Üç başlığı sorup ilk klinik değerlendirmenizi seçin.",
+    "history": "Öyküyü nasıl açarsınız?",
+    "sequence": "Deniz’e · Bu hafta hangi olay ne zaman oldu?",
+    "sequenceReply": "Deniz: “Pazartesi sınava çalıştım. Salı sınavdan sonra da gece uyumadım. Çarşamba sabahı üç proje fikrimi sınıf grubuna yazdım. Arkadaşımla perşembe günü tartıştık.”",
+    "sleep": "Deniz’e · Az uyuduğun günlerin sabahında nasıldın?",
+    "sleepReply": "Deniz: “Pazartesi üç saat uyudum, sınavda gözlerim kapandı. Sonraki iki gece çalışmam gerekmiyordu. Dört saat uyku yetti, sabah dinçtim. Normalde sekiz saat uyurum.”",
+    "function": "Anneye · Evde ve okulda olağan halinden ne farklı?",
+    "functionReply": "Annesi: “Salı akşamından beri çok hızlı konuşuyor. Gece yarısı odasını yeniden düzenledi. Öğretmeni çarşamba derste sürekli söz aldığını söyledi. Bunlar Deniz için yeni.”",
+    "assess": "Bugün hangi değerlendirmeyi kaydedersiniz?",
+    "situational": "Sınav yükü ve arkadaş çatışması uyku ve davranış değişimini açıklıyor.",
+    "situationalFeedback": "İlk gece uyku fırsatının kısalması ve sabah yorgunluğu bu yorumu destekliyor. Sonraki gecelerde uyku fırsatı geri geldiği halde Deniz dinç kaldı. Hızlı konuşma ve etkinlik artışı arkadaş tartışmasından önce başladı.",
+    "possible": "Azalmış uyku gereksinimi ve yeni davranış değişiklikleri olası bir duygudurum epizodu açısından ayrıntılandırılmalı.",
+    "possibleFeedback": "En iyi desteklenen ön değerlendirme bu. Deniz’in sonraki iki sabah dinç olması, annesi ve öğretmeninin bildirdiği yeni değişikliklerle örtüşüyor. Duygudurumun niteliğini, belirtilerin süresini, işlev kaybını, güvenliği ve ilaç/madde kullanımını değerlendirin. Önceki dönemleri sorun ve seyri izleyin.",
+    "confirmed": "Mevcut öykü manik epizodu doğruluyor.",
+    "confirmedFeedback": "Öykü, epizodik değişim olasılığını araştırmayı gerektiriyor. Duygudurumun niteliği, değişimin toplam süresi, işlev kaybının derecesi ve alternatif açıklamalar henüz açıklığa kavuşmadı.",
+    "restart": "Görüşmeye yeniden başla",
+    "source": "Kaynak · Çocuk ve ergenlerde bipolar bozukluğun değerlendirilmesi"
   },
   "ui": {
     "startPosition": "Başlangıç konumu",

@@ -45,24 +45,25 @@
       "Mimo obniżonego nastroju pracuje nad projektami przez całą noc i opisuje gonitwę myśli."
     ]
   },
-  "timing": {
-    "title": "Odstęp między dwoma stresorami",
-    "hint": "Obie próby zaczynają się w wybranej pozycji na podstawowym krajobrazie. Dwa równe impulsy o wybranym natężeniu działają w lewo. Pierwszy następuje w chwili zero. Znaczniki pokazują drugi impuls.",
-    "interval": "Odstęp między stresorami",
-    "reference": "Krótki odstęp",
-    "selected": "Wybrany odstęp",
-    "axes": "Oś pionowa: pozycja. Oś pozioma: czas modelu (s).",
-    "speed": "Przy wybranym odstępie drugi impuls zmienia szybkość z {{before}} na {{after}} jednostek pozycji/s."
-  },
-  "experiment": {
-    "title": "Czy pokonasz barierę?",
-    "hint": "Każde pchnięcie zaczyna się z wybranej pozycji. Zmień krajobraz i powtórz ostatnie pchnięcie.",
-    "direction": "Kierunek",
-    "left": "W lewo",
-    "right": "W prawo",
-    "strength": "Siła pchnięcia",
-    "push": "Popchnij",
-    "repeat": "Powtórz ostatnie pchnięcie"
+  "interview": {
+    "title": "Wywiad kliniczny · Nastolatek śpi krócej w tygodniu egzaminu",
+    "intro": "Przypadek fikcyjny. W piątek na wizytę przychodzą Deniz (16 lat) i matka. „Zaczęło się od egzaminu, a po kłótni było jeszcze gorzej”. Zapytaj o trzy obszary i wybierz wstępną ocenę.",
+    "history": "Zbierz wywiad",
+    "sequence": "Do Deniz · W jakiej kolejności to się wydarzyło?",
+    "sequenceReply": "Deniz: „W poniedziałek była nauka. Po wtorkowym egzaminie też nie spałem do późna. W środę rano wysłałem na czat klasowy trzy pomysły na projekty. Kłótnia była w czwartek”.",
+    "sleep": "Do Deniz · Jak się czułeś następnego ranka?",
+    "sleepReply": "Deniz: „W poniedziałek spałem trzy godziny, na egzaminie zamykały mi się oczy. Przez kolejne dwie noce nie miałem nauki. Cztery godziny snu mi wystarczały i rano miałem energię. Zwykle śpię osiem”.",
+    "function": "Do matki · Co zmieniło się w domu i w szkole?",
+    "functionReply": "Matka: „Od wtorku wieczorem mówi znacznie szybciej. O północy przemeblował pokój. Nauczyciel mówił, że w środę stale zabierał głos. To coś nowego”.",
+    "assess": "Jaką wstępną ocenę zapiszesz?",
+    "situational": "Egzamin i konflikt wyjaśniają zmianę.",
+    "situationalFeedback": "Brak czasu na sen i zmęczenie pasują do pierwszej nocy. Później Deniz miał czas na sen i czuł się wypoczęty po czterech godzinach. Szybka mowa i wzrost aktywności poprzedziły konflikt.",
+    "possible": "Zmniejszona potrzeba snu i nowe zmiany zachowania wymagają oceny pod kątem epizodu afektywnego.",
+    "possibleFeedback": "To najlepiej uzasadniona ocena. Poczucie wypoczęcia zbiega się ze zmianami obserwowanymi w domu i szkole. Oceń nastrój, czas trwania, funkcjonowanie, bezpieczeństwo i przyjmowane leki lub substancje. Zapytaj o wcześniejsze epizody i obserwuj przebieg.",
+    "confirmed": "Wywiad potwierdza epizod maniakalny.",
+    "confirmedFeedback": "Możliwa zmiana epizodyczna wymaga oceny. Należy ustalić charakter nastroju, łączny czas trwania, stopień zaburzenia funkcjonowania i inne wyjaśnienia.",
+    "restart": "Zacznij wywiad od nowa",
+    "source": "Źródło · Ocena zaburzeń afektywnych dwubiegunowych u dzieci i młodzieży"
   },
   "ui": {
     "startPosition": "Pozycja początkowa",

@@ -4,10 +4,9 @@ import { SUPPORTED_LANGS, rememberLang } from "./i18n.js";
 import { useSimulation } from "./hooks/useSimulation";
 import SimulationCanvas from "./components/SimulationCanvas";
 import ModifierControls from "./components/ModifierControls";
-import StressorTiming from "./components/StressorTiming";
+import ClinicalInterview from "./components/ClinicalInterview";
 import SleepComparison from "./components/SleepComparison";
 import ActivationCase from "./components/ActivationCase";
-import ThresholdExperiment from "./components/ThresholdExperiment";
 import InfoPanel from "./components/InfoPanel";
 import "./App.css";
 
@@ -15,7 +14,7 @@ export default function App() {
   const { t, i18n } = useTranslation();
   const {
     sim, activeModifiers, toggleModifier, disturb, loop,
-    isPaused, togglePause, startIndex, reset, launch,
+    isPaused, togglePause, startIndex, reset,
   } = useSimulation();
 
   const [stressorScale, setStressorScale] = React.useState(1);
@@ -97,8 +96,7 @@ export default function App() {
                 {t("ui.stressor")}
               </button>
             </div>
-            <ThresholdExperiment key={startIndex} launch={launch} isPaused={isPaused} />
-            <StressorTiming startIndex={startIndex} scale={stressorScale} />
+            <ClinicalInterview />
             <SleepComparison key={`sleep-${startIndex}-${stressorScale}`} startIndex={startIndex} scale={stressorScale} />
             <ActivationCase />
           </div>
