@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useCallback } from "react";
+import angryFace from "../assets/mood/angry.svg";
+import pensiveFace from "../assets/mood/pensive.svg";
 import "@fontsource/barlow-condensed/800.css";
 import { useTranslation } from "react-i18next";
 import { W, H, PAD, BALL_R, X_LO, X_HI, BARRIER } from "../constants";
@@ -14,6 +16,15 @@ export default function SimulationCanvas({ sim, loop, isPaused }) {
   const rafRef = useRef(null);
 
   const gesture = useRef(null);
+  const faces = useRef({});
+
+  useEffect(() => {
+    for (const [key, url] of Object.entries({ mania: angryFace, depression: pensiveFace })) {
+      const img = new Image();
+      img.src = url;
+      faces.current[key] = img;
+    }
+  }, []);
 
   const pointerX = (event) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -254,9 +265,9 @@ export default function SimulationCanvas({ sim, loop, isPaused }) {
 
     // ── 6. Zone labels ───────────────────────────────────────────────
     const zones = [
-      { lx: -0.68, label: t("ui.mania"),      zc: zoneColors[0] },
+      { lx: -0.68, label: t("ui.mania"),      zc: zoneColors[0], face: "mania", caption: t("ui.irritability") },
       { lx:  0.00, label: t("ui.euthymia"),   zc: zoneColors[1] },
-      { lx:  0.68, label: t("ui.depression"), zc: zoneColors[2] },
+      { lx:  0.68, label: t("ui.depression"), zc: zoneColors[2], face: "depression" },
     ];
     for (const z of zones) {
       const ly  = energy(z.lx, physP);
@@ -265,13 +276,17 @@ export default function SimulationCanvas({ sim, loop, isPaused }) {
       // Finite-difference second derivative: positive → concave up → local minimum → stable well
       const g2  = energy(z.lx + 0.01, physP) - 2 * energy(z.lx, physP) + energy(z.lx - 0.01, physP);
       const stb = g2 > 0;
-      const labelY = Math.max(labelSize, Math.min(H - labelSize * 0.75,
-        cy + (stb ? 1 : -1) * (23 + labelSize * 0.65)));
-      const tipY = labelY + (stb ? -1 : 1) * (labelSize * 0.6 + 3);
+      const iconSize = 21 * fs;
+      const extraHeight = z.face ? iconSize + 3 * fs : 0;
+      const offset = 23 + labelSize * 0.65;
+      const below = stb && cy + offset + labelSize / 2 + extraHeight < H - 3 * fs;
+      const labelY = Math.max(labelSize / 2 + 3 * fs, Math.min(H - labelSize / 2 - extraHeight - 3 * fs,
+        below ? cy + offset : cy - offset - extraHeight));
+      const tipY = below ? labelY - labelSize * 0.6 - 3 : labelY + labelSize * 0.6 + extraHeight + 3;
       ctx.strokeStyle = z.zc;
       ctx.lineWidth = 1.5;
       ctx.beginPath();
-      ctx.moveTo(cx, cy + (stb ? 4 : -4));
+      ctx.moveTo(cx, cy + (below ? 4 : -4));
       ctx.lineTo(cx, tipY);
       ctx.stroke();
       ctx.fillStyle = z.zc;
@@ -291,6 +306,21 @@ export default function SimulationCanvas({ sim, loop, isPaused }) {
       ctx.strokeStyle = "#101728";
       ctx.strokeText(z.label, cx, labelY, W * 0.29);
       ctx.fillText(z.label, cx, labelY, W * 0.29);
+      if (z.face) {
+        ctx.font = displayFont(Math.round(13 * fs));
+        const gap = 3 * fs;
+        const maxTextWidth = W * 0.32 - iconSize - gap;
+        const captionWidth = z.caption ? Math.min(maxTextWidth, ctx.measureText(z.caption).width) + gap : 0;
+        const left = cx - (iconSize + captionWidth) / 2;
+        const top = labelY + labelSize / 2 + gap;
+        const image = faces.current[z.face];
+        if (image?.complete && image.naturalWidth) ctx.drawImage(image, left, top, iconSize, iconSize);
+        if (z.caption) {
+          ctx.textAlign = "left";
+          ctx.strokeText(z.caption, left + iconSize + gap, top + iconSize / 2, maxTextWidth);
+          ctx.fillText(z.caption, left + iconSize + gap, top + iconSize / 2, maxTextWidth);
+        }
+      }
       ctx.restore();
     }
 
@@ -368,7 +398,7 @@ export default function SimulationCanvas({ sim, loop, isPaused }) {
 
   return (
     <div className="canvas-container" style={{ position: "relative", flexShrink: 1, minWidth: 0 }}>
-      <canvas ref={canvasRef} width={W} height={H}
+      <canvas aria-label={t("ui.landscapeDescription")} ref={canvasRef} width={W} height={H}
         style={{ borderRadius: 12, aspectRatio: `${W} / ${H}`, border: "1px solid #405271", cursor: "grab", touchAction: "none", display: "block", boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
         onPointerDown={onDown} onPointerMove={onMove} onPointerUp={finishDrag}
         onPointerCancel={finishDrag} onLostPointerCapture={finishDrag}
