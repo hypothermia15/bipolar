@@ -17,6 +17,16 @@
     "other": "Metody niefarmakologiczne",
     "other_hint": "zabiegi, nie leki"
   },
+  "experiment": {
+    "title": "Czy pokonasz barierę?",
+    "hint": "Każde pchnięcie zaczyna się z wybranej pozycji. Zmień krajobraz i powtórz ostatnie pchnięcie.",
+    "direction": "Kierunek",
+    "left": "W lewo",
+    "right": "W prawo",
+    "strength": "Siła pchnięcia",
+    "push": "Popchnij",
+    "repeat": "Powtórz ostatnie pchnięcie"
+  },
   "ui": {
     "startPosition": "Pozycja początkowa",
     "pauseSimulation": "Wstrzymaj",

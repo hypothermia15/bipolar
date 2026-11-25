@@ -9,24 +9,44 @@ export default function SimulationCanvas({ sim, loop, disturb, isPaused }) {
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
 
-  const onDown = (e) => {
-    if (isPaused) return;
-    const s = sim.current;
-    if (Math.abs(mouseX(e) - toX(s.ball.x)) < 30) {
-      s.ball.dragging = true; s.ball.vx = 0;
-    }
-  };
-  const onMove = (e) => {
-    const s = sim.current;
-    if (!s.ball.dragging) return;
-    s.ball.x = Math.max(X_LO + 0.02, Math.min(X_HI - 0.02, fromX(mouseX(e))));
-  };
-  const onUp = () => { sim.current.ball.dragging = false; };
+  const gesture = useRef(null);
 
-  const mouseX = (e) => {
-    const r = canvasRef.current.getBoundingClientRect();
-    const c = e.touches ? e.touches[0].clientX : e.clientX;
-    return (c - r.left) * (canvasRef.current.width / r.width);
+  const pointerX = (event) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    return fromX((event.clientX - bounds.left) * W / bounds.width);
+  };
+
+  const onDown = (event) => {
+    const ball = sim.current.ball;
+    const x = pointerX(event);
+    if (isPaused || !event.isPrimary || event.button !== 0 || Math.abs(toX(x) - toX(ball.x)) >= 30) return;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    gesture.current = { id: event.pointerId, offset: ball.x - x, samples: [{ x: ball.x, time: event.timeStamp }] };
+    ball.dragging = true;
+    ball.vx = 0;
+  };
+
+  const onMove = (event) => {
+    const drag = gesture.current;
+    const ball = sim.current.ball;
+    if (drag?.id !== event.pointerId || !ball.dragging) return;
+    ball.x = Math.max(X_LO + 0.02, Math.min(X_HI - 0.02, pointerX(event) + drag.offset));
+    drag.samples = drag.samples.filter(point => event.timeStamp - point.time <= 100);
+    drag.samples.push({ x: ball.x, time: event.timeStamp });
+  };
+
+  const finishDrag = (event) => {
+    const drag = gesture.current;
+    if (drag?.id !== event.pointerId) return;
+    const ball = sim.current.ball;
+    if (event.type === "pointerup" && ball.dragging) {
+      onMove(event);
+      const first = drag.samples[0];
+      const duration = Math.max(8, event.timeStamp - first.time);
+      ball.vx = Math.max(-10, Math.min(10, (ball.x - first.x) * 1000 / duration));
+    }
+    ball.dragging = false;
+    gesture.current = null;
   };
 
   const draw = useCallback((ts) => {
@@ -321,8 +341,8 @@ export default function SimulationCanvas({ sim, loop, disturb, isPaused }) {
     <div className="canvas-container" style={{ position: "relative", flexShrink: 1, minWidth: 0 }}>
       <canvas ref={canvasRef} width={W} height={H}
         style={{ borderRadius: 12, border: "1px solid rgba(255,255,255,0.07)", cursor: "grab", touchAction: "none", display: "block", boxShadow: "0 4px 40px rgba(0,0,0,0.5)" }}
-        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
-        onTouchStart={onDown} onTouchMove={onMove} onTouchEnd={onUp} onTouchCancel={onUp}
+        onPointerDown={onDown} onPointerMove={onMove} onPointerUp={finishDrag}
+        onPointerCancel={finishDrag} onLostPointerCapture={finishDrag}
       />
       <button
         disabled={isPaused}

@@ -17,6 +17,16 @@
     "other": "Nicht-medikamentöse Verfahren",
     "other_hint": "Eingriffe, keine Medikamente"
   },
+  "experiment": {
+    "title": "Überwindest du die Schwelle?",
+    "hint": "Jeder Stoß startet an der gewählten Position. Ändere die Landschaft und wiederhole den letzten Stoß.",
+    "direction": "Richtung",
+    "left": "Links",
+    "right": "Rechts",
+    "strength": "Stoßstärke",
+    "push": "Anstoßen",
+    "repeat": "Letzten Stoß wiederholen"
+  },
   "ui": {
     "startPosition": "Startposition",
     "pauseSimulation": "Pausieren",

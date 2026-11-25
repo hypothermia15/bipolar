@@ -23,6 +23,16 @@
     "lifestyle": "Yaşam Tarzı ve Ekran",
     "lifestyle_hint": "ilaç değil, kanıt ilişki düzeyinde"
   },
+  "experiment": {
+    "title": "Eşiği aşabilir misin?",
+    "hint": "Her itme topu seçili başlangıç konumundan fırlatır. Manzarayı değiştirip son itmeyi tekrarlayabilirsiniz.",
+    "direction": "Yön",
+    "left": "Sola",
+    "right": "Sağa",
+    "strength": "İtme şiddeti",
+    "push": "İt",
+    "repeat": "Son itmeyi tekrarla"
+  },
   "ui": {
     "startPosition": "Başlangıç konumu",
     "pauseSimulation": "Duraklat",

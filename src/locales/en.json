@@ -23,6 +23,16 @@
     "lifestyle": "Lifestyle and Screens",
     "lifestyle_hint": "not drugs; the evidence is associational"
   },
+  "experiment": {
+    "title": "Can you cross the barrier?",
+    "hint": "Each push launches the ball from the selected starting position. Change the landscape and repeat the last push.",
+    "direction": "Direction",
+    "left": "Left",
+    "right": "Right",
+    "strength": "Push strength",
+    "push": "Push",
+    "repeat": "Repeat last push"
+  },
   "ui": {
     "startPosition": "Starting position",
     "pauseSimulation": "Pause",
