@@ -38,9 +38,10 @@ export function useSimulation() {
   const toggleModifier = useCallback((key) => {
     const cur = modifiersRef.current[key];
     if (cur && cur.on) {
-      modifiersRef.current[key] = { on: false, conc: 0, phase: "decay", kicked: false };
+      modifiersRef.current[key] = { ...cur, on: false, phase: "decay" };
     } else {
-      modifiersRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset", kicked: false };
+      const conc = cur?.conc ?? 0;
+      modifiersRef.current[key] = { on: true, conc, phase: "onset", kicked: conc >= 0.5 };
     }
     setActiveModifiers({ ...modifiersRef.current });
   }, []);
@@ -119,7 +120,7 @@ export function useSimulation() {
         }
         if (d.conc >= 0.999) { d.conc = 1; d.phase = "decay"; }
         changed = true;
-      } else if (d.phase === "decay") {
+      } else if (d.phase === "decay" && d.conc > 0) {
         // When manually turned off, use a 3× faster decay to simulate abrupt discontinuation
         const hl = d.on ? cfg.halfLife : cfg.halfLife / 3;
         d.conc *= Math.pow(0.5, dt / hl);
