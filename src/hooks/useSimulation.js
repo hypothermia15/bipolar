@@ -1,33 +1,53 @@
 import { useState, useRef, useCallback } from "react";
 import { MODIFIERS, BASE } from "../data/modifiers";
-import { lerp, grad } from "../utils/physics";
-import { X_LO, X_HI } from "../constants";
+import { lerp, advanceBall, stressorVelocity } from "../utils/physics";
 
-export function useSimulation() {
-  const [activeModifiers, setActiveModifiers] = useState({});
-  const modifiersRef = useRef({});
-  const [, forceUpdate] = useState(0);
-
-  const sim = useRef({
-    ball: { x: 0.68, vx: 0, dragging: false },
+function createRun(startIndex) {
+  return {
+    ball: { x: BASE.wells[startIndex].cx, vx: 0, dragging: false },
     p: { ...BASE, wells: BASE.wells.map(w => ({ ...w })) },
     trail: [],
     lastTime: null,
-  });
+    elapsed: 0,
+  };
+}
+
+export function useSimulation() {
+  const [activeModifiers, setActiveModifiers] = useState({});
+  const [isPaused, setIsPaused] = useState(false);
+  const [startIndex, setStartIndex] = useState(2);
+  const modifiersRef = useRef({});
+  const [, forceUpdate] = useState(0);
+  const sim = useRef(null);
+  if (sim.current === null) sim.current = createRun(startIndex);
+
+  const reset = (index = startIndex) => {
+    sim.current = createRun(index);
+    modifiersRef.current = {};
+    setActiveModifiers({});
+    setStartIndex(index);
+  };
+
+  const togglePause = () => {
+    sim.current.lastTime = null;
+    sim.current.ball.dragging = false;
+    setIsPaused(paused => !paused);
+  };
 
   const toggleModifier = useCallback((key) => {
     const cur = modifiersRef.current[key];
     if (cur && cur.on) {
-      modifiersRef.current[key] = { on: false, conc: 0, phase: "decay", kicked: false };
+      modifiersRef.current[key] = { ...cur, on: false, phase: "decay" };
     } else {
-      modifiersRef.current[key] = { on: true, conc: cur ? cur.conc : 0, phase: "onset", kicked: false };
+      const conc = cur?.conc ?? 0;
+      modifiersRef.current[key] = { on: true, conc, phase: "onset", kicked: conc >= 0.5 };
     }
     setActiveModifiers({ ...modifiersRef.current });
   }, []);
 
-  const disturb = useCallback(() => {
-    // Random lateral kick — magnitude 3.5–4.7 in physics units/s, direction randomised
-    sim.current.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2);
+  const disturb = useCallback((scale = 1) => {
+    // Scale the impulse while preserving the original moderate stressor.
+    sim.current.ball.vx += stressorVelocity(scale);
   }, []);
 
   const blendParams = useCallback((activeList) => {
@@ -74,11 +94,13 @@ export function useSimulation() {
   }, []);
 
   const loop = useCallback((ts) => {
+    if (isPaused) return;
     const s = sim.current;
-    if (!s.lastTime) s.lastTime = ts;
+    if (s.lastTime === null) s.lastTime = ts;
     // Cap dt at 40 ms so physics don't explode if the tab is backgrounded
     const dt = Math.min((ts - s.lastTime) / 1000, 0.04);
     s.lastTime = ts;
+    s.elapsed += dt;
 
     let changed = false;
     const modifiers = modifiersRef.current;
@@ -97,7 +119,7 @@ export function useSimulation() {
         }
         if (d.conc >= 0.999) { d.conc = 1; d.phase = "decay"; }
         changed = true;
-      } else if (d.phase === "decay") {
+      } else if (d.phase === "decay" && d.conc > 0) {
         // When manually turned off, use a 3× faster decay to simulate abrupt discontinuation
         const hl = d.on ? cfg.halfLife : cfg.halfLife / 3;
         d.conc *= Math.pow(0.5, dt / hl);
@@ -137,7 +159,7 @@ export function useSimulation() {
       // the combined motion never exactly repeats.
       wells: s.p.wells.map((w, i) => {
         if (s.p.jitter < 0.01 || i === 1) return w;
-        const time = ts / 1000;
+        const time = s.elapsed;
         const j = s.p.jitter * (
           Math.sin(time * (i === 0 ? 2.3 : 1.7) + i * 1.5) * 0.35 +
           Math.sin(time * (i === 0 ? 3.9 : 4.3) + i * 0.8) * 0.2
@@ -146,21 +168,13 @@ export function useSimulation() {
       }),
     };
 
-    if (!s.ball.dragging) {
-      const slope = grad(s.ball.x, physP);
-      s.ball.vx += -slope * s.p.gravity * dt;
-      s.ball.vx *= Math.pow(s.p.damping, dt * 60);
-      s.ball.x  += s.ball.vx * dt;
-      // Soft wall: bounce with 0.3 restitution to keep the ball visible at canvas edges
-      if (s.ball.x < X_LO + 0.02) { s.ball.x = X_LO + 0.02; s.ball.vx *= -0.3; }
-      if (s.ball.x > X_HI - 0.02) { s.ball.x = X_HI - 0.02; s.ball.vx *= -0.3; }
-    }
+    if (!s.ball.dragging) advanceBall(s.ball, physP, dt);
 
     s.trail.push(s.ball.x);
     if (s.trail.length > 28) s.trail.shift();
 
     sim.current.physP = physP;
-  }, [blendParams]);
+  }, [blendParams, isPaused]);
 
-  return { sim, activeModifiers, toggleModifier, disturb, loop };
+  return { sim, activeModifiers, toggleModifier, disturb, loop, isPaused, togglePause, startIndex, reset };
 }

@@ -135,6 +135,39 @@
 
 canvas { width: 100%; height: auto !important; background: #0a0b18; display: block; border-radius: 12px; }
 
+.simulation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.simulation-controls label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.simulation-controls button,
+.simulation-controls select {
+  min-height: 44px;
+  padding: 6px 10px;
+  background: #151a30;
+  color: #eaf2ff;
+  border: 1px solid #52637d;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.simulation-controls button:disabled {
+  opacity: 0.45;
+  cursor: default !important;
+}
+
 /* Language picker */
 .lang-picker {
   display: flex;
@@ -293,7 +326,6 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   .modifier-category { scroll-snap-align: start; }
   .modifier-items button { min-height: 40px; }
   .canvas-container canvas { width: 100%; height: auto; }
-  .canvas-container button { bottom: auto !important; top: 10px; }
   .sidebar { scroll-padding-left: 12px; }
 }
 @media (max-width: 600px) {
@@ -306,3 +338,28 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   .footer-disclaimer { font-size: 13.5px; }
   .footer-credit { font-size: 12.5px; }
 }
+
+.threshold-experiment { margin-top: 16px; padding: 12px; border: 1px solid #38465d; border-radius: 8px; }
+.threshold-experiment summary { cursor: pointer; font-weight: 600; }
+.threshold-experiment p { font-size: 14px; line-height: 1.5; }
+.threshold-experiment input { min-height: 44px; margin: 0; max-width: 100%; }
+.threshold-experiment button:disabled { opacity: 0.5; cursor: default; }
+
+.week-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.week-card { padding: 10px; background: #151b30; border-radius: 8px; font-size: 13px; }
+.week-card div { margin-top: 6px; }
+.week-card svg { display: block; width: 100%; color: #83bdf8; }
+.week-card dl { margin: 4px 0; }
+.week-card dd { margin: 2px 0 8px; font-weight: 700; }
+.lab-scrub { display: grid; margin-top: 12px; font-size: 14px; }
+.lab-scrub input { width: 100%; }
+.case-plot { margin: 0; text-align: center; font-size: 13px; }
+.case-plot svg { display: block; width: min(100%, 320px); margin: auto; }
+.threshold-experiment a { color: #9cceff; }
+
+.clinical-interview fieldset { min-width: 0; margin: 12px 0; padding: 10px; border: 1px solid #38465d; border-radius: 8px; }
+.clinical-interview legend { padding: 0 4px; font-weight: 600; }
+.clinical-interview .simulation-controls { align-items: stretch; }
+.clinical-interview button { text-align: left; white-space: normal; }
+.clinical-interview button[aria-pressed="true"] { border-color: #83bdf8; }
+.clinical-interview blockquote { margin: 12px 0 4px; padding-left: 12px; border-left: 3px solid #83bdf8; line-height: 1.55; }

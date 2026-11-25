@@ -36,3 +36,18 @@ export function grad(x, p) {
 export function hexRgb(h) {
   return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
 }
+
+export function stressorVelocity(scale) {
+  return (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2) * scale;
+}
+
+export function advanceBall(ball, params, dt) {
+  ball.vx -= grad(ball.x, params) * params.gravity * dt;
+  ball.vx *= Math.pow(params.damping, dt * 60);
+  ball.x += ball.vx * dt;
+  const boundedX = Math.max(X_LO + 0.02, Math.min(X_HI - 0.02, ball.x));
+  if (boundedX !== ball.x) {
+    ball.x = boundedX;
+    ball.vx *= -0.3;
+  }
+}

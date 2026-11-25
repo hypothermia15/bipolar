@@ -1,0 +1,6 @@
+Angry Face (U+1F620) and Pensive Face (U+1F614)
+Twemoji graphics by Twitter, Inc. and other contributors.
+Source: https://github.com/jdecked/twemoji
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+The two original SVG graphics are displayed at a reduced size.
