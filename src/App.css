@@ -344,3 +344,15 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
 .threshold-experiment p { font-size: 14px; line-height: 1.5; }
 .threshold-experiment input { min-height: 44px; margin: 0; max-width: 100%; }
 .threshold-experiment button:disabled { opacity: 0.5; cursor: default; }
+
+.week-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.week-card { padding: 10px; background: #151b30; border-radius: 8px; font-size: 13px; }
+.week-card div { margin-top: 6px; }
+.week-card svg { display: block; width: 100%; color: #83bdf8; }
+.week-card dl { margin: 4px 0; }
+.week-card dd { margin: 2px 0 8px; font-weight: 700; }
+.lab-scrub { display: grid; margin-top: 12px; font-size: 14px; }
+.lab-scrub input { width: 100%; }
+.case-plot { margin: 0; text-align: center; font-size: 13px; }
+.case-plot svg { display: block; width: min(100%, 320px); margin: auto; }
+.threshold-experiment a { color: #9cceff; }

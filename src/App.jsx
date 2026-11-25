@@ -4,6 +4,8 @@ import { SUPPORTED_LANGS, rememberLang } from "./i18n.js";
 import { useSimulation } from "./hooks/useSimulation";
 import SimulationCanvas from "./components/SimulationCanvas";
 import ModifierControls from "./components/ModifierControls";
+import SleepComparison from "./components/SleepComparison";
+import ActivationCase from "./components/ActivationCase";
 import ThresholdExperiment from "./components/ThresholdExperiment";
 import InfoPanel from "./components/InfoPanel";
 import "./App.css";
@@ -95,6 +97,8 @@ export default function App() {
               </button>
             </div>
             <ThresholdExperiment key={startIndex} launch={launch} isPaused={isPaused} />
+            <SleepComparison key={`sleep-${startIndex}-${stressorScale}`} startIndex={startIndex} scale={stressorScale} />
+            <ActivationCase />
           </div>
           <div className="info-wrapper">
             <InfoPanel activeModifiers={activeModifiers} />

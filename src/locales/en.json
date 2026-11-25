@@ -23,6 +23,34 @@
     "lifestyle": "Lifestyle and Screens",
     "lifestyle_hint": "not drugs; the evidence is associational"
   },
+  "lab": {
+    "sleep": "Same stressor, two different weeks",
+    "protocol": "Both weeks average 7 hours of sleep per night. Both balls start at the selected position on the baseline landscape. One stressor of the selected intensity hits both at the same time and in the same direction.",
+    "regular": "Regular week",
+    "variable": "Variable week",
+    "hours": "hours",
+    "peak": "Maximum displacement",
+    "return": "Return to starting region",
+    "unsettled": "Not observed within the trial",
+    "apply": "Apply one stressor to both weeks",
+    "replay": "Replay the same trial",
+    "time": "Model time",
+    "metric": "The final frame shows displacement in model position units and return time in model seconds. Return requires staying within ±0.10 units of the start through the end for at least 0.5 seconds.",
+    "assumption": "STEP-BD linked sleep variability with symptom severity. We chose lower damping for the variable week as an educational assumption.",
+    "case": "Case · Mood and activation",
+    "caseHint": "Fictional five-day case. Explore how two dimensions change from the person’s usual level (0). Scores are illustrative.",
+    "axes": "Horizontal axis: mood. Vertical axis: activation.",
+    "day": "Day",
+    "mood": "Mood",
+    "activation": "Activation",
+    "observations": [
+      "Feels low and struggles to get started with everyday tasks.",
+      "Mood drops further. Spends most of the day inactive.",
+      "Mood remains low. Daily activity returns to its usual level.",
+      "Still feels low. Starts several new projects in one evening.",
+      "While still feeling low, works on projects through the night and describes racing thoughts."
+    ]
+  },
   "experiment": {
     "title": "Can you cross the barrier?",
     "hint": "Each push launches the ball from the selected starting position. Change the landscape and repeat the last push.",

@@ -17,6 +17,34 @@
     "other": "Metody niefarmakologiczne",
     "other_hint": "zabiegi, nie leki"
   },
+  "lab": {
+    "sleep": "Ten sam stresor, dwa różne tygodnie",
+    "protocol": "W obu tygodniach sen trwa średnio 7 godzin na noc. Obie kule zaczynają w wybranej pozycji na podstawowym krajobrazie. Ten sam stresor o wybranym natężeniu działa jednocześnie w tym samym kierunku.",
+    "regular": "Regularny tydzień",
+    "variable": "Zmienny tydzień",
+    "hours": "godz.",
+    "peak": "Maksymalne odchylenie",
+    "return": "Powrót w okolice punktu startu",
+    "unsettled": "Nie zaobserwowano w czasie próby",
+    "apply": "Zastosuj ten sam stresor w obu tygodniach",
+    "replay": "Odtwórz tę samą próbę",
+    "time": "Czas modelu",
+    "metric": "Ostatnia klatka pokazuje odchylenie w jednostkach pozycji i czas powrotu w sekundach modelu. Powrót oznacza utrzymanie się w granicach ±0,10 od punktu startu do końca próby przez co najmniej 0,5 sekundy.",
+    "assumption": "W STEP-BD zmienność snu wiązała się z nasileniem objawów. Słabsze tłumienie w zmiennym tygodniu jest założeniem dydaktycznym.",
+    "case": "Przypadek · Nastrój i aktywacja",
+    "caseHint": "Fikcyjny przebieg pięciu dni. Prześledź zmiany dwóch wymiarów względem typowego poziomu tej osoby (0). Punktacja jest przykładowa.",
+    "axes": "Oś pozioma: nastrój. Oś pionowa: aktywacja.",
+    "day": "Dzień",
+    "mood": "Nastrój",
+    "activation": "Aktywacja",
+    "observations": [
+      "Odczuwa przygnębienie i ma trudności z rozpoczynaniem codziennych zadań.",
+      "Nastrój pogarsza się. Większość dnia spędza bezczynnie.",
+      "Nastrój pozostaje obniżony. Aktywność wraca do zwykłego poziomu.",
+      "Nadal czuje się przygnębiona. Jednego wieczoru rozpoczyna kilka projektów.",
+      "Mimo obniżonego nastroju pracuje nad projektami przez całą noc i opisuje gonitwę myśli."
+    ]
+  },
   "experiment": {
     "title": "Czy pokonasz barierę?",
     "hint": "Każde pchnięcie zaczyna się z wybranej pozycji. Zmień krajobraz i powtórz ostatnie pchnięcie.",

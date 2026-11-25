@@ -1,7 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 import { MODIFIERS, BASE } from "../data/modifiers";
-import { lerp, grad } from "../utils/physics";
-import { X_LO, X_HI } from "../constants";
+import { lerp, advanceBall, stressorVelocity } from "../utils/physics";
 
 function createRun(startIndex) {
   return {
@@ -55,7 +54,7 @@ export function useSimulation() {
 
   const disturb = useCallback((scale = 1) => {
     // Scale the impulse while preserving the original moderate stressor.
-    sim.current.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2) * scale;
+    sim.current.ball.vx += stressorVelocity(scale);
   }, []);
 
   const blendParams = useCallback((activeList) => {
@@ -176,15 +175,7 @@ export function useSimulation() {
       }),
     };
 
-    if (!s.ball.dragging) {
-      const slope = grad(s.ball.x, physP);
-      s.ball.vx += -slope * s.p.gravity * dt;
-      s.ball.vx *= Math.pow(s.p.damping, dt * 60);
-      s.ball.x  += s.ball.vx * dt;
-      // Soft wall: bounce with 0.3 restitution to keep the ball visible at canvas edges
-      if (s.ball.x < X_LO + 0.02) { s.ball.x = X_LO + 0.02; s.ball.vx *= -0.3; }
-      if (s.ball.x > X_HI - 0.02) { s.ball.x = X_HI - 0.02; s.ball.vx *= -0.3; }
-    }
+    if (!s.ball.dragging) advanceBall(s.ball, physP, dt);
 
     s.trail.push(s.ball.x);
     if (s.trail.length > 28) s.trail.shift();
