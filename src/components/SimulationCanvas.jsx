@@ -4,7 +4,7 @@ import { W, H, PAD, BALL_R, X_LO, X_HI, BARRIER } from "../constants";
 import { toX, toY, fromX, energy, hexRgb } from "../utils/physics";
 import { MODIFIERS, BASE, blendSingleModifier } from "../data/modifiers";
 
-export default function SimulationCanvas({ sim, loop, disturb, isPaused }) {
+export default function SimulationCanvas({ sim, loop, isPaused }) {
   const { t } = useTranslation();
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
@@ -344,19 +344,6 @@ export default function SimulationCanvas({ sim, loop, disturb, isPaused }) {
         onPointerDown={onDown} onPointerMove={onMove} onPointerUp={finishDrag}
         onPointerCancel={finishDrag} onLostPointerCapture={finishDrag}
       />
-      <button
-        disabled={isPaused}
-        onClick={(e) => { e.stopPropagation(); disturb(); }}
-        style={{
-          position: "absolute", bottom: 14, left: 14, zIndex: 10,
-          padding: "8px 14px", minHeight: 36, borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 13,
-          border: "1px solid rgba(255,190,60,0.35)", color: "rgba(255,190,60,0.75)",
-          background: "rgba(255,190,60,0.07)", backdropFilter: "blur(6px)",
-          transition: "all 0.2s", fontFamily: "'DM Sans', system-ui, sans-serif"
-        }}
-      >
-        {t("ui.stressor")}
-      </button>
     </div>
   );
 }

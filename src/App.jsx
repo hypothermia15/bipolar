@@ -15,6 +15,8 @@ export default function App() {
     isPaused, togglePause, startIndex, reset, launch,
   } = useSimulation();
 
+  const [stressorScale, setStressorScale] = React.useState(1);
+
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
     rememberLang(lang);
@@ -64,7 +66,7 @@ export default function App() {
 
         <div className="main-visuals">
           <div className="canvas-wrapper">
-            <SimulationCanvas sim={sim} loop={loop} disturb={disturb} isPaused={isPaused} />
+            <SimulationCanvas sim={sim} loop={loop} isPaused={isPaused} />
             <div className="simulation-controls">
               <label>
                 {t("ui.startPosition")}
@@ -78,6 +80,19 @@ export default function App() {
                 {t(isPaused ? "ui.resumeSimulation" : "ui.pauseSimulation")}
               </button>
               <button type="button" onClick={() => reset()}>{t("ui.resetSimulation")}</button>
+            </div>
+            <div className="simulation-controls">
+              <label>
+                {t("ui.stressorLevel")}
+                <select value={stressorScale} onChange={event => setStressorScale(Number(event.target.value))}>
+                  <option value={0.5}>{t("ui.stressorMild")}</option>
+                  <option value={1}>{t("ui.stressorModerate")}</option>
+                  <option value={2}>{t("ui.stressorStrong")}</option>
+                </select>
+              </label>
+              <button type="button" disabled={isPaused} onClick={() => disturb(stressorScale)}>
+                {t("ui.stressor")}
+              </button>
             </div>
             <ThresholdExperiment key={startIndex} launch={launch} isPaused={isPaused} />
           </div>

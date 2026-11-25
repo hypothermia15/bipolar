@@ -53,9 +53,9 @@ export function useSimulation() {
     setActiveModifiers({ ...modifiersRef.current });
   }, []);
 
-  const disturb = useCallback(() => {
-    // Random lateral kick — magnitude 3.5–4.7 in physics units/s, direction randomised
-    sim.current.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2);
+  const disturb = useCallback((scale = 1) => {
+    // Scale the impulse while preserving the original moderate stressor.
+    sim.current.ball.vx += (Math.random() > 0.5 ? 1 : -1) * (3.5 + Math.random() * 1.2) * scale;
   }, []);
 
   const blendParams = useCallback((activeList) => {

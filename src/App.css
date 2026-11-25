@@ -163,7 +163,7 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   cursor: pointer;
 }
 
-.canvas-container button:disabled {
+.simulation-controls button:disabled {
   opacity: 0.45;
   cursor: default !important;
 }
@@ -326,7 +326,6 @@ canvas { width: 100%; height: auto !important; background: #0a0b18; display: blo
   .modifier-category { scroll-snap-align: start; }
   .modifier-items button { min-height: 40px; }
   .canvas-container canvas { width: 100%; height: auto; }
-  .canvas-container button { bottom: auto !important; top: 10px; }
   .sidebar { scroll-padding-left: 12px; }
 }
 @media (max-width: 600px) {
